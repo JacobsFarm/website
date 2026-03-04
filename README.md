@@ -2,6 +2,9 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+Clone repo
+git clone https://github.com/JacobsFarm/website.git
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
