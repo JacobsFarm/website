@@ -1,5 +1,7 @@
 <script>
   import * as m from '$lib/paraglide/messages.js';
+  import { base } from '$app/paths'; // Cruciaal voor correcte links op GitHub Pages
+  
   export let title;
   export let link;
   export let desc = "";
@@ -8,7 +10,7 @@
 <div class="card">
   <h2>{title}</h2>
   <p>{desc}</p>
-  <a href={link} class="btn">{m.read_more()} &rarr;</a>
+  <a href="{base}{link}" class="btn">{m.read_more()} &rarr;</a>
 </div>
 
 <style>
