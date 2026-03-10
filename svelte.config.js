@@ -5,12 +5,15 @@ import adapter from '@sveltejs/adapter-static';
 const config = {
     kit: { 
         adapter: adapter({
-            // fallback: '404.html' zorgt dat routes ook werken na een refresh op GitHub Pages
             fallback: '404.html' 
         }),
         paths: {
-            // Omdat je repo 'website' heet, gebruik je '/website'
+            // Dit zorgt dat de site werkt op JacobsFarm.github.io/website/
             base: process.env.NODE_ENV === 'production' ? '/website' : '',
+        },
+        prerender: {
+            // Dit voorkomt dat de build stopt als hij een link vindt die niet met /website begint
+            handleHttpError: 'warn' 
         }
     },
     preprocess: [mdsvex()],
