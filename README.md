@@ -14,11 +14,11 @@ npm install
 npm run build
 ```
 ```sh
-npm run dev --open
+npm run dev -- --open
 ```
 or when want viewed on phone for example
 ```sh
-npm run dev --open --host
+npm run dev -- --open --host
 ```
 
 ## Creating a project
