@@ -3,8 +3,22 @@
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
 ##Clone repo
+
 ```sh
 git clone https://github.com/JacobsFarm/website.git
+```
+```sh
+npm install
+```
+```sh
+npm run build
+```
+```sh
+npm run dev --open
+```
+or when want viewed on phone for example
+```sh
+npm run dev --open --host
 ```
 
 ## Creating a project
