@@ -24,5 +24,6 @@
   "jetson_title": "Jetson Nano Installation",
   "jetson_text": "Step 1: Flash the SD card with JetPack 4.6...",
   "pc_title": "PC Installation",
-  "pc_text": "Step 1: Install Python and the necessary CUDA libraries..."
+  "pc_text": "Step 1: Install Python and the necessary CUDA libraries...",
+  "footer_tagline": "Open Source Agriculture"
 }
