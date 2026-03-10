@@ -4,7 +4,7 @@
 
 <footer>
   <div class="container">
-    <p>&copy; 2026 CowCatcherAI - Open Source Agriculture</p>
+    <p>&copy; {new Date().getFullYear()} CowCatcherAI - {m.footer_tagline()}</p>
     <div class="brand-line"></div>
   </div>
 </footer>
