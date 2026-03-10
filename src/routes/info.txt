@@ -1,0 +1,17 @@
+make a website page in Svelte,
+do not yet use the paraglide but hardcode the text to later translaten for paraglide.
+Use the \src\lib\assets with the images / files starting with the page name in this case cowcatcher_
+Make that its for telephone aswell as desktop good readable
+
+The logo and text used for CowCatcherAI projects and logo's is bebas kai, regular font tyoe downloadable from dafont or any other font site
+https://www.dafont.com/bebas-kai.font download link. 
+For smmaller second fonts who wont be used as headliner is Roboto
+roboto is open source and can be installed from microsoft fonts
+
+Website colors
+The ral code we use for the logo's is Ral 6001,rgb code (56, 105, 56) Emerald Green
+Brand Hero	Emerald Green	#386938	Logo, primary buttons, headers.
+Accent 1	Electric Lime	#CCFF00	High-visibility CTAs, hover states.
+Accent 2	Soft Teal	#4DA699	Secondary icons, backgrounds.
+Base	    Off-White	#F9FBF9	Main background to keep it clean.
+
