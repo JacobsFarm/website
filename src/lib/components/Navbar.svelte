@@ -1,14 +1,15 @@
 <script>
   import * as m from '$lib/paraglide/messages.js';
+  import { base } from '$app/paths'; // Cruciaal voor GitHub Pages
   
-  // Track whether the mobile menu is open or closed
+  // Houdt bij of het mobiele menu open of gesloten is [cite: 11]
   let isOpen = false;
 
   function toggleMenu() {
     isOpen = !isOpen;
   }
 
-  // Close the menu when a link is clicked on mobile
+  // Sluit het menu wanneer er op een link wordt geklikt (mobiel) [cite: 12]
   function closeMenu() {
     isOpen = false;
   }
@@ -29,15 +30,15 @@
   </button>
 
   <div class="links" class:open={isOpen}>
-    <a href="/" on:click={closeMenu}>{m.nav_home()}</a>
-    <a href="/projects/cowcatcher" on:click={closeMenu}>CowCatcher</a>
-    <a href="/installation" on:click={closeMenu}>{m.nav_install()}</a>
-    <a href="/about-us" on:click={closeMenu}>{m.nav_about()}</a>
+    <a href="{base}/" on:click={closeMenu}>{m.nav_home()}</a>
+    <a href="{base}/projects/cowcatcher" on:click={closeMenu}>CowCatcher</a>
+    <a href="{base}/installation" on:click={closeMenu}>{m.nav_install()}</a>
+    <a href="{base}/about-us" on:click={closeMenu}>{m.nav_about()}</a>
   </div>
 </nav>
 
 <style>
-  /* Base Desktop Styles */
+  /* Base Desktop Styles [cite: 14] */
   nav { 
     display: flex; 
     justify-content: space-between;
@@ -45,7 +46,7 @@
     padding: 1rem 2rem; 
     background: #386938; /* RAL 6001 Emerald Green */
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    position: relative; /* Needed for absolute positioning of mobile menu */
+    position: relative; /* Nodig voor absolute positionering mobiel menu [cite: 15] */
     z-index: 100;
   }
 
@@ -69,10 +70,10 @@
   }
 
   a:hover { 
-    color: #CCFF00; /* Electric Lime Accent */
+    color: #CCFF00; /* Electric Lime Accent [cite: 20] */
   }
 
-  /* Hamburger Button Base Styles */
+  /* Hamburger Button Styles [cite: 21, 22] */
   .hamburger {
     display: none;
     flex-direction: column;
@@ -91,13 +92,13 @@
     transition: all 0.3s ease-in-out;
   }
 
-  /* Mobile Responsive Styles */
+  /* Mobile Responsive Styles [cite: 24] */
   @media (max-width: 768px) {
     .hamburger {
-      display: flex; /* Show hamburger on mobile */
+      display: flex; 
     }
 
-    /* Transform hamburger into an 'X' when open */
+    /* Transformeer hamburger naar 'X' [cite: 25, 26, 27] */
     .bar.open:nth-child(1) {
       transform: translateY(8px) rotate(45deg);
     }
@@ -108,7 +109,6 @@
       transform: translateY(-8px) rotate(-45deg);
     }
 
-    /* Hide links by default on mobile, display as dropdown */
     .links {
       position: absolute;
       top: 100%;
@@ -117,15 +117,14 @@
       background: #386938;
       flex-direction: column;
       gap: 0;
-      max-height: 0; /* Hidden by default */
+      max-height: 0; 
       overflow: hidden;
       transition: max-height 0.3s ease-in-out;
       box-shadow: 0 4px 6px rgba(0,0,0,0.15);
     }
 
-    /* Expand links container when menu is open */
     .links.open {
-      max-height: 300px; /* Adjust if you add more links */
+      max-height: 300px; 
     }
 
     .links a {
