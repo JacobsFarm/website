@@ -18,6 +18,5 @@ The website is built with SvelteKit and uses Paraglide for internationalization.
 A merge-messages.js script automatically merges all JSON files into a single file that Paraglide reads. 
 Each JSON file uses the page name as a key prefix, so all strings belonging to the front page start with front_page_, for example front_page_cowcatcher_title.
 for example with the cowcatcher page: 
-                <li>{m.cowcatcher_provide_model()}</li>
-                <li>{m.cowcatcher_provide_privacy()}</li>
-                <li>{m.cowcatcher_provide_os()}</li>
+<li>{m.cowcatcher_provide_model()}</li>
+  "cowcatcher_provide_model": "The Trained AI Model: The neural network 'brain'.",
