@@ -13,3 +13,5 @@ Base	        Off-White	#F9FBF9	Main background to keep it clean.
 You may alter or parody the logo as you wish, but do not claim that your modified version is from the official open source project.
 Please be fair and direct users to the official GitHub page: https://github.com/CowCatcherAI/CowCatcherAI
 The current "official" logo and illustrator project can be found on SeekLogo: https://seeklogo.com/vector-logo/637544/cowcatcherai
+
+The paraglide language messages are written with the : instead  of the underscore for example export { common_title as "common:title" }
