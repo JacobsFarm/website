@@ -14,4 +14,6 @@ You may alter or parody the logo as you wish, but do not claim that your modifie
 Please be fair and direct users to the official GitHub page: https://github.com/CowCatcherAI/CowCatcherAI
 The current "official" logo and illustrator project can be found on SeekLogo: https://seeklogo.com/vector-logo/637544/cowcatcherai
 
-The website is built with SvelteKit and uses Paraglide for internationalization. Translation strings are organized in /messages/en/ with a separate JSON file per page (e.g. front_page.json). A merge-messages.js script automatically merges all JSON files into a single file that Paraglide reads. Each JSON file uses the page name as a key prefix, so all strings belonging to the front page start with front_page_, for example front_page_cowcatcher_title.
+The website is built with SvelteKit and uses Paraglide for internationalization. Translation strings are organized in /messages/en/ with a separate JSON file per page (e.g. front_page.json). 
+A merge-messages.js script automatically merges all JSON files into a single file that Paraglide reads. 
+Each JSON file uses the page name as a key prefix, so all strings belonging to the front page start with front_page_, for example front_page_cowcatcher_title.
