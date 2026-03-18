@@ -28,71 +28,94 @@
     </section>
 
     <footer class="official-links">
-        <p>Part of the <a href="https://github.com/CowCatcherAI/CowCatcherAI">Official Open Source Project</a></p>
+        <p>Part of the <a href="https://github.com/CowCatcherAI/CowCatcherAI">Official Open Source Project</a> [cite: 6]</p>
     </footer>
 </div>
 
 <style>
     :global(body) {
         background-color: #F9FBF9; /* Base Off-White [cite: 4] */
-        font-family: 'Roboto', sans-serif; /* Secondary font  */
+        font-family: 'Roboto', sans-serif; /* Secondary font [cite: 2] */
         margin: 0;
         color: #333;
+        overflow-x: hidden; /* Prevent horizontal scroll on mobile */
     }
 
     .container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 4rem 2rem;
+        padding: 2rem 1rem; /* Smaller padding for mobile */
     }
 
     .brand-hero {
         text-align: center;
-        margin-bottom: 5rem;
+        margin-bottom: 3rem; /* Tighter spacing for mobile */
     }
 
     h1 {
         font-family: 'Bebas Kai', sans-serif; /* Headline Font  */
-        font-size: 4rem;
+        /* Fluid typography: shrinks on mobile, grows on desktop */
+        font-size: clamp(2.5rem, 8vw, 4.5rem); 
         color: #386938; /* Emerald Green  */
         margin-bottom: 1rem;
         text-transform: uppercase;
+        line-height: 1;
     }
 
     .brand-hero p {
-        font-size: 1.25rem;
+        font-size: clamp(1rem, 4vw, 1.25rem);
         color: #4DA699; /* Soft Teal Accent  */
         max-width: 600px;
         margin: 0 auto;
+        padding: 0 1rem;
     }
 
     .projects-grid {
         display: grid;
-        gap: 2rem; /* Increased spacing for modern feel [cite: 13] */
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 1.5rem; /*  */
+        /* Adjusted minmax to be more mobile-friendly */
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     }
 
-    /* Customizing ProjectCard behavior via CSS variables or global styles */
+    /* Tablet/Desktop Adjustments */
+    @media (min-width: 768px) {
+        .container {
+            padding: 4rem 2rem;
+        }
+        .brand-hero {
+            margin-bottom: 5rem;
+        }
+        .projects-grid {
+            gap: 2rem;
+        }
+    }
+
     :global(.project-card) {
-        border-top: 5px solid #386938; /* Branding  */
+        border-top: 5px solid #386938; /* Emerald Green  */
         transition: transform 0.3s ease, border-color 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
-    :global(.project-card:hover) {
-        border-color: #CCFF00; /* Electric Lime Accent  */
-        transform: translateY(-10px);
+    /* Disable hover transform on touch devices to avoid "sticky" hover states */
+    @media (hover: hover) {
+        :global(.project-card:hover) {
+            border-color: #CCFF00; /* Electric Lime Accent  */
+            transform: translateY(-10px);
+        }
     }
 
     .official-links {
-        margin-top: 6rem;
+        margin-top: 4rem;
         text-align: center;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         border-top: 1px solid #4DA699; /* Soft Teal  */
         padding-top: 2rem;
     }
 
     .official-links a {
-        color: #386938;
+        color: #386938; /* Emerald Green  */
         font-weight: bold;
         text-decoration: none;
     }
