@@ -1,0 +1,10 @@
+{
+  "front_page_title": "CowCatcherAI Ecosystem",
+  "front_page_subtitle": "Advanced open-source monitoring for livestock health and safety.",
+  "front_page_cowcatcher_title": "CowCatcher",
+  "front_page_cowcatcher_desc": "The main AI monitoring system for adult cattle health and location.",
+  "front_page_calfcatcher_title": "CalfCatcher",
+  "front_page_calfcatcher_desc": "Specialized neural networks optimized for neonatal calf care.",
+  "front_page_ai_detector_title": "AI Detector WebApp",
+  "front_page_ai_detector_desc": "Cloud-based analysis tool for instant livestock threat detection."
+}
