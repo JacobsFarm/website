@@ -20,3 +20,6 @@ Each JSON file uses the page name as a key prefix, so all strings belonging to t
 for example with the cowcatcher page: 
 <li>{m.cowcatcher_provide_model()}</li>
   "cowcatcher_provide_model": "The Trained AI Model: The neural network 'brain'.",
+
+The website is translated in: English and nederlands
+
