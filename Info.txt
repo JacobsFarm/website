@@ -25,3 +25,5 @@ for example with the cowcatcher page:
 The website is translated in: English and nederlands
 
 The website uses images and can be found in the \src\lib\assets directory, for each page the prefix is used for example for the cowcatcher page the images are names start with cowcatcher_
+
+The website should be optimized for phone in vertical mode as well as the desktop. 
