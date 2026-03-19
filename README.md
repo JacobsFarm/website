@@ -63,6 +63,7 @@ You can preview the production build with `npm run preview`.
 ## Commit
 
 ```sh
+git init
 git add .
 git commit -m "Lokale wijzigingen opslaan voor pull"
 git pull origin main --rebase
