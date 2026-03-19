@@ -1,4 +1,5 @@
 import type { Handle } from '@sveltejs/kit';
+<<<<<<< HEAD
 import { getTextDirection } from '$lib/paraglide/runtime';
 import { paraglideMiddleware } from '$lib/paraglide/server';
 
@@ -28,3 +29,20 @@ const handleParaglide: Handle = ({ event, resolve }) => {
 
 // Exporteer de handle functie die SvelteKit verwacht
 export const handle: Handle = handleParaglide;
+=======
+
+/**
+ * Vereenvoudigde hooks.server.ts voor GitHub Pages (static hosting).
+ * Paraglide taaldetectie gebeurt nu client-side via localStorage,
+ * dus de paraglideMiddleware is niet meer nodig.
+ * We vullen alleen de HTML placeholders in app.html in met een fallback.
+ */
+export const handle: Handle = ({ event, resolve }) => {
+    return resolve(event, {
+        transformPageChunk: ({ html }) =>
+            html
+                .replace('%paraglide.lang%', 'nl')
+                .replace('%paraglide.dir%', 'ltr')
+    });
+};
+>>>>>>> 2c42776 (Lokale wijzigingen opslaan voor pull)
