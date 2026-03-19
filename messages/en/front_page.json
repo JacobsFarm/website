@@ -1,10 +1,11 @@
 {
-  "front_page_title": "CowCatcherAI Ecosystem",
-  "front_page_subtitle": "Advanced open-source monitoring for livestock health and safety.",
+  "front_page_title": "CowCatcher AI",
+  "front_page_subtitle": "Your barn, Your data, Our vision",
+  "front_page_description": "AI-powered open-source tools as your virtual assistant",
   "front_page_cowcatcher_title": "CowCatcher",
-  "front_page_cowcatcher_desc": "The main AI monitoring system for adult cattle health and location.",
-  "front_page_calfcatcher_title": "CalfCatcher",
-  "front_page_calfcatcher_desc": "Specialized neural networks optimized for neonatal calf care.",
-  "front_page_ai_detector_title": "AI Detector WebApp",
-  "front_page_ai_detector_desc": "Cloud-based analysis tool for instant livestock threat detection."
+  "front_page_cowcatcher_desc": "A vision tool that detects mounting behavior a major indicator of cows in heat.",
+  "front_page_calfcatcher_title": "CalvingCatcher",
+  "front_page_calfcatcher_desc": "A vision tool that detects key stages of calving, from the water bag and legs to the head and the newborn calf",
+  "front_page_ai_detector_title": "AI Detector",
+  "front_page_ai_detector_desc": "The local run tool for utilizing the vision models, with a lot of personal settings for tailering to your preferences"
 }

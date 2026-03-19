@@ -1,10 +1,11 @@
 {
-  "front_page_title": "CowCatcherAI Ecosysteem",
-  "front_page_subtitle": "Geavanceerde open-source monitoring voor de gezondheid en veiligheid van vee.",
+  "front_page_title": "CowCatcher AI",
+  "front_page_subtitle": "Jouw stal, jouw data, onze visie",
+  "front_page_description": "AI-gestuurde open-source tools als jouw virtuele assistent",
   "front_page_cowcatcher_title": "CowCatcher",
-  "front_page_cowcatcher_desc": "Het hoofd AI-monitoringsysteem voor de gezondheid en locatie van volwassen koeien.",
-  "front_page_calfcatcher_title": "CalfCatcher",
-  "front_page_calfcatcher_desc": "Gespecialiseerde neurale netwerken geoptimaliseerd voor de zorg van pasgeboren kalveren.",
-  "front_page_ai_detector_title": "AI Detector WebApp",
-  "front_page_ai_detector_desc": "Cloud-gebaseerde analysetool voor directe detectie van bedreigingen voor het vee."
+  "front_page_cowcatcher_desc": "Een visietool die springgedrag detecteert, een belangrijke indicator dat koeien bronstig zijn.",
+  "front_page_calfcatcher_title": "CalvingCatcher",
+  "front_page_calfcatcher_desc": "Een visietool die belangrijke fasen van het afkalven detecteert, van de waterblaas en poten tot de kop en het pasgeboren kalf",
+  "front_page_ai_detector_title": "AI Detector",
+  "front_page_ai_detector_desc": "Een lokaal draaiende tool voor het gebruiken van de visiemodellen, met veel persoonlijke instellingen om het aan jouw voorkeuren aan te passen"
 }
