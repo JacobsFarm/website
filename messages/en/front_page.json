@@ -7,5 +7,11 @@
   "front_page_calfcatcher_title": "CalvingCatcher",
   "front_page_calfcatcher_desc": "A vision tool that detects key stages of calving, from the water bag and legs to the head and the newborn calf",
   "front_page_ai_detector_title": "AI Detector",
-  "front_page_ai_detector_desc": "The local run tool for utilizing the vision models, with a lot of personal settings for tailering to your preferences"
+  "front_page_ai_detector_desc": "The local run tool for utilizing the vision models, with a lot of personal settings for tailering to your preferences",
+  "front_page_stats_title": "Real-World Validation & Journey",
+  "front_page_stats_subtitle": "Ensuring CowCatcherAI meets real farm needs through hands-on testing and field validation",
+  "front_page_stats_farms": "Active Farms",
+  "front_page_stats_devs": "Active Developers",
+  "front_page_stats_countries": "Countries",
+  "front_page_stats_disclaimer": "*We don't actually know exactly how many farms use the software since it's all locally run. This number only features the farms that actively contacted the project."
 }
