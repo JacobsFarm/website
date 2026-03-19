@@ -1,10 +1,38 @@
 <script>
     import * as m from '$lib/paraglide/messages.js';
     import ProjectCard from '$lib/components/ProjectCard.svelte';
+    import { tweened } from 'svelte/motion';
+    import { cubicOut } from 'svelte/easing';
+    import { onMount } from 'svelte';
 
     import cowcatcherLogo from '$lib/assets/CowCatchter-logo-875x875.jpg';
     import calfcatcherLogo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
     import aiDetectorLogo from '$lib/assets/Ai-detector-logo-800x800.jpg';
+
+    // Animation stores for the numbers
+    const farms = tweened(0, { duration: 2000, easing: cubicOut });
+    const devs = tweened(0, { duration: 2000, easing: cubicOut });
+    const countries = tweened(0, { duration: 2000, easing: cubicOut });
+
+    let statsRef;
+
+    onMount(() => {
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                // Set the target numbers here
+                farms.set(35);
+                devs.set(3);
+                countries.set(3);
+                observer.disconnect(); // Stop observing once animated
+            }
+        }, { threshold: 0.3 }); // Triggers when 30% of the section is visible
+
+        if (statsRef) {
+            observer.observe(statsRef);
+        }
+
+        return () => observer.disconnect();
+    });
 </script>
 
 <div class="container">
@@ -33,6 +61,28 @@
             desc={m.front_page_ai_detector_desc()}
             logo={aiDetectorLogo}
         />
+    </section>
+
+    <section class="stats-section" bind:this={statsRef}>
+        <h2>{m.front_page_stats_title()}</h2>
+        <p class="stats-subtitle">{m.front_page_stats_subtitle()}</p>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span class="stat-number">{Math.floor($farms)}</span>
+                <span class="stat-label">{m.front_page_stats_farms()}</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">{Math.floor($devs)}</span>
+                <span class="stat-label">{m.front_page_stats_devs()}</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">{Math.floor($countries)}</span>
+                <span class="stat-label">{m.front_page_stats_countries()}</span>
+            </div>
+        </div>
+        
+        <p class="stats-disclaimer">{m.front_page_stats_disclaimer()}</p>
     </section>
 
     <footer class="official-links">
@@ -123,6 +173,79 @@
         }
     }
 
+    /* --- Stats Section Styles --- */
+    .stats-section {
+        margin-top: 5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stats-section h2 {
+        font-family: 'Bebas Kai', sans-serif;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        color: #386938;
+        margin-bottom: 0.5rem;
+    }
+
+    .stats-subtitle {
+        color: #4DA699;
+        font-size: clamp(1rem, 3vw, 1.25rem);
+        max-width: 600px;
+        margin-bottom: 3rem;
+    }
+
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 2rem;
+        width: 100%;
+        max-width: 900px;
+        margin-bottom: 2rem;
+    }
+
+    .stat-card {
+        background: #ffffff;
+        border: 1px solid #e0eee0;
+        border-radius: 16px;
+        padding: 2.5rem 1rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .stat-card:hover {
+        transform: translateY(-5px);
+        border-color: #CCFF00;
+    }
+
+    .stat-number {
+        font-family: 'Bebas Kai', sans-serif;
+        font-size: 4rem;
+        color: #386938;
+        line-height: 1;
+        margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+        font-weight: 500;
+        color: #555;
+        font-size: 1.1rem;
+    }
+
+    .stats-disclaimer {
+        font-size: 0.85rem;
+        color: #777;
+        max-width: 700px;
+        line-height: 1.5;
+        font-style: italic;
+        margin-top: 1rem;
+    }
+
+    /* --- Footer Styles --- */
     .official-links {
         margin-top: 4rem;
         text-align: center;
