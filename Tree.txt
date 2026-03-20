@@ -1,12 +1,13 @@
 website/
+├── .github
+    └── workflows
+        └── deploy.yml
 ├── .svelte-kit
     ├── generated
         ├── client
             ├── nodes
                 ├── 0.js
                 ├── 1.js
-                ├── 10.js
-                ├── 11.js
                 ├── 2.js
                 ├── 3.js
                 ├── 4.js
@@ -21,8 +22,6 @@ website/
             ├── nodes
                 ├── 0.js
                 ├── 1.js
-                ├── 10.js
-                ├── 11.js
                 ├── 2.js
                 ├── 3.js
                 ├── 4.js
@@ -44,50 +43,57 @@ website/
             ├── _app
                 ├── immutable
                     ├── assets
-                        ├── 0.BzvBiVAb.css
-                        └── 2.BGM1cfBM.css
+                        ├── 0.CqbwsXDB.css
+                        ├── 2.DWdahaQ5.css
+                        ├── 9.CIvssv-T.css
+                        ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
+                        ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
+                        ├── cowcatcher_1.0n65VzOv.jpg
+                        ├── cowcatcher_2.Cf2uNA8x.jpg
+                        ├── cowcatcher_3.C7pAIKVY.jpg
+                        ├── cowcatcher_4.CUrFwXcB.png
+                        ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
+                        └── CowCatchter-logo-875x875.B8spxSUU.jpg
                     ├── chunks
-                        ├── 0nSUMS3F.js
-                        ├── 1Gv1CDs9.js
-                        ├── B2VNSzmd.js
-                        ├── Ba03aYYi.js
-                        ├── BAMa026m.js
-                        ├── BD0iRL-4.js
-                        ├── BGsoLQ2Z.js
-                        ├── BHHPI8Iq.js
-                        ├── BSTa2wPC.js
-                        ├── BuD_q_Gl.js
-                        ├── CFFmkWoQ.js
-                        ├── CfSfmjQu.js
-                        ├── CHe7VBhD.js
-                        ├── ChtOAu3W.js
-                        ├── D1BqrRDE.js
-                        ├── DMns7rQU.js
-                        ├── DxgmJTgy.js
-                        └── Y2ytXg6f.js
+                        ├── 8wy35DsP.js
+                        ├── B3VqNwzh.js
+                        ├── B_-mWku-.js
+                        ├── BDOW4Fyq.js
+                        ├── BsIe8KWw.js
+                        ├── BtiIHNRg.js
+                        ├── BxwYuo2s.js
+                        ├── BZKX8CQ2.js
+                        ├── CTGAFbBL.js
+                        ├── Cw0IeOIc.js
+                        ├── CWQ1WYeD.js
+                        ├── D0QuwXuc.js
+                        ├── Db64iju-.js
+                        ├── DHYtKg6H.js
+                        ├── Dn7ODQ4R.js
+                        ├── Sg0AzWlr.js
+                        └── YL-oQNds.js
                     ├── entry
-                        ├── app.ciOaUEEZ.js
-                        └── start.BjVY3Mk9.js
+                        ├── app.CkgYizWZ.js
+                        └── start.CmFY3CuM.js
                     └── nodes
-                        ├── 0.Dc4M_rKd.js
-                        ├── 1.13Ya2ucY.js
-                        ├── 10.iaD7runL.js
-                        ├── 11.qKvD0rOT.js
-                        ├── 2.C6V_UpxL.js
-                        ├── 3.78ON4tOJ.js
-                        ├── 4.BygbVPz1.js
-                        ├── 5.BFw0OfiE.js
-                        ├── 6.CV8kMd8k.js
-                        ├── 7.BNMFxL30.js
-                        ├── 8.C0uDkP8P.js
-                        └── 9.BIz2t0Vs.js
+                        ├── 0.CNwzct7u.js
+                        ├── 1.BYaIzxJd.js
+                        ├── 2.CSh5nTyc.js
+                        ├── 3.T-1Ucm4Y.js
+                        ├── 4.DC9Lz6me.js
+                        ├── 5.CXofAbwA.js
+                        ├── 6.DtpRdYSA.js
+                        ├── 7.BucQu5SY.js
+                        ├── 8.BIEqxyV8.js
+                        └── 9.D4_J-n8r.js
                 └── version.json
             └── robots.txt
         ├── prerendered
+            ├── dependencies
+                └── _app
+                    └── env.js
             └── pages
                 ├── about-us
-                    └── index.html
-                ├── demo
                     └── index.html
                 ├── installation
                     ├── jetson-nano
@@ -109,9 +115,19 @@ website/
             ├── _app
                 └── immutable
                     └── assets
-                        ├── _layout.BzvBiVAb.css
-                        └── _page.BGM1cfBM.css
+                        ├── _layout.DjFtAfLi.css
+                        ├── _page.CIvssv-T.css
+                        ├── _page.DWdahaQ5.css
+                        ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
+                        ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
+                        ├── cowcatcher_1.0n65VzOv.jpg
+                        ├── cowcatcher_2.Cf2uNA8x.jpg
+                        ├── cowcatcher_3.C7pAIKVY.jpg
+                        ├── cowcatcher_4.CUrFwXcB.png
+                        ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
+                        └── CowCatchter-logo-875x875.B8spxSUU.jpg
             ├── chunks
+                ├── attributes.js
                 ├── environment.js
                 ├── escaping.js
                 ├── exports.js
@@ -119,7 +135,6 @@ website/
                 ├── index.js
                 ├── internal.js
                 ├── root.js
-                ├── routing.js
                 ├── runtime.js
                 ├── server.js
                 ├── shared.js
@@ -130,10 +145,6 @@ website/
                     └── error.svelte.js
                 ├── pages
                     ├── about-us
-                        └── _page.svelte.js
-                    ├── demo
-                        ├── paraglide
-                            └── _page.svelte.js
                         └── _page.svelte.js
                     ├── installation
                         ├── jetson-nano
@@ -156,8 +167,6 @@ website/
             ├── nodes
                 ├── 0.js
                 ├── 1.js
-                ├── 10.js
-                ├── 11.js
                 ├── 2.js
                 ├── 3.js
                 ├── 4.js
@@ -170,15 +179,12 @@ website/
             ├── index.js
             ├── internal.js
             ├── manifest-full.js
+            ├── manifest.js
             └── remote-entry.js
     ├── types
         ├── src
             └── routes
                 ├── about-us
-                    └── $types.d.ts
-                ├── demo
-                    ├── paraglide
-                        └── $types.d.ts
                     └── $types.d.ts
                 ├── installation
                     ├── jetson-nano
@@ -198,7 +204,88 @@ website/
     ├── ambient.d.ts
     ├── non-ambient.d.ts
     └── tsconfig.json
+├── build
+    ├── _app
+        ├── immutable
+            ├── assets
+                ├── 0.CqbwsXDB.css
+                ├── 2.DWdahaQ5.css
+                ├── 9.CIvssv-T.css
+                ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
+                ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
+                ├── cowcatcher_1.0n65VzOv.jpg
+                ├── cowcatcher_2.Cf2uNA8x.jpg
+                ├── cowcatcher_3.C7pAIKVY.jpg
+                ├── cowcatcher_4.CUrFwXcB.png
+                ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
+                └── CowCatchter-logo-875x875.B8spxSUU.jpg
+            ├── chunks
+                ├── 8wy35DsP.js
+                ├── B3VqNwzh.js
+                ├── B_-mWku-.js
+                ├── BDOW4Fyq.js
+                ├── BsIe8KWw.js
+                ├── BtiIHNRg.js
+                ├── BxwYuo2s.js
+                ├── BZKX8CQ2.js
+                ├── CTGAFbBL.js
+                ├── Cw0IeOIc.js
+                ├── CWQ1WYeD.js
+                ├── D0QuwXuc.js
+                ├── Db64iju-.js
+                ├── DHYtKg6H.js
+                ├── Dn7ODQ4R.js
+                ├── Sg0AzWlr.js
+                └── YL-oQNds.js
+            ├── entry
+                ├── app.CkgYizWZ.js
+                └── start.CmFY3CuM.js
+            └── nodes
+                ├── 0.CNwzct7u.js
+                ├── 1.BYaIzxJd.js
+                ├── 2.CSh5nTyc.js
+                ├── 3.T-1Ucm4Y.js
+                ├── 4.DC9Lz6me.js
+                ├── 5.CXofAbwA.js
+                ├── 6.DtpRdYSA.js
+                ├── 7.BucQu5SY.js
+                ├── 8.BIEqxyV8.js
+                └── 9.D4_J-n8r.js
+        ├── env.js
+        └── version.json
+    ├── about-us
+        └── index.html
+    ├── installation
+        ├── jetson-nano
+            └── index.html
+        ├── pc
+            └── index.html
+        └── index.html
+    ├── projects
+        ├── ai-detector
+            └── index.html
+        ├── calfcatcher
+            └── index.html
+        └── cowcatcher
+            └── index.html
+    ├── 404.html
+    ├── index.html
+    └── robots.txt
 ├── messages
+    ├── en
+        ├── ai_detector.json
+        ├── calfcatcher.json
+        ├── common.json
+        ├── cowcatcher.json
+        ├── front_page.json
+        └── install.json
+    ├── nl
+        ├── ai_detector.json
+        ├── calfcatcher.json
+        ├── common.json
+        ├── cowcatcher.json
+        ├── front_page.json
+        └── install.json
     ├── en.json
     └── nl.json
 ├── project.inlang
@@ -212,9 +299,18 @@ website/
 ├── src
     ├── lib
         ├── assets
+            ├── Ai-detector-logo-800x800.jpg
+            ├── calvingcatcher-logo-875x-875.jpg
+            ├── cowcatcher_1.jpg
+            ├── cowcatcher_2.jpg
+            ├── cowcatcher_3.jpg
+            ├── cowcatcher_4.png
+            ├── cowcatcher_demo_qr_code.png
+            ├── CowCatchter-logo-875x875.jpg
             └── favicon.svg
         ├── components
             ├── Footer.svelte
+            ├── LanguageModal.svelte
             ├── Navbar.svelte
             └── ProjectCard.svelte
         ├── paraglide
@@ -232,17 +328,12 @@ website/
     ├── routes
         ├── about-us
             └── +page.svelte
-        ├── demo
-            ├── paraglide
-                └── +page.svelte
-            └── +page.svelte
         ├── installation
             ├── jetson-nano
                 └── +page.svelte
             ├── pc
                 └── +page.svelte
             └── +page.svelte
-        ├── news
         ├── projects
             ├── ai-detector
                 └── +page.svelte
@@ -252,7 +343,8 @@ website/
                 └── +page.svelte
         ├── +layout.svelte
         ├── +layout.ts
-        └── +page.svelte
+        ├── +page.svelte
+        └── info.txt
     ├── app.d.ts
     ├── app.html
     ├── hooks.server.ts
@@ -263,7 +355,9 @@ website/
 ├── .prettierignore
 ├── .prettierrc
 ├── eslint.config.js
+├── Info.txt
 ├── LICENSE
+├── merge-messages.js
 ├── package-lock.json
 ├── package.json
 ├── README.md

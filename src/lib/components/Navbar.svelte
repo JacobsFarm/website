@@ -32,9 +32,12 @@
 
   <div class="links" class:open={isOpen}>
     <a href="{base}/" on:click={closeMenu}>{m.nav_home()}</a>
-    <a href="{base}/projects/cowcatcher" on:click={closeMenu}>CowCatcher</a>
     <a href="{base}/installation" on:click={closeMenu}>{m.nav_install()}</a>
     <a href="{base}/about-us" on:click={closeMenu}>{m.nav_about()}</a>
+
+    <a href="{base}/projects/cowcatcher" class="mobile-only" on:click={closeMenu}>CowCatcher</a>
+    <a href="{base}/projects/calvingcatcher" class="mobile-only" on:click={closeMenu}>CalvingCatcher</a>
+    <a href="{base}/projects/ai-detector" class="mobile-only" on:click={closeMenu}>AI-Detector</a>
 
     <div class="lang-switcher">
       <button
@@ -91,7 +94,11 @@
     color: #CCFF00;
   }
 
-  /* Taalwisselaar */
+  /* Verberg de mobiele links standaard (op desktop) */
+  .mobile-only {
+    display: none;
+  }
+
   .lang-switcher {
     display: flex;
     gap: 0.3rem;
@@ -124,7 +131,6 @@
     background: rgba(204,255,0,0.1);
   }
 
-  /* Hamburger */
   .hamburger {
     display: none;
     flex-direction: column;
@@ -174,13 +180,18 @@
     }
 
     .links.open {
-      max-height: 400px;
+      max-height: 500px; /* Iets groter gemaakt om ruimte te bieden aan de extra links */
     }
 
     .links a {
       padding: 1rem 2rem;
       width: 100%;
       border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Laat de mobiele links zien in het uitklapmenu */
+    .mobile-only {
+      display: block;
     }
 
     .lang-switcher {

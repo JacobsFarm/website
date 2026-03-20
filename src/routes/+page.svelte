@@ -6,19 +6,26 @@
     import { onMount } from 'svelte';
 
     import cowcatcherLogo from '$lib/assets/CowCatchter-logo-875x875.jpg';
-    import calfcatcherLogo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
+    import calvingcatcherLogo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
     import aiDetectorLogo from '$lib/assets/Ai-detector-logo-800x800.jpg';
 
     // Animation stores for the numbers
+<<<<<<< HEAD
     const farms = tweened(0, { duration: 2000, easing: cubicOut });
     const devs = tweened(0, { duration: 2000, easing: cubicOut });
     const countries = tweened(0, { duration: 2000, easing: cubicOut });
 
+=======
+const farms = tweened(0, { duration: 2000, easing: cubicOut });
+    const detections = tweened(0, { duration: 2000, easing: cubicOut }); 
+    const countries = tweened(0, { duration: 2000, easing: cubicOut });
+>>>>>>> 54d5c95 (Lokale wijzigingen opslaan voor pull)
     let statsRef;
 
     onMount(() => {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
+<<<<<<< HEAD
                 // Set the target numbers here
                 farms.set(35);
                 devs.set(3);
@@ -26,6 +33,14 @@
                 observer.disconnect(); // Stop observing once animated
             }
         }, { threshold: 0.3 }); // Triggers when 30% of the section is visible
+=======
+                farms.set(35);
+                detections.set(100); // Laat hem oplopen tot 100
+                countries.set(3);
+                observer.disconnect(); 
+            }
+        }, { threshold: 0.3 });
+>>>>>>> 54d5c95 (Lokale wijzigingen opslaan voor pull)
 
         if (statsRef) {
             observer.observe(statsRef);
@@ -50,10 +65,10 @@
             logo={cowcatcherLogo}
         />
         <ProjectCard 
-            title={m.front_page_calfcatcher_title()}
-            link="/projects/calfcatcher"
-            desc={m.front_page_calfcatcher_desc()}
-            logo={calfcatcherLogo}
+            title={m.front_page_calvingcatcher_title()}
+            link="/projects/calvingcatcher"
+            desc={m.front_page_calvingcatcher_desc()}
+            logo={calvingcatcherLogo}
         />
         <ProjectCard 
             title={m.front_page_ai_detector_title()}
@@ -73,8 +88,13 @@
                 <span class="stat-label">{m.front_page_stats_farms()}</span>
             </div>
             <div class="stat-card">
+<<<<<<< HEAD
                 <span class="stat-number">{Math.floor($devs)}</span>
                 <span class="stat-label">{m.front_page_stats_devs()}</span>
+=======
+                <span class="stat-number">{Math.floor($detections)}K+</span>
+                <span class="stat-label">{m.front_page_stats_detections()}</span>
+>>>>>>> 54d5c95 (Lokale wijzigingen opslaan voor pull)
             </div>
             <div class="stat-card">
                 <span class="stat-number">{Math.floor($countries)}</span>
