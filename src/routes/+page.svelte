@@ -10,37 +10,21 @@
     import aiDetectorLogo from '$lib/assets/Ai-detector-logo-800x800.jpg';
 
     // Animation stores for the numbers
-<<<<<<< HEAD
     const farms = tweened(0, { duration: 2000, easing: cubicOut });
-    const devs = tweened(0, { duration: 2000, easing: cubicOut });
-    const countries = tweened(0, { duration: 2000, easing: cubicOut });
-
-=======
-const farms = tweened(0, { duration: 2000, easing: cubicOut });
     const detections = tweened(0, { duration: 2000, easing: cubicOut }); 
     const countries = tweened(0, { duration: 2000, easing: cubicOut });
->>>>>>> 54d5c95 (Lokale wijzigingen opslaan voor pull)
     let statsRef;
 
     onMount(() => {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-<<<<<<< HEAD
                 // Set the target numbers here
                 farms.set(35);
-                devs.set(3);
+                detections.set(100); // Laat hem oplopen tot 100
                 countries.set(3);
                 observer.disconnect(); // Stop observing once animated
             }
         }, { threshold: 0.3 }); // Triggers when 30% of the section is visible
-=======
-                farms.set(35);
-                detections.set(100); // Laat hem oplopen tot 100
-                countries.set(3);
-                observer.disconnect(); 
-            }
-        }, { threshold: 0.3 });
->>>>>>> 54d5c95 (Lokale wijzigingen opslaan voor pull)
 
         if (statsRef) {
             observer.observe(statsRef);
@@ -88,13 +72,8 @@ const farms = tweened(0, { duration: 2000, easing: cubicOut });
                 <span class="stat-label">{m.front_page_stats_farms()}</span>
             </div>
             <div class="stat-card">
-<<<<<<< HEAD
-                <span class="stat-number">{Math.floor($devs)}</span>
-                <span class="stat-label">{m.front_page_stats_devs()}</span>
-=======
                 <span class="stat-number">{Math.floor($detections)}K+</span>
                 <span class="stat-label">{m.front_page_stats_detections()}</span>
->>>>>>> 54d5c95 (Lokale wijzigingen opslaan voor pull)
             </div>
             <div class="stat-card">
                 <span class="stat-number">{Math.floor($countries)}</span>

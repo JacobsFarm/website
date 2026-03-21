@@ -1,0 +1,17 @@
+{
+  "install_title": "Installatie Gids",
+  "install_info_text": "De hardware installatie van camera's en de computer kan je zelf goed doen. De software is compatibel met alle merken camera's. In de sectie 'Hardware Installatie' leggen we het allemaal nog eens gedetailleerd uit. Heb je al camera's hangen? Dan kan je meteen de software downloaden. Is dit ook gelukt, dan kan je je nog verdiepen in de mogelijkheden van ons programma in de sectie 'Software Opties'.",
+  "install_card_hardware_title": "1. Hardware Installatie",
+  "install_card_hardware_desc": "Lees hier alles over de benodigde camera's, de computer en hoe je deze correct installeert.",
+  "install_card_software_title": "2. Software Downloaden",
+  "install_card_software_desc": "Heb je de hardware al op orde? Download en installeer dan direct de CowCatcherAI software.",
+  "install_card_options_title": "3. Software Opties",
+  "install_card_options_desc": "Ontdek alle mogelijkheden en geavanceerde instellingen van ons softwareprogramma.",
+  "install_text": "Kies je platform:",
+  "install_jetson_link": "Jetson Nano Setup",
+  "install_pc_link": "PC Setup",
+  "jetson_title": "Jetson Nano Installatie",
+  "jetson_text": "Stap 1: Flash de SD-kaart met JetPack 4.6...",
+  "pc_title": "PC Installatie",
+  "pc_text": "Stap 1: Installeer Python en de benodigde CUDA bibliotheken..."
+}

@@ -1,0 +1,10 @@
+{
+  "hardware_title": "Hardware Installatie",
+  "hardware_intro": "Voor CowCatcherAI heb je twee belangrijke hardwarecomponenten nodig: beveiligingscamera's en een computer om de beelden te verwerken met AI.",
+  "hardware_cameras_title": "1. De Camera's",
+  "hardware_cameras_text": "Je kunt vrijwel elke IP-camera gebruiken, zolang deze RTSP (Real-Time Streaming Protocol) ondersteunt. Dit is een standaardfunctie op de meeste netwerkcamera's. Zorg ervoor dat de camera's hoog in de stal hangen voor een goed, onbelemmerd overzicht op de koeien.",
+  "hardware_computer_title": "2. De Computer (AI Host)",
+  "hardware_computer_text": "De software draait lokaal op jouw eigen hardware voor maximale privacy en snelheid. Dit kan een Windows/Linux PC zijn met een geschikte videokaart (NVIDIA GPU wordt aangeraden voor de beste prestaties), of een speciaal edge-apparaat zoals een NVIDIA Jetson Nano voor een compacte en energiezuinige opstelling in de stal.",
+  "hardware_btn_back": "Terug naar overzicht",
+  "hardware_btn_next": "Door naar Software"
+}
