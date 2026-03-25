@@ -20,8 +20,8 @@
             if (entries[0].isIntersecting) {
                 // Set the target numbers here
                 farms.set(35);
-                detections.set(100); // Laat hem oplopen tot 100
-                countries.set(3);
+                detections.set(100); 
+                countries.set(5);
                 observer.disconnect(); // Stop observing once animated
             }
         }, { threshold: 0.3 }); // Triggers when 30% of the section is visible
