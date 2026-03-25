@@ -64,16 +64,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background: #386938;
+    background: #386938; /* Emerald Green */
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
     position: relative;
     z-index: 100;
+    font-family: 'Roboto', sans-serif;
   }
 
   .logo {
-    color: white;
+    color: oklch(98% 0.005 145); /* Off White */
+    font-family: 'Bebas Kai', 'Bebas Neue', sans-serif;
     font-weight: 800;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     letter-spacing: 1px;
   }
 
@@ -85,16 +87,15 @@
 
   a {
     text-decoration: none;
-    color: rgba(255,255,255,0.9);
+    color: oklch(98% 0.005 145); /* Off White */
     font-weight: bold;
     transition: all 0.2s ease;
   }
 
   a:hover {
-    color: #CCFF00;
+    color: oklch(65% 0.16 75); /* Deep Amber */
   }
 
-  /* Verberg de mobiele links standaard (op desktop) */
   .mobile-only {
     display: none;
   }
@@ -105,13 +106,13 @@
     align-items: center;
     margin-left: 0.5rem;
     padding-left: 1rem;
-    border-left: 1px solid rgba(255,255,255,0.3);
+    border-left: 1px solid oklch(85% 0.01 145 / 0.4); /* Soft Gray met opacity */
   }
 
   .lang-switcher button {
     background: transparent;
     border: 1px solid transparent;
-    color: rgba(255,255,255,0.7);
+    color: oklch(98% 0.005 145); /* Off White */
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
@@ -121,14 +122,14 @@
   }
 
   .lang-switcher button:hover {
-    color: #CCFF00;
-    border-color: rgba(255,255,255,0.3);
+    color: oklch(65% 0.16 75); /* Deep Amber */
+    border-color: oklch(85% 0.01 145 / 0.4);
   }
 
   .lang-switcher button.active {
-    color: #CCFF00;
-    border-color: #CCFF00;
-    background: rgba(204,255,0,0.1);
+    color: oklch(65% 0.16 75); /* Deep Amber */
+    border-color: oklch(65% 0.16 75); /* Deep Amber */
+    background: rgba(255, 255, 255, 0.1);
   }
 
   .hamburger {
@@ -144,7 +145,7 @@
   .bar {
     width: 25px;
     height: 3px;
-    background-color: white;
+    background-color: oklch(98% 0.005 145); /* Off White */
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
   }
@@ -169,7 +170,7 @@
       top: 100%;
       left: 0;
       right: 0;
-      background: #386938;
+      background: #386938; /* Emerald Green */
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
@@ -180,23 +181,22 @@
     }
 
     .links.open {
-      max-height: 500px; /* Iets groter gemaakt om ruimte te bieden aan de extra links */
+      max-height: 500px;
     }
 
     .links a {
       padding: 1rem 2rem;
       width: 100%;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid oklch(85% 0.01 145 / 0.2); /* Soft Gray met opacity */
     }
 
-    /* Laat de mobiele links zien in het uitklapmenu */
     .mobile-only {
       display: block;
     }
 
     .lang-switcher {
       border-left: none;
-      border-top: 1px solid rgba(255,255,255,0.1);
+      border-top: 1px solid oklch(85% 0.01 145 / 0.2);
       margin-left: 0;
       padding: 0.75rem 2rem;
       width: 100%;

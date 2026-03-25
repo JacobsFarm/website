@@ -1,6 +1,8 @@
 {
-  "footer_tagline": "Open Source software",
-  "footer_join_community": "Word lid van de community",
-  "footer_project_sub": "Open Source Landbouwproject",
-  "footer_license": "GNU GPL v3.0 Licentie"
+  "footer_tagline": "Jouw stal, jouw data, onze visie",
+  "footer_join_community": "Word lid van de community! 🐄",
+  "footer_project_sub": "Wij zijn een community-gedreven open-source beweging. Gebouwd door boeren, voor boeren",
+  "footer_license": "Gratis & open source (GNU GPL v3.0)",
+  "footer_contribute": "Bekijk ons op GitHub",
+  "footer_made_with": "Gemaakt met 💚 voor de toekomst van de landbouw"
 }

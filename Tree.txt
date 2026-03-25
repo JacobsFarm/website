@@ -8,13 +8,6 @@ website/
             ├── nodes
                 ├── 0.js
                 ├── 1.js
-                ├── 10.js
-                ├── 11.js
-                ├── 12.js
-                ├── 13.js
-                ├── 14.js
-                ├── 15.js
-                ├── 16.js
                 ├── 2.js
                 ├── 3.js
                 ├── 4.js
@@ -50,8 +43,11 @@ website/
             ├── _app
                 ├── immutable
                     ├── assets
-                        ├── 0.BO3rIhus.css
-                        ├── 2.DWdahaQ5.css
+                        ├── 0.DW3PNJKa.css
+                        ├── 2.C-AquRVj.css
+                        ├── 4.BZG0w-Ji.css
+                        ├── 5.BuEYb2Lc.css
+                        ├── 6.BH24py2v.css
                         ├── 8.CD2djPxf.css
                         ├── 9.CIvssv-T.css
                         ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
@@ -65,40 +61,43 @@ website/
                         ├── cowcatcher_3.C7pAIKVY.jpg
                         ├── cowcatcher_4.CUrFwXcB.png
                         ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
-                        └── CowCatchter-logo-875x875.B8spxSUU.jpg
+                        ├── CowCatchter-logo-875x875.B8spxSUU.jpg
+                        ├── installation_hardware_1.Bvdw3oP5.jpg
+                        └── ProjectCard.DurydmLl.css
                     ├── chunks
                         ├── 8wy35DsP.js
-                        ├── BDOW4Fyq.js
-                        ├── BlCl5SHa.js
-                        ├── BtiIHNRg.js
-                        ├── BUHTwwzC.js
-                        ├── C91Rquu5.js
+                        ├── b7nHjK4P.js
+                        ├── BBCdQy3g.js
+                        ├── BhRLpkUo.js
+                        ├── BkSG6K6R.js
+                        ├── BL8Ri964.js
+                        ├── BOe5Ppe_.js
+                        ├── Bt1wYc5q.js
+                        ├── BTpcwqzu.js
+                        ├── C9iKbrmt.js
                         ├── Cf8WP9hA.js
-                        ├── CTGAFbBL.js
-                        ├── CTWupDfO.js
-                        ├── CwUgO4Xy.js
+                        ├── CQcLTsXK.js
+                        ├── CSIqD-34.js
+                        ├── Cz6Uy-og.js
                         ├── D0QuwXuc.js
-                        ├── DFkUrmNX.js
-                        ├── DkDtTeUy.js
-                        ├── IXIrT3J2.js
-                        ├── IXQ1uHA_.js
+                        ├── D9TTuTHJ.js
                         ├── nrc0tqSz.js
-                        ├── VM4d4xxg.js
+                        ├── Y-NwBkjD.js
                         └── YL-oQNds.js
                     ├── entry
-                        ├── app.CJkVtLr3.js
-                        └── start.Z4PfGaUJ.js
+                        ├── app.DP7umJ3x.js
+                        └── start.DYr2YmlM.js
                     └── nodes
-                        ├── 0.1Lz_EQNN.js
-                        ├── 1.G8aR1fAf.js
-                        ├── 2.vimhWWRv.js
-                        ├── 3.irhuH23P.js
-                        ├── 4.D5jggyeN.js
-                        ├── 5.jvlGMCJg.js
-                        ├── 6.gLJ9421n.js
-                        ├── 7.DN9IvVvH.js
-                        ├── 8.BdSlYveL.js
-                        └── 9.uolYti29.js
+                        ├── 0.C_cV035r.js
+                        ├── 1.CYPaKPr1.js
+                        ├── 2.DrD6_UKp.js
+                        ├── 3.CE5NetFT.js
+                        ├── 4.Cd7DLwAs.js
+                        ├── 5.DgoRYpvS.js
+                        ├── 6.BHz0BTEv.js
+                        ├── 7.0b8ojIXd.js
+                        ├── 8.BJJ7xCg5.js
+                        └── 9.B-R0THBp.js
                 └── version.json
             └── robots.txt
         ├── prerendered
@@ -109,9 +108,9 @@ website/
                 ├── about-us
                     └── index.html
                 ├── installation
-                    ├── jetson-nano
+                    ├── hardware
                         └── index.html
-                    ├── pc
+                    ├── options
                         └── index.html
                     └── index.html
                 ├── projects
@@ -128,10 +127,13 @@ website/
             ├── _app
                 └── immutable
                     └── assets
-                        ├── _layout.B8N8uzJY.css
+                        ├── _layout.BII9NqJW.css
+                        ├── _page.BH24py2v.css
+                        ├── _page.BuEYb2Lc.css
+                        ├── _page.BZG0w-Ji.css
+                        ├── _page.CClrQItA.css
                         ├── _page.CD2djPxf.css
                         ├── _page.CIvssv-T.css
-                        ├── _page.DWdahaQ5.css
                         ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
                         ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
                         ├── calvingcatcher_1.IhgGXNkN.jpg
@@ -143,7 +145,9 @@ website/
                         ├── cowcatcher_3.C7pAIKVY.jpg
                         ├── cowcatcher_4.CUrFwXcB.png
                         ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
-                        └── CowCatchter-logo-875x875.B8spxSUU.jpg
+                        ├── CowCatchter-logo-875x875.B8spxSUU.jpg
+                        ├── installation_hardware_1.Bvdw3oP5.jpg
+                        └── ProjectCard.Gj0SzJig.css
             ├── chunks
                 ├── attributes.js
                 ├── environment.js
@@ -152,6 +156,7 @@ website/
                 ├── false.js
                 ├── index.js
                 ├── internal.js
+                ├── ProjectCard.js
                 ├── root.js
                 ├── runtime.js
                 ├── server.js
@@ -165,9 +170,9 @@ website/
                     ├── about-us
                         └── _page.svelte.js
                     ├── installation
-                        ├── jetson-nano
+                        ├── hardware
                             └── _page.svelte.js
-                        ├── pc
+                        ├── options
                             └── _page.svelte.js
                         └── _page.svelte.js
                     ├── projects
@@ -207,29 +212,8 @@ website/
                 ├── installation
                     ├── hardware
                         └── $types.d.ts
-                    ├── jetson-nano
-                    ├── pc
-                    ├── software
-                        ├── apple
-                            └── $types.d.ts
-                        ├── cuda
-                            └── $types.d.ts
-                        ├── jetson-nano
-                        ├── linux
-                            └── $types.d.ts
-                        ├── Nvidia GPU
-                        ├── pc
-                        └── windows
-                            └── $types.d.ts
-                    ├── software - kopie
-                        ├── apple
-                            └── $types.d.ts
-                        ├── cuda
-                            └── $types.d.ts
-                        ├── linux
-                            └── $types.d.ts
-                        └── windows
-                            └── $types.d.ts
+                    ├── options
+                        └── $types.d.ts
                     └── $types.d.ts
                 ├── projects
                     ├── ai-detector
@@ -247,8 +231,11 @@ website/
     ├── _app
         ├── immutable
             ├── assets
-                ├── 0.BO3rIhus.css
-                ├── 2.DWdahaQ5.css
+                ├── 0.DW3PNJKa.css
+                ├── 2.C-AquRVj.css
+                ├── 4.BZG0w-Ji.css
+                ├── 5.BuEYb2Lc.css
+                ├── 6.BH24py2v.css
                 ├── 8.CD2djPxf.css
                 ├── 9.CIvssv-T.css
                 ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
@@ -262,48 +249,51 @@ website/
                 ├── cowcatcher_3.C7pAIKVY.jpg
                 ├── cowcatcher_4.CUrFwXcB.png
                 ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
-                └── CowCatchter-logo-875x875.B8spxSUU.jpg
+                ├── CowCatchter-logo-875x875.B8spxSUU.jpg
+                ├── installation_hardware_1.Bvdw3oP5.jpg
+                └── ProjectCard.DurydmLl.css
             ├── chunks
                 ├── 8wy35DsP.js
-                ├── BDOW4Fyq.js
-                ├── BlCl5SHa.js
-                ├── BtiIHNRg.js
-                ├── BUHTwwzC.js
-                ├── C91Rquu5.js
+                ├── b7nHjK4P.js
+                ├── BBCdQy3g.js
+                ├── BhRLpkUo.js
+                ├── BkSG6K6R.js
+                ├── BL8Ri964.js
+                ├── BOe5Ppe_.js
+                ├── Bt1wYc5q.js
+                ├── BTpcwqzu.js
+                ├── C9iKbrmt.js
                 ├── Cf8WP9hA.js
-                ├── CTGAFbBL.js
-                ├── CTWupDfO.js
-                ├── CwUgO4Xy.js
+                ├── CQcLTsXK.js
+                ├── CSIqD-34.js
+                ├── Cz6Uy-og.js
                 ├── D0QuwXuc.js
-                ├── DFkUrmNX.js
-                ├── DkDtTeUy.js
-                ├── IXIrT3J2.js
-                ├── IXQ1uHA_.js
+                ├── D9TTuTHJ.js
                 ├── nrc0tqSz.js
-                ├── VM4d4xxg.js
+                ├── Y-NwBkjD.js
                 └── YL-oQNds.js
             ├── entry
-                ├── app.CJkVtLr3.js
-                └── start.Z4PfGaUJ.js
+                ├── app.DP7umJ3x.js
+                └── start.DYr2YmlM.js
             └── nodes
-                ├── 0.1Lz_EQNN.js
-                ├── 1.G8aR1fAf.js
-                ├── 2.vimhWWRv.js
-                ├── 3.irhuH23P.js
-                ├── 4.D5jggyeN.js
-                ├── 5.jvlGMCJg.js
-                ├── 6.gLJ9421n.js
-                ├── 7.DN9IvVvH.js
-                ├── 8.BdSlYveL.js
-                └── 9.uolYti29.js
+                ├── 0.C_cV035r.js
+                ├── 1.CYPaKPr1.js
+                ├── 2.DrD6_UKp.js
+                ├── 3.CE5NetFT.js
+                ├── 4.Cd7DLwAs.js
+                ├── 5.DgoRYpvS.js
+                ├── 6.BHz0BTEv.js
+                ├── 7.0b8ojIXd.js
+                ├── 8.BJJ7xCg5.js
+                └── 9.B-R0THBp.js
         ├── env.js
         └── version.json
     ├── about-us
         └── index.html
     ├── installation
-        ├── jetson-nano
+        ├── hardware
             └── index.html
-        ├── pc
+        ├── options
             └── index.html
         └── index.html
     ├── projects
@@ -322,17 +312,23 @@ website/
         ├── calvingcatcher.json
         ├── common.json
         ├── cowcatcher.json
+        ├── footer.json
         ├── front_page.json
-        └── installation.json
-    ├── nl
+        ├── hardware.json
+        ├── installation.json
+        ├── software.json
+        └── software_options.json
+    └── nl
         ├── ai_detector.json
         ├── calvingcatcher.json
         ├── common.json
         ├── cowcatcher.json
+        ├── footer.json
         ├── front_page.json
-        └── installation.json
-    ├── en.json
-    └── nl.json
+        ├── hardware.json
+        ├── installation.json
+        ├── software.json
+        └── software_options.json
 ├── project.inlang
     ├── cache
         └── plugins
@@ -357,6 +353,7 @@ website/
             ├── cowcatcher_demo_qr_code.png
             ├── CowCatchter-logo-875x875.jpg
             ├── favicon.svg
+            ├── hf-logo-pirate.svg
             ├── installation_hardware_1.jpg
             ├── installation_software_1.jpg
             ├── installation_software_options_1.jpg
@@ -384,25 +381,8 @@ website/
         ├── installation
             ├── hardware
                 └── +page.svelte
-            ├── software
-                ├── apple
-                    └── +page.svelte
-                ├── cuda
-                    └── +page.svelte
-                ├── linux
-                    └── +page.svelte
-                └── windows
-                    └── +page.svelte
-            ├── software - kopie
-                ├── apple
-                    └── +page.svelte
-                ├── cuda
-                    └── +page.svelte
-                ├── linux
-                    └── +page.svelte
-                └── windows
-                    └── +page.svelte
-            ├── software_options
+            ├── options
+                └── +page.svelte
             └── +page.svelte
         ├── projects
             ├── ai-detector
@@ -413,8 +393,7 @@ website/
                 └── +page.svelte
         ├── +layout.svelte
         ├── +layout.ts
-        ├── +page.svelte
-        └── info.txt
+        └── +page.svelte
     ├── app.d.ts
     ├── app.html
     ├── hooks.server.ts
@@ -425,7 +404,7 @@ website/
 ├── .prettierignore
 ├── .prettierrc
 ├── eslint.config.js
-├── Info.txt
+├── info.json
 ├── LICENSE
 ├── merge-messages.js
 ├── package-lock.json

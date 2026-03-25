@@ -91,10 +91,10 @@
 
 <style>
     :global(body) {
-        background-color: #F9FBF9;
+        background-color: oklch(98% 0.005 145); /* Off White */
         font-family: 'Roboto', sans-serif;
         margin: 0;
-        color: #333;
+        color: oklch(22% 0.02 145); /* Deep Ink */
         overflow-x: hidden;
     }
 
@@ -116,7 +116,7 @@
     h1 {
         font-family: 'Bebas Kai', sans-serif;
         font-size: clamp(2.5rem, 8vw, 4.5rem);
-        color: #386938;
+        color: #386938; /* Emerald Green */
         margin-bottom: 1rem;
         text-transform: uppercase;
         line-height: 1;
@@ -125,7 +125,7 @@
     .brand-hero .slogan {
         font-family: 'Roboto', sans-serif;
         font-size: clamp(1.2rem, 5vw, 1.75rem);
-        color: #4DA699;
+        color: oklch(60% 0.09 195); /* Muted Teal */
         margin: 0;
         font-weight: 500;
         text-transform: capitalize;
@@ -133,7 +133,7 @@
 
     .brand-hero .description {
         font-size: clamp(1rem, 4vw, 1.15rem);
-        color: #555;
+        color: oklch(22% 0.02 145); /* Deep Ink */
         max-width: 600px;
         margin: 0;
         padding: 0 1rem;
@@ -158,7 +158,7 @@
     }
 
     :global(.project-card) {
-        border-top: 5px solid #386938;
+        border-top: 5px solid #386938; /* Emerald Green */
         transition: transform 0.3s ease, border-color 0.3s ease;
         height: 100%;
         display: flex;
@@ -167,7 +167,7 @@
 
     @media (hover: hover) {
         :global(.project-card:hover) {
-            border-color: #CCFF00;
+            border-color: oklch(65% 0.16 75); /* Deep Amber */
             transform: translateY(-10px);
         }
     }
@@ -184,12 +184,12 @@
     .stats-section h2 {
         font-family: 'Bebas Kai', sans-serif;
         font-size: clamp(2rem, 6vw, 3.5rem);
-        color: #386938;
+        color: #386938; /* Emerald Green */
         margin-bottom: 0.5rem;
     }
 
     .stats-subtitle {
-        color: #4DA699;
+        color: oklch(60% 0.09 195); /* Muted Teal */
         font-size: clamp(1rem, 3vw, 1.25rem);
         max-width: 600px;
         margin-bottom: 3rem;
@@ -206,7 +206,7 @@
 
     .stat-card {
         background: #ffffff;
-        border: 1px solid #e0eee0;
+        border: 1px solid oklch(85% 0.01 145); /* Soft Gray */
         border-radius: 16px;
         padding: 2.5rem 1rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
@@ -218,26 +218,27 @@
 
     .stat-card:hover {
         transform: translateY(-5px);
-        border-color: #CCFF00;
+        border-color: oklch(65% 0.16 75); /* Deep Amber */
     }
 
     .stat-number {
         font-family: 'Bebas Kai', sans-serif;
         font-size: 4rem;
-        color: #386938;
+        color: #386938; /* Emerald Green */
         line-height: 1;
         margin-bottom: 0.5rem;
     }
 
     .stat-label {
         font-weight: 500;
-        color: #555;
+        color: oklch(22% 0.02 145); /* Deep Ink */
         font-size: 1.1rem;
     }
 
     .stats-disclaimer {
         font-size: 0.85rem;
-        color: #777;
+        color: oklch(22% 0.02 145); /* Deep Ink */
+        opacity: 0.8; /* Slightly faded for secondary text */
         max-width: 700px;
         line-height: 1.5;
         font-style: italic;
@@ -249,17 +250,17 @@
         margin-top: 4rem;
         text-align: center;
         font-size: 0.85rem;
-        border-top: 1px solid #4DA699;
+        border-top: 1px solid oklch(60% 0.09 195); /* Muted Teal */
         padding-top: 2rem;
     }
 
     .official-links a {
-        color: #386938;
+        color: #386938; /* Emerald Green */
         font-weight: bold;
         text-decoration: none;
     }
 
     .official-links a:hover {
-        color: #CCFF00;
+        color: oklch(65% 0.16 75); /* Deep Amber */
     }
 </style>
