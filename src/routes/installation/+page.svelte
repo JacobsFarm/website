@@ -2,7 +2,7 @@
     import * as m from '$lib/paraglide/messages.js';
     import ProjectCard from '$lib/components/ProjectCard.svelte';
     
-    // Importeer de juiste afbeeldingen uit de assets map
+    // Updated image extensions to match the new assets directory
     import hardwareLogo from '$lib/assets/installation_hardware_1.jpg';
     import softwareLogo from '$lib/assets/installation_software_1.jpg';
     import optionsLogo from '$lib/assets/installation_software_options_1.jpg';
@@ -23,7 +23,7 @@
         />
         <ProjectCard 
             title={m.install_card_software_title()}
-            link="/installation/software"
+            link="/installation/download" 
             desc={m.install_card_software_desc()}
             logo={softwareLogo}
         />
@@ -42,10 +42,10 @@
 
 <style>
     :global(body) {
-        background-color: #F9FBF9;
+        background-color: oklch(98% 0.005 145); /* Off-white */
         font-family: 'Roboto', sans-serif;
         margin: 0;
-        color: #333;
+        color: oklch(22% 0.02 145); /* Deep Ink */
         overflow-x: hidden;
     }
 
@@ -59,18 +59,18 @@
     .info-section {
         text-align: center;
         background: #ffffff;
-        border: 1px solid #e0eee0;
+        border: 1px solid oklch(85% 0.01 145); /* Soft Gray */
         border-radius: 16px;
         padding: 3rem 2rem;
-        margin-bottom: 4rem; /* Ruimte tussen tekst en de kaarten */
+        margin-bottom: 4rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-        border-top: 5px solid #4DA699; /* Soft Teal accent */
+        border-top: 5px solid oklch(60% 0.09 195); /* Muted Teal accent */
     }
 
     .info-section h1 {
         font-family: 'Bebas Kai', sans-serif;
         font-size: clamp(2.5rem, 8vw, 4.5rem);
-        color: #386938;
+        color: #386938; /* Emerald Green */
         margin-bottom: 1rem;
         margin-top: 0;
         text-transform: uppercase;
@@ -79,7 +79,7 @@
 
     .info-text {
         font-size: 1.15rem;
-        color: #555;
+        color: oklch(22% 0.02 145); /* Deep Ink */
         max-width: 800px;
         margin: 0 auto;
         line-height: 1.6;
@@ -97,18 +97,19 @@
         margin-top: 4rem;
         text-align: center;
         font-size: 0.85rem;
-        border-top: 1px solid #4DA699;
+        border-top: 1px solid oklch(60% 0.09 195); /* Muted Teal */
         padding-top: 2rem;
     }
 
     .official-links a {
-        color: #386938;
+        color: #386938; /* Emerald Green */
         font-weight: bold;
         text-decoration: none;
+        transition: color 0.2s ease;
     }
 
     .official-links a:hover {
-        color: #CCFF00;
+        color: oklch(65% 0.16 75); /* Deep Amber */
     }
 
     @media (min-width: 768px) {

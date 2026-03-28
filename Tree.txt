@@ -2,345 +2,51 @@ website/
 ├── .github
     └── workflows
         └── deploy.yml
-├── .svelte-kit
-    ├── generated
-        ├── client
-            ├── nodes
-                ├── 0.js
-                ├── 1.js
-                ├── 2.js
-                ├── 3.js
-                ├── 4.js
-                ├── 5.js
-                ├── 6.js
-                ├── 7.js
-                ├── 8.js
-                └── 9.js
-            ├── app.js
-            └── matchers.js
-        ├── client-optimized
-            ├── nodes
-                ├── 0.js
-                ├── 1.js
-                ├── 2.js
-                ├── 3.js
-                ├── 4.js
-                ├── 5.js
-                ├── 6.js
-                ├── 7.js
-                ├── 8.js
-                └── 9.js
-            ├── app.js
-            └── matchers.js
-        ├── server
-            └── internal.js
-        ├── root.js
-        └── root.svelte
-    ├── output
-        ├── client
-            ├── .vite
-                └── manifest.json
-            ├── _app
-                ├── immutable
-                    ├── assets
-                        ├── 0.DW3PNJKa.css
-                        ├── 2.C-AquRVj.css
-                        ├── 4.BZG0w-Ji.css
-                        ├── 5.BuEYb2Lc.css
-                        ├── 6.BH24py2v.css
-                        ├── 8.CD2djPxf.css
-                        ├── 9.CIvssv-T.css
-                        ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
-                        ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
-                        ├── calvingcatcher_1.IhgGXNkN.jpg
-                        ├── calvingcatcher_2.GwcXaQg-.jpg
-                        ├── calvingcatcher_3.CIfPj5fQ.jpg
-                        ├── calvingcatcher_4.D5KwomiO.jpg
-                        ├── cowcatcher_1.0n65VzOv.jpg
-                        ├── cowcatcher_2.Cf2uNA8x.jpg
-                        ├── cowcatcher_3.C7pAIKVY.jpg
-                        ├── cowcatcher_4.CUrFwXcB.png
-                        ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
-                        ├── CowCatchter-logo-875x875.B8spxSUU.jpg
-                        ├── installation_hardware_1.Bvdw3oP5.jpg
-                        └── ProjectCard.DurydmLl.css
-                    ├── chunks
-                        ├── 8wy35DsP.js
-                        ├── b7nHjK4P.js
-                        ├── BBCdQy3g.js
-                        ├── BhRLpkUo.js
-                        ├── BkSG6K6R.js
-                        ├── BL8Ri964.js
-                        ├── BOe5Ppe_.js
-                        ├── Bt1wYc5q.js
-                        ├── BTpcwqzu.js
-                        ├── C9iKbrmt.js
-                        ├── Cf8WP9hA.js
-                        ├── CQcLTsXK.js
-                        ├── CSIqD-34.js
-                        ├── Cz6Uy-og.js
-                        ├── D0QuwXuc.js
-                        ├── D9TTuTHJ.js
-                        ├── nrc0tqSz.js
-                        ├── Y-NwBkjD.js
-                        └── YL-oQNds.js
-                    ├── entry
-                        ├── app.DP7umJ3x.js
-                        └── start.DYr2YmlM.js
-                    └── nodes
-                        ├── 0.C_cV035r.js
-                        ├── 1.CYPaKPr1.js
-                        ├── 2.DrD6_UKp.js
-                        ├── 3.CE5NetFT.js
-                        ├── 4.Cd7DLwAs.js
-                        ├── 5.DgoRYpvS.js
-                        ├── 6.BHz0BTEv.js
-                        ├── 7.0b8ojIXd.js
-                        ├── 8.BJJ7xCg5.js
-                        └── 9.B-R0THBp.js
-                └── version.json
-            └── robots.txt
-        ├── prerendered
-            ├── dependencies
-                └── _app
-                    └── env.js
-            └── pages
-                ├── about-us
-                    └── index.html
-                ├── installation
-                    ├── hardware
-                        └── index.html
-                    ├── options
-                        └── index.html
-                    └── index.html
-                ├── projects
-                    ├── ai-detector
-                        └── index.html
-                    ├── calvingcatcher
-                        └── index.html
-                    └── cowcatcher
-                        └── index.html
-                └── index.html
-        └── server
-            ├── .vite
-                └── manifest.json
-            ├── _app
-                └── immutable
-                    └── assets
-                        ├── _layout.BII9NqJW.css
-                        ├── _page.BH24py2v.css
-                        ├── _page.BuEYb2Lc.css
-                        ├── _page.BZG0w-Ji.css
-                        ├── _page.CClrQItA.css
-                        ├── _page.CD2djPxf.css
-                        ├── _page.CIvssv-T.css
-                        ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
-                        ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
-                        ├── calvingcatcher_1.IhgGXNkN.jpg
-                        ├── calvingcatcher_2.GwcXaQg-.jpg
-                        ├── calvingcatcher_3.CIfPj5fQ.jpg
-                        ├── calvingcatcher_4.D5KwomiO.jpg
-                        ├── cowcatcher_1.0n65VzOv.jpg
-                        ├── cowcatcher_2.Cf2uNA8x.jpg
-                        ├── cowcatcher_3.C7pAIKVY.jpg
-                        ├── cowcatcher_4.CUrFwXcB.png
-                        ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
-                        ├── CowCatchter-logo-875x875.B8spxSUU.jpg
-                        ├── installation_hardware_1.Bvdw3oP5.jpg
-                        └── ProjectCard.Gj0SzJig.css
-            ├── chunks
-                ├── attributes.js
-                ├── environment.js
-                ├── escaping.js
-                ├── exports.js
-                ├── false.js
-                ├── index.js
-                ├── internal.js
-                ├── ProjectCard.js
-                ├── root.js
-                ├── runtime.js
-                ├── server.js
-                ├── shared.js
-                ├── url.js
-                └── utils.js
-            ├── entries
-                ├── fallbacks
-                    └── error.svelte.js
-                ├── pages
-                    ├── about-us
-                        └── _page.svelte.js
-                    ├── installation
-                        ├── hardware
-                            └── _page.svelte.js
-                        ├── options
-                            └── _page.svelte.js
-                        └── _page.svelte.js
-                    ├── projects
-                        ├── ai-detector
-                            └── _page.svelte.js
-                        ├── calvingcatcher
-                            └── _page.svelte.js
-                        └── cowcatcher
-                            └── _page.svelte.js
-                    ├── _layout.svelte.js
-                    ├── _layout.ts.js
-                    └── _page.svelte.js
-                ├── hooks.server.js
-                └── hooks.universal.js
-            ├── nodes
-                ├── 0.js
-                ├── 1.js
-                ├── 2.js
-                ├── 3.js
-                ├── 4.js
-                ├── 5.js
-                ├── 6.js
-                ├── 7.js
-                ├── 8.js
-                └── 9.js
-            ├── stylesheets
-            ├── index.js
-            ├── internal.js
-            ├── manifest-full.js
-            ├── manifest.js
-            └── remote-entry.js
-    ├── types
-        ├── src
-            └── routes
-                ├── about-us
-                    └── $types.d.ts
-                ├── installation
-                    ├── hardware
-                        └── $types.d.ts
-                    ├── options
-                        └── $types.d.ts
-                    └── $types.d.ts
-                ├── projects
-                    ├── ai-detector
-                        └── $types.d.ts
-                    ├── calvingcatcher
-                        └── $types.d.ts
-                    └── cowcatcher
-                        └── $types.d.ts
-                └── $types.d.ts
-        └── route_meta_data.json
-    ├── ambient.d.ts
-    ├── non-ambient.d.ts
-    └── tsconfig.json
-├── build
-    ├── _app
-        ├── immutable
-            ├── assets
-                ├── 0.DW3PNJKa.css
-                ├── 2.C-AquRVj.css
-                ├── 4.BZG0w-Ji.css
-                ├── 5.BuEYb2Lc.css
-                ├── 6.BH24py2v.css
-                ├── 8.CD2djPxf.css
-                ├── 9.CIvssv-T.css
-                ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
-                ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
-                ├── calvingcatcher_1.IhgGXNkN.jpg
-                ├── calvingcatcher_2.GwcXaQg-.jpg
-                ├── calvingcatcher_3.CIfPj5fQ.jpg
-                ├── calvingcatcher_4.D5KwomiO.jpg
-                ├── cowcatcher_1.0n65VzOv.jpg
-                ├── cowcatcher_2.Cf2uNA8x.jpg
-                ├── cowcatcher_3.C7pAIKVY.jpg
-                ├── cowcatcher_4.CUrFwXcB.png
-                ├── cowcatcher_demo_qr_code.BqzuI_Xa.png
-                ├── CowCatchter-logo-875x875.B8spxSUU.jpg
-                ├── installation_hardware_1.Bvdw3oP5.jpg
-                └── ProjectCard.DurydmLl.css
-            ├── chunks
-                ├── 8wy35DsP.js
-                ├── b7nHjK4P.js
-                ├── BBCdQy3g.js
-                ├── BhRLpkUo.js
-                ├── BkSG6K6R.js
-                ├── BL8Ri964.js
-                ├── BOe5Ppe_.js
-                ├── Bt1wYc5q.js
-                ├── BTpcwqzu.js
-                ├── C9iKbrmt.js
-                ├── Cf8WP9hA.js
-                ├── CQcLTsXK.js
-                ├── CSIqD-34.js
-                ├── Cz6Uy-og.js
-                ├── D0QuwXuc.js
-                ├── D9TTuTHJ.js
-                ├── nrc0tqSz.js
-                ├── Y-NwBkjD.js
-                └── YL-oQNds.js
-            ├── entry
-                ├── app.DP7umJ3x.js
-                └── start.DYr2YmlM.js
-            └── nodes
-                ├── 0.C_cV035r.js
-                ├── 1.CYPaKPr1.js
-                ├── 2.DrD6_UKp.js
-                ├── 3.CE5NetFT.js
-                ├── 4.Cd7DLwAs.js
-                ├── 5.DgoRYpvS.js
-                ├── 6.BHz0BTEv.js
-                ├── 7.0b8ojIXd.js
-                ├── 8.BJJ7xCg5.js
-                └── 9.B-R0THBp.js
-        ├── env.js
-        └── version.json
-    ├── about-us
-        └── index.html
-    ├── installation
-        ├── hardware
-            └── index.html
-        ├── options
-            └── index.html
-        └── index.html
-    ├── projects
-        ├── ai-detector
-            └── index.html
-        ├── calvingcatcher
-            └── index.html
-        └── cowcatcher
-            └── index.html
-    ├── 404.html
-    ├── index.html
-    └── robots.txt
 ├── messages
     ├── en
+        ├── about-us.json
         ├── ai_detector.json
         ├── calvingcatcher.json
         ├── common.json
         ├── cowcatcher.json
+        ├── docker.json
+        ├── download.json
         ├── footer.json
         ├── front_page.json
         ├── hardware.json
         ├── installation.json
+        ├── os.json
         ├── software.json
-        └── software_options.json
-    └── nl
+        ├── software_options.json
+        └── windows.json
+    ├── nl
+        ├── about-us.json
         ├── ai_detector.json
         ├── calvingcatcher.json
         ├── common.json
         ├── cowcatcher.json
+        ├── docker.json
+        ├── download.json
         ├── footer.json
         ├── front_page.json
         ├── hardware.json
         ├── installation.json
+        ├── os.json
         ├── software.json
-        └── software_options.json
+        ├── software_options.json
+        └── windows.json
+    ├── en.json
+    └── nl.json
 ├── project.inlang
-    ├── cache
-        └── plugins
-            ├── 2sy648wh9sugi
-            └── ygx0uiahq6uw
-    ├── .meta.json
-    ├── README.md
     └── settings.json
 ├── src
     ├── lib
         ├── assets
             ├── Ai-detector-logo-800x800.jpg
+            ├── ai_detector_home_page.png
+            ├── ai_detector_live_view.png
+            ├── ai_detector_pictured_detection.jpg
+            ├── ai_detector_video_detection.gif
             ├── calvingcatcher-logo-875x-875.jpg
             ├── calvingcatcher_1.jpg
             ├── calvingcatcher_2.jpg
@@ -352,6 +58,9 @@ website/
             ├── cowcatcher_4.png
             ├── cowcatcher_demo_qr_code.png
             ├── CowCatchter-logo-875x875.jpg
+            ├── download_linux_logo.jpg
+            ├── download_macOS_logo.jpg
+            ├── download_windows_logo.jpg
             ├── favicon.svg
             ├── hf-logo-pirate.svg
             ├── installation_hardware_1.jpg
@@ -363,22 +72,19 @@ website/
             ├── LanguageModal.svelte
             ├── Navbar.svelte
             └── ProjectCard.svelte
-        ├── paraglide
-            ├── messages
-                ├── _index.js
-                ├── en.js
-                └── nl.js
-            ├── .prettierignore
-            ├── messages.js
-            ├── README.md
-            ├── registry.js
-            ├── runtime.js
-            └── server.js
         └── index.ts
     ├── routes
         ├── about-us
             └── +page.svelte
         ├── installation
+            ├── download
+                ├── docker
+                    └── +page.svelte
+                ├── macOS
+                    └── +page.svelte
+                ├── Windows
+                    └── +page.svelte
+                └── +page.svelte
             ├── hardware
                 └── +page.svelte
             ├── options
@@ -386,7 +92,8 @@ website/
             └── +page.svelte
         ├── projects
             ├── ai-detector
-                └── +page.svelte
+                ├── +page.svelte
+                └── ai-detector.txt
             ├── calvingcatcher
                 └── +page.svelte
             └── cowcatcher

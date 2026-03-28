@@ -1,0 +1,15 @@
+{
+  "windows_title": "Windows Installatie",
+  "windows_intro": "Optie 1 — Windows Executable (aanbevolen voor de meeste gebruikers). Start de detector snel en eenvoudig op je Windows systeem.",
+  "windows_download_heading": "👉 Download via GitHub Releases",
+  "windows_download_desc": "Kies het juiste bestand voor jouw hardware in de nieuwste release.",
+  "windows_btn_releases": "Ga naar Releases",
+  "windows_table_file": "Bestand",
+  "windows_table_hardware": "Hardwarevereisten",
+  "windows_hw_win11_any": "Windows 11 met een willekeurige GPU",
+  "windows_hw_win10_rtx3000": "Windows 10 met NVIDIA RTX 3000 serie of nieuwer",
+  "windows_hw_win10_rtx2000": "Windows 10 met NVIDIA RTX 2000 serie of ouder",
+  "windows_note_title": "Weet je niet zeker welke je moet kiezen?",
+  "windows_note_text": "Start met de <strong>winml</strong> versie op Windows. Gebruik een cuda build alléén als je zeker weet dat je NVIDIA setup overeenkomt met die specifieke CUDA versie.",
+  "windows_setup_step1": "Maak een map aan, bijvoorbeeld <code>C:\\aidetector</code>, en verplaats het gedownloade <code>.exe</code> bestand naar deze map."
+}

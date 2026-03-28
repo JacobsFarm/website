@@ -1,0 +1,41 @@
+All vision models are powered by the open-source AI Detector software, developed by E. Schouten.
+
+the AI Detector
+
+AI Detector is an advanced, AI-powered detection system designed to monitor video streams in real time and alert you whenever something relevant is detected. It includes an intelligent double-check mechanism to help reduce false positives and improve reliability.
+
+What it does
+
+At Cowcatcher AI, we train and develop the vision models. The AI Detector is the software layer that applies these models in practice—using their learned knowledge to perform accurate, real-world detections.
+The detector could also be used outside the Cowcatcher provides models and used for your own projects for example, alerting for people, cars, tractors pulling up etc. 
+
+The system provides the following capabilities:
+
+Continuously monitors one or multiple cameras, as well as video files.
+Detects objects using a YOLO model, which is fast and runs locally without requiring cloud processing.
+Optionally verifies detections by asking an AI a custom question (for example: “Is there really a person?”). This step helps filter out false alarms but can be skipped if not needed.
+Sends alerts through Telegram, saves images or video recordings to disk, or triggers external systems via webhooks.
+Components
+
+Detector
+The core service of the system. It handles object detection and optional AI-based verification. The entire system is configurable through a single config.json file, making it flexible and easy to manage.
+
+Webb-app
+A web-based interface currently under development. It will allow users to monitor live video streams, review past detections, and manage system activity through a user-friendly dashboard. The interface will also make it easy to configure settings and connect your cameras.
+
+Source code is https://github.com/ESchouten/ai-detector/tree/main
+
+latest release for download https://github.com/ESchouten/ai-detector/releases/tag/v0.6.3
+
+I want to one software program for both calving as cowcatcher. 
+At Cowcatcher AI, we train and develop the vision models. The AI Detector is the software layer that applies these models in practice—using their learned knowledge to perform accurate, real-world detections.
+The detector could also be used outside the Cowcatcher provides models and used for your own projects for example, alerting for people, cars, tractors pulling up etc. 
+
+I want a double section with cards like 100% local processing
+
+image and video's use the assets the gif and the image for both cards
+
+You can chose wether you like to receive a image of the detection, this could be the full iamge, a zoomed in picture around the detection for example for calving, or the zoomed and full images , or like multiple, the ai detector automatically choses the best captured moment to send to you make easier the best possible decision.
+
+Video
+The detector can send a short video of the event. Using a special technique, it records a smooth video, regardless of your computer’s performance. This is useful for estrus detection, as it helps determine whether the cow is standing still or actively mounting (in heat). 

@@ -1,0 +1,15 @@
+{
+  "windows_title": "Windows Installation",
+  "windows_intro": "Option 1 — Windows Executable (recommended for most users). Start the detector quickly and easily on your Windows system.",
+  "windows_download_heading": "👉 Download via GitHub Releases",
+  "windows_download_desc": "Choose the correct file for your hardware in the latest release.",
+  "windows_btn_releases": "Go to Releases",
+  "windows_table_file": "File",
+  "windows_table_hardware": "Hardware Requirements",
+  "windows_hw_win11_any": "Windows 11 with any GPU",
+  "windows_hw_win10_rtx3000": "Windows 10 with NVIDIA RTX 3000 series or newer",
+  "windows_hw_win10_rtx2000": "Windows 10 with NVIDIA RTX 2000 series or older",
+  "windows_note_title": "Not sure which one to choose?",
+  "windows_note_text": "Start with the <strong>winml</strong> version on Windows. Only use a cuda build if you are certain that your NVIDIA setup matches that specific CUDA version.",
+  "windows_setup_step1": "Create a folder, for example <code>C:\\aidetector</code>, and move the downloaded <code>.exe</code> file to this folder."
+}

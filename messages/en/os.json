@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "macOS Installation",
+  "os_macos_intro": "Easily start the detector on your Apple device.",
+  "os_macos_download_heading": "👉 Download via GitHub Releases",
+  "os_macos_download_desc": "Download the macOS file in the latest release.",
+  "os_btn_releases": "Go to Releases",
+  "os_table_file": "File",
+  "os_table_hardware": "Hardware Requirements",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Create a folder, for example on your desktop or <code>~/aidetector</code>, and move the downloaded file here.",
+  "os_setup_title": "Setup Instructions",
+  "os_setup_step2": "Create a <code>config.json</code> file in the same folder (see Configuration documentation).",
+  "os_macos_setup_step3": "Double-click the file or open it via the terminal — a terminal window will open with the detection logs.",
+  "os_setup_step3": "Double-click the <code>.exe</code> — a terminal window will open with the detection logs.",
+  "os_setup_step4": "Upon first startup (without an existing <code>config.json</code>), a template is generated automatically. Fill this in and restart the application.",
+  "os_tip_title": "Tip",
+  "os_tip_text": "Keep the terminal window open as long as the detector is running. If it closes immediately, there is an error in your <code>config.json</code> — check carefully that you haven't forgotten any quotation marks (\") or commas (,)."
+}

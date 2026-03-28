@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "macOS Installatie",
+  "os_macos_intro": "Start de detector eenvoudig op je Apple apparaat.",
+  "os_macos_download_heading": "👉 Download via GitHub Releases",
+  "os_macos_download_desc": "Download het macOS bestand in de nieuwste release.",
+  "os_btn_releases": "Ga naar Releases",
+  "os_table_file": "Bestand",
+  "os_table_hardware": "Hardwarevereisten",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Maak een map aan, bijvoorbeeld op je bureaublad of <code>~/aidetector</code>, en verplaats het gedownloade bestand hiernaartoe.",
+  "os_setup_title": "Setup Instructies",
+  "os_setup_step2": "Maak in diezelfde map een <code>config.json</code> bestand aan (zie Configuratie documentatie).",
+  "os_macos_setup_step3": "Dubbelklik op het bestand of open het via de terminal — een terminalvenster opent zich met de detectie logboeken.",
+  "os_setup_step3": "Dubbelklik op de <code>.exe</code> — een terminalvenster opent zich met de detectie logboeken.",
+  "os_setup_step4": "Bij de eerste keer opstarten (zonder bestaande <code>config.json</code>) wordt er automatisch een template gegenereerd. Vul deze in en start de applicatie opnieuw.",
+  "os_tip_title": "Tip",
+  "os_tip_text": "Houd het terminalvenster open zolang de detector draait. Als het direct weer sluit, zit er een fout in je <code>config.json</code> — controleer goed of je geen aanhalingstekens (\") of komma's (,) bent vergeten."
+}

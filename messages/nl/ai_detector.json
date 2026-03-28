@@ -1,6 +1,50 @@
-
 {
-  "ai_detector_desc": "Browser-based AI detection tool.",
+  "ai_detector_desc": "Browsergebaseerde AI-detectietool.",
   "ai_detector_title": "AI Detector WebApp",
-  "ai_detector_text": "Information about the browser application."
+  "ai_detector_text": "Informatie over de browserapplicatie.",
+  
+  "ai_detector_hero_title": "AI Detector",
+  "ai_detector_hero_subtitle": "Eén softwareprogramma voor zowel Calving als Cowcatcher. Monitor je videostreams, leg gebeurtenissen vast en ontvang direct meldingen.",
+  "ai_detector_btn_download": "Download app",
+  "ai_detector_btn_github": "Bekijk broncode",
+
+  "ai_detector_about_title": "Eén detector, eindeloze mogelijkheden",
+  "ai_detector_about_p1": "Bij Cowcatcher AI trainen en ontwikkelen we de vision-modellen. De AI Detector is de softwarelaag die deze modellen in de praktijk toepast—met hun aangeleerde kennis voor nauwkeurige detecties in de echte wereld.",
+  "ai_detector_about_p2": "De detector kan ook buiten de door Cowcatcher geleverde modellen worden gebruikt en ingezet worden voor je eigen projecten—bijvoorbeeld voor meldingen van mensen, auto’s, tractoren die aankomen, enzovoort.",
+
+  "ai_detector_media_title": "Slim vastleggen & meldingen",
+  
+  "ai_detector_image_title": "Beelddetectie",
+  "ai_detector_image_desc": "Je kunt kiezen hoe je afbeeldingen van detecties wilt ontvangen. Opties zijn onder andere de volledige afbeelding, een ingezoomde weergave rond de detectie (bijvoorbeeld bij afkalven), of beide. De AI-detector selecteert automatisch het beste vastgelegde moment om naar je te sturen, zodat je een zo goed mogelijk geïnformeerde beslissing kunt nemen.",
+  
+  "ai_detector_video_title": "Videodetectie",
+  "ai_detector_video_desc": "De detector kan een korte video van de gebeurtenis versturen. Met een speciale techniek wordt een vloeiende video opgenomen, ongeacht de prestaties van je computer. Dit is handig voor bronstdetectie, omdat het helpt bepalen of de koe stil staat of actief besprongen wordt (tochtig is).",
+
+  "ai_detector_feature_local_title": "100% lokale verwerking",
+  "ai_detector_feature_local_desc": "Houd je data privé. Objectdetectie draait volledig lokaal op je hardware met razendsnelle YOLO-modellen. Geen cloud nodig voor de kernfunctionaliteit.",
+  
+  "ai_detector_feature_network_title": "Overal op je netwerk",
+  "ai_detector_feature_network_desc": "Toegang tot het intuïtieve WebApp-dashboard via je mobiele telefoon, tablet of desktop. Zolang je verbonden bent met hetzelfde Wi-Fi-netwerk als de hostcomputer, heb je volledige controle.",
+  
+  "ai_detector_feature_custom_title": "Zeer configureerbaar",
+  "ai_detector_feature_custom_desc": "Maak het helemaal naar wens. Of je nu meldingen wilt voor koeien, mensen of voertuigen, het hele systeem is eenvoudig aan te passen via één config.json-bestand.",
+
+  "ai_detector_how_title": "Hoe het werkt",
+  "ai_detector_step_1_title": "Stap 1: Snelle lokale scanning",
+  "ai_detector_step_1_desc": "De detector maakt verbinding met je RTSP-streams of videobestanden. Een snel YOLO-model scant elk frame op specifieke objecten.",
+  
+  "ai_detector_step_2_title": "Stap 2: Slimme VLM-verificatie (optioneel)",
+  "ai_detector_step_2_desc": "Om valse meldingen te filteren, kun je optioneel een Vision Language AI (zoals Gemini) een aangepaste vraag laten stellen over de beelden (bijv. 'Is er echt een persoon?').",
+  
+  "ai_detector_step_3_title": "Stap 3: Directe meldingen",
+  "ai_detector_step_3_desc": "Bevestigde detecties kunnen worden opgeslagen op schijf, naar een webhook worden gestuurd of direct naar je Telegram-chat worden verzonden, inclusief afbeeldingen en videoclips.",
+
+  "ai_detector_install_title": "Eenvoudige installatie",
+  "ai_detector_install_desc": "Aan de slag gaan kost minuten, geen uren. Kies de setup die bij jouw omgeving past.",
+  
+  "ai_detector_install_win_title": "Windows-uitvoerbaar bestand",
+  "ai_detector_install_win_desc": "De aanbevolen aanpak. Download simpelweg de .exe voor jouw hardware, plaats deze in een map, dubbelklik en vul het gegenereerde config.json-bestand in.",
+  
+  "ai_detector_install_docker_title": "Docker-container",
+  "ai_detector_install_docker_desc": "Perfect voor edge-computers, Linux of auto-restart setups. Gebruik het meegeleverde docker-compose-bestand om de detector en webapp direct te starten."
 }

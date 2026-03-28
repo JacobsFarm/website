@@ -62,6 +62,28 @@
         />
     </section>
 
+    <section class="test-models-section">
+        <div class="test-models-content">
+            <h2>{m.front_page_test_models_title()}</h2>
+            <p>{m.front_page_test_models_subtitle()}</p>
+            
+            <div class="demo-buttons">
+                <a href="https://huggingface.co/spaces/CowcatcherAI/CowCatcherAI" target="_blank" rel="noopener noreferrer" class="demo-btn primary-btn">
+                    {m.front_page_test_cowcatcher_btn()}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
+                    </svg>
+                </a>
+                <a href="https://huggingface.co/spaces/CowcatcherAI/CalvingcatcherAI" target="_blank" rel="noopener noreferrer" class="demo-btn secondary-btn">
+                    {m.front_page_test_calvingcatcher_btn()}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section class="stats-section" bind:this={statsRef}>
         <h2>{m.front_page_stats_title()}</h2>
         <p class="stats-subtitle">{m.front_page_stats_subtitle()}</p>
@@ -170,6 +192,85 @@
             border-color: oklch(65% 0.16 75); /* Deep Amber */
             transform: translateY(-10px);
         }
+    }
+
+    /* --- Test Models Section Styles --- */
+    .test-models-section {
+        margin-top: 5rem;
+        background: #ffffff;
+        border: 1px solid oklch(85% 0.01 145); /* Soft Gray */
+        border-radius: 20px;
+        padding: 4rem 2rem;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+        border-top: 5px solid oklch(65% 0.16 75); /* Deep Amber accent */
+    }
+
+    .test-models-content h2 {
+        font-family: 'Bebas Kai', sans-serif;
+        font-size: clamp(2rem, 6vw, 3.5rem);
+        color: #386938; /* Emerald Green */
+        margin-bottom: 1rem;
+    }
+
+    .test-models-content p {
+        font-size: clamp(1rem, 3vw, 1.15rem);
+        color: oklch(22% 0.02 145); /* Deep Ink */
+        max-width: 700px;
+        margin: 0 auto 2.5rem auto;
+        line-height: 1.6;
+    }
+
+    .demo-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .demo-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.1rem 2.5rem;
+        border-radius: 50px;
+        font-family: 'Bebas Kai', sans-serif;
+        font-size: 1.3rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .demo-btn.primary-btn {
+        background-color: #386938; /* Emerald Green */
+        color: #ffffff;
+        border: 2px solid #386938;
+    }
+
+    .demo-btn.primary-btn:hover {
+        background-color: oklch(65% 0.16 75); /* Deep Amber */
+        border-color: oklch(65% 0.16 75);
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .demo-btn.secondary-btn {
+        background-color: transparent;
+        color: #386938; /* Emerald Green */
+        border: 2px solid #386938;
+    }
+
+    .demo-btn.secondary-btn:hover {
+        background-color: oklch(60% 0.09 195); /* Muted Teal */
+        color: #ffffff;
+        border-color: oklch(60% 0.09 195);
+        transform: translateY(-4px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    .demo-btn svg {
+        fill: currentColor;
     }
 
     /* --- Stats Section Styles --- */
