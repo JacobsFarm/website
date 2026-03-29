@@ -1,6 +1,7 @@
 <script>
     import * as m from '$lib/paraglide/messages.js';
     import ProjectCard from '$lib/components/ProjectCard.svelte';
+    import FeaturedIn from '$lib/components/FeaturedIn.svelte';
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
     import { onMount } from 'svelte';
@@ -83,6 +84,8 @@
             </div>
         </div>
     </section>
+
+    <FeaturedIn />
 
     <section class="stats-section" bind:this={statsRef}>
         <h2>{m.front_page_stats_title()}</h2>

@@ -238,6 +238,7 @@
   "front_page_stats_detections": "Detections",
   "front_page_stats_countries": "Countries",
   "front_page_stats_disclaimer": "*We don't actually know exactly how many farms use the software since it's all locally run. This number only features the farms that actively contacted the project.",
+  "front_page_featured_in_title": "Featured In",
   "hardware_title": "Hardware Installation",
   "hardware_intro": "For CowCatcherAI, you need two main hardware components: security cameras and a computer to process the images using AI.",
   "hardware_cameras_title": "1. The Cameras",

@@ -238,6 +238,7 @@
   "front_page_stats_detections": "Detecties",
   "front_page_stats_countries": "Landen",
   "front_page_stats_disclaimer": "*We weten eigenlijk niet precies hoeveel boerderijen de software gebruiken, aangezien deze volledig lokaal draait. Dit aantal bevat alleen de boerderijen die actief contact hebben opgenomen met het project.",
+  "front_page_featured_in_title": "Uitgelicht In",
   "hardware_title": "Hardware Installatie",
   "hardware_intro": "Voor CowCatcherAI heb je twee belangrijke hardwarecomponenten nodig: beveiligingscamera's en een computer om de beelden te verwerken met AI.",
   "hardware_cameras_title": "1. De Camera's",

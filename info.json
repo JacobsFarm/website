@@ -65,8 +65,11 @@
       }
     }
   },
-  "technical_setup": {
+"technical_setup": {
     "framework": "SvelteKit",
+    "coding_standards": {
+      "comments_and_citations": "Do not include citations and comments in the code."
+    },
     "responsiveness": [
       "Optimized for phone in vertical mode",
       "Optimized for desktop"

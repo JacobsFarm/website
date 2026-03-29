@@ -144,7 +144,7 @@
 
     .page-wrapper { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem 4rem; }
 
-    h1, h2, h3 { 
+    h1, h2 { 
         font-family: var(--font-heading); 
         color: var(--primary);
         text-transform: uppercase; 
@@ -200,14 +200,14 @@
         font-weight: bold; 
         text-align: center; 
         margin: 2.5rem 0; 
-        font-size: 1.25rem; 
+        font-size: 1.25re; 
         box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     }
     
     ul { list-style-type: square; padding-left: 1.5rem; margin: 0; }
     li { margin-bottom: 0.75rem; color: var(--text-main); }
     
-    .img-fluid { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); display: block; }
+    :global(.img-fluid) { width: 100%; height: auto; border-radius: 12px; box-shadow: 0 6px 12px rgba(0,0,0,0.1); display: block; }
     
     @media (max-width: 768px) {
         .hero h1 { font-size: 2.5rem; }
