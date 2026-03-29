@@ -1,22 +1,23 @@
 <script>
     import * as m from '$lib/paraglide/messages.js';
 
+    // Componenten importeren
+    import MediaCardPicture from '$lib/components/MediaCardPicture.svelte';
+    import MediaCardGif from '$lib/components/MediaCardGif.svelte';
+
     // Core Assets
     import logo from '$lib/assets/Ai-detector-logo-800x800.jpg';
     import liveViewImg from '$lib/assets/ai_detector_live_view.png';
     import dashboardImg from '$lib/assets/ai_detector_home_page.png';
 
     // Media assets
-    import imageDetectionImg from '$lib/assets/ai_detector_pictured_detection.jpg';
-    
-    // GIF logica
+    import imageDetectionImg1 from '$lib/assets/ai_detector_pictured_detection.jpg';
+    import imageDetectionImg2 from '$lib/assets/ai_detector_pictured_detection-2-896x512.jpg'; 
+    import imageDetectionImg3 from '$lib/assets/ai_detector_pictured_detection-3-896x512.jpg';
+    import imageDetectionImg4 from '$lib/assets/ai_detector_pictured_detection-4-896x512.jpg';
+    import imageDetectionImg5 from '$lib/assets/ai_detector_pictured_detection-5-896x512.jpg';
     import originalGif from '$lib/assets/ai_detector_video_detection.gif';
-    let videoDetectionGif = originalGif;
-
-    // Herlaadt de GIF zodat deze opnieuw start
-    function restartGif() {
-        videoDetectionGif = `${originalGif}?t=${new Date().getTime()}`;
-    }
+    import originalGif2 from '$lib/assets/ai_detector_video_detection-2-896x512.gif';
 </script>
 
 <main class="ai-detector-wrapper">
@@ -43,36 +44,20 @@
     <section class="media-section">
         <h2 class="section-title">{m.ai_detector_media_title()}</h2>
         <div class="media-grid">
-            <div class="media-card">
-                <div class="media-text">
-                    <h3>{m.ai_detector_image_title()}</h3>
-                    <p>{m.ai_detector_image_desc()}</p>
-                </div>
-                <div class="media-visual">
-                    <img src={imageDetectionImg} alt="Detection output example" class="media-img" />
-                </div>
-            </div>
+            <MediaCardPicture 
+                title={m.ai_detector_image_title()}
+                desc={m.ai_detector_image_desc()}
+                images={[imageDetectionImg1, imageDetectionImg2, imageDetectionImg3, imageDetectionImg4, imageDetectionImg5]} // ARRAY MET TWEE AFBEELDINGEN DOORGETGEVEN
+                altText="Detection output example sequence"
+            />
 
-            <div class="media-card reverse">
-                <div class="media-text">
-                    <h3>{m.ai_detector_video_title()}</h3>
-                    <p>{m.ai_detector_video_desc()}</p>
-                </div>
-                <div class="media-visual">
-                    <button 
-                        class="gif-button" 
-                        on:mouseenter={restartGif}
-                        on:click={restartGif}
-                        aria-label="Restart detection animation"
-                    >
-                        <img 
-                            src={videoDetectionGif} 
-                            alt="Animated detection sequence" 
-                            class="media-img interactive-gif" 
-                        />
-                    </button>
-                </div>
-            </div>
+            <MediaCardGif
+                title={m.ai_detector_video_title()}
+                desc={m.ai_detector_video_desc()}
+                gifs={[originalGif, originalGif2]} 
+                altText="Animated detection sequence"
+                reverse={true} 
+            />
         </div>
     </section>
 
@@ -258,65 +243,6 @@
         gap: 40px;
     }
 
-    .media-card {
-        display: flex;
-        align-items: center;
-        background: var(--card-bg);
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .media-card.reverse {
-        flex-direction: row-reverse;
-    }
-
-    .media-text {
-        flex: 1;
-        padding: 40px;
-    }
-
-    .media-text h3 {
-        font-size: 1.8rem;
-        color: var(--primary);
-        margin-top: 0;
-        margin-bottom: 15px;
-    }
-
-    .media-visual {
-        flex: 1;
-        display: flex;
-        width: 100%;
-    }
-
-    /* GIF Button reset styles */
-    .gif-button {
-        background: none;
-        border: none;
-        padding: 0;
-        margin: 0;
-        width: 100%;
-        display: flex;
-        cursor: pointer;
-    }
-
-    .media-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        min-height: 300px;
-        display: block;
-    }
-
-    /* Interactieve GIF CSS */
-    .interactive-gif {
-        transition: opacity 0.2s ease;
-    }
-
-    .gif-button:active .interactive-gif {
-        opacity: 0.8;
-    }
-
     /* Features Grid */
     .features, .install-options {
         display: grid;
@@ -380,10 +306,11 @@
 
     /* Responsive adjustments */
     @media (max-width: 768px) {
-        .hero h1 { font-size: 2.5rem; }
-        .cta-buttons { flex-direction: column; }
-        .media-card, .media-card.reverse { flex-direction: column; }
-        .media-visual { width: 100%; }
-        .media-text { padding: 25px; }
+        .hero h1 { 
+            font-size: 2.5rem;
+        }
+        .cta-buttons { 
+            flex-direction: column;
+        }
     }
 </style>
