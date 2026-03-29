@@ -53,7 +53,7 @@ website/
                     ├── assets
                         ├── 0.DW3PNJKa.css
                         ├── 10.BH24py2v.css
-                        ├── 11.EwCgHwhf.css
+                        ├── 11.BWMW1ZYf.css
                         ├── 12.CD2djPxf.css
                         ├── 13.CIvssv-T.css
                         ├── 2.BFNIgh3l.css
@@ -67,7 +67,10 @@ website/
                         ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
                         ├── ai_detector_home_page.DXlO5WQq.png
                         ├── ai_detector_live_view.BDNzpeTm.png
+                        ├── ai_detector_pictured_detection-2-896x512.BvQCSTa6.jpg
+                        ├── ai_detector_pictured_detection-3-896x512.BO-Oh-1E.jpg
                         ├── ai_detector_pictured_detection.DBMDESri.jpg
+                        ├── ai_detector_video_detection-2-896x512.DjYASp_K.gif
                         ├── ai_detector_video_detection.CuJpDTni.gif
                         ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
                         ├── calvingcatcher_1.IhgGXNkN.jpg
@@ -87,49 +90,50 @@ website/
                         ├── installation_software_1.DOEgtfYr.jpg
                         └── ProjectCard.DurydmLl.css
                     ├── chunks
-                        ├── 3tbdz8cR.js
-                        ├── B6B6G9Ac.js
-                        ├── B72QQf0j.js
+                        ├── B7YNzOgr.js
                         ├── BBCdQy3g.js
                         ├── BBosyOxa.js
-                        ├── BPcq-fTi.js
                         ├── Bt1wYc5q.js
+                        ├── BUNJDwft.js
+                        ├── BUslys7A.js
+                        ├── Bz259QJS.js
+                        ├── Cb6-N5xk.js
+                        ├── CdS6916l.js
+                        ├── CeehKLBn.js
                         ├── Cf8WP9hA.js
-                        ├── D-AkknO6.js
-                        ├── DBFxJEmq.js
-                        ├── DNTCNRyz.js
+                        ├── CG2daqQZ.js
+                        ├── CyRHWnFf.js
+                        ├── Cz1trfqq.js
+                        ├── DLuYY7UQ.js
+                        ├── DN6-BukV.js
+                        ├── DsUq1rYu.js
                         ├── DtOGB5Sz.js
-                        ├── DWwtIvgk.js
-                        ├── F0EoTf95.js
-                        ├── IAA5FDSV.js
-                        ├── JhBMXgJw.js
-                        ├── kv-2pAAi.js
-                        ├── Lm16bAoc.js
+                        ├── DWbxj4y7.js
                         ├── nrc0tqSz.js
-                        ├── PxttIThA.js
+                        ├── qnsZQxyd.js
                         ├── S7OJjK42.js
-                        ├── TwH-K4EW.js
+                        ├── TH7_d63s.js
                         ├── wZFQWbrQ.js
                         ├── xA65PzHQ.js
                         └── YL-oQNds.js
                     ├── entry
-                        ├── app.CWquTD11.js
-                        └── start.4eFdwPm1.js
+                        ├── app.C_fSrhDl.js
+                        └── start.By-Q9dVT.js
                     └── nodes
-                        ├── 0.CMtqhGfi.js
-                        ├── 1.DlJDOkEY.js
-                        ├── 10.DNVL_NNf.js
-                        ├── 11.Ez7O39Ma.js
-                        ├── 12.BSr8NKsy.js
-                        ├── 13.Djd7iD2U.js
-                        ├── 2.CUWM6Z2I.js
-                        ├── 3.TCiUZzQG.js
-                        ├── 4.BKVK_wh1.js
-                        ├── 5.lEUYlTGF.js
-                        ├── 6.BpZRdqEg.js
-                        ├── 7.B7whfzTn.js
-                        ├── 8.CV5I5v4E.js
-                        └── 9.Q4P4dpFw.js
+                        ├── 0.CsEMRoE6.js
+                        ├── 1.CwPrUt-F.js
+                        ├── 10.DNqCiFDq.js
+                        ├── 11.Ndd_CNk6.js
+                        ├── 12.D4-rV6ra.js
+                        ├── 13.AoCP3m0N.js
+                        ├── 2.4Iu3mbcg.js
+                        ├── 3.DGTn7sVo.js
+                        ├── 4.BQkdkL35.js
+                        ├── 5.BmyNBHc7.js
+                        ├── 6.BcF-CDkQ.js
+                        ├── 7.CmnYzvDl.js
+                        ├── 8.BIQ25fRL.js
+                        └── 9.LDh6WYQ9.js
                 └── version.json
             └── robots.txt
         ├── prerendered
@@ -174,16 +178,19 @@ website/
                         ├── _page.BuEYb2Lc.css
                         ├── _page.CD2djPxf.css
                         ├── _page.CIvssv-T.css
+                        ├── _page.DGWoUGPi.css
                         ├── _page.DIHpRu-h.css
                         ├── _page.DQHIuY5I.css
                         ├── _page.DXQ2miS7.css
-                        ├── _page.EwCgHwhf.css
                         ├── _page.JYvm25Mg.css
                         ├── _page.qIaylx2L.css
                         ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
                         ├── ai_detector_home_page.DXlO5WQq.png
                         ├── ai_detector_live_view.BDNzpeTm.png
+                        ├── ai_detector_pictured_detection-2-896x512.BvQCSTa6.jpg
+                        ├── ai_detector_pictured_detection-3-896x512.BO-Oh-1E.jpg
                         ├── ai_detector_pictured_detection.DBMDESri.jpg
+                        ├── ai_detector_video_detection-2-896x512.DjYASp_K.gif
                         ├── ai_detector_video_detection.CuJpDTni.gif
                         ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
                         ├── calvingcatcher_1.IhgGXNkN.jpg
@@ -307,7 +314,7 @@ website/
             ├── assets
                 ├── 0.DW3PNJKa.css
                 ├── 10.BH24py2v.css
-                ├── 11.EwCgHwhf.css
+                ├── 11.BWMW1ZYf.css
                 ├── 12.CD2djPxf.css
                 ├── 13.CIvssv-T.css
                 ├── 2.BFNIgh3l.css
@@ -321,7 +328,10 @@ website/
                 ├── Ai-detector-logo-800x800.B_kQMPZ5.jpg
                 ├── ai_detector_home_page.DXlO5WQq.png
                 ├── ai_detector_live_view.BDNzpeTm.png
+                ├── ai_detector_pictured_detection-2-896x512.BvQCSTa6.jpg
+                ├── ai_detector_pictured_detection-3-896x512.BO-Oh-1E.jpg
                 ├── ai_detector_pictured_detection.DBMDESri.jpg
+                ├── ai_detector_video_detection-2-896x512.DjYASp_K.gif
                 ├── ai_detector_video_detection.CuJpDTni.gif
                 ├── calvingcatcher-logo-875x-875.DxKPS2lz.jpg
                 ├── calvingcatcher_1.IhgGXNkN.jpg
@@ -341,49 +351,50 @@ website/
                 ├── installation_software_1.DOEgtfYr.jpg
                 └── ProjectCard.DurydmLl.css
             ├── chunks
-                ├── 3tbdz8cR.js
-                ├── B6B6G9Ac.js
-                ├── B72QQf0j.js
+                ├── B7YNzOgr.js
                 ├── BBCdQy3g.js
                 ├── BBosyOxa.js
-                ├── BPcq-fTi.js
                 ├── Bt1wYc5q.js
+                ├── BUNJDwft.js
+                ├── BUslys7A.js
+                ├── Bz259QJS.js
+                ├── Cb6-N5xk.js
+                ├── CdS6916l.js
+                ├── CeehKLBn.js
                 ├── Cf8WP9hA.js
-                ├── D-AkknO6.js
-                ├── DBFxJEmq.js
-                ├── DNTCNRyz.js
+                ├── CG2daqQZ.js
+                ├── CyRHWnFf.js
+                ├── Cz1trfqq.js
+                ├── DLuYY7UQ.js
+                ├── DN6-BukV.js
+                ├── DsUq1rYu.js
                 ├── DtOGB5Sz.js
-                ├── DWwtIvgk.js
-                ├── F0EoTf95.js
-                ├── IAA5FDSV.js
-                ├── JhBMXgJw.js
-                ├── kv-2pAAi.js
-                ├── Lm16bAoc.js
+                ├── DWbxj4y7.js
                 ├── nrc0tqSz.js
-                ├── PxttIThA.js
+                ├── qnsZQxyd.js
                 ├── S7OJjK42.js
-                ├── TwH-K4EW.js
+                ├── TH7_d63s.js
                 ├── wZFQWbrQ.js
                 ├── xA65PzHQ.js
                 └── YL-oQNds.js
             ├── entry
-                ├── app.CWquTD11.js
-                └── start.4eFdwPm1.js
+                ├── app.C_fSrhDl.js
+                └── start.By-Q9dVT.js
             └── nodes
-                ├── 0.CMtqhGfi.js
-                ├── 1.DlJDOkEY.js
-                ├── 10.DNVL_NNf.js
-                ├── 11.Ez7O39Ma.js
-                ├── 12.BSr8NKsy.js
-                ├── 13.Djd7iD2U.js
-                ├── 2.CUWM6Z2I.js
-                ├── 3.TCiUZzQG.js
-                ├── 4.BKVK_wh1.js
-                ├── 5.lEUYlTGF.js
-                ├── 6.BpZRdqEg.js
-                ├── 7.B7whfzTn.js
-                ├── 8.CV5I5v4E.js
-                └── 9.Q4P4dpFw.js
+                ├── 0.CsEMRoE6.js
+                ├── 1.CwPrUt-F.js
+                ├── 10.DNqCiFDq.js
+                ├── 11.Ndd_CNk6.js
+                ├── 12.D4-rV6ra.js
+                ├── 13.AoCP3m0N.js
+                ├── 2.4Iu3mbcg.js
+                ├── 3.DGTn7sVo.js
+                ├── 4.BQkdkL35.js
+                ├── 5.BmyNBHc7.js
+                ├── 6.BcF-CDkQ.js
+                ├── 7.CmnYzvDl.js
+                ├── 8.BIQ25fRL.js
+                └── 9.LDh6WYQ9.js
         ├── env.js
         └── version.json
     ├── about-us
@@ -459,7 +470,12 @@ website/
             ├── Ai-detector-logo-800x800.jpg
             ├── ai_detector_home_page.png
             ├── ai_detector_live_view.png
+            ├── ai_detector_pictured_detection-2-896x512.jpg
+            ├── ai_detector_pictured_detection-3-896x512.jpg
+            ├── ai_detector_pictured_detection-4-896x512.jpg
+            ├── ai_detector_pictured_detection-5-896x512.jpg
             ├── ai_detector_pictured_detection.jpg
+            ├── ai_detector_video_detection-2-896x512.gif
             ├── ai_detector_video_detection.gif
             ├── calvingcatcher-logo-875x-875.jpg
             ├── calvingcatcher_1.jpg
@@ -482,8 +498,12 @@ website/
             ├── installation_software_options_1.jpg
             └── place-holder 875x875.jpg
         ├── components
+            ├── FeatureCard.svelte
             ├── Footer.svelte
+            ├── HighlightBlock.svelte
             ├── LanguageModal.svelte
+            ├── MediaCardGif.svelte
+            ├── MediaCardPicture.svelte
             ├── Navbar.svelte
             └── ProjectCard.svelte
         ├── paraglide

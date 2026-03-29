@@ -4,6 +4,8 @@
     // Componenten importeren
     import MediaCardPicture from '$lib/components/MediaCardPicture.svelte';
     import MediaCardGif from '$lib/components/MediaCardGif.svelte';
+    import FeatureCard from '$lib/components/FeatureCard.svelte';
+    import HighlightBlock from '$lib/components/HighlightBlock.svelte';
 
     // Core Assets
     import logo from '$lib/assets/Ai-detector-logo-800x800.jpg';
@@ -12,7 +14,7 @@
 
     // Media assets
     import imageDetectionImg1 from '$lib/assets/ai_detector_pictured_detection.jpg';
-    import imageDetectionImg2 from '$lib/assets/ai_detector_pictured_detection-2-896x512.jpg'; 
+    import imageDetectionImg2 from '$lib/assets/ai_detector_pictured_detection-2-896x512.jpg';
     import imageDetectionImg3 from '$lib/assets/ai_detector_pictured_detection-3-896x512.jpg';
     import imageDetectionImg4 from '$lib/assets/ai_detector_pictured_detection-4-896x512.jpg';
     import imageDetectionImg5 from '$lib/assets/ai_detector_pictured_detection-5-896x512.jpg';
@@ -33,13 +35,10 @@
         </div>
     </header>
 
-    <section class="about-section">
-        <div class="about-content">
-            <h2>{m.ai_detector_about_title()}</h2>
-            <p>{m.ai_detector_about_p1()}</p>
-            <p>{m.ai_detector_about_p2()}</p>
-        </div>
-    </section>
+    <HighlightBlock title={m.ai_detector_about_title()}>
+        <p>{m.ai_detector_about_p1()}</p>
+        <p>{m.ai_detector_about_p2()}</p>
+    </HighlightBlock>
 
     <section class="media-section">
         <h2 class="section-title">{m.ai_detector_media_title()}</h2>
@@ -47,7 +46,7 @@
             <MediaCardPicture 
                 title={m.ai_detector_image_title()}
                 desc={m.ai_detector_image_desc()}
-                images={[imageDetectionImg1, imageDetectionImg2, imageDetectionImg3, imageDetectionImg4, imageDetectionImg5]} // ARRAY MET TWEE AFBEELDINGEN DOORGETGEVEN
+                images={[imageDetectionImg1, imageDetectionImg2, imageDetectionImg3, imageDetectionImg4, imageDetectionImg5]}
                 altText="Detection output example sequence"
             />
 
@@ -62,18 +61,18 @@
     </section>
 
     <section class="features">
-        <div class="feature-card">
-            <h2>{m.ai_detector_feature_local_title()}</h2>
-            <p>{m.ai_detector_feature_local_desc()}</p>
-        </div>
-        <div class="feature-card">
-            <h2>{m.ai_detector_feature_network_title()}</h2>
-            <p>{m.ai_detector_feature_network_desc()}</p>
-        </div>
-        <div class="feature-card">
-            <h2>{m.ai_detector_feature_custom_title()}</h2>
-            <p>{m.ai_detector_feature_custom_desc()}</p>
-        </div>
+        <FeatureCard 
+            title={m.ai_detector_feature_local_title()} 
+            desc={m.ai_detector_feature_local_desc()} 
+        />
+        <FeatureCard 
+            title={m.ai_detector_feature_network_title()} 
+            desc={m.ai_detector_feature_network_desc()} 
+        />
+        <FeatureCard 
+            title={m.ai_detector_feature_custom_title()} 
+            desc={m.ai_detector_feature_custom_desc()} 
+        />
     </section>
 
     <section class="how-it-works">
@@ -100,14 +99,14 @@
         <h2 class="section-title">{m.ai_detector_install_title()}</h2>
         <p class="center-text">{m.ai_detector_install_desc()}</p>
         <div class="install-options">
-            <div class="install-card">
-                <h3>{m.ai_detector_install_win_title()}</h3>
-                <p>{m.ai_detector_install_win_desc()}</p>
-            </div>
-            <div class="install-card">
-                <h3>{m.ai_detector_install_docker_title()}</h3>
-                <p>{m.ai_detector_install_docker_desc()}</p>
-            </div>
+            <FeatureCard 
+                title={m.ai_detector_install_win_title()} 
+                desc={m.ai_detector_install_win_desc()} 
+            />
+            <FeatureCard 
+                title={m.ai_detector_install_docker_title()} 
+                desc={m.ai_detector_install_docker_desc()} 
+            />
         </div>
     </section>
 </main>
@@ -213,25 +212,7 @@
         color: white;
     }
 
-    /* About Section */
-    .about-section {
-        max-width: 800px;
-        margin: 0 auto 60px;
-        text-align: center;
-        background: var(--card-bg);
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        border-left: 5px solid var(--accent);
-    }
-
-    .about-section h2 {
-        color: var(--primary);
-        font-size: 2rem;
-        margin-top: 0;
-    }
-
-    /* Media Cards (Double Section) */
+    /* Media Cards */
     .media-section {
         max-width: 1000px;
         margin: 60px auto;
@@ -243,27 +224,13 @@
         gap: 40px;
     }
 
-    /* Features Grid */
+    /* Zorgt voor de juiste layout van de FeatureCards (zowel per 3 als per 2) */
     .features, .install-options {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 20px;
         max-width: 1000px;
         margin: 60px auto;
-    }
-
-    .feature-card, .install-card {
-        background: var(--card-bg);
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        border-top: 4px solid var(--primary);
-    }
-
-    .feature-card h2, .install-card h3 {
-        color: var(--primary);
-        margin-top: 0;
-        font-size: 1.8rem;
     }
 
     /* Split Layout for How it Works */
