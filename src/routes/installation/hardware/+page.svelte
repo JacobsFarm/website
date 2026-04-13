@@ -20,7 +20,7 @@
 
         <div class="action-buttons">
             <a href="{base}/installation" class="btn secondary-btn">&larr; {m.hardware_btn_back()}</a>
-            <a href="{base}/installation/software" class="btn primary-btn">{m.hardware_btn_next()} &rarr;</a>
+            <a href="{base}/installation/options" class="btn primary-btn">{m.hardware_btn_next()} &rarr;</a>
         </div>
     </section>
 

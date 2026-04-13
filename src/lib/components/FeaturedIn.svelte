@@ -5,15 +5,14 @@
 
     const logos = [
         { 
-            src: agrarischOndernemerLogo, 
-            alt: 'Agrarisch Ondernemer 2026', 
-            isWhiteLogo: true,
-            href: 'https://agrarischondernemer.nl/jong-agrarisch-talent-genomineerden/' 
-        },
-        { 
             src: 'https://cdn.prod.website-files.com/67926f6051d52946b93dfd03/67969bfe72fda3c1fd7a4e08_veeteelt_logo.svg', 
             alt: 'Veeteelt',
             href: 'https://veeteelt.nl/gezondheid/gratis-ai-software-informeert-boeren-over-afkalvingen'
+        },
+        { 
+            src: 'https://cdn.prod.website-files.com/67926f6051d52946b93dfd03/67969bfee147649bdd8dd029_boerderij_logo.svg', 
+            alt: 'Boerderij',
+            href: 'https://www.boerderij.nl/video-jan-jaap-verweij-ontwikkelt-gratis-tool-voor-detecteren-tochtige-koeien'
         },
         { 
             src: 'https://cdn.prod.website-files.com/67926f6051d52946b93dfd03/67969bfe4919eaa9196cceb7_nieuwe%20oogst_logo.svg', 
@@ -26,14 +25,25 @@
             href: 'https://www.mechaman.nl/veehouderij-techniek/artikel/20260310/cowcatcher-komt-met-afkalfdetectie/'
         },
         { 
+            src: 'https://cdn.brandfetch.io/idj2Epissl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1771540125311', 
+            alt: 'Omrop Fryslân',
+            href: 'https://www.omropfryslan.nl/nl/nieuws/18353769/hoe-ai-de-friese-boer-kan-steunen-in-het-dagelijks-werk'
+        },
+        { 
+            src: agrarischOndernemerLogo, 
+            alt: 'Agrarisch Ondernemer 2026', 
+            isWhiteLogo: true,
+            href: 'https://agrarischondernemer.nl/jong-agrarisch-talent-genomineerden/' 
+        },
+        { 
+            src: 'https://cdn.brandfetch.io/idArW_C6LY/w/2048/h/2048/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1775493657540', 
+            alt: 'NOS Journaal Regio',
+            href: 'https://npo.nl/start/afspelen/nos-journaal-regio_1359'
+        },
+        { 
             src: prikkebordLogo, 
             alt: 'prikkebord forum',
             href: 'https://www.prikkebord.nl/topic/362840/'
-        },
-        { 
-            src: 'https://cdn.prod.website-files.com/67926f6051d52946b93dfd03/67969bfee147649bdd8dd029_boerderij_logo.svg', 
-            alt: 'Boerderij',
-            href: 'https://www.boerderij.nl/video-jan-jaap-verweij-ontwikkelt-gratis-tool-voor-detecteren-tochtige-koeien'
         }
     ];
 
@@ -104,8 +114,8 @@
 
     .carousel-track {
         display: flex;
-        width: calc(200px * 10);
-        animation: scroll 20s linear infinite;
+        width: calc(200px * 16);
+        animation: scroll 30s linear infinite;
     }
 
     .carousel-track:hover {
@@ -152,12 +162,8 @@
     }
 
     @keyframes scroll {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            transform: translateX(calc(-200px * 5));
-        }
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-200px * 8)); }
     }
 
     @media (min-width: 768px) {
@@ -165,11 +171,11 @@
             flex: 0 0 250px;
         }
         .carousel-track {
-            width: calc(250px * 10);
+            width: calc(250px * 16);
         }
         @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(calc(-250px * 5)); }
+            100% { transform: translateX(calc(-250px * 8)); }
         }
     }
 </style>

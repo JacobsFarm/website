@@ -2,30 +2,32 @@
     import * as m from '$lib/paraglide/messages.js';
     import ProjectCard from '$lib/components/ProjectCard.svelte';
     import FeaturedIn from '$lib/components/FeaturedIn.svelte';
+    import HighlightblockCallToAction from '$lib/components/HighlightBlock_call_to_action.svelte';
+    import FeatureCard from '$lib/components/FeatureCard.svelte';
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
     import { onMount } from 'svelte';
+    import { base } from '$app/paths';
 
     import cowcatcherLogo from '$lib/assets/CowCatchter-logo-875x875.jpg';
     import calvingcatcherLogo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
     import aiDetectorLogo from '$lib/assets/Ai-detector-logo-800x800.jpg';
 
-    // Animation stores for the numbers
     const farms = tweened(0, { duration: 2000, easing: cubicOut });
     const detections = tweened(0, { duration: 2000, easing: cubicOut }); 
     const countries = tweened(0, { duration: 2000, easing: cubicOut });
+
     let statsRef;
 
     onMount(() => {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-                // Set the target numbers here
-                farms.set(35);
+                farms.set(40);
                 detections.set(100); 
                 countries.set(5);
-                observer.disconnect(); // Stop observing once animated
+                observer.disconnect();
             }
-        }, { threshold: 0.3 }); // Triggers when 30% of the section is visible
+        }, { threshold: 0.3 });
 
         if (statsRef) {
             observer.observe(statsRef);
@@ -45,21 +47,50 @@
     <section class="projects-grid">
         <ProjectCard 
             title={m.front_page_cowcatcher_title()} 
-            link="/projects/cowcatcher" 
+            link="{base}/projects/cowcatcher" 
             desc={m.front_page_cowcatcher_desc()} 
             logo={cowcatcherLogo}
         />
         <ProjectCard 
             title={m.front_page_calvingcatcher_title()}
-            link="/projects/calvingcatcher"
+            link="{base}/projects/calvingcatcher"
             desc={m.front_page_calvingcatcher_desc()}
             logo={calvingcatcherLogo}
         />
         <ProjectCard 
             title={m.front_page_ai_detector_title()}
-            link="/projects/ai-detector"
+            link="{base}/projects/ai-detector"
             desc={m.front_page_ai_detector_desc()}
             logo={aiDetectorLogo}
+        />
+    </section>
+
+    <HighlightblockCallToAction 
+        title={m.front_page_intro_title()}
+        btn1Text={m.front_page_intro_btn_install()}
+        btn1Link="{base}/installation"
+        btn2Text={m.front_page_intro_btn_help()}
+        btn2Link="{base}/about-us"
+    >
+        <p>{m.front_page_intro_p1()}</p>
+        <p>{m.front_page_intro_p2()}</p>
+        <p>{m.front_page_intro_p3()}</p>
+        <p>{m.front_page_intro_p4()}</p>
+        <p>{m.front_page_intro_p5()}</p>
+    </HighlightblockCallToAction>
+
+    <section class="features">
+        <FeatureCard
+            title={m.front_page_feature_community_title()}
+            desc={m.front_page_feature_community_desc()}
+        />
+        <FeatureCard
+            title={m.front_page_feature_free_title()}
+            desc={m.front_page_feature_free_desc()}
+        />
+        <FeatureCard
+            title={m.front_page_feature_smart_title()}
+            desc={m.front_page_feature_smart_desc()}
         />
     </section>
 
@@ -116,10 +147,10 @@
 
 <style>
     :global(body) {
-        background-color: oklch(98% 0.005 145); /* Off White */
+        background-color: oklch(98% 0.005 145);
         font-family: 'Roboto', sans-serif;
         margin: 0;
-        color: oklch(22% 0.02 145); /* Deep Ink */
+        color: oklch(22% 0.02 145);
         overflow-x: hidden;
     }
 
@@ -141,7 +172,7 @@
     h1 {
         font-family: 'Bebas Kai', sans-serif;
         font-size: clamp(2.5rem, 8vw, 4.5rem);
-        color: #386938; /* Emerald Green */
+        color: #386938;
         margin-bottom: 1rem;
         text-transform: uppercase;
         line-height: 1;
@@ -150,7 +181,7 @@
     .brand-hero .slogan {
         font-family: 'Roboto', sans-serif;
         font-size: clamp(1.2rem, 5vw, 1.75rem);
-        color: oklch(60% 0.09 195); /* Muted Teal */
+        color: oklch(60% 0.09 195);
         margin: 0;
         font-weight: 500;
         text-transform: capitalize;
@@ -158,7 +189,7 @@
 
     .brand-hero .description {
         font-size: clamp(1rem, 4vw, 1.15rem);
-        color: oklch(22% 0.02 145); /* Deep Ink */
+        color: oklch(22% 0.02 145);
         max-width: 600px;
         margin: 0;
         padding: 0 1rem;
@@ -168,6 +199,14 @@
         display: grid;
         gap: 1.5rem;
         grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        max-width: 1000px;
+        margin: 0 auto 2rem auto;
     }
 
     @media (min-width: 768px) {
@@ -183,7 +222,7 @@
     }
 
     :global(.project-card) {
-        border-top: 5px solid #386938; /* Emerald Green */
+        border-top: 5px solid #386938;
         transition: transform 0.3s ease, border-color 0.3s ease;
         height: 100%;
         display: flex;
@@ -192,33 +231,32 @@
 
     @media (hover: hover) {
         :global(.project-card:hover) {
-            border-color: oklch(65% 0.16 75); /* Deep Amber */
+            border-color: oklch(65% 0.16 75);
             transform: translateY(-10px);
         }
     }
 
-    /* --- Test Models Section Styles --- */
     .test-models-section {
         margin-top: 5rem;
         background: #ffffff;
-        border: 1px solid oklch(85% 0.01 145); /* Soft Gray */
+        border: 1px solid oklch(85% 0.01 145);
         border-radius: 20px;
         padding: 4rem 2rem;
         text-align: center;
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
-        border-top: 5px solid oklch(65% 0.16 75); /* Deep Amber accent */
+        border-top: 5px solid oklch(65% 0.16 75);
     }
 
     .test-models-content h2 {
         font-family: 'Bebas Kai', sans-serif;
         font-size: clamp(2rem, 6vw, 3.5rem);
-        color: #386938; /* Emerald Green */
+        color: #386938;
         margin-bottom: 1rem;
     }
 
     .test-models-content p {
         font-size: clamp(1rem, 3vw, 1.15rem);
-        color: oklch(22% 0.02 145); /* Deep Ink */
+        color: oklch(22% 0.02 145);
         max-width: 700px;
         margin: 0 auto 2.5rem auto;
         line-height: 1.6;
@@ -246,13 +284,13 @@
     }
 
     .demo-btn.primary-btn {
-        background-color: #386938; /* Emerald Green */
+        background-color: #386938;
         color: #ffffff;
         border: 2px solid #386938;
     }
 
     .demo-btn.primary-btn:hover {
-        background-color: oklch(65% 0.16 75); /* Deep Amber */
+        background-color: oklch(65% 0.16 75);
         border-color: oklch(65% 0.16 75);
         transform: translateY(-4px);
         box-shadow: 0 6px 20px rgba(0,0,0,0.15);
@@ -260,12 +298,12 @@
 
     .demo-btn.secondary-btn {
         background-color: transparent;
-        color: #386938; /* Emerald Green */
+        color: #386938;
         border: 2px solid #386938;
     }
 
     .demo-btn.secondary-btn:hover {
-        background-color: oklch(60% 0.09 195); /* Muted Teal */
+        background-color: oklch(60% 0.09 195);
         color: #ffffff;
         border-color: oklch(60% 0.09 195);
         transform: translateY(-4px);
@@ -276,7 +314,6 @@
         fill: currentColor;
     }
 
-    /* --- Stats Section Styles --- */
     .stats-section {
         margin-top: 5rem;
         text-align: center;
@@ -288,12 +325,12 @@
     .stats-section h2 {
         font-family: 'Bebas Kai', sans-serif;
         font-size: clamp(2rem, 6vw, 3.5rem);
-        color: #386938; /* Emerald Green */
+        color: #386938;
         margin-bottom: 0.5rem;
     }
 
     .stats-subtitle {
-        color: oklch(60% 0.09 195); /* Muted Teal */
+        color: oklch(60% 0.09 195);
         font-size: clamp(1rem, 3vw, 1.25rem);
         max-width: 600px;
         margin-bottom: 3rem;
@@ -310,7 +347,7 @@
 
     .stat-card {
         background: #ffffff;
-        border: 1px solid oklch(85% 0.01 145); /* Soft Gray */
+        border: 1px solid oklch(85% 0.01 145);
         border-radius: 16px;
         padding: 2.5rem 1rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
@@ -322,49 +359,48 @@
 
     .stat-card:hover {
         transform: translateY(-5px);
-        border-color: oklch(65% 0.16 75); /* Deep Amber */
+        border-color: oklch(65% 0.16 75);
     }
 
     .stat-number {
         font-family: 'Bebas Kai', sans-serif;
         font-size: 4rem;
-        color: #386938; /* Emerald Green */
+        color: #386938;
         line-height: 1;
         margin-bottom: 0.5rem;
     }
 
     .stat-label {
         font-weight: 500;
-        color: oklch(22% 0.02 145); /* Deep Ink */
+        color: oklch(22% 0.02 145);
         font-size: 1.1rem;
     }
 
     .stats-disclaimer {
         font-size: 0.85rem;
-        color: oklch(22% 0.02 145); /* Deep Ink */
-        opacity: 0.8; /* Slightly faded for secondary text */
+        color: oklch(22% 0.02 145);
+        opacity: 0.8;
         max-width: 700px;
         line-height: 1.5;
         font-style: italic;
         margin-top: 1rem;
     }
 
-    /* --- Footer Styles --- */
     .official-links {
         margin-top: 4rem;
         text-align: center;
         font-size: 0.85rem;
-        border-top: 1px solid oklch(60% 0.09 195); /* Muted Teal */
+        border-top: 1px solid oklch(60% 0.09 195);
         padding-top: 2rem;
     }
 
     .official-links a {
-        color: #386938; /* Emerald Green */
+        color: #386938;
         font-weight: bold;
         text-decoration: none;
     }
 
     .official-links a:hover {
-        color: oklch(65% 0.16 75); /* Deep Amber */
+        color: oklch(65% 0.16 75);
     }
 </style>
