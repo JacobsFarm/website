@@ -2,11 +2,18 @@
   import { browser } from '$app/environment';
   import { setLocale } from '$lib/paraglide/runtime';
 
+  // --- CONFIGURATIE ---
+  // true  = Toon de popup ALTIJD bij het opstarten (negeer opslag).
+  // false = Toon de popup alleen als er nog geen taal is opgeslagen.
+  const FORCE_SHOW = false; 
   const STORAGE_KEY = 'lang_chosen';
-  let show = browser && !localStorage.getItem(STORAGE_KEY);
+
+  // Logica voor het tonen van de modal
+  let show = browser && (FORCE_SHOW || !localStorage.getItem(STORAGE_KEY));
   
   // Standaard selectie gebaseerd op browser of default naar Engels
   let selectedLocale = 'en';
+  
   if (browser) {
     const navLang = navigator.language.toLowerCase().split('-')[0];
     const supported = ['en', 'nl', 'es', 'fr', 'pt', 'de', 'it', 'pl', 'ro', 'dn'];
@@ -16,8 +23,10 @@
   }
 
   function choose() {
-    localStorage.setItem(STORAGE_KEY, selectedLocale);
-    setLocale(selectedLocale);
+    if (browser) {
+      localStorage.setItem(STORAGE_KEY, selectedLocale);
+    }
+    setLocale(selectedLocale as any);
     show = false;
   }
 
@@ -60,6 +69,7 @@
 {/if}
 
 <style>
+  /* De styling blijft exact hetzelfde als in jouw voorbeeld */
   .backdrop {
     position: fixed;
     inset: 0;
@@ -121,7 +131,7 @@
     padding: 1.1rem;
     border: none;
     border-radius: 14px;
-    background: #386938; /* Emerald Green */
+    background: #386938; 
     color: white;
     font-weight: 700;
     cursor: pointer;
