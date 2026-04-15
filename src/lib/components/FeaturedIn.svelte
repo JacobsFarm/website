@@ -25,6 +25,11 @@
             href: 'https://www.mechaman.nl/veehouderij-techniek/artikel/20260310/cowcatcher-komt-met-afkalfdetectie/'
         },
         { 
+            src: 'https://cdn.brandfetch.io/idgfMn7mzV/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1770955759252', 
+            alt: 'VILT',
+            href: 'https://vilt.be/nl/nieuws/groep-boeren-ontwikkelt-ai-tool-voor-tocht-en-afkalfdectie-melkvee'
+        },
+        { 
             src: 'https://cdn.brandfetch.io/idj2Epissl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1771540125311', 
             alt: 'Omrop Fryslân',
             href: 'https://www.omropfryslan.nl/nl/nieuws/18353769/hoe-ai-de-friese-boer-kan-steunen-in-het-dagelijks-werk'

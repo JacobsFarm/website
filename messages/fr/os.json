@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "Installation macOS",
+  "os_macos_intro": "Lancez facilement le détecteur sur votre appareil Apple.",
+  "os_macos_download_heading": "👉 Téléchargement via GitHub Releases",
+  "os_macos_download_desc": "Téléchargez le fichier macOS de la dernière version.",
+  "os_btn_releases": "Aller aux Releases",
+  "os_table_file": "Fichier",
+  "os_table_hardware": "Matériel requis",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Créez un dossier, par exemple sur votre bureau ou dans <code>~/aidetector</code>, et déplacez le fichier téléchargé ici.",
+  "os_setup_title": "Instructions de configuration",
+  "os_setup_step2": "Créez un fichier <code>config.json</code> dans le même dossier (voir la documentation de Configuration).",
+  "os_macos_setup_step3": "Double-cliquez sur le fichier ou ouvrez-le via le terminal — une fenêtre de terminal s'ouvrira avec les logs de détection.",
+  "os_setup_step3": "Double-cliquez sur le <code>.exe</code> — une fenêtre de terminal s'ouvrira avec les logs de détection.",
+  "os_setup_step4": "Au premier démarrage (sans <code>config.json</code> existant), un modèle est généré automatiquement. Remplissez-le et redémarrez l'application.",
+  "os_tip_title": "Conseil",
+  "os_tip_text": "Laissez la fenêtre du terminal ouverte tant que le détecteur fonctionne. Si elle se ferme immédiatement, il y a une erreur dans votre <code>config.json</code> — vérifiez bien que vous n'avez pas oublié de guillemets (\") ou de virgules (,)."
+}

@@ -1,0 +1,10 @@
+{
+  "hardware_title": "Instalacja sprzętu",
+  "hardware_intro": "Do CowCatcherAI potrzebujesz dwóch głównych komponentów sprzętowych: kamer monitoringu oraz komputera do przetwarzania obrazu za pomocą AI.",
+  "hardware_cameras_title": "1. Kamery",
+  "hardware_cameras_text": "Możesz użyć prawie każdej kamery IP, o ile obsługuje protokół RTSP (Real-Time Streaming Protocol). Jest to standardowa funkcja w większości kamer sieciowych. Upewnij się, że kamery są zamontowane wysoko w oborze, aby zapewnić wyraźny, niczym nieprzesłonięty widok na krowy.",
+  "hardware_computer_title": "2. Komputer (Host AI)",
+  "hardware_computer_text": "Oprogramowanie działa lokalnie na Twoim sprzęcie dla maksymalnej prywatności i szybkości. Może to być komputer PC z systemem Windows/Linux i wydajną kartą graficzną (zalecany procesor graficzny NVIDIA dla najlepszej wydajności) lub dedykowane urządzenie edge, takie jak NVIDIA Jetson Nano, zapewniające kompaktową i energooszczędną konfigurację w oborze.",
+  "hardware_btn_back": "Powrót do przeglądu",
+  "hardware_btn_next": "Przejdź do oprogramowania"
+}

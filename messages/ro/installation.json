@@ -1,0 +1,17 @@
+{
+  "install_title": "Ghid de instalare",
+  "install_info_text": "Puteți face cu ușurință instalarea hardware a camerelor și a computerului singur. Software-ul este compatibil cu toate mărcile de camere. În secțiunea „Instalare Hardware”, explicăm totul în detaliu. Dacă aveți deja camere instalate, puteți descărca software-ul imediat. Odată ce acest lucru a reușit, puteți explora posibilitățile programului nostru în secțiunea „Opțiuni Software”.",
+  "install_card_hardware_title": "1. Instalare Hardware",
+  "install_card_hardware_desc": "Citiți totul despre camerele necesare, computerul și cum să le instalați corect.",
+  "install_card_software_title": "2. Descărcare Software",
+  "install_card_software_desc": "Hardware-ul este gata? Descarcă și instalează direct software-ul CowCatcherAI.",
+  "install_card_options_title": "3. Opțiuni Software",
+  "install_card_options_desc": "Descoperă toate funcțiile și setările avansate ale programului nostru.",
+  "install_text": "Alege platforma ta:",
+  "install_jetson_link": "Configurare Jetson Nano",
+  "install_pc_link": "Configurare PC",
+  "jetson_title": "Instalare Jetson Nano",
+  "jetson_text": "Pasul 1: Scrie cardul SD cu JetPack 4.6...",
+  "pc_title": "Instalare pe PC",
+  "pc_text": "Pasul 1: Instalează Python și bibliotecile CUDA necesare..."
+}

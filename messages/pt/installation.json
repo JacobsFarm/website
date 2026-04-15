@@ -1,0 +1,17 @@
+{
+  "install_title": "Guia de Instalação",
+  "install_info_text": "Você mesmo pode fazer facilmente a instalação do hardware das câmeras e do computador. O software é compatível com todas as marcas de câmeras. Na seção 'Instalação de Hardware', explicamos tudo em detalhes. Se você já tem câmeras instaladas, pode baixar o software imediatamente. Uma vez bem-sucedido, você pode explorar as possibilidades do nosso programa de software na seção 'Opções de Software'.",
+  "install_card_hardware_title": "1. Instalação de Hardware",
+  "install_card_hardware_desc": "Leia tudo sobre as câmeras necessárias, o computador e como instalá-los corretamente.",
+  "install_card_software_title": "2. Download do Software",
+  "install_card_software_desc": "Seu hardware está pronto? Baixe e instale o software CowCatcherAI diretamente.",
+  "install_card_options_title": "3. Opções de Software",
+  "install_card_options_desc": "Descubra todos os recursos e configurações avançadas do nosso programa de software.",
+  "install_text": "Escolha sua plataforma:",
+  "install_jetson_link": "Configuração Jetson Nano",
+  "install_pc_link": "Configuração PC",
+  "jetson_title": "Instalação Jetson Nano",
+  "jetson_text": "Passo 1: Grave o cartão SD com o JetPack 4.6...",
+  "pc_title": "Instalação PC",
+  "pc_text": "Passo 1: Instale o Python e as bibliotecas CUDA necessárias..."
+}

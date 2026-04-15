@@ -1,0 +1,10 @@
+{
+  "download_title": "Installation & downloads",
+  "download_intro_text": "Installationen er designet til at være så nem som muligt. Følg blot trinnene for dit operativsystem nedenfor, så kan du komme i gang med CowCatcherAI med det samme.",
+  "download_card_windows_title": "Windows",
+  "download_card_windows_desc": "Til download på computere med Windows 10 og Windows 11.",
+  "download_card_macos_title": "macOS",
+  "download_card_macos_desc": "Til Apple-enheder som MacBook eller andre Mac-computere.",
+  "download_card_linux_title": "Linux / Docker",
+  "download_card_linux_desc": "Til Linux-operativsystemet og edge-computere (som Jetson Nano Orin eller Raspberry Pi). Denne installation sker via Docker."
+}

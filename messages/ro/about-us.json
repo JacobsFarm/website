@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Cine suntem și de ce o facem",
+  "about_us_intro": "Suntem o echipă de fermieri din sectorul lactatelor care construiesc software open-source pentru sectorul agricol. Deoarece folosim acest sistem în propriile noastre ferme, știm exact ce funcționează, ce nu merge bine și ce trebuie îmbunătățit. Nu suntem o companie corporativă plină de oameni care nu au văzut niciodată o vacă în realitate — și aceasta este cea mai mare forță a noastră. Construit de fermieri pentru fermieri.",
+  "about_us_opensource_title": "De ce Open Source?",
+  "about_us_opensource_text": "Pentru că este distractiv, util și merită împărtășit! Acest proiect este complet gratuit și ușor de descărcat. Cu ajutorul viziunii computerizate, putem construi un sistem de detectare a evenimentelor fiabil, rapid și accesibil. Cea mai bună parte? Totul rămâne local — datele tale nu părăsesc niciodată ferma. Toate acestea sunt conduse de bucuria libertății și a independenței.",
+  "about_us_team_title": "Avantajul Open Source",
+  "about_us_team_text": "Cel mai mare avantaj al open source-ului este că ne permite să folosim software puternic de la alte proiecte pe care entitățile comerciale nu îl pot utiliza liber. De exemplu, nucleul nostru de viziune computerizată este construit pe framework-urile Ultralytics, iar sistemul nostru de alerte este susținut de AI Detector. Fără aceste instrumente, acest proiect nu ar fi posibil.",
+  "about_us_longevity_title": "Construit să dureze",
+  "about_us_longevity_text": "Deoarece tot codul este complet online, proiectul poate continua teoretic pentru totdeauna. Dacă unul dintre noi trebuie să se retragă, un alt dezvoltator poate prelua controlul cu ușurință. Acesta nu este un proiect care va muri în liniște; va fi întreținut în anii următori. În viitor, așteptăm și încurajăm mai mulți colaboratori să ni se alăture.",
+  "about_us_independence_title": "Local și reparabil",
+  "about_us_independence_text": "Sunteți responsabil pentru propriile configurații. Îl instalați, îl actualizați și montați singur camerele. L-am proiectat să fie cât mai simplu posibil, deoarece nu avem timp să întreținem sistemele individuale ale fermelor sau să ne ocupăm de facturare. Software-ul rulează local, astfel încât rămâneți în control total. Datele nu sunt transmise, rămân la ferma dumneavoastră și sistemul poate rula fără Wi-Fi.",
+  "about_us_reality_title": "Așteptări și Realitate",
+  "about_us_reality_text": "Fiind open-source, spunem clar: „Este ceea ce este”. Nu putem promite că va funcționa perfect 100% din timp, iar funcții precum detectarea fătării trebuie să devină mai inteligente. În prezent, avem un grup activ de aproximativ 35 de fermieri care folosesc sistemul. În acest grup, utilizatorii se ajută reciproc, iar chiar și fermierii de 50 și 60 de ani reușesc să gestioneze configurarea fără probleme.",
+  "about_us_contribute_title": "Alătură-te comunității",
+  "about_us_contribute_text": "Cowcatcher AI este construit de fermieri pentru fermieri. Fie că îl folosești deja sau ești la început, te invităm să te alături comunității noastre de Telegram. Conectează-te cu alți fermieri, împărtășește idei, fii la curent și primește asistență ori de câte ori ai nevoie. Multe îmbunătățiri sugerate de utilizatori sunt deja active în cod.",
+  "about_us_conclusion": "În cele din urmă, ne actualizăm constant modelele de viziune și software-ul. Dacă nu este exact ceea ce ai nevoie acum, revino peste câteva luni!",
+  "about_us_github_button": "Vezi codul pe GitHub"
+}

@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "Instalare pe macOS",
+  "os_macos_intro": "Pornește cu ușurință detectorul pe dispozitivul tău Apple.",
+  "os_macos_download_heading": "👉 Descarcă via GitHub Releases",
+  "os_macos_download_desc": "Descarcă fișierul macOS din cea mai recentă versiune.",
+  "os_btn_releases": "Mergi la Releases",
+  "os_table_file": "Fișier",
+  "os_table_hardware": "Cerințe hardware",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Creează un folder, de exemplu pe desktop sau în <code>~/aidetector</code>, și mută fișierul descărcat aici.",
+  "os_setup_title": "Instrucțiuni de configurare",
+  "os_setup_step2": "Creează un fișier <code>config.json</code> în același folder (vezi documentația de Configurare).",
+  "os_macos_setup_step3": "Fă dublu clic pe fișier sau deschide-l prin terminal — se va deschide o fereastră de terminal cu log-urile de detecție.",
+  "os_setup_step3": "Fă dublu clic pe <code>.exe</code> — se va deschide o fereastră de terminal cu log-urile de detecție.",
+  "os_setup_step4": "La prima pornire (fără un <code>config.json</code> existent), un șablon este generat automat. Completează-l și repornește aplicația.",
+  "os_tip_title": "Sfat",
+  "os_tip_text": "Păstrează fereastra terminalului deschisă atât timp cât detectorul rulează. Dacă se închide imediat, există o eroare în <code>config.json</code> — verifică cu atenție să nu fi uitat ghilimele (\") sau virgule (,)."
+}

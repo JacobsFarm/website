@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Wer wir sind & Warum wir es tun",
+  "about_us_intro": "Wir sind ein Team von Milchviehhaltern, das Open-Source-Software für den Agrarsektor entwickelt. Da wir dieses System auf unseren eigenen Betrieben einsetzen, wissen wir genau, was funktioniert, was schiefläuft und was verbessert werden muss. Wir sind kein Konzern voller Leute, die noch nie eine Kuh im echten Leben gesehen haben – und das ist unsere größte Stärke. Von Landwirten für Landwirte gebaut.",
+  "about_us_opensource_title": "Warum Open Source?",
+  "about_us_opensource_text": "Weil es Spaß macht, nützlich ist und es sich lohnt, es zu teilen! Dieses Projekt ist völlig kostenlos und einfach herunterzuladen. Mit Computer Vision können wir schnell und kostengünstig eine zuverlässige Ereigniserkennung aufbauen. Das Beste daran? Alles bleibt vollständig lokal – Ihre Daten verlassen niemals Ihren Betrieb. All dies wird von der Freude an Freiheit und Unabhängigkeit angetrieben.",
+  "about_us_team_title": "Vorteile von Open Source",
+  "about_us_team_text": "Der größte Vorteil von Open Source ist, dass wir leistungsstarke Software aus anderen Projekten nutzen können, die kommerzielle Unternehmen nicht frei verwenden dürfen. So basiert unsere Kern-Computer-Vision auf den Ultralytics-Vision-Frameworks, und unser Erkennungs-Alarmsystem wird durch den AI Detector unterstützt. Ohne diese Tools wäre dieses Projekt nicht möglich.",
+  "about_us_longevity_title": "Für die Ewigkeit gebaut",
+  "about_us_longevity_text": "Da der gesamte Code komplett online verfügbar ist, kann das Projekt theoretisch ewig weiterbestehen. Wenn einer von uns kürzertreten muss, kann ein anderer Entwickler problemlos übernehmen. Dies ist kein Projekt, das stillschweigend sterben wird; es wird über Jahre hinweg gepflegt werden. Für die Zukunft erwarten und fördern wir weitere Mitwirkende.",
+  "about_us_independence_title": "Lokal und reparierbar",
+  "about_us_independence_text": "Sie sind für Ihre eigenen Setups verantwortlich. Sie installieren es, aktualisieren es und hängen die Kameras selbst auf. Wir haben es so einfach wie möglich gestaltet, weil wir keine Zeit haben, einzelne Betriebssysteme zu warten oder uns um die Rechnungsstellung zu kümmern. Die Software läuft lokal, sodass Sie die volle Kontrolle behalten. Daten werden nicht übertragen, bleiben auf Ihrem Hof und das System kann auch ohne WLAN laufen.",
+  "about_us_reality_title": "Erwartung & Realität",
+  "about_us_reality_text": "Da es Open Source ist, sagen wir: 'Es ist, wie es ist.' Wir können nicht versprechen, dass es zu 100 % perfekt funktioniert, und Funktionen wie die Abkalbeerkennung müssen noch intelligenter werden. Derzeit haben wir eine aktive Gruppe von etwa 35 Landwirten, die das System nutzen. In dieser Gruppe helfen sich die Nutzer gegenseitig, und selbst Landwirte in ihren 50ern und 60ern kommen mit dem Setup bestens zurecht.",
+  "about_us_contribute_title": "Tritt der Community bei",
+  "about_us_contribute_text": "Cowcatcher AI wird von Landwirten für Landwirte gebaut. Egal, ob Sie es bereits nutzen oder gerade erst anfangen: Wir laden Sie ein, unserer Telegram-Community beizutreten. Vernetzen Sie sich mit Kollegen, tauschen Sie Ideen aus, bleiben Sie auf dem Laufenden und erhalten Sie Unterstützung, wann immer Sie diese benötigen. Viele von Nutzern vorgeschlagene Verbesserungen sind bereits im Code enthalten.",
+  "about_us_conclusion": "Letztendlich aktualisieren wir unsere Vision-Modelle und die Software ständig. Wenn es momentan noch nicht ganz das ist, was Sie brauchen, schauen Sie in ein paar Monaten wieder vorbei!",
+  "about_us_github_button": "Code auf GitHub ansehen"
+}

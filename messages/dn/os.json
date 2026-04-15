@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "macOS installation",
+  "os_macos_intro": "Start nemt detektoren på din Apple-enhed.",
+  "os_macos_download_heading": "👉 Download via GitHub Releases",
+  "os_macos_download_desc": "Download macOS-filen i den seneste version.",
+  "os_btn_releases": "Gå til Releases",
+  "os_table_file": "Fil",
+  "os_table_hardware": "Hardwarekrav",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Opret en mappe, for eksempel på dit skrivebord eller i <code>~/aidetector</code>, og flyt den downloadede fil hertil.",
+  "os_setup_title": "Opsætningsvejledning",
+  "os_setup_step2": "Opret en <code>config.json</code>-fil i samme mappe (se konfigurationsdokumentationen).",
+  "os_macos_setup_step3": "Dobbeltklik på filen eller åbn den via terminalen — et terminalvindue åbnes med registreringsloggene.",
+  "os_setup_step3": "Dobbeltklik på <code>.exe</code>-filen — et terminalvindue åbnes med registreringsloggene.",
+  "os_setup_step4": "Ved første opstart (uden en eksisterende <code>config.json</code>) genereres en skabelon automatisk. Udfyld denne og genstart programmet.",
+  "os_tip_title": "Tip",
+  "os_tip_text": "Hold terminalvinduet åbent, så længe detektoren kører. Hvis det lukker med det samme, er der en fejl i din <code>config.json</code> — tjek omhyggeligt, at du ikke har glemt nogen anførselstegn (\") eller kommaer (,)."
+}

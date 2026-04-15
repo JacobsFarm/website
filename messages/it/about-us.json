@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Chi Siamo e Perché lo Facciamo",
+  "about_us_intro": "Siamo un team di allevatori di bovine da latte che sviluppa software open-source per il settore agricolo. Poiché utilizziamo questo sistema nelle nostre aziende, sappiamo esattamente cosa funziona, cosa non va e cosa deve essere migliorato. Non siamo un'azienda multinazionale piena di persone che non hanno mai visto una vacca dal vivo: questo è il nostro più grande punto di forza. Creato dagli allevatori per gli allevatori.",
+  "about_us_opensource_title": "Perché Open Source?",
+  "about_us_opensource_text": "Perché è divertente, utile e vale la pena condividerlo! Questo progetto è completamente gratuito e facile da scaricare. Grazie alla computer vision, possiamo creare un sistema di rilevamento eventi affidabile in modo rapido ed economico. La parte migliore? Tutto rimane locale: i tuoi dati non lasciano mai la tua azienda agricola. Tutto questo è guidato dal piacere della libertà e dell'indipendenza.",
+  "about_us_team_title": "Vantaggi dell'Open Source",
+  "about_us_team_text": "Il più grande vantaggio dell'open source è che ci permette di sfruttare potenti software di altri progetti che le entità commerciali non possono utilizzare liberamente. Ad esempio, il nostro core di computer vision è basato sui framework Ultralytics, e il nostro sistema di avvisi è alimentato da AI Detector. Senza questi strumenti, questo progetto non sarebbe possibile.",
+  "about_us_longevity_title": "Costruito per Durare",
+  "about_us_longevity_text": "Poiché tutto il codice è disponibile online, il progetto può teoricamente continuare per sempre. Se uno di noi dovesse fare un passo indietro, un altro sviluppatore può subentrare facilmente. Questo non è un progetto destinato a morire in silenzio; sarà mantenuto per gli anni a venire. In futuro, ci aspettiamo e incoraggiamo l'adesione di nuovi collaboratori.",
+  "about_us_independence_title": "Locale e Riparabile",
+  "about_us_independence_text": "Sei responsabile della tua configurazione. Installi il software, lo aggiorni e posizioni le telecamere tu stesso. Lo abbiamo progettato per essere il più semplice possibile perché non abbiamo il tempo di gestire i sistemi di ogni singola azienda o occuparci della fatturazione. Il software gira localmente, così mantieni il pieno controllo. I dati non vengono trasmessi, rimangono nella tua azienda e il sistema può funzionare anche senza Wi-Fi.",
+  "about_us_reality_title": "Aspettative e Realtà",
+  "about_us_reality_text": "Trattandosi di open-source, diciamo chiaramente: 'È così com'è'. Non possiamo promettere che funzionerà perfettamente il 100% delle volte, e funzioni come il rilevamento del parto devono ancora diventare più intelligenti. Attualmente abbiamo un gruppo attivo di circa 35 allevatori che utilizzano il sistema. In questo gruppo gli utenti si aiutano a vicenda e persino allevatori di 50 o 60 anni riescono a gestire la configurazione senza problemi.",
+  "about_us_contribute_title": "Unisciti alla community",
+  "about_us_contribute_text": "Cowcatcher AI è costruito dagli allevatori, per gli allevatori. Che tu lo stia già usando o che stia appena iniziando, ti invitiamo a unirti alla nostra community su Telegram. Connettiti con altri allevatori, condividi idee, rimani aggiornato e ottieni supporto ogni volta che ne hai bisogno. Molti miglioramenti suggeriti dagli utenti sono già presenti nel codice.",
+  "about_us_conclusion": "In definitiva, aggiorniamo costantemente i nostri modelli di visione e il software. Se non è esattamente ciò di cui hai bisogno in questo momento, torna a controllare tra qualche mese!",
+  "about_us_github_button": "Visualizza Codice su GitHub"
+}

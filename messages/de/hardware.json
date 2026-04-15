@@ -1,0 +1,10 @@
+{
+  "hardware_title": "Hardware-Installation",
+  "hardware_intro": "Für CowCatcherAI benötigen Sie zwei Hauptkomponenten: Sicherheitskameras und einen Computer, um die Bilder mittels KI zu verarbeiten.",
+  "hardware_cameras_title": "1. Die Kameras",
+  "hardware_cameras_text": "Sie können fast jede IP-Kamera verwenden, sofern sie RTSP (Real-Time Streaming Protocol) unterstützt. Dies ist eine Standardfunktion bei den meisten Netzwerkkameras. Stellen Sie sicher, dass die Kameras hoch oben im Stall montiert sind, um eine klare, ungehinderte Sicht auf die Kühe zu haben.",
+  "hardware_computer_title": "2. Der Computer (KI-Host)",
+  "hardware_computer_text": "Die Software läuft lokal auf Ihrer eigenen Hardware für maximale Privatsphäre und Geschwindigkeit. Dies kann ein Windows/Linux-PC mit einer leistungsfähigen Grafikkarte sein (NVIDIA-GPU wird für beste Leistung empfohlen) oder ein dediziertes Edge-Gerät wie ein NVIDIA Jetson Nano für ein kompaktes und energieeffizientes Setup im Stall.",
+  "hardware_btn_back": "Zurück zur Übersicht",
+  "hardware_btn_next": "Weiter zur Software"
+}

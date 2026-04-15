@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "macOS Installation",
+  "os_macos_intro": "Starten Sie den Detektor ganz einfach auf Ihrem Apple-Gerät.",
+  "os_macos_download_heading": "👉 Download über GitHub Releases",
+  "os_macos_download_desc": "Laden Sie die macOS-Datei in der neuesten Version herunter.",
+  "os_btn_releases": "Zu den Releases",
+  "os_table_file": "Datei",
+  "os_table_hardware": "Hardware-Anforderungen",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Erstellen Sie einen Ordner, z. B. auf Ihrem Schreibtisch oder unter <code>~/aidetector</code>, und verschieben Sie die heruntergeladene Datei hierher.",
+  "os_setup_title": "Setup-Anweisungen",
+  "os_setup_step2": "Erstellen Sie eine <code>config.json</code> Datei im selben Ordner (siehe Konfigurationsdokumentation).",
+  "os_macos_setup_step3": "Doppelklicken Sie auf die Datei oder öffnen Sie sie über das Terminal – ein Terminalfenster mit den Erkennungsprotokollen wird geöffnet.",
+  "os_setup_step3": "Doppelklicken Sie auf die <code>.exe</code> – ein Terminalfenster mit den Erkennungsprotokollen wird geöffnet.",
+  "os_setup_step4": "Beim ersten Start (ohne vorhandene <code>config.json</code>) wird automatisch eine Vorlage erstellt. Füllen Sie diese aus und starten Sie die Anwendung neu.",
+  "os_tip_title": "Tipp",
+  "os_tip_text": "Lassen Sie das Terminalfenster offen, solange der Detektor läuft. Wenn es sich sofort schließt, liegt ein Fehler in Ihrer <code>config.json</code> vor – prüfen Sie sorgfältig, ob Sie Anführungszeichen (\") oder Kommas (,) vergessen haben."
+}

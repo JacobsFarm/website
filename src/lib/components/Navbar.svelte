@@ -14,6 +14,20 @@
   }
 
   $: currentLocale = getLocale();
+
+  // De talen in de gevraagde volgorde
+  const languages = [
+    { code: 'en', label: 'EN', flag: '🇬🇧' },
+    { code: 'nl', label: 'NL', flag: '🇳🇱' },
+    { code: 'es', label: 'ES', flag: '🇪🇸' },
+    { code: 'fr', label: 'FR', flag: '🇫🇷' },
+    { code: 'pt', label: 'PT', flag: '🇵🇹' },
+    { code: 'de', label: 'DE', flag: '🇩🇪' },
+    { code: 'it', label: 'IT', flag: '🇮🇹' },
+    { code: 'pl', label: 'PL', flag: '🇵🇱' },
+    { code: 'ro', label: 'RO', flag: '🇷🇴' },
+    { code: 'dn', label: 'DN', flag: '🇩🇰' }
+  ];
 </script>
 
 <nav>
@@ -40,20 +54,22 @@
     <a href="{base}/projects/ai-detector" class="mobile-only" on:click={closeMenu}>AI-Detector</a>
 
     <div class="lang-switcher">
-      <button
-        class:active={currentLocale === 'nl'}
-        on:click={() => { setLocale('nl'); closeMenu(); }}
-        aria-label="Schakel naar Nederlands"
+      <select 
+        value={currentLocale} 
+        on:change={(e) => {
+          // @ts-ignore
+          setLocale(e.target.value);
+          closeMenu();
+        }}
+        class="lang-dropdown"
+        aria-label="Change language"
       >
-        🇳🇱 NL
-      </button>
-      <button
-        class:active={currentLocale === 'en'}
-        on:click={() => { setLocale('en'); closeMenu(); }}
-        aria-label="Switch to English"
-      >
-        🇬🇧 EN
-      </button>
+        {#each languages as lang}
+          <option value={lang.code}>
+            {lang.flag} {lang.label}
+          </option>
+        {/each}
+      </select>
     </div>
   </div>
 </nav>
@@ -87,7 +103,7 @@
 
   a {
     text-decoration: none;
-    color: oklch(98% 0.005 145); /* Off White */
+    color: oklch(98% 0.005 145);
     font-weight: bold;
     transition: all 0.2s ease;
   }
@@ -102,34 +118,32 @@
 
   .lang-switcher {
     display: flex;
-    gap: 0.3rem;
     align-items: center;
     margin-left: 0.5rem;
     padding-left: 1rem;
-    border-left: 1px solid oklch(85% 0.01 145 / 0.4); /* Soft Gray met opacity */
+    border-left: 1px solid oklch(85% 0.01 145 / 0.4);
   }
 
-  .lang-switcher button {
+  .lang-dropdown {
     background: transparent;
-    border: 1px solid transparent;
-    color: oklch(98% 0.005 145); /* Off White */
+    border: 1px solid oklch(85% 0.01 145 / 0.4);
+    color: oklch(98% 0.005 145);
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
     border-radius: 5px;
+    outline: none;
     transition: all 0.2s ease;
   }
 
-  .lang-switcher button:hover {
-    color: oklch(65% 0.16 75); /* Deep Amber */
-    border-color: oklch(85% 0.01 145 / 0.4);
+  .lang-dropdown:hover {
+    border-color: oklch(65% 0.16 75);
   }
 
-  .lang-switcher button.active {
-    color: oklch(65% 0.16 75); /* Deep Amber */
-    border-color: oklch(65% 0.16 75); /* Deep Amber */
-    background: rgba(255, 255, 255, 0.1);
+  .lang-dropdown option {
+    background: #386938;
+    color: white;
   }
 
   .hamburger {
@@ -145,7 +159,7 @@
   .bar {
     width: 25px;
     height: 3px;
-    background-color: oklch(98% 0.005 145); /* Off White */
+    background-color: oklch(98% 0.005 145);
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
   }
@@ -155,22 +169,16 @@
       display: flex;
     }
 
-    .bar.open:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .bar.open:nth-child(2) {
-      opacity: 0;
-    }
-    .bar.open:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
+    .bar.open:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .bar.open:nth-child(2) { opacity: 0; }
+    .bar.open:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
 
     .links {
       position: absolute;
       top: 100%;
       left: 0;
       right: 0;
-      background: #386938; /* Emerald Green */
+      background: #386938;
       flex-direction: column;
       align-items: flex-start;
       gap: 0;
@@ -181,13 +189,14 @@
     }
 
     .links.open {
-      max-height: 500px;
+      max-height: 600px;
     }
 
     .links a {
       padding: 1rem 2rem;
       width: 100%;
-      border-top: 1px solid oklch(85% 0.01 145 / 0.2); /* Soft Gray met opacity */
+      border-top: 1px solid oklch(85% 0.01 145 / 0.2);
+      box-sizing: border-box;
     }
 
     .mobile-only {
@@ -198,9 +207,19 @@
       border-left: none;
       border-top: 1px solid oklch(85% 0.01 145 / 0.2);
       margin-left: 0;
-      padding: 0.75rem 2rem;
+      padding: 1.5rem 2rem;
       width: 100%;
-      justify-content: flex-start;
+      box-sizing: border-box;
+    }
+
+    .lang-dropdown {
+      width: 100%;
+      font-size: 1rem;
+      padding: 0.75rem 1.2rem;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
+      text-align: center;
     }
   }
 </style>

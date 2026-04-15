@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Quiénes somos y por qué lo hacemos",
+  "about_us_intro": "Somos un equipo de productores de lácteos que desarrolla software de código abierto para el sector agrícola. Al utilizar este sistema en nuestras propias granjas, sabemos exactamente qué funciona, qué falla y qué necesita mejorar. No somos una corporación llena de gente que nunca ha visto una vaca en la vida, y esa es nuestra mayor fortaleza. Creado por agricultores para agricultores.",
+  "about_us_opensource_title": "¿Por qué código abierto?",
+  "about_us_opensource_text": "¡Porque es divertido, útil y vale la pena compartirlo! Este proyecto es completamente gratuito y fácil de descargar. Con la visión artificial, podemos crear una detección de eventos fiable de forma rápida y económica. ¿Lo mejor? Todo permanece de forma local: tus datos nunca salen de tu granja. Todo esto está impulsado por la alegría de la libertad y la independencia.",
+  "about_us_team_title": "Ventajas del código abierto",
+  "about_us_team_text": "La mayor ventaja del código abierto es que nos permite aprovechar software potente de otros proyectos que las entidades comerciales no pueden usar libremente. Por ejemplo, nuestra visión artificial principal se basa en los marcos de visión de Ultralytics, y nuestro sistema de alerta de detección funciona con AI Detector. Sin estas herramientas, este proyecto no sería posible.",
+  "about_us_longevity_title": "Construido para durar",
+  "about_us_longevity_text": "Dado que todo el código está disponible en línea, el proyecto teóricamente puede continuar para siempre. Si uno de nosotros tiene que retirarse, otro desarrollador puede tomar el relevo fácilmente. Este no es un proyecto que morirá silenciosamente; se mantendrá durante años. En el futuro, esperamos y animamos a más colaboradores a unirse.",
+  "about_us_independence_title": "Local y reparable",
+  "about_us_independence_text": "Tú eres responsable de tus propias instalaciones. Tú lo instalas, lo actualizas y cuelgas las cámaras tú mismo. Lo diseñamos para que fuera lo más fácil posible porque no tenemos tiempo para mantener sistemas de granjas individuales ni para gestionar facturaciones. El software se ejecuta localmente, por lo que tú mantienes el control total. Los datos no se transmiten, permanecen en tu granja y pueden funcionar sin Wi-Fi.",
+  "about_us_reality_title": "Expectativas y realidad",
+  "about_us_reality_text": "Al ser de código abierto, decimos: 'Es lo que es'. No podemos prometer que funcionará perfectamente el 100% del tiempo, y funciones como la detección de partos aún necesitan volverse más inteligentes. Actualmente tenemos un grupo activo de unos 35 agricultores que utilizan el sistema. En este grupo, los usuarios se ayudan entre sí, e incluso agricultores de 50 y 60 años gestionan la configuración perfectamente.",
+  "about_us_contribute_title": "Únete a la comunidad",
+  "about_us_contribute_text": "Cowcatcher AI es construido por agricultores, para agricultores. Ya sea que lo estés usando o estés comenzando, te invitamos a unirte a nuestra comunidad de Telegram. Conéctate con otros agricultores, comparte ideas, mantente al día y obtén ayuda cuando la necesites. Muchas mejoras sugeridas por los usuarios ya están implementadas en el código.",
+  "about_us_conclusion": "En última instancia, actualizamos constantemente nuestros modelos de visión y el software. Si no es exactamente lo que necesitas ahora, ¡vuelve a consultar en unos meses!",
+  "about_us_github_button": "Ver código en GitHub"
+}

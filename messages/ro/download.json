@@ -1,0 +1,10 @@
+{
+  "download_title": "Instalare și Descărcări",
+  "download_intro_text": "Instalarea este concepută pentru a fi cât mai ușoară posibil. Pur și simplu urmează pașii pentru sistemul tău de operare de mai jos și poți începe imediat cu CowCatcherAI.",
+  "download_card_windows_title": "Windows",
+  "download_card_windows_desc": "Pentru descărcare pe computere cu Windows 10 și Windows 11.",
+  "download_card_macos_title": "macOS",
+  "download_card_macos_desc": "Pentru dispozitive Apple, cum ar fi MacBook sau alte computere Mac.",
+  "download_card_linux_title": "Linux / Docker",
+  "download_card_linux_desc": "Pentru sistemul de operare Linux și computere edge (cum ar fi Jetson Nano Orin sau Raspberry Pi). Această instalare se face prin Docker."
+}

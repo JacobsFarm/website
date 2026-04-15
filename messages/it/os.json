@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "Installazione macOS",
+  "os_macos_intro": "Avvia facilmente il detector sul tuo dispositivo Apple.",
+  "os_macos_download_heading": "👉 Download tramite GitHub Releases",
+  "os_macos_download_desc": "Scarica il file macOS nell'ultima release.",
+  "os_btn_releases": "Vai alle Releases",
+  "os_table_file": "File",
+  "os_table_hardware": "Requisiti Hardware",
+  "os_hw_macos_any": "macOS (CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Crea una cartella, ad esempio sul desktop o in <code>~/aidetector</code>, e sposta qui il file scaricato.",
+  "os_setup_title": "Istruzioni per il Setup",
+  "os_setup_step2": "Crea un file <code>config.json</code> nella stessa cartella (vedi documentazione di Configurazione).",
+  "os_macos_setup_step3": "Fai doppio clic sul file o aprilo tramite terminale — si aprirà una finestra di terminale con i log di rilevamento.",
+  "os_setup_step3": "Fai doppio clic sull'<code>.exe</code> — si aprirà una finestra di terminale con i log di rilevamento.",
+  "os_setup_step4": "Al primo avvio (senza un <code>config.json</code> esistente), viene generato automaticamente un modello. Compilalo e riavvia l'applicazione.",
+  "os_tip_title": "Suggerimento",
+  "os_tip_text": "Mantieni aperta la finestra del terminale finché il detector è in funzione. Se si chiude immediatamente, c'è un errore nel tuo <code>config.json</code> — controlla attentamente di non aver dimenticato virgolette (\") o virgole (,)."
+}

@@ -1,0 +1,10 @@
+{
+  "hardware_title": "Instalação de Hardware",
+  "hardware_intro": "Para o CowCatcherAI, você precisa de dois componentes principais de hardware: câmeras de segurança e um computador para processar as imagens usando IA.",
+  "hardware_cameras_title": "1. As Câmeras",
+  "hardware_cameras_text": "Você pode usar quase qualquer câmera IP, desde que suporte RTSP (Real-Time Streaming Protocol). Este é um recurso padrão na maioria das câmeras de rede. Certifique-se de que as câmeras sejam montadas no alto do curral para uma visão clara e desobstruída das vacas.",
+  "hardware_computer_title": "2. O Computador (Host da IA)",
+  "hardware_computer_text": "O software roda localmente em seu próprio hardware para máxima privacidade e velocidade. Pode ser um PC Windows/Linux com uma placa de vídeo capaz (GPU NVIDIA é recomendada para melhor desempenho), ou um dispositivo edge dedicado como um NVIDIA Jetson Orin Nano para uma configuração compacta e eficiente em termos de energia no curral.",
+  "hardware_btn_back": "Voltar para visão geral",
+  "hardware_btn_next": "Prosseguir para o Software"
+}

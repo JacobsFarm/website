@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Quem Somos e Por Que Fazemos Isso",
+  "about_us_intro": "Somos uma equipe de produtores de leite desenvolvendo software de código aberto para o setor agrícola. Como utilizamos este sistema em nossas próprias fazendas, sabemos exatamente o que funciona, o que dá errado e o que precisa ser melhorado. Não somos uma empresa corporativa cheia de pessoas que nunca viram uma vaca na vida — e essa é a nossa maior força. Desenvolvido por produtores para produtores.",
+  "about_us_opensource_title": "Por que Código Aberto?",
+  "about_us_opensource_text": "Porque é divertido, útil e vale a pena compartilhar! Este projeto é completamente gratuito e fácil de baixar. Com visão computacional, podemos construir uma detecção de eventos confiável de forma rápida e acessível. A melhor parte? Tudo permanece totalmente local — seus dados nunca saem da sua fazenda. Tudo isso é movido pela alegria da liberdade e independência.",
+  "about_us_team_title": "Vantagem do Código Aberto",
+  "about_us_team_text": "A maior vantagem do código aberto é que ele nos permite aproveitar softwares poderosos de outros projetos que entidades comerciais não podem usar livremente. Por exemplo, nossa visão computacional principal é construída sobre os frameworks de visão da Ultralytics, e nosso sistema de alerta de detecção é alimentado pelo AI Detector. Sem essas ferramentas, este projeto não seria possível.",
+  "about_us_longevity_title": "Construído para Durar",
+  "about_us_longevity_text": "Como todo o código está disponível on-line, o projeto pode teoricamente continuar para sempre. Se um de nós precisar se afastar, outro desenvolvedor pode assumir facilmente. Este não é um projeto que morrerá silenciosamente; ele será mantido nos próximos anos. No futuro, esperamos e incentivamos a participação de mais colaboradores.",
+  "about_us_independence_title": "Local e Reparável",
+  "about_us_independence_text": "Você é responsável por suas próprias configurações. Você instala, atualiza e pendura as câmeras você mesmo. Nós o projetamos para ser o mais fácil possível, porque não temos tempo para dar manutenção em sistemas individuais de fazendas ou lidar com faturamento. O software roda localmente, para que você tenha controle total. Os dados não são transmitidos, permanecem na sua fazenda e o sistema pode funcionar sem Wi-Fi.",
+  "about_us_reality_title": "Expectativa e Realidade",
+  "about_us_reality_text": "Por ser código aberto, dizemos: 'É o que é'. Não podemos prometer que funcionará perfeitamente 100% do tempo, e recursos como a detecção de parto ainda precisam ficar mais inteligentes. Atualmente, temos um grupo ativo de cerca de 35 produtores utilizando o sistema. Nesse grupo, os usuários se ajudam, e até produtores na faixa dos 50 e 60 anos conseguem gerenciar a configuração perfeitamente.",
+  "about_us_contribute_title": "Junte-se à comunidade",
+  "about_us_contribute_text": "O Cowcatcher AI é construído por produtores para produtores. Quer você já o esteja usando ou esteja apenas começando, convidamos você a se juntar à nossa comunidade no Telegram. Conecte-se com colegas produtores, compartilhe ideias, mantenha-se atualizado e obtenha suporte sempre que precisar. Muitas melhorias sugeridas pelos usuários já estão implementadas no código.",
+  "about_us_conclusion": "No fim das contas, estamos constantemente atualizando nossos modelos de visão e software. Se ainda não for exatamente o que você precisa agora, volte a conferir em alguns meses!",
+  "about_us_github_button": "Ver Código no GitHub"
+}

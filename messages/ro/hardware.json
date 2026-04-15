@@ -1,0 +1,10 @@
+{
+  "hardware_title": "Instalare Hardware",
+  "hardware_intro": "Pentru CowCatcherAI, aveți nevoie de două componente hardware principale: camere de supraveghere și un computer pentru a procesa imaginile folosind AI.",
+  "hardware_cameras_title": "1. Camerele",
+  "hardware_cameras_text": "Puteți utiliza aproape orice cameră IP, atât timp cât acceptă RTSP (Real-Time Streaming Protocol). Aceasta este o caracteristică standard pe majoritatea camerelor de rețea. Asigurați-vă că sunt montate sus în grajd pentru o vedere clară și fără obstacole a vacilor.",
+  "hardware_computer_title": "2. Computerul (Gazda AI)",
+  "hardware_computer_text": "Software-ul rulează local pe propriul hardware pentru confidențialitate și viteză maximă. Acesta poate fi un PC cu Windows/Linux cu o placă grafică capabilă (GPU NVIDIA este recomandat pentru cele mai bune performanțe) sau un dispozitiv edge dedicat, cum ar fi un NVIDIA Jetson Nano, pentru o configurație compactă și eficientă din punct de vedere energetic chiar în grajd.",
+  "hardware_btn_back": "Înapoi la prezentarea generală",
+  "hardware_btn_next": "Continuă către Software"
+}

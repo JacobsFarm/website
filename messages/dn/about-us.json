@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Hvem vi er, og hvorfor vi gør det",
+  "about_us_intro": "Vi er et team af mælkeproducenter, der bygger open-source software til landbrugssektoren. Fordi vi bruger dette system på vores egne gårde, ved vi præcis, hvad der virker, hvad der går galt, og hvad der kræver forbedring. Vi er ikke en stor virksomhed fyldt med mennesker, der aldrig har set en ko i virkeligheden – og det er vores største styrke. Bygget af landmænd til landmænd.",
+  "about_us_opensource_title": "Hvorfor Open Source?",
+  "about_us_opensource_text": "Fordi det er sjovt, nyttigt og værd at dele! Dette projekt er helt gratis og nemt at downloade. Med computer vision kan vi opbygge pålidelig hændelsesregistrering hurtigt og billigt. Det bedste af det hele? Alt forbliver lokalt – dine data forlader aldrig din gård. Alt dette er drevet af glæden ved frihed og uafhængighed.",
+  "about_us_team_title": "Fordelen ved Open Source",
+  "about_us_team_text": "Den største fordel ved open source er, at det giver os mulighed for at udnytte kraftfuld software fra andre projekter, som kommercielle virksomheder ikke frit kan bruge. For eksempel er vores kerne-computer vision bygget på Ultralytics vision-frameworks, og vores registreringssystem er drevet af AI Detector. Uden disse værktøjer ville dette projekt ikke være muligt.",
+  "about_us_longevity_title": "Bygget til at holde",
+  "about_us_longevity_text": "Da al koden ligger frit tilgængeligt online, kan projektet teoretisk set fortsætte for evigt. Hvis en af os må træde tilbage, kan en anden udvikler nemt tage over. Dette er ikke et projekt, der bare dør ud; det vil blive vedligeholdt i mange år fremover. I fremtiden forventer og opfordrer vi flere bidragsydere til at deltage.",
+  "about_us_independence_title": "Lokalt og reparerbart",
+  "about_us_independence_text": "Du er ansvarlig for dit eget setup. Du installerer det, opdaterer det og hænger selv kameraerne op. Vi har designet det til at være så nemt som muligt, da vi ikke har tid til at vedligeholde individuelle systemer eller håndtere fakturering. Softwaren kører lokalt, så du har den fulde kontrol. Data transmitteres ikke, bliver på din gård og systemet kan køre uden wifi.",
+  "about_us_reality_title": "Forventninger og virkelighed",
+  "about_us_reality_text": "Da det er open-source, siger vi: 'Det er, hvad det er.' Vi kan ikke love, at det virker perfekt 100% af tiden, og funktioner som kælvingsovervågning skal stadig blive klogere. Vi har i øjeblikket en aktiv gruppe på omkring 35 landmænd, der kører systemet. I denne gruppe hjælper brugerne hinanden, og selv landmænd i 50'erne og 60'erne styrer opsætningen uden problemer.",
+  "about_us_contribute_title": "Bliv en del af fællesskabet",
+  "about_us_contribute_text": "Cowcatcher AI er bygget af landmænd til landmænd. Uanset om du allerede bruger det eller lige er gået i gang, inviterer vi dig til at deltage i vores Telegram-fællesskab. Skab kontakt til andre landmænd, del idéer, hold dig opdateret og få hjælp, når du har brug for det. Mange brugerforslag til forbedringer er allerede implementeret i koden.",
+  "about_us_conclusion": "Vi opdaterer konstant vores vision-modeller og software. Hvis det ikke lige er det, du har brug for nu, så tjek igen om et par måneder!",
+  "about_us_github_button": "Se koden på GitHub"
+}

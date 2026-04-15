@@ -1,0 +1,18 @@
+{
+  "os_macos_title": "Instalacja na macOS",
+  "os_macos_intro": "Łatwo uruchom detektor na swoim urządzeniu Apple.",
+  "os_macos_download_heading": "👉 Pobierz przez GitHub Releases",
+  "os_macos_download_desc": "Pobierz plik dla systemu macOS w najnowszej wersji.",
+  "os_btn_releases": "Przejdź do Releases",
+  "os_table_file": "Plik",
+  "os_table_hardware": "Wymagania sprzętowe",
+  "os_hw_macos_any": "macOS (procesor CPU / Apple Silicon)",
+  "os_macos_setup_step1": "Utwórz folder, na przykład na pulpicie lub w <code>~/aidetector</code>, i przenieś tam pobrany plik.",
+  "os_setup_title": "Instrukcja konfiguracji",
+  "os_setup_step2": "Utwórz plik <code>config.json</code> w tym samym folderze (patrz dokumentacja konfiguracji).",
+  "os_macos_setup_step3": "Kliknij dwukrotnie plik lub otwórz go przez terminal – otworzy się okno terminala z logami detekcji.",
+  "os_setup_step3": "Kliknij dwukrotnie plik <code>.exe</code> – otworzy się okno terminala z logami detekcji.",
+  "os_setup_step4": "Przy pierwszym uruchomieniu (bez istniejącego pliku <code>config.json</code>) automatycznie generowany jest szablon. Wypełnij go i zrestartuj aplikację.",
+  "os_tip_title": "Wskazówka",
+  "os_tip_text": "Zostaw okno terminala otwarte tak długo, jak detektor pracuje. Jeśli zamknie się natychmiast, oznacza to błąd w pliku <code>config.json</code> – sprawdź dokładnie, czy nie zapomniałeś cudzysłowu (\") lub przecinka (,)."
+}

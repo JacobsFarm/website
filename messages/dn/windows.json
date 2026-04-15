@@ -1,0 +1,15 @@
+{
+  "windows_title": "Windows-installation",
+  "windows_intro": "Mulighed 1 — Windows-fil (.exe) (anbefales til de fleste brugere). Start detektoren hurtigt og nemt på dit Windows-system.",
+  "windows_download_heading": "👉 Download via GitHub Releases",
+  "windows_download_desc": "Vælg den korrekte fil til din hardware i den seneste version.",
+  "windows_btn_releases": "Gå til Releases",
+  "windows_table_file": "Fil",
+  "windows_table_hardware": "Hardwarekrav",
+  "windows_hw_win11_any": "Windows 11 med ethvert grafikkort (GPU)",
+  "windows_hw_win10_rtx3000": "Windows 10 med NVIDIA RTX 3000-serien eller nyere",
+  "windows_hw_win10_rtx2000": "Windows 10 med NVIDIA RTX 2000-serien eller ældre",
+  "windows_note_title": "Er du i tvivl om, hvilken du skal vælge?",
+  "windows_note_text": "Start med <strong>winml</strong>-versionen på Windows. Brug kun en cuda-build, hvis du er helt sikker på, at dit NVIDIA-setup matcher den specifikke CUDA-version.",
+  "windows_setup_step1": "Opret en mappe, for eksempel <code>C:\\aidetector</code>, og flyt den downloadede <code>.exe</code>-fil til denne mappe."
+}

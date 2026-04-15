@@ -1,13 +1,11 @@
 {
   "options_title": "Software Configuratie",
   "options_intro": "De AI Detector wordt ingesteld via een config.json bestand. Hieronder vind je een compleet en gedetailleerd overzicht van alle beschikbare modules en variabelen.",
-  
   "opt_det_title": "1. Detection (Wat te bekijken)",
   "opt_det_desc": "Configureer de bronnen die de detector in de gaten moet houden.",
   "opt_det_source": "De RTSP/HTTP stream URL of lokaal videopad. Gebruik een lijst [ ] voor meerdere bronnen.",
   "opt_det_interval": "Aantal seconden wachttijd tussen verwerkte frames (standaard 0 = verwerk elk frame). Handig voor tragere computers.",
   "opt_det_retention": "Hoeveel recente frames per bron in het geheugen blijven (standaard 30) voor context bij detecties.",
-  
   "opt_yolo_title": "2. YOLO (Object Detectie)",
   "opt_yolo_desc": "Het snelle eerste AI-model dat elke frame scant. Zonder YOLO worden alle frames simpelweg doorgelaten.",
   "opt_yolo_model": "URL of lokaal pad naar een YOLO-modelbestand (.pt of .onnx).",
@@ -19,7 +17,6 @@
   "opt_yolo_framesmin": "Hoeveel frames op rij moeten matchen voordat het telt (standaard 6 of 3 afhankelijk van GPU).",
   "opt_yolo_imgsz": "De afbeeldingsgrootte voor het model. Hoger is nauwkeuriger maar trager (standaard 640).",
   "opt_yolo_strat": "Welke frames te evalueren: \"LATEST\" (meest recente) of \"ALL\" (elke frame).",
-  
   "opt_vlm_title": "3. VLM (AI Dubbelcheck - Optioneel)",
   "opt_vlm_desc": "Een Vision Language Model controleert de beelden na een YOLO-detectie. Vermindert valse meldingen.",
   "opt_vlm_prompt": "De vraag over de beelden, bijv. 'Zie je een persoon in deze video?'.",
@@ -27,14 +24,12 @@
   "opt_vlm_key": "API-sleutel voor de gekozen modelprovider.",
   "opt_vlm_url": "Aangepast API-eindpunt, handig voor lokale modellen.",
   "opt_vlm_strat": "\"VIDEO\" stuurt een videoclip naar de AI. \"IMAGE\" stuurt één frame (goedkoper maar minder accuraat).",
-  
   "opt_exp_title": "4. Exporters (Meldingen & Opslag)",
   "opt_exp_desc": "Stel in waar bevestigde detecties naartoe moeten worden gestuurd.",
   "opt_exp_disk_dir": "Map onder 'detections/' om bestanden in op te slaan. Anders wordt de klassenaam gebruikt.",
   "opt_exp_disk_strat": "\"BEST\" bewaart alleen het frame met de hoogste zekerheid. \"ALL\" bewaart alles.",
   "opt_exp_disk_conf": "Minimale zekerheid die nodig is om op te slaan.",
   "opt_exp_disk_rej": "Of detecties die door de VLM zijn afgewezen ook moeten worden opgeslagen (standaard true).",
-  
   "opt_exp_tele_token": "Jouw Telegram bot token.",
   "opt_exp_tele_chat": "De Telegram chat- of gebruikers-ID.",
   "opt_exp_tele_conf": "Minimale zekerheid die nodig is om te versturen.",
@@ -45,7 +40,6 @@
   "opt_exp_tele_width": "Breedte van de videoclip in pixels (standaard 1280).",
   "opt_exp_tele_crf": "Videokwaliteit (0-51). Lager is beter, standaard 28.",
   "opt_exp_tele_rej": "Of afgewezen detecties ook moeten worden verstuurd (standaard false).",
-  
   "opt_exp_web_url": "De URL waar de data naartoe wordt ge-POST.",
   "opt_exp_web_token": "Autorisatietoken voor in de request headers.",
   "opt_exp_web_conf": "Minimale zekerheid die nodig is voor de trigger.",
@@ -57,7 +51,6 @@
   "opt_exp_web_width": "Breedte van de videoclip in pixels (standaard 1280).",
   "opt_exp_web_crf": "Videokwaliteit (0-51). Lager is beter, standaard 28.",
   "opt_exp_web_rej": "Of afgewezen detecties ook moeten worden ge-POST (standaard false).",
-  
   "opt_health_title": "5. Health (Ping Monitor)",
   "opt_health_desc": "Stuurt periodiek een HTTP request om systemen te laten weten dat de detector nog actief is.",
   "opt_health_url": "De URL om te pingen.",
@@ -66,13 +59,11 @@
   "opt_health_timeout": "Request timeout in seconden (standaard 5).",
   "opt_health_headers": "Optionele HTTP headers map.",
   "opt_health_body": "Optionele request body (raw text).",
-  
   "opt_onnx_title": "6. ONNX Runtime",
   "opt_onnx_desc": "Beheert hoe ONNX Runtime wordt ingesteld voor YOLO modellen.",
   "opt_onnx_provider": "Forceer een providernaam, bijv. \"CUDAExecutionProvider\" of \"CPUExecutionProvider\".",
   "opt_onnx_winml": "Alleen voor Windows ML builds. Probeer automatisch providers te registreren (standaard true).",
   "opt_onnx_opset": "ONNX opset gebruikt tijdens de export. Lagere waarden kunnen compatibiliteit verhogen (standaard 20).",
-  
   "options_btn_back": "Terug naar overzicht",
   "options_github_text": "Bekijk de volledige documentatie, voorbeeldconfiguraties en de Docker setup op onze officiële GitHub pagina.",
   "options_github_btn": "Bekijk op GitHub"

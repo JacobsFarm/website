@@ -1,0 +1,10 @@
+{
+  "hardware_title": "Hardwareinstallation",
+  "hardware_intro": "Til CowCatcherAI skal du bruge to primære hardwarekomponenter: overvågningskameraer og en computer til at behandle billederne ved hjælp af AI.",
+  "hardware_cameras_title": "1. Kameraerne",
+  "hardware_cameras_text": "Du kan bruge næsten ethvert IP-kamera, så længe det understøtter RTSP (Real-Time Streaming Protocol). Dette er en standardfunktion på de fleste netværkskameraer. Sørg for, at kameraerne monteres højt oppe i stalden for at få et klart, uhindret udsyn over køerne.",
+  "hardware_computer_title": "2. Computeren (AI-vært)",
+  "hardware_computer_text": "Softwaren kører lokalt på din egen hardware for maksimalt privatliv og hastighed. Dette kan være en Windows/Linux PC med et ordentligt grafikkort (NVIDIA GPU anbefales for den bedste ydeevne) eller en dedikeret edge-enhed som en NVIDIA Jetson Nano for et kompakt og energieffektivt setup i stalden.",
+  "hardware_btn_back": "Tilbage til oversigten",
+  "hardware_btn_next": "Gå videre til software"
+}

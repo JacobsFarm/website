@@ -1,0 +1,18 @@
+{
+  "about_us_title": "Kim jesteśmy i dlaczego to robimy",
+  "about_us_intro": "Jesteśmy zespołem hodowców bydła mlecznego, tworzącym oprogramowanie open-source dla sektora rolniczego. Ponieważ sami korzystamy z tego systemu w naszych gospodarstwach, wiemy dokładnie, co działa, co zawodzi i co wymaga poprawy. Nie jesteśmy korporacją pełną ludzi, którzy nigdy nie widzieli krowy na żywo – i to jest nasza największa siła. Stworzone przez rolników dla rolników.",
+  "about_us_opensource_title": "Dlaczego Open Source?",
+  "about_us_opensource_text": "Ponieważ to świetna zabawa, przydatne narzędzie i coś, czym warto się dzielić! Ten projekt jest całkowicie darmowy i łatwy do pobrania. Dzięki wizji komputerowej możemy szybko i tanio budować niezawodne systemy wykrywania zdarzeń. Najlepsza część? Wszystko pozostaje w pełni lokalne – Twoje dane nigdy nie opuszczają Twojego gospodarstwa. Wszystko to napędza radość z wolności i niezależności.",
+  "about_us_team_title": "Zaleta Open Source",
+  "about_us_team_text": "Największą zaletą open-source jest to, że pozwala nam korzystać z potężnego oprogramowania innych projektów, którego podmioty komercyjne nie mogą swobodnie używać. Na przykład, nasz rdzeń wizji komputerowej opiera się na frameworkach Ultralytics, a nasz system powiadomień o wykryciu jest zasilany przez AI Detector. Bez tych narzędzi ten projekt nie byłby możliwy.",
+  "about_us_longevity_title": "Zbudowane, by trwać",
+  "about_us_longevity_text": "Ponieważ cały kod jest dostępny online, projekt teoretycznie może trwać wiecznie. Jeśli jeden z nas będzie musiał się wycofać, inny programista może łatwo przejąć stery. To nie jest projekt, który po cichu umrze; będzie utrzymywany przez lata. W przyszłości oczekujemy i zachęcamy kolejnych współtwórców do dołączenia.",
+  "about_us_independence_title": "Lokalne i naprawialne",
+  "about_us_independence_text": "Jesteś odpowiedzialny za własną konfigurację. Sam instalujesz system, aktualizujesz go i montujesz kamery. Zaprojektowaliśmy go tak, aby był jak najprostszy, ponieważ nie mamy czasu na serwisowanie systemów w poszczególnych gospodarstwach ani na zajmowanie się fakturowaniem. Oprogramowanie działa lokalnie, więc masz nad nim pełną kontrolę. Dane nie są przesyłane, zostają w Twoim gospodarstwie, a system może działać bez Wi-Fi.",
+  "about_us_reality_title": "Oczekiwania a rzeczywistość",
+  "about_us_reality_text": "Ponieważ to projekt open-source, mówimy wprost: „Jest, jak jest”. Nie możemy obiecać, że będzie działać idealnie przez 100% czasu, a funkcje takie jak wykrywanie wycieleń wciąż muszą stać się inteligentniejsze. Obecnie mamy aktywną grupę około 35 rolników korzystających z systemu. W tej grupie użytkownicy pomagają sobie nawzajem, a nawet rolnicy w wieku 50 i 60 lat świetnie radzą sobie z konfiguracją.",
+  "about_us_contribute_title": "Dołącz do społeczności",
+  "about_us_contribute_text": "Cowcatcher AI jest tworzony przez rolników dla rolników. Niezależnie od tego, czy już z niego korzystasz, czy dopiero zaczynasz, zapraszamy Cię do naszej społeczności na Telegramie. Nawiąż kontakt z innymi hodowcami, dziel się pomysłami, bądź na bieżąco i uzyskaj wsparcie, gdy go potrzebujesz. Wiele ulepszeń sugerowanych przez użytkowników jest już wdrożonych w kodzie.",
+  "about_us_conclusion": "Stale aktualizujemy nasze modele wizyjne i oprogramowanie. Jeśli teraz nie jest to dokładnie to, czego potrzebujesz, sprawdź ponownie za kilka miesięcy!",
+  "about_us_github_button": "Zobacz kod na GitHub"
+}
