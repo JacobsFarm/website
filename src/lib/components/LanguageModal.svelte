@@ -48,7 +48,7 @@
   <div class="backdrop" role="dialog" aria-modal="true" aria-label="Kies je taal">
     <div class="modal">
       <div class="globe">🌍</div>
-      <h2>Kies je taal</h2>
+      <h2>Choose your language</h2>
       <p>Select your preferred language</p>
 
       <div class="options">
@@ -60,8 +60,20 @@
           {/each}
         </select>
 
-        <button class="confirm-btn" on:click={choose}>
-          Confirm / Bevestig
+        <button class="confirm-btn" on:click={choose} aria-label="Confirm">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="24" 
+            height="24" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="currentColor" 
+            stroke-width="3" 
+            stroke-linecap="round" 
+            stroke-linejoin="round"
+          >
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
         </button>
       </div>
     </div>
@@ -69,7 +81,6 @@
 {/if}
 
 <style>
-  /* De styling blijft exact hetzelfde als in jouw voorbeeld */
   .backdrop {
     position: fixed;
     inset: 0;
@@ -128,6 +139,9 @@
   }
 
   .confirm-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1.1rem;
     border: none;
     border-radius: 14px;
