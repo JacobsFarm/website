@@ -47,19 +47,19 @@
     <section class="projects-grid">
         <ProjectCard 
             title={m.front_page_cowcatcher_title()} 
-            link="{base}/projects/cowcatcher" 
+            link="/projects/cowcatcher" 
             desc={m.front_page_cowcatcher_desc()} 
             logo={cowcatcherLogo}
         />
         <ProjectCard 
             title={m.front_page_calvingcatcher_title()}
-            link="{base}/projects/calvingcatcher"
+            link="/projects/calvingcatcher"
             desc={m.front_page_calvingcatcher_desc()}
             logo={calvingcatcherLogo}
         />
         <ProjectCard 
             title={m.front_page_ai_detector_title()}
-            link="{base}/projects/ai-detector"
+            link="/projects/ai-detector"
             desc={m.front_page_ai_detector_desc()}
             logo={aiDetectorLogo}
         />
