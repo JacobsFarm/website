@@ -24,7 +24,7 @@
             if (entries[0].isIntersecting) {
                 farms.set(40);
                 detections.set(100); 
-                countries.set(5);
+                countries.set(6);
                 observer.disconnect();
             }
         }, { threshold: 0.3 });
