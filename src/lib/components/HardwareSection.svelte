@@ -30,7 +30,23 @@
                     <details class="more-info-accordion">
                         <summary>More information</summary>
                         <div class="accordion-content">
-                            <p>{option.moreInfo}</p>
+                            <p class="more-text">{option.moreInfo}</p>
+                            
+                            {#if option.videoLink || option.pdfLink}
+                                <div class="attachment-links">
+                                    {#if option.videoLink}
+                                        <a href={option.videoLink} target="_blank" rel="noopener noreferrer" class="attachment-link video">
+                                            <span class="icon">▶</span> See video
+                                        </a>
+                                    {/if}
+                                    
+                                    {#if option.pdfLink}
+                                        <a href={option.pdfLink} target="_blank" rel="noopener noreferrer" class="attachment-link pdf">
+                                            <span class="icon">📄</span> View PDF Guide
+                                        </a>
+                                    {/if}
+                                </div>
+                            {/if}
                         </div>
                     </details>
                 {/if}
@@ -153,6 +169,40 @@
         color: #555;
     }
 
+    .more-text {
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+
+    .attachment-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        border-top: 1px dashed #e0eee0;
+        padding-top: 1rem;
+    }
+
+    .attachment-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: #386938;
+        text-decoration: none;
+        transition: color 0.2s, transform 0.2s;
+    }
+
+    .attachment-link:hover {
+        color: oklch(65% 0.16 75);
+        transform: translateX(2px);
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+
     @media (max-width: 768px) {
         .option-main {
             flex-direction: column;
@@ -163,6 +213,11 @@
             flex: auto;
             width: 100%;
             max-width: 100%;
+        }
+
+        .attachment-links {
+            flex-direction: column;
+            gap: 0.8rem;
         }
     }
 </style>

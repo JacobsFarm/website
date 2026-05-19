@@ -5,10 +5,16 @@
     import imgHardware1 from '$lib/assets/installation_hardware_1.jpg';
     import imgPlaceholder from '$lib/assets/place-holder 875x875.jpg';
     
+    // Computers
     import imgNvidiaDesktop from '$lib/assets/Hardware_nvidia_desktop_875x875.jpg';
     import imgMacMini from '$lib/assets/Hardware_Mac_mini_m4_875x875.jpg';
     import imgJetsonNano from '$lib/assets/Hardware_jetson_nano_orin_875x875.jpg';
     import imgStandardDesktop from '$lib/assets/Hardware_standard_desktop_875x875.jpg';
+
+    // Nieuwe toevoegingen
+    import imgPoeSwitch from '$lib/assets/Hardware_poe switch_875x875.jpg';
+    import imgEthernetCable from '$lib/assets/Hardware_ethernet_cable_875x875.jpg';
+    import imgCrimpTool from '$lib/assets/Hardware_crimp_tool_rj45_875x875.jpg';
 
     $: computerOptions = [
         {
@@ -17,7 +23,9 @@
             moreInfo: m.hardware_comp_opt1_more(),
             imageSrc: imgNvidiaDesktop,
             imageAlt: "Gaming PC",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_comp_opt2_title(),
@@ -25,7 +33,9 @@
             moreInfo: m.hardware_comp_opt2_more(),
             imageSrc: imgMacMini,
             imageAlt: "Mac mini",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_comp_opt3_title(),
@@ -33,7 +43,9 @@
             moreInfo: m.hardware_comp_opt3_more(),
             imageSrc: imgJetsonNano,
             imageAlt: "Jetson Nano",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_comp_opt4_title(),
@@ -41,7 +53,9 @@
             moreInfo: m.hardware_comp_opt4_more(),
             imageSrc: imgStandardDesktop,
             imageAlt: "Refurbished PC",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         }
     ];
 
@@ -52,7 +66,10 @@
             moreInfo: m.hardware_cam_opt1_more(),
             imageSrc: imgHardware1,
             imageAlt: "Standard Camera",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            // De nieuwe PDF link toegevoegd:
+            pdfLink: "/docs/camera_setup_trackmix.pdf"
         }
     ];
 
@@ -61,25 +78,31 @@
             title: m.hardware_req_opt1_title(),
             desc: m.hardware_req_opt1_desc(),
             moreInfo: m.hardware_req_opt1_more(),
-            imageSrc: imgPlaceholder,
+            imageSrc: imgPoeSwitch,
             imageAlt: "PoE Switch",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_req_opt2_title(),
             desc: m.hardware_req_opt2_desc(),
             moreInfo: m.hardware_req_opt2_more(),
-            imageSrc: imgPlaceholder,
+            imageSrc: imgEthernetCable,
             imageAlt: "Internet Cable",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_req_opt3_title(),
             desc: m.hardware_req_opt3_desc(),
             moreInfo: m.hardware_req_opt3_more(),
-            imageSrc: imgPlaceholder,
+            imageSrc: imgPlaceholder, // Nog geen afbeelding voor de waterdichte doos
             imageAlt: "Waterproof Box",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         }
     ];
 
@@ -88,17 +111,21 @@
             title: m.hardware_diy_opt1_title(),
             desc: m.hardware_diy_opt1_desc(),
             moreInfo: m.hardware_diy_opt1_more(),
-            imageSrc: imgPlaceholder,
+            imageSrc: imgCrimpTool,
             imageAlt: "Crimp Tool",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_diy_opt2_title(),
             desc: m.hardware_diy_opt2_desc(),
             moreInfo: m.hardware_diy_opt2_more(),
-            imageSrc: imgPlaceholder,
+            imageSrc: imgPlaceholder, // Nog geen afbeelding voor connectoren
             imageAlt: "Pass-through Connectors",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_diy_opt3_title(),
@@ -106,7 +133,9 @@
             moreInfo: m.hardware_diy_opt3_more(),
             imageSrc: imgPlaceholder,
             imageAlt: "DIY IP Box Components",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         },
         {
             title: m.hardware_diy_opt4_title(),
@@ -114,7 +143,9 @@
             moreInfo: m.hardware_diy_opt4_more(),
             imageSrc: imgPlaceholder,
             imageAlt: "Impact-Resistant PVC",
-            imageLink: "#"
+            imageLink: "#",
+            videoLink: null,
+            pdfLink: null
         }
     ];
 </script>
