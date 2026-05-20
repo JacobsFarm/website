@@ -2,16 +2,13 @@
     import * as m from '$lib/paraglide/messages.js';
     import { base } from '$app/paths';
     import HardwareSection from '$lib/components/HardwareSection.svelte';
+    
     import imgHardware1 from '$lib/assets/installation_hardware_1.jpg';
     import imgPlaceholder from '$lib/assets/place-holder 875x875.jpg';
-    
-    // Computers
     import imgNvidiaDesktop from '$lib/assets/Hardware_nvidia_desktop_875x875.jpg';
     import imgMacMini from '$lib/assets/Hardware_Mac_mini_m4_875x875.jpg';
     import imgJetsonNano from '$lib/assets/Hardware_jetson_nano_orin_875x875.jpg';
     import imgStandardDesktop from '$lib/assets/Hardware_standard_desktop_875x875.jpg';
-
-    // Nieuwe toevoegingen
     import imgPoeSwitch from '$lib/assets/Hardware_poe switch_875x875.jpg';
     import imgEthernetCable from '$lib/assets/Hardware_ethernet_cable_875x875.jpg';
     import imgCrimpTool from '$lib/assets/Hardware_crimp_tool_rj45_875x875.jpg';
@@ -24,8 +21,9 @@
             imageSrc: imgNvidiaDesktop,
             imageAlt: "Gaming PC",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "See setup video", url: "https://youtube.com/watch", icon: "▶" }
+            ]
         },
         {
             title: m.hardware_comp_opt2_title(),
@@ -34,8 +32,7 @@
             imageSrc: imgMacMini,
             imageAlt: "Mac mini",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: []
         },
         {
             title: m.hardware_comp_opt3_title(),
@@ -44,8 +41,9 @@
             imageSrc: imgJetsonNano,
             imageAlt: "Jetson Nano",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "View Docker installation guide", url: "/docs/docker_guide.pdf", icon: "📄" }
+            ]
         },
         {
             title: m.hardware_comp_opt4_title(),
@@ -54,8 +52,7 @@
             imageSrc: imgStandardDesktop,
             imageAlt: "Refurbished PC",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: []
         }
     ];
 
@@ -67,9 +64,10 @@
             imageSrc: imgHardware1,
             imageAlt: "Standard Camera",
             imageLink: "#",
-            videoLink: null,
-            // De nieuwe PDF link toegevoegd:
-            pdfLink: "/docs/camera_setup_trackmix.pdf"
+            links: [
+                { text: "See camera setup video", url: "https://youtube.com/watch", icon: "▶" },
+                { text: "Camera Setup Manual (PDF)", url: `${base}/docs/camera_setup_trackmix.pdf`, icon: "📄" }
+            ]
         }
     ];
 
@@ -81,8 +79,9 @@
             imageSrc: imgPoeSwitch,
             imageAlt: "PoE Switch",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "Buy PoE Switch on AliExpress", url: "https://aliexpress.com", icon: "🛒" }
+            ]
         },
         {
             title: m.hardware_req_opt2_title(),
@@ -91,18 +90,20 @@
             imageSrc: imgEthernetCable,
             imageAlt: "Internet Cable",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "Buy Cat6 Cable on AliExpress", url: "https://aliexpress.com", icon: "🛒" }
+            ]
         },
         {
             title: m.hardware_req_opt3_title(),
             desc: m.hardware_req_opt3_desc(),
             moreInfo: m.hardware_req_opt3_more(),
-            imageSrc: imgPlaceholder, // Nog geen afbeelding voor de waterdichte doos
+            imageSrc: imgPlaceholder,
             imageAlt: "Waterproof Box",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "Buy Waterproof Box", url: "https://aliexpress.com", icon: "📦" }
+            ]
         }
     ];
 
@@ -114,18 +115,21 @@
             imageSrc: imgCrimpTool,
             imageAlt: "Crimp Tool",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "See how to crimp cables", url: "https://youtube.com/watch", icon: "▶" },
+                { text: "Buy Pass-through Tool", url: "https://aliexpress.com", icon: "🛠️" }
+            ]
         },
         {
             title: m.hardware_diy_opt2_title(),
             desc: m.hardware_diy_opt2_desc(),
             moreInfo: m.hardware_diy_opt2_more(),
-            imageSrc: imgPlaceholder, // Nog geen afbeelding voor connectoren
+            imageSrc: imgPlaceholder,
             imageAlt: "Pass-through Connectors",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "Buy Connectors (Cat6)", url: "https://aliexpress.com", icon: "🔌" }
+            ]
         },
         {
             title: m.hardware_diy_opt3_title(),
@@ -134,8 +138,10 @@
             imageSrc: imgPlaceholder,
             imageAlt: "DIY IP Box Components",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: [
+                { text: "Buy Junction Box", url: "https://aliexpress.com", icon: "📦" },
+                { text: "Buy Cable Glands", url: "https://aliexpress.com", icon: "🔧" }
+            ]
         },
         {
             title: m.hardware_diy_opt4_title(),
@@ -144,8 +150,7 @@
             imageSrc: imgPlaceholder,
             imageAlt: "Impact-Resistant PVC",
             imageLink: "#",
-            videoLink: null,
-            pdfLink: null
+            links: []
         }
     ];
 </script>

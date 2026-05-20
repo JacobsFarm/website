@@ -26,25 +26,24 @@
                     </div>
                 </div>
 
-                {#if option.moreInfo}
+                {#if option.moreInfo || (option.links && option.links.length > 0)}
                     <details class="more-info-accordion">
                         <summary>More information</summary>
                         <div class="accordion-content">
-                            <p class="more-text">{option.moreInfo}</p>
+                            {#if option.moreInfo}
+                                <p class="more-text">{option.moreInfo}</p>
+                            {/if}
                             
-                            {#if option.videoLink || option.pdfLink}
-                                <div class="attachment-links">
-                                    {#if option.videoLink}
-                                        <a href={option.videoLink} target="_blank" rel="noopener noreferrer" class="attachment-link video">
-                                            <span class="icon">▶</span> See video
+                            {#if option.links && option.links.length > 0}
+                                <div class="linktree-container">
+                                    {#each option.links as link}
+                                        <a href={link.url} target="_blank" rel="external noopener noreferrer" data-sveltekit-reload class="linktree-btn">
+                                            {#if link.icon}
+                                                <span class="icon">{link.icon}</span>
+                                            {/if}
+                                            <span class="link-text">{link.text}</span>
                                         </a>
-                                    {/if}
-                                    
-                                    {#if option.pdfLink}
-                                        <a href={option.pdfLink} target="_blank" rel="noopener noreferrer" class="attachment-link pdf">
-                                            <span class="icon">📄</span> View PDF Guide
-                                        </a>
-                                    {/if}
+                                    {/each}
                                 </div>
                             {/if}
                         </div>
@@ -174,33 +173,41 @@
         margin-bottom: 1.5rem;
     }
 
-    .attachment-links {
+    .linktree-container {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1.5rem;
+        flex-direction: column;
+        gap: 0.8rem;
         border-top: 1px dashed #e0eee0;
-        padding-top: 1rem;
+        padding-top: 1.5rem;
     }
 
-    .attachment-link {
-        display: inline-flex;
+    .linktree-btn {
+        display: flex;
         align-items: center;
-        gap: 0.5rem;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 600;
-        font-size: 0.95rem;
+        justify-content: center;
+        gap: 0.8rem;
+        background-color: #ffffff;
+        border: 2px solid #386938;
+        padding: 0.8rem 1rem;
+        border-radius: 8px;
         color: #386938;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
         text-decoration: none;
-        transition: color 0.2s, transform 0.2s;
+        transition: all 0.2s ease;
+        width: 100%;
+        box-sizing: border-box;
     }
 
-    .attachment-link:hover {
-        color: oklch(65% 0.16 75);
-        transform: translateX(2px);
+    .linktree-btn:hover {
+        background-color: #386938;
+        color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 10px rgba(56, 105, 56, 0.2);
     }
 
     .icon {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
     }
 
     @media (max-width: 768px) {
@@ -213,11 +220,6 @@
             flex: auto;
             width: 100%;
             max-width: 100%;
-        }
-
-        .attachment-links {
-            flex-direction: column;
-            gap: 0.8rem;
         }
     }
 </style>
