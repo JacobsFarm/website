@@ -2,6 +2,7 @@
     import * as m from '$lib/paraglide/messages.js';
     import agrarischOndernemerLogo from '$lib/assets/front_page_logo_agrarisch_ondernemer_2026.png';
     import prikkebordLogo from '$lib/assets/front_page_logo_prikkebord.png';
+    import sterkeErvenLogo from '$lib/assets/sterke_erven_logo.svg';
 
     const logos = [
         { 
@@ -23,6 +24,11 @@
             src: 'https://cdn.prod.website-files.com/67926f6051d52946b93dfd03/67969bfe08ff0a9f00554e61_veehouderij%20techniek_logo.svg', 
             alt: 'Veehouderij Techniek',
             href: 'https://www.mechaman.nl/veehouderij-techniek/artikel/20260310/cowcatcher-komt-met-afkalfdetectie/'
+        },
+        { 
+            src: sterkeErvenLogo,
+            alt: 'Sterke Erven Melkvee',
+            href: 'https://www.melkvee.nl/artikel/1526197-ai-systeem-helpt-bij-detectie-van-tochtige-koeien/'
         },
         { 
             src: 'https://cdn.brandfetch.io/idgfMn7mzV/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1770955759252', 
