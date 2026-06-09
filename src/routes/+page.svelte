@@ -22,8 +22,8 @@
     onMount(() => {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-                farms.set(40);
-                detections.set(100); 
+                farms.set(45);
+                detections.set(200); 
                 countries.set(6);
                 observer.disconnect();
             }
