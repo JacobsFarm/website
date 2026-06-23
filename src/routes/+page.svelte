@@ -22,7 +22,7 @@
     onMount(() => {
         const observer = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting) {
-                farms.set(45);
+                farms.set(50);
                 detections.set(200); 
                 countries.set(6);
                 observer.disconnect();
