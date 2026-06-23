@@ -28,7 +28,7 @@
         { 
             src: sterkeErvenLogo,
             alt: 'Sterke Erven Melkvee',
-            href: 'https://www.melkvee.nl/artikel/1526197-ai-systeem-helpt-bij-detectie-van-tochtige-koeien/'
+            href: 'https://sterke-erven.nl/artikel/631761-ai-systeem-helpt-bij-detectie-van-tochtige-koeien'
         },
         { 
             src: 'https://cdn.brandfetch.io/idgfMn7mzV/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1770955759252', 
