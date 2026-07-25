@@ -2,117 +2,123 @@
     import * as m from '$lib/paraglide/messages.js';
     import ProjectCard from '$lib/components/ProjectCard.svelte';
     import FeaturedIn from '$lib/components/FeaturedIn.svelte';
-    import HighlightblockCallToAction from '$lib/components/HighlightBlock_call_to_action.svelte';
+    import HighlightBlock from '$lib/components/HighlightBlock.svelte';
     import FeatureCard from '$lib/components/FeatureCard.svelte';
-    import { tweened } from 'svelte/motion';
+    import { Tween } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
-    import { onMount } from 'svelte';
     import { base } from '$app/paths';
+    import { projects } from '$lib/config/projects.js';
 
-    import cowcatcherLogo from '$lib/assets/CowCatchter-logo-875x875.jpg';
-    import calvingcatcherLogo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
-    import aiDetectorLogo from '$lib/assets/Ai-detector-logo-800x800.jpg';
+    const features = [
+        { title: m.front_page_feature_community_title, desc: m.front_page_feature_community_desc },
+        { title: m.front_page_feature_free_title, desc: m.front_page_feature_free_desc },
+        { title: m.front_page_feature_smart_title, desc: m.front_page_feature_smart_desc }
+    ];
 
-    const farms = tweened(0, { duration: 2000, easing: cubicOut });
-    const detections = tweened(0, { duration: 2000, easing: cubicOut }); 
-    const countries = tweened(0, { duration: 2000, easing: cubicOut });
-
-    let statsRef;
-
-    onMount(() => {
-        const observer = new IntersectionObserver((entries) => {
-            if (entries[0].isIntersecting) {
-                farms.set(50);
-                detections.set(200); 
-                countries.set(6);
-                observer.disconnect();
-            }
-        }, { threshold: 0.3 });
-
-        if (statsRef) {
-            observer.observe(statsRef);
+    const demos = [
+        {
+            href: 'https://huggingface.co/spaces/CowcatcherAI/CowCatcherAI',
+            text: m.front_page_test_cowcatcher_btn,
+            variant: 'solid'
+        },
+        {
+            href: 'https://huggingface.co/spaces/CowcatcherAI/CalvingcatcherAI',
+            text: m.front_page_test_calvingcatcher_btn,
+            variant: 'outline'
         }
+    ];
 
+    // Tellers die oplopen zodra het statistiekblok in beeld komt.
+    const stats = [
+        { target: 50, suffix: '', label: m.front_page_stats_farms },
+        { target: 200, suffix: 'K+', label: m.front_page_stats_detections },
+        { target: 6, suffix: '', label: m.front_page_stats_countries }
+    ].map((stat) => ({
+        ...stat,
+        tween: new Tween(0, { duration: 2000, easing: cubicOut })
+    }));
+
+    let statsRef = $state();
+
+    $effect(() => {
+        if (!statsRef) return;
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                if (entries[0].isIntersecting) {
+                    for (const stat of stats) stat.tween.target = stat.target;
+                    observer.disconnect();
+                }
+            },
+            { threshold: 0.3 }
+        );
+
+        observer.observe(statsRef);
         return () => observer.disconnect();
     });
 </script>
 
-<div class="container">
+{#snippet externalLinkIcon()}
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
+    </svg>
+{/snippet}
+
+<div class="page-container">
     <header class="brand-hero">
         <h1>{m.front_page_title()}</h1>
         <h2 class="slogan">{m.front_page_subtitle()}</h2>
         <p class="description">{m.front_page_description()}</p>
     </header>
 
-    <section class="projects-grid">
-        <ProjectCard 
-            title={m.front_page_cowcatcher_title()} 
-            link="/projects/cowcatcher" 
-            desc={m.front_page_cowcatcher_desc()} 
-            logo={cowcatcherLogo}
-        />
-        <ProjectCard 
-            title={m.front_page_calvingcatcher_title()}
-            link="/projects/calvingcatcher"
-            desc={m.front_page_calvingcatcher_desc()}
-            logo={calvingcatcherLogo}
-        />
-        <ProjectCard 
-            title={m.front_page_ai_detector_title()}
-            link="/projects/ai-detector"
-            desc={m.front_page_ai_detector_desc()}
-            logo={aiDetectorLogo}
-        />
+    <section class="card-grid">
+        {#each projects as project}
+            <ProjectCard
+                title={project.title()}
+                link={project.link}
+                desc={project.desc()}
+                logo={project.logo}
+            />
+        {/each}
     </section>
 
-    <HighlightblockCallToAction 
+    <HighlightBlock
+        size="large"
         title={m.front_page_intro_title()}
-        btn1Text={m.front_page_intro_btn_install()}
-        btn1Link="{base}/installation"
-        btn2Text={m.front_page_intro_btn_help()}
-        btn2Link="{base}/about-us"
+        actions={[
+            { text: m.front_page_intro_btn_install(), href: `${base}/installation`, variant: 'solid' },
+            { text: m.front_page_intro_btn_help(), href: `${base}/about-us`, variant: 'outline' }
+        ]}
     >
         <p>{m.front_page_intro_p1()}</p>
         <p>{m.front_page_intro_p2()}</p>
         <p>{m.front_page_intro_p3()}</p>
         <p>{m.front_page_intro_p4()}</p>
         <p>{m.front_page_intro_p5()}</p>
-    </HighlightblockCallToAction>
+    </HighlightBlock>
 
     <section class="features">
-        <FeatureCard
-            title={m.front_page_feature_community_title()}
-            desc={m.front_page_feature_community_desc()}
-        />
-        <FeatureCard
-            title={m.front_page_feature_free_title()}
-            desc={m.front_page_feature_free_desc()}
-        />
-        <FeatureCard
-            title={m.front_page_feature_smart_title()}
-            desc={m.front_page_feature_smart_desc()}
-        />
+        {#each features as feature}
+            <FeatureCard title={feature.title()} desc={feature.desc()} />
+        {/each}
     </section>
 
     <section class="test-models-section">
-        <div class="test-models-content">
-            <h2>{m.front_page_test_models_title()}</h2>
-            <p>{m.front_page_test_models_subtitle()}</p>
-            
-            <div class="demo-buttons">
-                <a href="https://huggingface.co/spaces/CowcatcherAI/CowCatcherAI" target="_blank" rel="noopener noreferrer" class="demo-btn primary-btn">
-                    {m.front_page_test_cowcatcher_btn()}
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
-                    </svg>
+        <h2>{m.front_page_test_models_title()}</h2>
+        <p>{m.front_page_test_models_subtitle()}</p>
+
+        <div class="demo-buttons">
+            {#each demos as demo}
+                <a
+                    href={demo.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--pill btn--{demo.variant}"
+                >
+                    {demo.text()}
+                    {@render externalLinkIcon()}
                 </a>
-                <a href="https://huggingface.co/spaces/CowcatcherAI/CalvingcatcherAI" target="_blank" rel="noopener noreferrer" class="demo-btn secondary-btn">
-                    {m.front_page_test_calvingcatcher_btn()}
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path d="M10 6V8H5V19H16V14H18V20C18 20.5523 17.5523 21 17 21H4C3.44772 21 3 20.5523 3 20V7C3 6.44772 3.44772 6 4 6H10ZM21 3V11H19L18.9999 6.413L11.2071 14.2071L9.79289 12.7929L17.5849 5H13V3H21Z"></path>
-                    </svg>
-                </a>
-            </div>
+            {/each}
         </div>
     </section>
 
@@ -121,22 +127,16 @@
     <section class="stats-section" bind:this={statsRef}>
         <h2>{m.front_page_stats_title()}</h2>
         <p class="stats-subtitle">{m.front_page_stats_subtitle()}</p>
-        
+
         <div class="stats-grid">
-            <div class="stat-card">
-                <span class="stat-number">{Math.floor($farms)}</span>
-                <span class="stat-label">{m.front_page_stats_farms()}</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">{Math.floor($detections)}K+</span>
-                <span class="stat-label">{m.front_page_stats_detections()}</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">{Math.floor($countries)}</span>
-                <span class="stat-label">{m.front_page_stats_countries()}</span>
-            </div>
+            {#each stats as stat}
+                <div class="stat-card">
+                    <span class="stat-number">{Math.floor(stat.tween.current)}{stat.suffix}</span>
+                    <span class="stat-label">{stat.label()}</span>
+                </div>
+            {/each}
         </div>
-        
+
         <p class="stats-disclaimer">{m.front_page_stats_disclaimer()}</p>
     </section>
 
@@ -146,20 +146,6 @@
 </div>
 
 <style>
-    :global(body) {
-        background-color: oklch(98% 0.005 145);
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        color: oklch(22% 0.02 145);
-        overflow-x: hidden;
-    }
-
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 2rem 1rem;
-    }
-
     .brand-hero {
         text-align: center;
         margin-bottom: 3rem;
@@ -170,18 +156,18 @@
     }
 
     h1 {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: clamp(2.5rem, 8vw, 4.5rem);
-        color: #386938;
+        color: var(--primary);
         margin-bottom: 1rem;
         text-transform: uppercase;
         line-height: 1;
     }
 
     .brand-hero .slogan {
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-body);
         font-size: clamp(1.2rem, 5vw, 1.75rem);
-        color: oklch(60% 0.09 195);
+        color: var(--accent-teal);
         margin: 0;
         font-weight: 500;
         text-transform: capitalize;
@@ -189,16 +175,10 @@
 
     .brand-hero .description {
         font-size: clamp(1rem, 4vw, 1.15rem);
-        color: oklch(22% 0.02 145);
+        color: var(--text-main);
         max-width: 600px;
         margin: 0;
         padding: 0 1rem;
-    }
-
-    .projects-grid {
-        display: grid;
-        gap: 1.5rem;
-        grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
     }
 
     .features {
@@ -210,53 +190,32 @@
     }
 
     @media (min-width: 768px) {
-        .container {
-            padding: 4rem 2rem;
-        }
         .brand-hero {
             margin-bottom: 5rem;
-        }
-        .projects-grid {
-            gap: 2rem;
-        }
-    }
-
-    :global(.project-card) {
-        border-top: 5px solid #386938;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-    }
-
-    @media (hover: hover) {
-        :global(.project-card:hover) {
-            border-color: oklch(65% 0.16 75);
-            transform: translateY(-10px);
         }
     }
 
     .test-models-section {
         margin-top: 5rem;
-        background: #ffffff;
-        border: 1px solid oklch(85% 0.01 145);
-        border-radius: 20px;
+        background: var(--card-bg);
+        border: 1px solid var(--soft-gray);
+        border-radius: var(--radius-lg);
         padding: 4rem 2rem;
         text-align: center;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
-        border-top: 5px solid oklch(65% 0.16 75);
+        box-shadow: var(--shadow-lg);
+        border-top: 5px solid var(--accent-amber);
     }
 
-    .test-models-content h2 {
-        font-family: 'Bebas Kai', sans-serif;
+    .test-models-section h2 {
+        font-family: var(--font-heading);
         font-size: clamp(2rem, 6vw, 3.5rem);
-        color: #386938;
+        color: var(--primary);
         margin-bottom: 1rem;
     }
 
-    .test-models-content p {
+    .test-models-section p {
         font-size: clamp(1rem, 3vw, 1.15rem);
-        color: oklch(22% 0.02 145);
+        color: var(--text-main);
         max-width: 700px;
         margin: 0 auto 2.5rem auto;
         line-height: 1.6;
@@ -269,51 +228,6 @@
         gap: 1.5rem;
     }
 
-    .demo-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 1.1rem 2.5rem;
-        border-radius: 50px;
-        font-family: 'Bebas Kai', sans-serif;
-        font-size: 1.3rem;
-        text-decoration: none;
-        transition: all 0.3s ease;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
-
-    .demo-btn.primary-btn {
-        background-color: #386938;
-        color: #ffffff;
-        border: 2px solid #386938;
-    }
-
-    .demo-btn.primary-btn:hover {
-        background-color: oklch(65% 0.16 75);
-        border-color: oklch(65% 0.16 75);
-        transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-
-    .demo-btn.secondary-btn {
-        background-color: transparent;
-        color: #386938;
-        border: 2px solid #386938;
-    }
-
-    .demo-btn.secondary-btn:hover {
-        background-color: oklch(60% 0.09 195);
-        color: #ffffff;
-        border-color: oklch(60% 0.09 195);
-        transform: translateY(-4px);
-        box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-    }
-
-    .demo-btn svg {
-        fill: currentColor;
-    }
-
     .stats-section {
         margin-top: 5rem;
         text-align: center;
@@ -323,14 +237,14 @@
     }
 
     .stats-section h2 {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: clamp(2rem, 6vw, 3.5rem);
-        color: #386938;
+        color: var(--primary);
         margin-bottom: 0.5rem;
     }
 
     .stats-subtitle {
-        color: oklch(60% 0.09 195);
+        color: var(--accent-teal);
         font-size: clamp(1rem, 3vw, 1.25rem);
         max-width: 600px;
         margin-bottom: 3rem;
@@ -346,8 +260,8 @@
     }
 
     .stat-card {
-        background: #ffffff;
-        border: 1px solid oklch(85% 0.01 145);
+        background: var(--card-bg);
+        border: 1px solid var(--soft-gray);
         border-radius: 16px;
         padding: 2.5rem 1rem;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
@@ -359,48 +273,30 @@
 
     .stat-card:hover {
         transform: translateY(-5px);
-        border-color: oklch(65% 0.16 75);
+        border-color: var(--accent-amber);
     }
 
     .stat-number {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: 4rem;
-        color: #386938;
+        color: var(--primary);
         line-height: 1;
         margin-bottom: 0.5rem;
     }
 
     .stat-label {
         font-weight: 500;
-        color: oklch(22% 0.02 145);
+        color: var(--text-main);
         font-size: 1.1rem;
     }
 
     .stats-disclaimer {
         font-size: 0.85rem;
-        color: oklch(22% 0.02 145);
+        color: var(--text-main);
         opacity: 0.8;
         max-width: 700px;
         line-height: 1.5;
         font-style: italic;
         margin-top: 1rem;
-    }
-
-    .official-links {
-        margin-top: 4rem;
-        text-align: center;
-        font-size: 0.85rem;
-        border-top: 1px solid oklch(60% 0.09 195);
-        padding-top: 2rem;
-    }
-
-    .official-links a {
-        color: #386938;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .official-links a:hover {
-        color: oklch(65% 0.16 75);
     }
 </style>

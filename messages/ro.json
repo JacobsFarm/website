@@ -253,6 +253,7 @@
   "front_page_stats_countries": "Țări",
   "front_page_stats_disclaimer": "*Nu știm exact câte ferme folosesc software-ul, deoarece totul rulează local. Acest număr prezintă doar fermele care au contactat activ proiectul.",
   "front_page_featured_in_title": "Prezentat în",
+  "hardware_more_info": "Mai multe informații",
   "hardware_title": "Instalare Hardware",
   "hardware_intro": "Pentru CowCatcherAI, aveți nevoie de două componente hardware principale: camere de supraveghere și un computer pentru a procesa imaginile folosind AI.",
   "hardware_cameras_title": "1. Camerele",

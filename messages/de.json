@@ -253,6 +253,7 @@
   "front_page_stats_countries": "Länder",
   "front_page_stats_disclaimer": "*Wir wissen nicht genau, wie viele Betriebe die Software nutzen, da alles lokal läuft. Diese Zahl umfasst nur die Betriebe, die das Projekt aktiv kontaktiert haben.",
   "front_page_featured_in_title": "Bekannt aus",
+  "hardware_more_info": "Mehr Informationen",
   "hardware_title": "Hardware-Installation",
   "hardware_intro": "Für CowCatcherAI benötigen Sie zwei Hauptkomponenten: Sicherheitskameras und einen Computer, um die Bilder mittels KI zu verarbeiten.",
   "hardware_cameras_title": "1. Die Kameras",

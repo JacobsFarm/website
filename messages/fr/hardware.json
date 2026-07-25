@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Plus d'informations",
   "hardware_title": "Installation du matériel",
   "hardware_intro": "Pour CowCatcherAI, vous avez besoin de deux composants matériels principaux : des caméras de sécurité et un ordinateur pour traiter les images à l'aide de l'IA.",
   "hardware_cameras_title": "1. Les caméras",

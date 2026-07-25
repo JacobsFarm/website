@@ -1,7 +1,7 @@
 <script>
-    export let title = '';
-    export let intro = '';
-    export let options = [];
+    import * as m from '$lib/paraglide/messages.js';
+
+    let { title = '', intro = '', options = [] } = $props();
 </script>
 
 <div class="hardware-section">
@@ -28,7 +28,7 @@
 
                 {#if option.moreInfo || (option.links && option.links.length > 0)}
                     <details class="more-info-accordion">
-                        <summary>More information</summary>
+                        <summary>{m.hardware_more_info()}</summary>
                         <div class="accordion-content">
                             {#if option.moreInfo}
                                 <p class="more-text">{option.moreInfo}</p>
@@ -37,7 +37,7 @@
                             {#if option.links && option.links.length > 0}
                                 <div class="linktree-container">
                                     {#each option.links as link}
-                                        <a href={link.url} target="_blank" rel="external noopener noreferrer" data-sveltekit-reload class="linktree-btn">
+                                        <a href={link.url} target="_blank" rel="external noopener noreferrer" data-sveltekit-reload class="btn btn--outline btn--block linktree-btn">
                                             {#if link.icon}
                                                 <span class="icon">{link.icon}</span>
                                             {/if}
@@ -56,27 +56,27 @@
 
 <style>
     .hardware-section {
-        background-color: #ffffff;
-        border: 1px solid #e0eee0;
-        border-radius: 12px;
+        background-color: var(--card-bg);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
         padding: 2rem;
         margin-bottom: 2.5rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
     }
 
     .section-title {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: 2.2rem;
-        color: #386938;
+        color: var(--primary);
         margin-top: 0;
         margin-bottom: 0.5rem;
     }
 
     .section-intro {
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-body);
         font-size: 1.1rem;
         line-height: 1.6;
-        color: #4DA699;
+        color: var(--accent-teal);
         margin-bottom: 2rem;
         font-weight: 500;
     }
@@ -88,9 +88,9 @@
     }
 
     .option-card {
-        border: 1px solid #e0eee0;
-        border-radius: 8px;
-        background-color: oklch(98% 0.005 145);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius-sm);
+        background-color: var(--bg-color);
         overflow: hidden;
     }
 
@@ -124,32 +124,32 @@
     }
 
     h3 {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: 1.6rem;
-        color: #386938;
+        color: var(--primary);
         margin-top: 0;
         margin-bottom: 0.5rem;
         letter-spacing: 0.5px;
     }
 
     .short-desc {
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-body);
         font-size: 1.05rem;
         line-height: 1.5;
-        color: #333;
+        color: var(--text-main);
         margin: 0;
     }
 
     .more-info-accordion {
-        border-top: 1px solid #e0eee0;
-        background-color: #ffffff;
+        border-top: 1px solid var(--border-soft);
+        background-color: var(--card-bg);
     }
 
     .more-info-accordion summary {
         padding: 1rem 1.5rem;
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-body);
         font-weight: 600;
-        color: #386938;
+        color: var(--primary);
         cursor: pointer;
         user-select: none;
         transition: background-color 0.2s;
@@ -162,10 +162,10 @@
     .accordion-content {
         padding: 1.5rem;
         padding-top: 0.5rem;
-        font-family: 'Roboto', sans-serif;
+        font-family: var(--font-body);
         font-size: 1rem;
         line-height: 1.6;
-        color: #555;
+        color: var(--text-muted);
     }
 
     .more-text {
@@ -177,30 +177,21 @@
         display: flex;
         flex-direction: column;
         gap: 0.8rem;
-        border-top: 1px dashed #e0eee0;
+        border-top: 1px dashed var(--border-soft);
         padding-top: 1.5rem;
     }
 
+    /* Bouwt voort op de globale .btn--outline; alleen de witte vulling en de
+       groene hover-variant zijn hier specifiek. */
     .linktree-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 0.8rem;
-        background-color: #ffffff;
-        border: 2px solid #386938;
         padding: 0.8rem 1rem;
-        border-radius: 8px;
-        color: #386938;
-        font-family: 'Roboto', sans-serif;
-        font-weight: bold;
-        text-decoration: none;
-        transition: all 0.2s ease;
-        width: 100%;
-        box-sizing: border-box;
+        background-color: var(--card-bg);
     }
 
     .linktree-btn:hover {
-        background-color: #386938;
+        background-color: var(--primary);
+        border-color: var(--primary);
         color: #ffffff;
         transform: translateY(-2px);
         box-shadow: 0 4px 10px rgba(56, 105, 56, 0.2);

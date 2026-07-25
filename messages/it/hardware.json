@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Maggiori informazioni",
   "hardware_title": "Installazione Hardware",
   "hardware_intro": "Per CowCatcherAI, hai bisogno di due componenti hardware principali: telecamere di sicurezza e un computer per elaborare le immagini tramite AI.",
   "hardware_cameras_title": "1. Le Telecamere",

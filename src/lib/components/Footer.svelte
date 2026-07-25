@@ -27,10 +27,10 @@
         <a href="mailto:cowcatcherai@gmail.com">cowcatcherai@gmail.com</a>
       </p>
 
-      <a 
-        class="contribute-btn" 
-        href="https://github.com/CowCatcherAI/CowCatcherAI" 
-        target="_blank" 
+      <a
+        class="btn contribute-btn"
+        href="https://github.com/CowCatcherAI/CowCatcherAI"
+        target="_blank"
         rel="noopener noreferrer"
       >
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" aria-hidden="true">
@@ -59,10 +59,10 @@
 
 <style>
   footer {
-    background: oklch(22% 0.02 145); /* Deep Ink */
-    border-top: 4px solid #386938; /* Emerald Green */
+    background: var(--text-main); /* Deep Ink */
+    border-top: 4px solid var(--primary);
     margin-top: 5rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-body);
   }
 
   .footer-inner {
@@ -86,15 +86,15 @@
   }
 
   .brand-name {
-    font-family: 'Bebas Kai', 'Bebas Neue', sans-serif;
+    font-family: var(--font-heading);
     font-size: 2.2rem;
     letter-spacing: 0.08em;
-    color: oklch(65% 0.16 75); /* Deep Amber */
+    color: var(--accent-amber);
     margin: 0;
   }
 
   .tagline {
-    color: oklch(98% 0.005 145); /* Off White */
+    color: var(--bg-color);
     font-size: 1.1rem;
     font-weight: 700;
     margin: 0;
@@ -103,46 +103,45 @@
   .divider {
     width: 60px;
     height: 3px;
-    background: #386938; /* Emerald Green */
+    background: var(--primary);
     border-radius: 3px;
-    margin: 0.5rem 0; /* Minder margin */
+    margin: 0.5rem 0;
   }
 
   .mission-text {
-    color: oklch(85% 0.01 145); /* Soft Gray */
+    color: var(--soft-gray);
     font-size: 0.95rem;
     line-height: 1.4;
     margin: 0;
   }
 
-  /* Nieuwe stijlen voor de legal en made-with tekst onderaan links */
   .legal-stack {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     margin-top: 1rem;
     font-size: 0.85rem;
-    color: oklch(85% 0.01 145); /* Soft Gray */
+    color: var(--soft-gray);
   }
 
   .dot-separator {
-    color: oklch(42% 0.07 145); 
+    color: var(--text-muted);
   }
 
   .license {
-    color: oklch(85% 0.01 145);
+    color: var(--soft-gray);
     text-decoration: none;
     transition: color 0.2s;
   }
 
   .license:hover {
-    color: oklch(65% 0.16 75); /* Deep Amber */
+    color: var(--accent-amber);
     text-decoration: underline;
   }
 
   .made-with {
     font-size: 0.8rem;
-    color: oklch(60% 0.09 195); /* Muted Teal */
+    color: var(--accent-teal);
     margin: 0.25rem 0 0 0;
   }
 
@@ -155,10 +154,10 @@
   }
 
   .community-label {
-    font-family: 'Bebas Kai', 'Bebas Neue', sans-serif;
+    font-family: var(--font-heading);
     font-size: 1.6rem;
     letter-spacing: 0.06em;
-    color: oklch(98% 0.005 145); /* Off White */
+    color: var(--bg-color);
     margin: 0 0 0.25rem 0;
   }
 
@@ -167,7 +166,7 @@
   }
 
   .community-email a {
-    color: oklch(60% 0.09 195); /* Muted Teal */
+    color: var(--accent-teal);
     font-size: 0.95rem;
     font-weight: 600;
     text-decoration: none;
@@ -175,29 +174,25 @@
   }
 
   .community-email a:hover {
-    color: oklch(65% 0.16 75); /* Deep Amber */
+    color: var(--accent-amber);
   }
 
-  /* Contribute Button */
+  /* Bouwt voort op de globale .btn-basis; alleen de amberkleurige
+     outline-variant is specifiek voor de donkere footer. */
   .contribute-btn {
-    display: flex;
-    align-items: center;
     gap: 0.5rem;
-    background: transparent;
-    border: 2px solid oklch(65% 0.16 75); /* Deep Amber */
-    color: oklch(65% 0.16 75);
     padding: 0.5rem 1rem;
-    border-radius: 8px;
+    background: transparent;
+    border-color: var(--accent-amber);
+    color: var(--accent-amber);
     font-weight: 600;
     font-size: 0.9rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    margin: 0.5rem 0; /* Minder afstand boven en onder */
+    margin: 0.5rem 0;
   }
 
   .contribute-btn:hover {
-    background: oklch(65% 0.16 75); /* Deep Amber */
-    color: oklch(22% 0.02 145); /* Deep Ink (Donker) */
+    background: var(--accent-amber);
+    color: var(--text-main);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(255, 210, 30, 0.2);
   }
@@ -210,7 +205,7 @@
   }
 
   .icon-link {
-    color: oklch(85% 0.01 145); /* Soft Gray */
+    color: var(--soft-gray);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +213,7 @@
   }
 
   .icon-link:hover {
-    color: oklch(60% 0.09 195); /* Muted Teal */
+    color: var(--accent-teal);
     transform: translateY(-3px);
   }
 

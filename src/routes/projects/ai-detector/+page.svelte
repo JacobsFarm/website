@@ -22,15 +22,25 @@
     import originalGif2 from '$lib/assets/ai_detector_video_detection-2-896x512.gif';
 </script>
 
-<main class="ai-detector-wrapper">
+<div class="ai-detector-wrapper">
     <header class="hero">
         <img src={logo} alt="AI Detector Logo" class="hero-logo" />
         <div class="hero-text">
             <h1>{m.ai_detector_hero_title()}</h1>
             <p class="subtitle">{m.ai_detector_hero_subtitle()}</p>
             <div class="cta-buttons">
-                <a href="https://github.com/ESchouten/ai-detector/releases" class="btn primary">{m.ai_detector_btn_download()}</a>
-                <a href="https://github.com/ESchouten/ai-detector" class="btn secondary">{m.ai_detector_btn_github()}</a>
+                <a
+                    href="https://github.com/ESchouten/ai-detector/releases"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--solid hero-btn">{m.ai_detector_btn_download()}</a
+                >
+                <a
+                    href="https://github.com/ESchouten/ai-detector"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn--outline hero-btn">{m.ai_detector_btn_github()}</a
+                >
             </div>
         </div>
     </header>
@@ -109,31 +119,27 @@
             />
         </div>
     </section>
-</main>
+</div>
 
 <style>
-    :root {
-        --primary: #386938; /* Emerald Green */
-        --primary-hover: oklch(28% 0.05 145);
-        --accent: oklch(65% 0.16 75); /* Deep Amber */
-        --text-main: oklch(22% 0.02 145); /* Deep Ink */
-        --bg-color: oklch(98% 0.005 145); /* Off White */
-        --card-bg: #ffffff;
-    }
-
     .ai-detector-wrapper {
-        font-family: 'Roboto', sans-serif;
-        color: var(--text-main);
-        background-color: var(--bg-color);
-        line-height: 1.6;
         padding: 0 20px 60px;
     }
 
-    h1, h2, h3, .btn {
-        font-family: 'Bebas Kai', sans-serif;
+    h1,
+    h2,
+    h3,
+    .hero-btn {
+        font-family: var(--font-heading);
         font-weight: normal;
         text-transform: uppercase;
         letter-spacing: 1px;
+    }
+
+    .hero-btn {
+        padding: 12px 24px;
+        font-size: 1.2rem;
+        border-radius: 6px;
     }
 
     .section-title {
@@ -184,34 +190,6 @@
         justify-content: center;
     }
 
-    .btn {
-        padding: 12px 24px;
-        font-size: 1.2rem;
-        text-decoration: none;
-        border-radius: 6px;
-        transition: background 0.2s ease;
-    }
-
-    .btn.primary {
-        background-color: var(--primary);
-        color: white;
-    }
-
-    .btn.primary:hover {
-        background-color: var(--primary-hover);
-    }
-
-    .btn.secondary {
-        background-color: transparent;
-        border: 2px solid var(--primary);
-        color: var(--primary);
-    }
-
-    .btn.secondary:hover {
-        background-color: var(--primary);
-        color: white;
-    }
-
     /* Media Cards */
     .media-section {
         max-width: 1000px;
@@ -253,7 +231,7 @@
 
     .text-content h3 {
         font-size: 1.5rem;
-        color: var(--accent);
+        color: var(--accent-amber);
         margin-bottom: 5px;
     }
 

@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Mehr Informationen",
   "hardware_title": "Hardware-Installation",
   "hardware_intro": "Für CowCatcherAI benötigen Sie zwei Hauptkomponenten: Sicherheitskameras und einen Computer, um die Bilder mittels KI zu verarbeiten.",
   "hardware_cameras_title": "1. Die Kameras",

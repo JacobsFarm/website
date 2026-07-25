@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "More information",
   "hardware_title": "Hardware Installation",
   "hardware_intro": "For CowCatcherAI, you need two main hardware components: security cameras and a computer to process the images using AI. Choose the setup that best fits your farm.",
   

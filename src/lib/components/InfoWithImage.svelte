@@ -1,21 +1,10 @@
 <script>
-    // In Svelte 5 halen we props op met de $props() rune
-    let { 
-        title = "", 
-        images = [], 
-        reverse = false,
-        children // <-- Nieuwe prop voor Svelte 5 in plaats van <slot>
-    } = $props();
+    import CarouselDots from './CarouselDots.svelte';
 
-    // $state() zorgt ervoor dat de UI update als de index verandert
-    let currentIndex = $state(0); 
+    let { title = '', images = [], reverse = false, children } = $props();
 
-    // $derived() berekent automatisch of er navigatie nodig is
+    let currentIndex = $state(0);
     let showNavigation = $derived(images.length > 1);
-
-    function goToImage(index) {
-        currentIndex = index;
-    }
 </script>
 
 <section class="info-grid {reverse ? 'reverse' : ''}">
@@ -40,16 +29,13 @@
         </div>
 
         {#if showNavigation}
-            <div class="dots-container">
-                {#each images as _, i}
-                    <button
-                        type="button"
-                        class="dot {i === currentIndex ? 'active' : ''}"
-                        aria-label="Go to image {i + 1}"
-                        onclick={() => goToImage(i)}
-                    ></button>
-                {/each}
-            </div>
+            <CarouselDots
+                count={images.length}
+                current={currentIndex}
+                onSelect={(index) => (currentIndex = index)}
+                label="Image selection"
+                itemLabel="image"
+            />
         {/if}
     </div>
 </section>
@@ -72,8 +58,8 @@
     }
 
     h2 {
-        font-family: var(--font-heading, 'Bebas Kai', sans-serif);
-        color: var(--primary, #386938);
+        font-family: var(--font-heading);
+        color: var(--primary);
         font-size: 2rem;
         margin-top: 0;
         padding-bottom: 0.5rem;
@@ -82,21 +68,17 @@
         font-weight: normal;
     }
 
+    /* De globale .custom-card heeft ondermarge; in deze grid-cel niet nodig. */
     .custom-card {
-        background: var(--card-bg, #ffffff);
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        border-top: 4px solid var(--primary, #386938);
-        box-sizing: border-box;
+        margin-bottom: 0;
     }
 
     /* CSS voor de afbeeldingen-slider */
     .image-col {
-        position: relative; 
-        border-radius: 12px;
-        overflow: hidden; 
-        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        position: relative;
+        border-radius: var(--radius);
+        overflow: hidden;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     }
 
     .slider-container {
@@ -118,39 +100,7 @@
         width: 100%;
         height: auto;
         display: block;
-        border-radius: inherit; 
-    }
-
-    /* CSS voor de dot-navigatie */
-    .dots-container {
-        position: absolute;
-        bottom: 15px;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 8px;
-        z-index: 2; 
-    }
-
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: rgba(255, 255, 255, 0.6);
-        border: none;
-        padding: 0;
-        cursor: pointer;
-        transition: background-color 0.2s, transform 0.2s;
-    }
-
-    .dot:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        transform: scale(1.1);
-    }
-
-    .dot.active {
-        background-color: var(--accent-amber); 
-        transform: scale(1.1);
+        border-radius: inherit;
     }
 
     /* Mobiele weergave */

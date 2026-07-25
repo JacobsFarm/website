@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Meer informatie",
   "hardware_title": "Hardware Installatie",
   "hardware_intro": "Voor CowCatcherAI heb je twee belangrijke hardwarecomponenten nodig: beveiligingscamera's en een computer om de beelden te verwerken met AI.",
   "hardware_cameras_title": "1. De Camera's",

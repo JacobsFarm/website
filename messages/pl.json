@@ -253,6 +253,7 @@
   "front_page_stats_countries": "Kraje",
   "front_page_stats_disclaimer": "*Nie wiemy dokładnie, ile gospodarstw korzysta z oprogramowania, ponieważ wszystko działa lokalnie. Ta liczba obejmuje tylko te farmy, które aktywnie skontaktowały się z twórcami projektu.",
   "front_page_featured_in_title": "Wspomniano o nas w",
+  "hardware_more_info": "Więcej informacji",
   "hardware_title": "Instalacja sprzętu",
   "hardware_intro": "Do CowCatcherAI potrzebujesz dwóch głównych komponentów sprzętowych: kamer monitoringu oraz komputera do przetwarzania obrazu za pomocą AI.",
   "hardware_cameras_title": "1. Kamery",

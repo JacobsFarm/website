@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Więcej informacji",
   "hardware_title": "Instalacja sprzętu",
   "hardware_intro": "Do CowCatcherAI potrzebujesz dwóch głównych komponentów sprzętowych: kamer monitoringu oraz komputera do przetwarzania obrazu za pomocą AI.",
   "hardware_cameras_title": "1. Kamery",

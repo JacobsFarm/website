@@ -253,6 +253,7 @@
   "front_page_stats_countries": "Lande",
   "front_page_stats_disclaimer": "*Vi ved faktisk ikke præcis, hvor mange gårde der bruger softwaren, da den kører lokalt. Dette tal viser kun de gårde, der aktivt har kontaktet projektet.",
   "front_page_featured_in_title": "Omtalt i",
+  "hardware_more_info": "Flere oplysninger",
   "hardware_title": "Hardwareinstallation",
   "hardware_intro": "Til CowCatcherAI skal du bruge to primære hardwarekomponenter: overvågningskameraer og en computer til at behandle billederne ved hjælp af AI.",
   "hardware_cameras_title": "1. Kameraerne",

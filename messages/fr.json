@@ -253,6 +253,7 @@
   "front_page_stats_countries": "Pays",
   "front_page_stats_disclaimer": "*Nous ne savons pas exactement combien de fermes utilisent le logiciel car tout fonctionne localement. Ce chiffre ne concerne que les exploitations qui ont contacté activement le projet.",
   "front_page_featured_in_title": "Présenté dans",
+  "hardware_more_info": "Plus d'informations",
   "hardware_title": "Installation du matériel",
   "hardware_intro": "Pour CowCatcherAI, vous avez besoin de deux composants matériels principaux : des caméras de sécurité et un ordinateur pour traiter les images à l'aide de l'IA.",
   "hardware_cameras_title": "1. Les caméras",

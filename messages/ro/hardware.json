@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Mai multe informații",
   "hardware_title": "Instalare Hardware",
   "hardware_intro": "Pentru CowCatcherAI, aveți nevoie de două componente hardware principale: camere de supraveghere și un computer pentru a procesa imaginile folosind AI.",
   "hardware_cameras_title": "1. Camerele",

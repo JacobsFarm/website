@@ -13,7 +13,8 @@
     import imgEthernetCable from '$lib/assets/Hardware_ethernet_cable_875x875.jpg';
     import imgCrimpTool from '$lib/assets/Hardware_crimp_tool_rj45_875x875.jpg';
 
-    $: computerOptions = [
+    // Geen reactieve declaraties nodig: setLocale herlaadt de pagina.
+    const computerOptions = [
         {
             title: m.hardware_comp_opt1_title(),
             desc: m.hardware_comp_opt1_desc(),
@@ -56,7 +57,7 @@
         }
     ];
 
-    $: cameraOptions = [
+    const cameraOptions = [
         {
             title: m.hardware_cam_opt1_title(),
             desc: m.hardware_cam_opt1_desc(),
@@ -71,7 +72,7 @@
         }
     ];
 
-    $: requirementsOptions = [
+    const requirementsOptions = [
         {
             title: m.hardware_req_opt1_title(),
             desc: m.hardware_req_opt1_desc(),
@@ -107,7 +108,7 @@
         }
     ];
 
-    $: diyOptions = [
+    const diyOptions = [
         {
             title: m.hardware_diy_opt1_title(),
             desc: m.hardware_diy_opt1_desc(),
@@ -186,20 +187,16 @@
     />
 
     <div class="action-buttons">
-        <a href="{base}/installation" class="btn secondary-btn">&larr; {m.hardware_btn_back()}</a>
-        <a href="{base}/installation/options" class="btn primary-btn">{m.hardware_btn_next()} &rarr;</a>
+        <a href="{base}/installation" class="btn btn--lg btn--solid btn--responsive-block">
+            &larr; {m.hardware_btn_back()}
+        </a>
+        <a href="{base}/installation/options" class="btn btn--lg btn--amber btn--responsive-block">
+            {m.hardware_btn_next()} &rarr;
+        </a>
     </div>
 </div>
 
 <style>
-    :global(body) {
-        background-color: oklch(98% 0.005 145);
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        color: #333;
-        overflow-x: hidden;
-    }
-
     .container {
         max-width: 1100px;
         margin: 0 auto;
@@ -212,9 +209,9 @@
     }
 
     h1 {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: clamp(3rem, 6vw, 4.5rem);
-        color: #386938;
+        color: var(--primary);
         margin-top: 0;
         margin-bottom: 1rem;
         text-transform: uppercase;
@@ -223,7 +220,7 @@
 
     .intro-text {
         font-size: 1.3rem;
-        color: #4DA699;
+        color: var(--accent-teal);
         max-width: 800px;
         margin: 0 auto;
         font-weight: 500;
@@ -236,50 +233,13 @@
         justify-content: space-between;
         gap: 1rem;
         margin-top: 4rem;
-        border-top: 2px solid #e0eee0;
+        border-top: 2px solid var(--border-soft);
         padding-top: 2.5rem;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 1rem 2rem;
-        border-radius: 8px;
-        font-weight: bold;
-        font-size: 1.1rem;
-        text-decoration: none;
-        transition: background 0.2s, transform 0.2s;
-        text-align: center;
-    }
-
-    .btn:hover {
-        transform: translateY(-3px);
-    }
-
-    .primary-btn {
-        background: oklch(65% 0.16 75);
-        color: #ffffff;
-    }
-
-    .primary-btn:hover {
-        background: oklch(60% 0.16 75);
-    }
-
-    .secondary-btn {
-        background: #386938;
-        color: #ffffff;
-    }
-
-    .secondary-btn:hover {
-        background: oklch(60% 0.09 195);
     }
 
     @media (max-width: 600px) {
         .action-buttons {
             flex-direction: column;
-        }
-        .btn {
-            width: 100%;
-            box-sizing: border-box;
         }
     }
 </style>

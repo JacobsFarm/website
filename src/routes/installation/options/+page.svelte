@@ -1,6 +1,136 @@
 <script>
     import * as m from '$lib/paraglide/messages.js';
     import { base } from '$app/paths';
+
+    /**
+     * De configuratiemodules van de AI-detector.
+     * Elke module heeft één of meer groepen variabelen; een groep met een
+     * `label` wordt als subkop weergegeven (zoals Disk / Telegram / Webhook).
+     */
+    const modules = [
+        {
+            title: m.opt_det_title,
+            desc: m.opt_det_desc,
+            groups: [
+                {
+                    vars: [
+                        { name: 'source', desc: m.opt_det_source },
+                        { name: 'interval', desc: m.opt_det_interval },
+                        { name: 'frame_retention', desc: m.opt_det_retention }
+                    ]
+                }
+            ]
+        },
+        {
+            title: m.opt_yolo_title,
+            desc: m.opt_yolo_desc,
+            groups: [
+                {
+                    vars: [
+                        { name: 'model', desc: m.opt_yolo_model },
+                        { name: 'confidence', desc: m.opt_yolo_conf },
+                        { name: 'time_max', desc: m.opt_yolo_timemax },
+                        { name: 'timeout', desc: m.opt_yolo_timeout },
+                        { name: 'cooldown', desc: m.opt_yolo_cooldown },
+                        { name: 'include_trailing_time', desc: m.opt_yolo_trailing },
+                        { name: 'frames_min', desc: m.opt_yolo_framesmin },
+                        { name: 'imgsz', desc: m.opt_yolo_imgsz },
+                        { name: 'strategy', desc: m.opt_yolo_strat }
+                    ]
+                }
+            ]
+        },
+        {
+            title: m.opt_vlm_title,
+            desc: m.opt_vlm_desc,
+            groups: [
+                {
+                    vars: [
+                        { name: 'prompt', desc: m.opt_vlm_prompt },
+                        { name: 'model', desc: m.opt_vlm_model },
+                        { name: 'key', desc: m.opt_vlm_key },
+                        { name: 'url', desc: m.opt_vlm_url },
+                        { name: 'strategy', desc: m.opt_vlm_strat }
+                    ]
+                }
+            ]
+        },
+        {
+            title: m.opt_exp_title,
+            desc: m.opt_exp_desc,
+            groups: [
+                {
+                    label: 'Disk (Opslag)',
+                    vars: [
+                        { name: 'directory', desc: m.opt_exp_disk_dir },
+                        { name: 'strategy', desc: m.opt_exp_disk_strat },
+                        { name: 'confidence', desc: m.opt_exp_disk_conf },
+                        { name: 'export_rejected', desc: m.opt_exp_disk_rej }
+                    ]
+                },
+                {
+                    label: 'Telegram',
+                    vars: [
+                        { name: 'token', desc: m.opt_exp_tele_token },
+                        { name: 'chat', desc: m.opt_exp_tele_chat },
+                        { name: 'confidence', desc: m.opt_exp_tele_conf },
+                        { name: 'alert_every', desc: m.opt_exp_tele_alert },
+                        { name: 'include_plot', desc: m.opt_exp_tele_plot },
+                        { name: 'include_crop', desc: m.opt_exp_tele_crop },
+                        { name: 'include_video', desc: m.opt_exp_tele_vid },
+                        { name: 'video_width', desc: m.opt_exp_tele_width },
+                        { name: 'video_crf', desc: m.opt_exp_tele_crf },
+                        { name: 'export_rejected', desc: m.opt_exp_tele_rej }
+                    ]
+                },
+                {
+                    label: 'Webhook',
+                    vars: [
+                        { name: 'url', desc: m.opt_exp_web_url },
+                        { name: 'token', desc: m.opt_exp_web_token },
+                        { name: 'confidence', desc: m.opt_exp_web_conf },
+                        { name: 'data_type', desc: m.opt_exp_web_type },
+                        { name: 'data_max', desc: m.opt_exp_web_max },
+                        { name: 'include_plot', desc: m.opt_exp_web_plot },
+                        { name: 'include_crop', desc: m.opt_exp_web_crop },
+                        { name: 'include_video', desc: m.opt_exp_web_vid },
+                        { name: 'video_width', desc: m.opt_exp_web_width },
+                        { name: 'video_crf', desc: m.opt_exp_web_crf },
+                        { name: 'export_rejected', desc: m.opt_exp_web_rej }
+                    ]
+                }
+            ]
+        },
+        {
+            title: m.opt_health_title,
+            desc: m.opt_health_desc,
+            groups: [
+                {
+                    vars: [
+                        { name: 'url', desc: m.opt_health_url },
+                        { name: 'method', desc: m.opt_health_method },
+                        { name: 'interval', desc: m.opt_health_interval },
+                        { name: 'timeout', desc: m.opt_health_timeout },
+                        { name: 'headers', desc: m.opt_health_headers },
+                        { name: 'body', desc: m.opt_health_body }
+                    ]
+                }
+            ]
+        },
+        {
+            title: m.opt_onnx_title,
+            desc: m.opt_onnx_desc,
+            groups: [
+                {
+                    vars: [
+                        { name: 'provider', desc: m.opt_onnx_provider },
+                        { name: 'winml', desc: m.opt_onnx_winml },
+                        { name: 'opset', desc: m.opt_onnx_opset }
+                    ]
+                }
+            ]
+        }
+    ];
 </script>
 
 <div class="container">
@@ -10,135 +140,56 @@
     </header>
 
     <div class="content-wrapper">
-        <section class="config-module">
-            <h2>{m.opt_det_title()}</h2>
-            <p class="module-desc">{m.opt_det_desc()}</p>
-            <ul class="variable-list">
-                <li><span class="var-name">source</span> <span class="var-desc">{m.opt_det_source()}</span></li>
-                <li><span class="var-name">interval</span> <span class="var-desc">{m.opt_det_interval()}</span></li>
-                <li><span class="var-name">frame_retention</span> <span class="var-desc">{m.opt_det_retention()}</span></li>
-            </ul>
-        </section>
+        {#each modules as module}
+            <section class="config-module">
+                <h2>{module.title()}</h2>
+                <p class="module-desc">{module.desc()}</p>
 
-        <section class="config-module">
-            <h2>{m.opt_yolo_title()}</h2>
-            <p class="module-desc">{m.opt_yolo_desc()}</p>
-            <ul class="variable-list">
-                <li><span class="var-name">model</span> <span class="var-desc">{m.opt_yolo_model()}</span></li>
-                <li><span class="var-name">confidence</span> <span class="var-desc">{m.opt_yolo_conf()}</span></li>
-                <li><span class="var-name">time_max</span> <span class="var-desc">{m.opt_yolo_timemax()}</span></li>
-                <li><span class="var-name">timeout</span> <span class="var-desc">{m.opt_yolo_timeout()}</span></li>
-                <li><span class="var-name">cooldown</span> <span class="var-desc">{m.opt_yolo_cooldown()}</span></li>
-                <li><span class="var-name">include_trailing_time</span> <span class="var-desc">{m.opt_yolo_trailing()}</span></li>
-                <li><span class="var-name">frames_min</span> <span class="var-desc">{m.opt_yolo_framesmin()}</span></li>
-                <li><span class="var-name">imgsz</span> <span class="var-desc">{m.opt_yolo_imgsz()}</span></li>
-                <li><span class="var-name">strategy</span> <span class="var-desc">{m.opt_yolo_strat()}</span></li>
-            </ul>
-        </section>
-
-        <section class="config-module">
-            <h2>{m.opt_vlm_title()}</h2>
-            <p class="module-desc">{m.opt_vlm_desc()}</p>
-            <ul class="variable-list">
-                <li><span class="var-name">prompt</span> <span class="var-desc">{m.opt_vlm_prompt()}</span></li>
-                <li><span class="var-name">model</span> <span class="var-desc">{m.opt_vlm_model()}</span></li>
-                <li><span class="var-name">key</span> <span class="var-desc">{m.opt_vlm_key()}</span></li>
-                <li><span class="var-name">url</span> <span class="var-desc">{m.opt_vlm_url()}</span></li>
-                <li><span class="var-name">strategy</span> <span class="var-desc">{m.opt_vlm_strat()}</span></li>
-            </ul>
-        </section>
-
-        <section class="config-module">
-            <h2>{m.opt_exp_title()}</h2>
-            <p class="module-desc">{m.opt_exp_desc()}</p>
-            
-            <h3 class="sub-module-title">Disk (Opslag)</h3>
-            <ul class="variable-list">
-                <li><span class="var-name">directory</span> <span class="var-desc">{m.opt_exp_disk_dir()}</span></li>
-                <li><span class="var-name">strategy</span> <span class="var-desc">{m.opt_exp_disk_strat()}</span></li>
-                <li><span class="var-name">confidence</span> <span class="var-desc">{m.opt_exp_disk_conf()}</span></li>
-                <li><span class="var-name">export_rejected</span> <span class="var-desc">{m.opt_exp_disk_rej()}</span></li>
-            </ul>
-
-            <h3 class="sub-module-title" style="margin-top: 2.5rem;">Telegram</h3>
-            <ul class="variable-list">
-                <li><span class="var-name">token</span> <span class="var-desc">{m.opt_exp_tele_token()}</span></li>
-                <li><span class="var-name">chat</span> <span class="var-desc">{m.opt_exp_tele_chat()}</span></li>
-                <li><span class="var-name">confidence</span> <span class="var-desc">{m.opt_exp_tele_conf()}</span></li>
-                <li><span class="var-name">alert_every</span> <span class="var-desc">{m.opt_exp_tele_alert()}</span></li>
-                <li><span class="var-name">include_plot</span> <span class="var-desc">{m.opt_exp_tele_plot()}</span></li>
-                <li><span class="var-name">include_crop</span> <span class="var-desc">{m.opt_exp_tele_crop()}</span></li>
-                <li><span class="var-name">include_video</span> <span class="var-desc">{m.opt_exp_tele_vid()}</span></li>
-                <li><span class="var-name">video_width</span> <span class="var-desc">{m.opt_exp_tele_width()}</span></li>
-                <li><span class="var-name">video_crf</span> <span class="var-desc">{m.opt_exp_tele_crf()}</span></li>
-                <li><span class="var-name">export_rejected</span> <span class="var-desc">{m.opt_exp_tele_rej()}</span></li>
-            </ul>
-
-            <h3 class="sub-module-title" style="margin-top: 2.5rem;">Webhook</h3>
-            <ul class="variable-list">
-                <li><span class="var-name">url</span> <span class="var-desc">{m.opt_exp_web_url()}</span></li>
-                <li><span class="var-name">token</span> <span class="var-desc">{m.opt_exp_web_token()}</span></li>
-                <li><span class="var-name">confidence</span> <span class="var-desc">{m.opt_exp_web_conf()}</span></li>
-                <li><span class="var-name">data_type</span> <span class="var-desc">{m.opt_exp_web_type()}</span></li>
-                <li><span class="var-name">data_max</span> <span class="var-desc">{m.opt_exp_web_max()}</span></li>
-                <li><span class="var-name">include_plot</span> <span class="var-desc">{m.opt_exp_web_plot()}</span></li>
-                <li><span class="var-name">include_crop</span> <span class="var-desc">{m.opt_exp_web_crop()}</span></li>
-                <li><span class="var-name">include_video</span> <span class="var-desc">{m.opt_exp_web_vid()}</span></li>
-                <li><span class="var-name">video_width</span> <span class="var-desc">{m.opt_exp_web_width()}</span></li>
-                <li><span class="var-name">video_crf</span> <span class="var-desc">{m.opt_exp_web_crf()}</span></li>
-                <li><span class="var-name">export_rejected</span> <span class="var-desc">{m.opt_exp_web_rej()}</span></li>
-            </ul>
-        </section>
-
-        <section class="config-module">
-            <h2>{m.opt_health_title()}</h2>
-            <p class="module-desc">{m.opt_health_desc()}</p>
-            <ul class="variable-list">
-                <li><span class="var-name">url</span> <span class="var-desc">{m.opt_health_url()}</span></li>
-                <li><span class="var-name">method</span> <span class="var-desc">{m.opt_health_method()}</span></li>
-                <li><span class="var-name">interval</span> <span class="var-desc">{m.opt_health_interval()}</span></li>
-                <li><span class="var-name">timeout</span> <span class="var-desc">{m.opt_health_timeout()}</span></li>
-                <li><span class="var-name">headers</span> <span class="var-desc">{m.opt_health_headers()}</span></li>
-                <li><span class="var-name">body</span> <span class="var-desc">{m.opt_health_body()}</span></li>
-            </ul>
-        </section>
-
-        <section class="config-module">
-            <h2>{m.opt_onnx_title()}</h2>
-            <p class="module-desc">{m.opt_onnx_desc()}</p>
-            <ul class="variable-list">
-                <li><span class="var-name">provider</span> <span class="var-desc">{m.opt_onnx_provider()}</span></li>
-                <li><span class="var-name">winml</span> <span class="var-desc">{m.opt_onnx_winml()}</span></li>
-                <li><span class="var-name">opset</span> <span class="var-desc">{m.opt_onnx_opset()}</span></li>
-            </ul>
-        </section>
+                {#each module.groups as group, groupIndex}
+                    {#if group.label}
+                        <h3 class="sub-module-title" class:spaced={groupIndex > 0}>{group.label}</h3>
+                    {/if}
+                    <ul class="variable-list">
+                        {#each group.vars as variable}
+                            <li>
+                                <span class="var-name">{variable.name}</span>
+                                <span class="var-desc">{variable.desc()}</span>
+                            </li>
+                        {/each}
+                    </ul>
+                {/each}
+            </section>
+        {/each}
     </div>
 
     <div class="action-buttons">
-        <a href="{base}/installation" class="btn secondary-btn">&larr; {m.options_btn_back()}</a>
+        <a href="{base}/installation" class="btn btn--solid">&larr; {m.options_btn_back()}</a>
     </div>
 
     <section class="github-section">
         <p>{m.options_github_text()}</p>
-        <a href="https://github.com/ESchouten/ai-detector/tree/main" target="_blank" rel="noopener noreferrer" class="btn primary-btn github-btn">
+        <a
+            href="https://github.com/ESchouten/ai-detector/tree/main"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn--amber github-btn"
+        >
             {m.options_github_btn()}
         </a>
     </section>
 
     <footer class="official-links">
-        <p>Part of the <a href="https://github.com/CowCatcherAI/CowCatcherAI" target="_blank" rel="noopener noreferrer">Official Open Source Project</a></p>
+        <p>
+            Part of the <a
+                href="https://github.com/CowCatcherAI/CowCatcherAI"
+                target="_blank"
+                rel="noopener noreferrer">Official Open Source Project</a
+            >
+        </p>
     </footer>
 </div>
 
 <style>
-    :global(body) {
-        background-color: #F9FBF9;
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        color: #333;
-        overflow-x: hidden;
-    }
-
     .container {
         max-width: 1000px;
         margin: 0 auto;
@@ -151,9 +202,9 @@
     }
 
     h1 {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: clamp(2.5rem, 6vw, 4rem);
-        color: #386938;
+        color: var(--primary);
         margin-top: 0;
         margin-bottom: 1rem;
         text-transform: uppercase;
@@ -162,14 +213,14 @@
 
     .intro-text {
         font-size: 1.2rem;
-        color: #4DA699;
+        color: var(--accent-teal);
         font-weight: 500;
         line-height: 1.5;
         max-width: 800px;
         margin: 0 auto;
     }
 
-    /* --- Modules Layout --- */
+    /* --- Modules --- */
     .content-wrapper {
         display: flex;
         flex-direction: column;
@@ -178,45 +229,49 @@
     }
 
     .config-module {
-        background: #ffffff;
-        border: 1px solid #e0eee0;
-        border-radius: 12px;
+        background: var(--card-bg);
+        border: 1px solid var(--border-soft);
+        border-radius: var(--radius);
         padding: 2.5rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-        border-left: 5px solid #386938;
-        transition: transform 0.2s;
+        border-left: 5px solid var(--primary);
+        transition: transform 0.2s, border-left-color 0.2s;
     }
 
     .config-module:hover {
         transform: translateX(3px);
-        border-left-color: #CCFF00;
+        border-left-color: var(--accent-amber);
     }
 
     .config-module h2 {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: 2.2rem;
-        color: #386938;
+        color: var(--primary);
         margin-top: 0;
         margin-bottom: 0.5rem;
     }
 
     .sub-module-title {
-        font-family: 'Bebas Kai', sans-serif;
+        font-family: var(--font-heading);
         font-size: 1.5rem;
-        color: #4DA699;
+        color: var(--accent-teal);
         margin-bottom: 1rem;
-        border-bottom: 1px solid #e0eee0;
+        border-bottom: 1px solid var(--border-soft);
         padding-bottom: 0.5rem;
+    }
+
+    .sub-module-title.spaced {
+        margin-top: 2.5rem;
     }
 
     .module-desc {
         font-size: 1.1rem;
-        color: #555;
+        color: var(--text-muted);
         line-height: 1.6;
         margin-bottom: 1.5rem;
     }
 
-    /* --- Variables List --- */
+    /* --- Variabelenlijst --- */
     .variable-list {
         list-style: none;
         padding: 0;
@@ -227,9 +282,9 @@
     }
 
     .variable-list li {
-        background: #F9FBF9;
+        background: var(--bg-color);
         padding: 1rem;
-        border-radius: 8px;
+        border-radius: var(--radius-sm);
         border: 1px dashed #cde0cd;
         display: flex;
         flex-direction: column;
@@ -239,9 +294,9 @@
     .var-name {
         font-family: monospace;
         font-weight: bold;
-        color: #386938;
+        color: var(--primary);
         font-size: 1.1rem;
-        background: #eaf3ea;
+        background: var(--surface-tint);
         padding: 0.2rem 0.6rem;
         border-radius: 4px;
         display: inline-block;
@@ -249,7 +304,7 @@
     }
 
     .var-desc {
-        color: #555;
+        color: var(--text-muted);
         font-size: 1rem;
         line-height: 1.5;
     }
@@ -267,20 +322,19 @@
         }
     }
 
-    /* --- General Elements --- */
+    /* --- Overig --- */
     .github-section {
         text-align: center;
         padding: 2.5rem;
-        background: #eaf3ea;
-        border-radius: 12px;
-        border: 1px dashed #386938;
-        margin-bottom: 3rem;
-        margin-top: 3rem;
+        background: var(--surface-tint);
+        border-radius: var(--radius);
+        border: 1px dashed var(--primary);
+        margin: 3rem 0;
     }
 
     .github-section p {
         font-size: 1.1rem;
-        color: #2c3e2c;
+        color: var(--text-main);
         margin-bottom: 1.5rem;
         font-weight: 500;
     }
@@ -294,54 +348,5 @@
         display: flex;
         justify-content: flex-start;
         margin-top: 2rem;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 0.8rem 1.5rem;
-        border-radius: 8px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: background 0.2s, transform 0.2s;
-        text-align: center;
-    }
-
-    .btn:hover {
-        transform: translateY(-3px);
-    }
-
-    .primary-btn {
-        background: #CCFF00;
-        color: #386938;
-    }
-
-    .primary-btn:hover {
-        background: #b6e600;
-    }
-
-    .secondary-btn {
-        background: #386938;
-        color: #ffffff;
-    }
-
-    .secondary-btn:hover {
-        background: #4DA699;
-    }
-
-    .official-links {
-        text-align: center;
-        font-size: 0.85rem;
-        padding-top: 2rem;
-        border-top: 1px solid #4DA699;
-    }
-
-    .official-links a {
-        color: #386938;
-        font-weight: bold;
-        text-decoration: none;
-    }
-
-    .official-links a:hover {
-        color: #CCFF00;
     }
 </style>

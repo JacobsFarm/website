@@ -1,4 +1,5 @@
 {
+  "hardware_more_info": "Flere oplysninger",
   "hardware_title": "Hardwareinstallation",
   "hardware_intro": "Til CowCatcherAI skal du bruge to primære hardwarekomponenter: overvågningskameraer og en computer til at behandle billederne ved hjælp af AI.",
   "hardware_cameras_title": "1. Kameraerne",

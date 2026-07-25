@@ -1,23 +1,22 @@
 <script lang="ts">
   import { browser } from '$app/environment';
   import { setLocale } from '$lib/paraglide/runtime';
+  import { languages, languageCodes } from '$lib/config/languages.js';
 
   // --- CONFIGURATIE ---
   // true  = Toon de popup ALTIJD bij het opstarten (negeer opslag).
   // false = Toon de popup alleen als er nog geen taal is opgeslagen.
-  const FORCE_SHOW = false; 
+  const FORCE_SHOW = false;
   const STORAGE_KEY = 'lang_chosen';
 
-  // Logica voor het tonen van de modal
-  let show = browser && (FORCE_SHOW || !localStorage.getItem(STORAGE_KEY));
-  
-  // Standaard selectie gebaseerd op browser of default naar Engels
-  let selectedLocale = 'en';
-  
+  let show = $state(browser && (FORCE_SHOW || !localStorage.getItem(STORAGE_KEY)));
+
+  // Standaard selectie gebaseerd op browsertaal, anders Engels.
+  let selectedLocale = $state('en');
+
   if (browser) {
     const navLang = navigator.language.toLowerCase().split('-')[0];
-    const supported = ['en', 'nl', 'es', 'fr', 'pt', 'de', 'it', 'pl', 'ro', 'dn'];
-    if (supported.includes(navLang)) {
+    if (languageCodes.includes(navLang)) {
       selectedLocale = navLang;
     }
   }
@@ -26,22 +25,9 @@
     if (browser) {
       localStorage.setItem(STORAGE_KEY, selectedLocale);
     }
-    setLocale(selectedLocale as any);
+    setLocale(selectedLocale as Parameters<typeof setLocale>[0]);
     show = false;
   }
-
-  const languages = [
-    { code: 'en', name: 'English', flag: '🇬🇧' },
-    { code: 'nl', name: 'Nederlands', flag: '🇳🇱' },
-    { code: 'es', name: 'Español', flag: '🇪🇸' },
-    { code: 'fr', name: 'Français', flag: '🇫🇷' },
-    { code: 'pt', name: 'Português', flag: '🇵🇹' },
-    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
-    { code: 'it', name: 'Italiano', flag: '🇮🇹' },
-    { code: 'pl', name: 'Polski', flag: '🇵🇱' },
-    { code: 'ro', name: 'Română', flag: '🇷🇴' },
-    { code: 'dn', name: 'Dansk', flag: '🇩🇰' }
-  ];
 </script>
 
 {#if show}
@@ -60,16 +46,16 @@
           {/each}
         </select>
 
-        <button class="confirm-btn" on:click={choose} aria-label="Confirm">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="24" 
-            height="24" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            stroke-width="3" 
-            stroke-linecap="round" 
+        <button class="confirm-btn" onclick={choose} aria-label="Confirm">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="3"
+            stroke-linecap="round"
             stroke-linejoin="round"
           >
             <polyline points="20 6 9 17 4 12"></polyline>
@@ -93,13 +79,13 @@
   }
 
   .modal {
-    background: oklch(98% 0.005 145);
-    border-radius: 20px;
+    background: var(--bg-color);
+    border-radius: var(--radius-lg);
     padding: 2.5rem 2rem;
     max-width: 360px;
     width: 90%;
     text-align: center;
-    box-shadow: 0 24px 64px rgba(0,0,0,0.25);
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
   }
 
   .globe {
@@ -110,11 +96,11 @@
   h2 {
     margin: 0 0 0.25rem;
     font-size: 1.4rem;
-    color: oklch(22% 0.02 145);
+    color: var(--text-main);
   }
 
   p {
-    color: oklch(42% 0.07 145);
+    color: var(--text-muted);
     margin: 0 0 1.75rem;
     font-size: 0.9rem;
   }
@@ -128,12 +114,12 @@
   .modal-dropdown {
     width: 100%;
     padding: 1.1rem 0.75rem;
-    border: 2px solid oklch(85% 0.01 145);
+    border: 2px solid var(--soft-gray);
     border-radius: 14px;
     background: white;
     font-size: 1rem;
     font-weight: 600;
-    color: oklch(22% 0.02 145);
+    color: var(--text-main);
     cursor: pointer;
     outline: none;
   }
@@ -145,7 +131,7 @@
     padding: 1.1rem;
     border: none;
     border-radius: 14px;
-    background: #386938; 
+    background: var(--primary);
     color: white;
     font-weight: 700;
     cursor: pointer;
@@ -153,8 +139,8 @@
   }
 
   .confirm-btn:hover {
-    background: oklch(28% 0.05 145);
+    background: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56,105,56,0.3);
+    box-shadow: 0 4px 12px rgba(56, 105, 56, 0.3);
   }
 </style>
