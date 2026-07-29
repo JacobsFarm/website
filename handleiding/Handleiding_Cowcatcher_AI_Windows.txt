@@ -1,0 +1,371 @@
+Cowcatcherai draait op de software van de AI detector https://github.com/ESchouten/ai-detector 
+
+Op de releasepagina van de software op GitHub vindt u het specifieke macOS-bestand:
+ 1. Cowcatcher AI Detector - macOS / OS X versie (voor Mac)
+ 2. Cowcatcher AI Webversie / Frontend (De gebruikersinterface voor iedereen)
+
+1.2 Systeemeisen & Hardware-identificatie
+--------------------------------------------------------------------------------
+Om het programma vloeiend te laten draaien heeft u een Windows-computer nodig
+(Windows 10 of Windows 11). Het type videokaart (GPU) of processor bepaalt welke
+versie van de AI-motor u moet installeren:
+
+A) Intel / AMD Computers:
+   - Geschikt voor pc's met een Intel processor (met geïntegreerde HD/UHD/Iris
+     videokaart) of een AMD processor / AMD Radeon videokaart.
+   - Verwerkingstijd per beeldframe: Ongeveer 200ms - 600ms (ruim voldoende voor
+     nauwkeurige detectie).
+
+aidetector-winml-v.....zip 
+
+B) NVIDIA Videokaarten (Oudere generatie: GTX 1000 & RTX 2000 serie):
+   - Geschikt voor videokaarten zoals de GTX 1050, GTX 1060, GTX 1660, RTX 2060,
+     RTX 2070, etc.
+   - Maakt gebruik van NVIDIA CUDA technologie voor snelle verwerking.
+   - Verwerkingstijd per beeldframe: Ongeveer 40ms - 60ms.
+
+For GTX 3000 series and newer:
+aidetector-nvidia-cu130-v....zip
+
+Donwload versie 
+
+C) NVIDIA Videokaarten (Nieuwere generatie: RTX 3000 & RTX 4000+ serie):
+   - Geschikt voor moderne videokaarten zoals de RTX 3060, RTX 3070, RTX 4060,
+     RTX 4070, RTX 4090, etc.
+   - Geoptimaliseerd voor de nieuwste Tensor-cores en CUDA-architectuur.
+   - Verwerkingstijd per beeldframe: Ultra-snel (10ms - 40ms).
+
+For GTX 2000 series and older:
+aidetector-nvidia-cu126-v....zip
+
+1.3 Overzicht van de beschikbare installatieversies
+--------------------------------------------------------------------------------
+Op de releasepagina van de software vindt u de volgende bestanden:
+ 1. Cowcatcher AI Detector - Standaard Windows (voor Intel & AMD)
+ 2. Cowcatcher AI Detector - NVIDIA CUDA Oudere kaarten (1000/2000 serie)
+ 3. Cowcatcher AI Detector - NVIDIA CUDA Nieuwere kaarten (3000/4000+ serie)
+ 4. Cowcatcher AI Webversie / Frontend (De gebruikersinterface voor iedereen)
+ 5. (Optioneel) Apple macOS (OS X) versie voor Mac-gebruikers.
+
+================================================================================
+2. DOWNLOADEN VAN HET PROGRAMMA EN OPZETTEN VAN DE MAPSTRUCTUUR
+================================================================================
+
+2.1 Aanmaken van een GitHub-account (NVIDIA gebruikers)
+--------------------------------------------------------------------------------
+- Voor de standaard Intel/AMD versie kunt u de bestanden direct downloaden zonder
+  in te loggen.
+- Voor de speciale NVIDIA (CUDA) versies stelt GitHub de eis dat u bent ingelogd.
+  1. Ga in uw browser naar https://github.com
+  2. Klik rechtsboven op 'Sign in' of 'Sign up'.
+  3. U kunt ervoor kiezen om in te loggen met uw bestaande Google-account ('Continue
+     with Google'). Dit duurt slechts enkele seconden.
+
+2.2 Downloaden van de benodigde bestanden
+--------------------------------------------------------------------------------
+1. Zoek in Google naar "Cowcatcher AI GitHub" of ga direct naar de GitHub-pagina.
+2. Klik op het project/repository genaamd "AI Detector".
+3. Scroll op de pagina naar beneden of klik in het rechtermenu op "Releases".
+   Hier vindt u de meest recente versie van het programma.
+4. Download precies TWEE bestanden:
+   - Bestand 1: De AI Detector Motor ZIP die past bij uw videokaart (Intel/AMD,
+     NVIDIA OUD of NVIDIA NIEUW).
+   - Bestand 2: De Webversie ZIP (dit is de voorkant/app waarmee u alles instelt).
+
+2.3 Aanmaken van de hoofdmap op het Bureaublad
+--------------------------------------------------------------------------------
+1. Ga naar uw Windows Bureaublad (Desktop).
+2. Klik op een lege plek met de rechtermuisknop en kies: Nieuw -> Map.
+3. Geef deze map de duidelijke naam: `Cowcatcher`
+
+2.4 Uitpakken en opschonen van bestanden
+--------------------------------------------------------------------------------
+1. Open uw verkenner en ga naar de map 'Downloads'.
+2. Selecteer de twee gedownloade `.zip` bestanden.
+3. Druk op `Ctrl + X` (Knippen), ga naar de nieuwe map `Cowcatcher` op uw
+   bureaublad en druk op `Ctrl + V` (Plakken).
+4. Klik met de rechtermuisknop op het eerste ZIP-bestand en kies 'Alles uitpakken...'
+   (of 'Extract All...'). Bevestig het uitpakken.
+5. Doe exact hetzelfde voor het tweede ZIP-bestand (de webversie).
+6. Er zijn nu uitgepakte mappen aangemaakt. U mag de originele gecomprimeerde
+   .zip bestanden (met het rits-icoontje) nu selecteren en verwijderen.
+
+2.5 Windows Beveiliging en Blokkering opheffen (SmartScreen)
+--------------------------------------------------------------------------------
+Omdat Cowcatcher AI een lokaal geschreven programma is dat niet via de officiële
+Microsoft Windows Store wordt gedistribueerd, kan Windows uit voorzorg een
+beveiligingswaarschuwing tonen.
+
+Stap A: Blokkering opheffen via Eigenschappen
+1. Klik in de map met de rechtermuisknop op de uitvoerbare bestanden (`.exe`).
+2. Kies helemaal onderaan voor 'Eigenschappen' (Properties).
+3. Op het tabblad 'Algemeen', onderaan bij het kopje 'Beveiliging', ziet u staan:
+   "Dit bestand is afkomstig van een andere computer..."
+4. Vink het vakje aan bij 'Blokkering opheffen' (Unblock).
+5. Klik op 'Toepassen' en daarna op 'OK'.
+
+Stap B: Windows SmartScreen melding omzeilen
+Wanneer u het programma voor de eerste keer opent, kan er een blauw scherm
+verschijnen met de tekst: "Uw computer is beschermd" (Windows Defender SmartScreen).
+1. Klik op de kleine tekst 'Meer informatie' (More info).
+2. Er verschijnt nu een extra knop genaamd 'Toch uitvoeren' (Run anyway).
+3. Klik op 'Toch uitvoeren'. Het programma krijgt nu volledige toestemming.
+
+================================================================================
+3. HET INSTELLEN VAN CAMERA'S & RTSP STREAMS
+================================================================================
+
+3.1 Wat is een RTSP-stream?
+--------------------------------------------------------------------------------
+RTSP staat voor Real Time Streaming Protocol. Dit is het standaard netwerk-
+adres waarmee IP-camera's hun live videobeelden over het lokale netwerk
+versturen. Cowcatcher AI leest deze videostream uit om realtime beelden te
+analyseren.
+
+3.2 Specifieke instellingen per cameramerk
+--------------------------------------------------------------------------------
+A) Reolink Camera's (BELANGRIJK!):
+   Bij camera's van het merk Reolink staat het RTSP-protocol fabrieksmatig UIT.
+   U dient dit eenmalig handmatig in te schakelen via de Reolink-software:
+   1. Open de Reolink App op uw pc of telefoon.
+   2. Selecteer de camera en klik op het tandwiel (Instellingen).
+   3. Ga naar: Netwerk -> Advanced (Geavanceerd) -> Server Settings.
+   4. Vink het schuifje/vakje bij 'RTSP' AAN.
+   5. Klik op Opslaan. De camera vraagt "Weet u dit zeker?", kies Ja.
+
+B) Hikvision & Dahua Camera's:
+   Bij deze merken staat RTSP standaard reeds ingeschakeld. U hoeft in de
+   camerasoftware geen speciale instellingen aan te passen.
+
+C) Axis, Foscam, Ubiquiti UniFi:
+   Staan eveneens standaard RTSP-streaming toe via hun standaard poort (554).
+
+3.3 Opzoeken van het IP-adres van uw camera
+--------------------------------------------------------------------------------
+Om de camera te koppelen heeft u het IP-adres van de camera nodig. Dit kunt u
+terugvinden in de mobiele app van uw camera, in de netwerkpagina van uw router,
+of in de software van het cameramerk.
+Een IP-adres heeft vrijwel altijd de vorm van:
+ - `192.168.1.X` (bijv. `192.168.1.31`)
+ - `192.168.178.X` (bijv. `192.168.178.50`)
+
+3.4 Mainstream vs. Substream (Prestatie-optimalisatie)
+--------------------------------------------------------------------------------
+Vrijwel elke IP-camera zendt twee videostreams uit:
+ 1. Mainstream: Hoge resolutie (4K of 1080p). Kost zeer veel computerkracht.
+ 2. Substream: Lagere resolutie (bijv. 640x480 of 720p).
+
+ADVIES: Gebruik voor Cowcatcher AI ALTIJD de Substream! Voor kunstmatige
+intelligentie is de beeldkwaliteit van een substream meer dan voldoende om
+koeien, bespringingen en afkalfactiviteiten te herkennen. Het gebruik van de
+substream bespaart tot wel 80% aan processorbelasting op uw pc.
+
+3.5 Camera's toevoegen en testen in de Cowcatcher Webinterface
+--------------------------------------------------------------------------------
+1. Open de map van de Webversie en start de applicatie. Uw browser opent de
+   lokale gebruikersinterface.
+2. Als de browser vraagt om netwerktoegang of toestemming, klik op 'Allow' /
+   'Toestaan'.
+3. Klik rechtsboven op de knop 'Voeg stream toe'.
+4. Vul bij 'Naam' een duidelijke omschrijving in (bijv. `Pinken stal 1` of `Afkalfbox West`).
+5. Vul bij RTSP-URL de videolijn in. Hieronder vindt u de exacte standaardregels:
+
+   - Reolink Substream:
+     `rtsp://admin:WACHTWOORD@IP-ADRES:554/h264Preview_01_sub`
+
+   - Hikvision Substream:
+     `rtsp://admin:WACHTWOORD@IP-ADRES:554/Streaming/Channels/102`
+
+   - Dahua Substream:
+     `rtsp://admin:WACHTWOORD@IP-ADRES:554/cam/realmonitor?channel=1&subtype=1`
+
+   *(Vervang `admin`, `WACHTWOORD` en `IP-ADRES` door de eigen gegevens van uw camera).*
+
+6. Klik op de knop 'Test stream'. Als de verbinding geslaagd is, ziet u direct
+   het live camerabeeld verschijnen.
+7. Klik op 'Opslaan'. U kunt nu op dezelfde manier nog meer camera's toevoegen.
+
+================================================================================
+4. INSTELEN VAN NOTIFICATIES EN MELDINGEN
+================================================================================
+
+4.1 Telegram integratie
+--------------------------------------------------------------------------------
+Telegram is het meest geschikte platform om supersnel en gratis meldingen
+inclusief foto's van de detectie op uw telefoon te ontvangen.
+
+1. Ga in het programma naar de tab 'Meldingen'.
+2. Klik op 'Voeg melding toe' en selecteer 'Telegram'.
+3. Geef het account een naam (bijv. `Mijn Telefoon` of `Familie Groep`).
+4. Vul de **Bot Token** in. (Deze krijgt u van Telegram via de 'BotFather' wanneer
+   u een eigen meldingsbot aanmaakt).
+5. Vul uw **User ID** of **Chat ID** in. Dit is een unieke tiencijferige code
+   (bijv. `1234567890`) die aangeeft naar welk account of welke groepschat de
+   foto sturen moet worden.
+6. Klik op de knop 'Test notificatie'.
+7. Controleer uw telefoon. Ontvangt u een testbericht op Telegram? Dan is de
+   koppeling geslaagd! Klik op 'Opslaan'.
+
+4.2 Aanmaken van meerdere meldingsgroepen
+--------------------------------------------------------------------------------
+U kunt een onbeperkt aantal Telegram-ontvangers of groepen toevoegen.
+Voorbeeld van een slimme indeling:
+ - Groep 1: "Tochtdetectie Pinken" -> Wordt verzonden naar de veehouder en
+   medewerkers.
+ - Groep 2: "Spoed Afkalven" -> Wordt verzonden naar het hele gezin / nachtdienst.
+
+4.3 Home Assistant Webhook integratie (Optioneel)
+--------------------------------------------------------------------------------
+Als u op de boerderij gebruikmaakt van Home Assistant (domotica), kunt u ook een
+Webhook URL invoeren. Cowcatcher AI stuurt dan bij elke detectie een JSON-signaal
+naar uw Home Assistant server, waarmee u bijvoorbeeld automatisch stalverlichting
+kunt laten aanspringen of een fysieke sirenerelais kunt aansturen.
+
+================================================================================
+5. HET CONFIGUREREN VAN DETECTOREN (AI PARAMETERS)
+================================================================================
+
+In de tab 'Detector' maakt u de daadwerkelijke AI-opdrachten aan. U koppelt hier
+de camera's, het type detectie en de instellingen aan elkaar.
+
+5.1 Tochtdetectie (Cowcatcher) configureren
+--------------------------------------------------------------------------------
+1. Klik op 'Nieuwe Detector'.
+2. Selecteer bij type: **Cowcatcher** (Tochtdetectie / Bespringingen).
+3. Vink de camera's aan die op de tochtige koeien/pinken zijn gericht.
+4. Kies welke Telegram-accounts/groepen bij een bespringing een melding moeten
+   ontvangen.
+5. Stel de gewenste AI-parameters in (zie paragraaf 5.3).
+6. Klik op 'Opslaan'.
+
+5.2 Afkalfdetectie (Kalfingcatcher) configureren
+--------------------------------------------------------------------------------
+1. Klik op 'Nieuwe Detector'.
+2. Selecteer bij type: **Kalfingcatcher** (Afkalfdetectie).
+3. Vink de camera('s) van de afkalfstal of strohokken aan.
+4. Selecteer de gewenste Telegram-ontvangers voor afkalfmeldingen.
+5. Bij afkalven wilt u GEEN vertraging. Zet het meldingsgeluid-interval op `1`.
+6. Stel de minimale detectieduur in op bijvoorbeeld `15` seconden (de AI controleert
+   1x per seconde; bij 15 seconden continu signaal van pootjes/blaas gaat het alarm af).
+7. Klik op 'Opslaan'.
+
+5.3 Parameters uitgelegd: Rekenkracht, Drempelwaarden en Geluidsintervallen
+--------------------------------------------------------------------------------
+A) Rekenkracht / Snelheidsfactor (Waarde tussen 1 en 10):
+   - Voor een standaard Intel/AMD pc: Kies **6** (dit is de meest veilige en
+     stabiele balans).
+   - Voor een snelle pc met NVIDIA videokaart: Kies **8** of **10**.
+
+B) Betrouwbaarheidswaarde / Drempelwaarde (Confidence Threshold):
+   Deze waarde bepaalt hoe "zeker" de AI van zijn zaak moet zijn voordat er een
+   melding wordt verstuurd.
+   - **0.92**: Zeer streng. Vrijwel nul valse meldingen, maar een hele snelle of
+     korte bespringing kan heel soms gemist worden.
+   - **0.90**: **AANBEVOLEN INSTELLING!** De ideale balans tussen een zeer hoge
+     pakkans en minimale valse meldingen.
+   - **0.88**: Gevoelig. Registreert werkelijk alles, maar geeft af en toe een
+     valse melding (bijv. als twee koeien dicht tegen elkaar staan).
+   - **0.85**: Niet aanbevolen (geeft te veel valse meldingen).
+
+C) Melding geluid interval:
+   Bepaalt om de hoeveel detecties de pc een hoorbaar geluidssignaal laat horen.
+   Bij tochtdetectie kunt u dit bijv. op `5` zetten. Wilt u helemaal geen geluid
+   op de pc? Vul dan een extreem hoog getal in (bijv. `9999`).
+
+5.4 Controle van het gegenereerde `configuratie.json` bestand
+--------------------------------------------------------------------------------
+Zodra u op Opslaan drukt, maakt het programma in de map automatisch het bestand
+`configuratie.json` aan. Hierin staan al uw camera's, tokens en drempelwaarden
+veilig opgeslagen. U hoeft dit bestand niet handmatig te bewerken.
+
+================================================================================
+6. HET OPSTARTEN EN MONITORING VAN HET SYSTEEM
+================================================================================
+
+6.1 De eerste keer opstarten
+--------------------------------------------------------------------------------
+1. Ga naar de hoofdmap op uw bureaublad.
+2. Dubbelklik op het opstartbestand van de AI Motor (`.exe`).
+3. Er opent een zwart/donker opdrachtpromptextrascherm (Terminal/Console).
+   **BELANGRIJK: Sluit dit zwarte scherm NIET af! Dit is de motor die op de
+   achtergrond alle beelden verwerkt.**
+
+Eerste opstartprocedure:
+De allereerste keer dat het programma start, downloadt het automatisch het nieuwste
+AI-neuraal model van de server. Afhankelijk van uw internetsnelheid duurt dit 1 tot
+3 minuten. Daarna converteert het programma het model automatisch naar het meest
+efficiënte formaat voor uw specifieke videokaart.
+
+6.2 Begrijpen van het Terminal/Console scherm
+--------------------------------------------------------------------------------
+Zodra de AI actief is, ziet u continu tekstregels voorbijstromen in het zwarte scherm.
+Dit geeft u direct informatie over de verwerkingssnelheid:
+
+Voorbeelden van meldingen:
+ - `Detection loop active (300ms)` -> Standaard Intel/AMD computer. De AI analyseert
+   het beeld elke 300 milliseconden.
+ - `Detection loop active (40ms)` -> NVIDIA videokaart op standaardinstelling.
+ - `Detection loop active (10ms)` -> NVIDIA videokaart met CUDA versnelling.
+   In dit geval verwerkt uw pc maar liefst 100 beelden per seconde!
+
+Zolang u deze regels ziet lopen, weet u zeker dat de AI live uw stal bewaakt.
+
+6.3 Lokale data-opslag (`detectie/` map) & Privacy
+--------------------------------------------------------------------------------
+Elke keer wanneer de AI een bespringing of afkalfactiviteit waarneemt, gebeuren er
+twee dingen:
+ 1. Er wordt direct een melding verzonden naar uw Telegram (indien ingesteld).
+ 2. De betreffende foto met AI-kader wordt lokaal opgeslagen in de map `detectie/`.
+
+Deze map wordt automatisch aangemaakt in uw Cowcatcher-programmamap. Hierdoor
+bouwt u automatisch een lokaal archief op van alle tocht- en afkalfmomenten,
+zonder dat u afhankelijk bent van cloud-abonnementen.
+
+================================================================================
+7. VEELGESTELDE VRAGEN (FAQ), PROBLEEMOPLOSSING & TIPS
+================================================================================
+
+7.1 Netwerk en Internetverbinding
+--------------------------------------------------------------------------------
+- **Vraag:** Kan ik de pc op Wi-Fi laten draaien?
+  **Antwoord:** Het wordt KRACHTIG AANBEVOLEN om zowel de AI-computer als de IP-
+  camera's aan te sluiten met een fysieke netwerkkabel (UTP/ethernet). Wi-Fi in een
+  stalomgeving kan instabiel zijn, wat leidt tot haperende RTSP-videostreams.
+
+7.2 Slaapstand en Energiebeheer instellen
+--------------------------------------------------------------------------------
+- **Probleem:** De AI stopt 's nachts ineens met detecteren.
+  **Oplossing:** Windows heeft de pc waarschijnlijk in de automatische 'Slaapstand'
+  gezet. Dit moet u uitschakelen:
+  1. Ga in Windows naar: Instellingen -> Systeem -> Energie & Slaapstand.
+  2. Zet 'Scherm uitschakelen' op bijv. 15 minuten.
+  3. Zet 'Slaapstand' (Sleep) verplicht op **NOOIT**.
+
+7.3 Automatisch opstarten bij stroomuitval
+--------------------------------------------------------------------------------
+Om te zorgen dat de pc na een stroomstoring of herstart van Windows automatisch
+weer begint met monitoren:
+1. Druk op de toetscombinatie `Windows-toets + R` op uw toetsenbord.
+2. Typ in het uitvoervenster: `shell:startup` en druk op Enter.
+3. De map 'Opstarten' van Windows opent.
+4. Klik met de rechtermuisknop op uw Cowcatcher AI opstartbestand (`.exe`), kies
+   'Snelkoppeling maken' en sleep deze snelkoppeling in de zojuist geopende map.
+5. Het programma start nu voortaan automatisch op zodra de computer aangaat.
+
+7.4 Contact, Videotutorials & Ondersteuning
+--------------------------------------------------------------------------------
+Mocht u er ondanks deze handleiding niet helemaal uitkomen, gebruik dan de
+volgende ondersteuningskanalen:
+
+- **YouTube:** Zoek op YouTube naar "Cowcatcher AI". Hier vindt u stap-voor-stap
+  videohandleidingen van 0 tot 100, evenals extra video's over het aansluiten
+  van een automatisch stalalarm en uitvaldetectie.
+- **E-mail:** Stuur bij vragen of problemen direct een e-mail naar:
+  `cowcatcherai@gmail.com`
+- **Facebook / Community:** Stel uw vragen gerust in de reacties onder de YouTube-
+  video's of via onze Facebook-pagina voor snelle hulp en ervaringen van
+  medeveehouders.
+
+================================================================================
+                          EINDE VAN DE HANDLEIDING
+================================================================================
