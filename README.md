@@ -127,6 +127,7 @@ Independent coverage of the project:
 | Boerderij | [Jan Jaap Verweij ontwikkelt gratis tool voor detecteren tochtige koeien](https://www.boerderij.nl/video-jan-jaap-verweij-ontwikkelt-gratis-tool-voor-detecteren-tochtige-koeien) |
 | Nieuwe Oogst | [Melkveehouder ontwikkelt CowCatcher, gratis programma voor tochtdetectie](https://www.nieuweoogst.nl/nieuws/2025/09/30/melkveehouder-ontwikkelt-cowcatcher-gratis-programma-voor-tochtdetectie) |
 | Veehouderij Techniek | [Koe volgen met camera: zo werkt CowCatcher](https://www.mechaman.nl/veehouderij-techniek/artikel/20260720/koe-volgen-met-camera-zo-werkt-cowcatcher/) |
+| Veehouderij Techniek | [Cowcatcher komt met afkalfdetectie](https://www.mechaman.nl/veehouderij-techniek/artikel/20260310/cowcatcher-komt-met-afkalfdetectie/)|
 | VILT | [Groep boeren ontwikkelt AI-tool voor tocht- en afkalfdetectie melkvee](https://vilt.be/nl/nieuws/groep-boeren-ontwikkelt-ai-tool-voor-tocht-en-afkalfdectie-melkvee) |
 | Omrop Fryslân | [Hoe AI de Friese boer kan steunen in het dagelijks werk](https://www.omropfryslan.nl/nl/nieuws/18353769/hoe-ai-de-friese-boer-kan-steunen-in-het-dagelijks-werk) |
 | NOS Journaal Regio | [Broadcast item](https://npo.nl/start/afspelen/nos-journaal-regio_1359) |
