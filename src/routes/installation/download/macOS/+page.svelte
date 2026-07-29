@@ -16,7 +16,7 @@
             <h3>{m.os_macos_download_heading()}</h3>
             <p>{m.os_macos_download_desc()}</p>
             <a
-                href="https://github.com/CowCatcherAI/CowCatcherAI/releases"
+                href="https://github.com/ESchouten/ai-detector/releases"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn btn--solid release-btn"

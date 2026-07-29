@@ -56,3 +56,8 @@ Thumbs.db
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# =========================================
+# Claude Code
+# =========================================
+.claude/

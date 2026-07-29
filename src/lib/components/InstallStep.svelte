@@ -1,4 +1,6 @@
 <script>
+    import ZoomableImage from '$lib/components/ZoomableImage.svelte';
+
     /**
      * Eén stap uit de installatiehandleiding: genummerde badge, titel, inhoud
      * (children) en optioneel een schermafbeelding met bijschrift.
@@ -17,7 +19,7 @@
 
         {#if image}
             <figure class="step-figure">
-                <img src={image} alt={imageAlt} loading="lazy" />
+                <ZoomableImage src={image} alt={imageAlt} class="step-figure-img" />
                 {#if caption}
                     <figcaption>{caption}</figcaption>
                 {/if}
@@ -80,10 +82,7 @@
         margin: 1.5rem 0 0;
     }
 
-    .step-figure img {
-        width: 100%;
-        height: auto;
-        display: block;
+    .step-figure :global(.step-figure-img img) {
         border: 1px solid var(--soft-gray);
         border-radius: var(--radius-sm);
     }

@@ -2,7 +2,9 @@
     import * as m from '$lib/paraglide/messages.js';
     import { base } from '$app/paths';
     import InstallStep from '$lib/components/InstallStep.svelte';
+    import RtspUrlFinder from '$lib/components/RtspUrlFinder.svelte';
 
+    import imgRtspEnable from '$lib/assets/installation_software_rtsp_enabling.jpg';
     import imgAddStream from '$lib/assets/installation_software_add stream.jpg';
     import imgTelegram from '$lib/assets/installation_software_telegram_adding.jpg';
     import imgDetector from '$lib/assets/installation_software_step_7.jpg';
@@ -20,7 +22,13 @@
     let { showTerminalImage = true } = $props();
 </script>
 
-<InstallStep number="4" title={m.inst_cams_title()}>
+<InstallStep
+    number="4"
+    title={m.inst_cams_title()}
+    image={imgRtspEnable}
+    imageAlt="Enabling the RTSP toggle in the Reolink camera app"
+    caption={m.inst_cams_rtsp_enable_caption()}
+>
     <p>{m.inst_cams_intro()}</p>
 
     <h4>{m.inst_cams_brands_title()}</h4>
@@ -55,10 +63,8 @@
     </ol>
 
     <h4>{m.inst_stream_urls_title()}</h4>
-    <pre><code>Reolink    rtsp://admin:PASSWORD@IP-ADDRESS:554/h264Preview_01_sub
-Hikvision  rtsp://admin:PASSWORD@IP-ADDRESS:554/Streaming/Channels/102
-Dahua      rtsp://admin:PASSWORD@IP-ADDRESS:554/cam/realmonitor?channel=1&amp;subtype=1</code></pre>
     <p class="note">{@html m.inst_stream_urls_note()}</p>
+    <RtspUrlFinder />
 </InstallStep>
 
 <InstallStep
