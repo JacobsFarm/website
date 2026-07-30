@@ -22,7 +22,7 @@
   "docker_step1_opt3_step4": "Følg installationsproceduren fuldstændigt via SDK Manager.",
   "docker_step2_title": "2. Installation af Docker & NVIDIA Container Toolkit",
   "docker_step2_desc": "Åbn en terminal på din Jetson og kør følgende kommandoer:",
-  "docker_step3_title": "3. Download AI-Detector Container",
+  "docker_step3_title": "3. Download AI-Detector container",
   "docker_step3_desc": "Download den korrekte container til JetPack 6:",
   "docker_step4_title": "4. Oprettelse af konfigurationsfiler",
   "docker_step4_desc": "Opret de nødvendige filer ved hjælp af følgende kommandoer:",

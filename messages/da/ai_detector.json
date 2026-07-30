@@ -1,10 +1,10 @@
 {
   "ai_detector_desc": "Browser-baseret AI-registreringsværktøj.",
-  "ai_detector_title": "AI Detector WebApp",
+  "ai_detector_title": "AI-detektor WebApp",
   "ai_detector_text": "Information om browser-applikationen.",
-  "ai_detector_hero_title": "AI Detector",
+  "ai_detector_hero_title": "AI-detektor",
   "ai_detector_hero_subtitle": "Ét softwareprogram til både Calving (kælving) og Cowcatcher. Overvåg dine videostreams, fang begivenhederne og få øjeblikkelige advarsler.",
-  "ai_detector_btn_download": "Download App",
+  "ai_detector_btn_download": "Hent App",
   "ai_detector_btn_github": "Se kildekode",
   "ai_detector_about_title": "Én detektor, uendelige muligheder",
   "ai_detector_about_p1": "Hos Cowcatcher AI træner og udvikler vi vision-modellerne. AI Detector er det softwarelag, der anvender disse modeller i praksis – ved at bruge deres lærte viden til at udføre nøjagtige registreringer i den virkelige verden.",
@@ -31,6 +31,6 @@
   "ai_detector_install_desc": "Det tager minutter, ikke timer, at komme i gang. Vælg det setup, der passer til dit miljø.",
   "ai_detector_install_win_title": "Windows-fil (.exe)",
   "ai_detector_install_win_desc": "Den anbefalede tilgang. Download blot .exe-filen til din hardware, læg den i en mappe, dobbeltklik og udfyld den genererede config.json.",
-  "ai_detector_install_docker_title": "Docker Container",
+  "ai_detector_install_docker_title": "Docker-container",
   "ai_detector_install_docker_desc": "Perfekt til Edge-computere, Linux eller setups med automatisk genstart. Brug den medfølgende docker-compose-fil til at få detektoren og web-appen op at køre med det samme."
 }

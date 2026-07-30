@@ -33,7 +33,7 @@
   "cowcatcher_value_night": "Je mist geen tochtigheid, ook niet 's nachts.",
   "cowcatcher_value_fast": "Directe meldingen maken snel handelen mogelijk.",
   "cowcatcher_value_precision": "Bepaal het exacte begin van de tochtigheid voor precisie-inseminatie na 16 of 24 uur.",
-  "cowcatcher_privacy_title": "Data & Privacy",
+  "cowcatcher_privacy_title": "Gegevens & Privacy",
   "cowcatcher_privacy_local": "Lokale Hosting: Het programma draait op je eigen computer zonder cloud-verbinding.",
   "cowcatcher_privacy_req": "Vereisten: De pc moet aanstaan en verbonden zijn met internet voor meldingen.",
   "cowcatcher_privacy_platforms": "Platformen: We gebruiken Telegram of Home Assistant.",

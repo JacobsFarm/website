@@ -59,7 +59,7 @@
   "opt_health_timeout": "Tempo limite da requisição em segundos (padrão 5).",
   "opt_health_headers": "Mapa opcional de cabeçalhos HTTP.",
   "opt_health_body": "Corpo opcional da requisição enviado como texto bruto.",
-  "opt_onnx_title": "6. ONNX Runtime",
+  "opt_onnx_title": "6. ONNX Tempo de Execução",
   "opt_onnx_desc": "Controla como o ONNX Runtime se configura antes de carregar um modelo YOLO.",
   "opt_onnx_provider": "Nome opcional do provedor para forçar (ex: \"CUDAExecutionProvider\").",
   "opt_onnx_winml": "Apenas para build Windows ML. Tenta registrar provedores de execução ML (padrão true).",

@@ -51,7 +51,7 @@
   "opt_exp_web_width": "Bredde på videoklippet i pixels (standard 1280).",
   "opt_exp_web_crf": "Videokvalitet (0-51). Lavere = bedre kvalitet, standard 28.",
   "opt_exp_web_rej": "Om registreringer afvist af VLM også skal POSTes (standard false).",
-  "opt_health_title": "5. Health (Ping Monitor)",
+  "opt_health_title": "5. Helse (Ping-overvågning)",
   "opt_health_desc": "Sender en simpel periodisk HTTP-anmodning for at verificere, at processen stadig kører.",
   "opt_health_url": "URL'en der skal pinges.",
   "opt_health_method": "HTTP-metode: GET, POST, PUT, PATCH, DELETE eller HEAD (standard GET).",

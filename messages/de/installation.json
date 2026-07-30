@@ -8,10 +8,10 @@
   "install_card_options_title": "3. Software-Optionen",
   "install_card_options_desc": "Entdecken Sie alle Funktionen und erweiterten Einstellungen unserer Software.",
   "install_text": "Wählen Sie Ihre Plattform:",
-  "install_jetson_link": "Jetson Nano Setup",
-  "install_pc_link": "PC Setup",
-  "jetson_title": "Jetson Nano Installation",
+  "install_jetson_link": "Jetson Nano Einrichtung",
+  "install_pc_link": "PC Einrichtung",
+  "jetson_title": "Jetson Nano-Installation",
   "jetson_text": "Schritt 1: Flashen Sie die SD-Karte mit JetPack 4.6...",
-  "pc_title": "PC Installation",
+  "pc_title": "PC-Installation",
   "pc_text": "Schritt 1: Installieren Sie Python und die notwendigen CUDA-Bibliotheken..."
 }

@@ -9,7 +9,7 @@
   "docker_step1_opt1_step4": "Flashez l'image téléchargée sur la carte SD avec BalenaEtcher.",
   "docker_step1_opt1_step5": "Insérez la carte SD flashée dans le Jetson Orin Nano.",
   "docker_step1_opt1_step6": "Démarrez le Jetson et complétez la configuration initiale.",
-  "docker_important": "IMPORTANT",
+  "docker_important": "Important",
   "docker_step1_opt1_note": "Mémorisez bien le nom d'utilisateur et le mot de passe choisis.",
   "docker_video_link": "Voir la vidéo explicative",
   "docker_step1_opt2_title": "Option 2 : Transférer le démarrage de la SD vers le SSD",
