@@ -3,6 +3,7 @@
     import agrarischOndernemerLogo from '$lib/assets/front_page_logo_agrarisch_ondernemer_2026.png';
     import prikkebordLogo from '$lib/assets/front_page_logo_prikkebord.png';
     import sterkeErvenLogo from '$lib/assets/sterke_erven_logo.svg';
+    import foodlogLogo from '$lib/assets/foodlog-logo.jpg';
 
     const logos = [
         {
@@ -34,6 +35,11 @@
             src: 'https://cdn.brandfetch.io/idgfMn7mzV/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1770955759252',
             alt: 'VILT',
             href: 'https://vilt.be/nl/nieuws/groep-boeren-ontwikkelt-ai-tool-voor-tocht-en-afkalfdectie-melkvee'
+        },
+        {
+            src: foodlogLogo,
+            alt: 'Foodlog',
+            href: 'https://www.foodlog.nl/artikel/met-een-camera-boer-je-beter'
         },
         {
             src: 'https://cdn.brandfetch.io/idj2Epissl/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1771540125311',
