@@ -30,7 +30,7 @@
 
     // Tellers die oplopen zodra het statistiekblok in beeld komt.
     const stats = [
-        { target: 50, suffix: '', label: m.front_page_stats_farms },
+        { target: 55, suffix: '', label: m.front_page_stats_farms },
         { target: 200, suffix: 'K+', label: m.front_page_stats_detections },
         { target: 6, suffix: '', label: m.front_page_stats_countries }
     ].map((stat) => ({
