@@ -59,7 +59,7 @@
             href: 'https://npo.nl/start/afspelen/nos-journaal-regio_1359'
         },
         {
-            src: 'melkvanhetnoordenlogo',
+            src: melkvanhetnoordenlogo,
             alt: 'Melk van het Noorden',
             href: 'https://www.melkvanhetnoorden.nl/laatste-nieuws/achtergrond/wie-staat-er-aan-het-roer-ai-of-de-boer/'
         },
