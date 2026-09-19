@@ -4,6 +4,7 @@
     import prikkebordLogo from '$lib/assets/front_page_logo_prikkebord.png';
     import sterkeErvenLogo from '$lib/assets/sterke_erven_logo.svg';
     import foodlogLogo from '$lib/assets/foodlog-logo.jpg';
+    import melkvanhetnoordenlogo from '$lib/assets/melk_van_het_noorden.png';
 
     const logos = [
         {
@@ -56,6 +57,11 @@
             src: 'https://cdn.brandfetch.io/idArW_C6LY/w/2048/h/2048/theme/dark/icon.jpeg?c=1bxid64Mup7aczewSAYMX&t=1775493657540',
             alt: 'NOS Journaal Regio',
             href: 'https://npo.nl/start/afspelen/nos-journaal-regio_1359'
+        },
+        {
+            src: 'melkvanhetnoordenlogo',
+            alt: 'Melk van het Noorden',
+            href: 'https://www.melkvanhetnoorden.nl/laatste-nieuws/achtergrond/wie-staat-er-aan-het-roer-ai-of-de-boer/'
         },
         {
             src: prikkebordLogo,
