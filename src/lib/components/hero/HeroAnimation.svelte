@@ -12,7 +12,9 @@
 	 * tekent een kader, en er komt een melding binnen op de telefoon.
 	 *
 	 * Draait alleen als hij in beeld is en het tabblad zichtbaar is. Onder
-	 * `prefers-reduced-motion` toont hij direct de eindstand, zonder beweging.
+	 * `prefers-reduced-motion` loopt het verhaal gewoon door (veel telefoons
+	 * zetten dat stilletjes aan, bv. in batterijbesparing), maar zonder
+	 * overgangen, trillen of oplopende getallen.
 	 */
 
 	const SCENES = {
@@ -58,9 +60,9 @@
 	const conf = new Tween(0, { duration: 750, easing: cubicOut });
 
 	const cfg = $derived(SCENES[scene]);
-	const running = $derived(inView && docVisible && !paused && !reduced);
-	const shownPhase = $derived(reduced ? cfg.steps.length : phase);
-	const shownAlerts = $derived(reduced ? cfg.alerts.length : alerts);
+	const running = $derived(inView && docVisible && !paused);
+	const shownPhase = $derived(phase);
+	const shownAlerts = $derived(alerts);
 	// Terwijl de AI een nieuwe stap bevestigt, staat de status weer op analyseren.
 	const sent = $derived(shownAlerts > 0 && shownPhase !== 4 && shownPhase !== 6);
 	const stageIndex = $derived(Math.min(shownPhase >= 6 ? 2 : shownPhase >= 4 ? 1 : 0, cfg.labels.length - 1));
@@ -186,17 +188,15 @@
 			{/each}
 		</div>
 
-		{#if !reduced}
-			<button
-				type="button"
-				class="pause"
-				onclick={() => (paused = !paused)}
-				aria-label={paused ? m.home_anim_play() : m.home_anim_pause()}
-				title={paused ? m.home_anim_play() : m.home_anim_pause()}
-			>
-				<Icon name={paused ? 'play' : 'pause'} size={14} stroke={2.2} />
-			</button>
-		{/if}
+		<button
+			type="button"
+			class="pause"
+			onclick={() => (paused = !paused)}
+			aria-label={paused ? m.home_anim_play() : m.home_anim_pause()}
+			title={paused ? m.home_anim_play() : m.home_anim_pause()}
+		>
+			<Icon name={paused ? 'play' : 'pause'} size={14} stroke={2.2} />
+		</button>
 	</div>
 
 	<div class="frame" aria-hidden="true">
