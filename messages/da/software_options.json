@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Objektregistrering)",
   "opt_yolo_desc": "Den hurtige 'første-gennemløbs' AI, der scanner hver frame. Uden YOLO behandles ingen frames.",
   "opt_yolo_model": "URL eller lokal sti til en YOLO-modelfil (.pt eller .onnx).",
-  "opt_yolo_conf": "Påkrævet sikkerhed (0-1). Kan også være en tærskelværdi pr. klasse, f.eks. { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Påkrævet sikkerhed (0-1). Kan også være en tærskelværdi pr. klasse, f.eks. \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Maksimal varighed i sekunder for at gruppere frames til én hændelse (standard 60).",
   "opt_yolo_timeout": "Sekunder uden registreringer før hændelsen betragtes som slut (standard 5).",
   "opt_yolo_cooldown": "Sekunder der skal ventes før en ny hændelse startes. Forhindrer gentagne advarsler. Kan indstilles pr. klasse.",

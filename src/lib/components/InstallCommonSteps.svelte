@@ -174,29 +174,60 @@ aidetector.detection.detector - INFO - Detection time: 37ms for 1 frame(s). Avg:
 aidetector.detection.detector - INFO - Checking for timeouts</code></pre>
 </InstallStep>
 
-<h3>{m.inst_storage_title()}</h3>
-<p>{@html m.inst_storage_text()}</p>
+<section class="extra" id="storage">
+    <h3>{m.inst_storage_title()}</h3>
+    <p>{@html m.inst_storage_text()}</p>
+</section>
 
-<h3>{m.inst_support_title()}</h3>
-<ul class="plain-list">
-    <li>{@html m.inst_support_youtube()}</li>
-    <li>
-        {@html m.inst_support_email()}
-        <a href="mailto:cowcatcherai@gmail.com" class="text-link">cowcatcherai@gmail.com</a>
-    </li>
-    <li>{@html m.inst_support_community()}</li>
-</ul>
+<section class="extra support" id="support">
+    <h3>{m.inst_support_title()}</h3>
+    <ul class="plain-list">
+        <li>{@html m.inst_support_youtube()}</li>
+        <li>
+            {@html m.inst_support_email()}
+            <a href="mailto:cowcatcherai@gmail.com" class="text-link">cowcatcherai@gmail.com</a>
+        </li>
+        <li>{@html m.inst_support_community()}</li>
+    </ul>
+</section>
 
 <style>
-    /* Opsomming zonder bolletjes, met dezelfde regelafstand als .setup-steps. */
     .plain-list {
         list-style: none;
-        padding-left: 0;
+        padding-left: 0 !important;
+        display: grid;
+        gap: 0.75rem;
     }
 
     .plain-list li {
-        margin-bottom: 1rem;
-        line-height: 1.6;
-        color: var(--text-main);
+        margin: 0 !important;
+        padding-left: 1.1rem;
+        border-left: 2px solid var(--primary-soft);
+    }
+
+    .extra {
+        margin-top: 2.5rem !important;
+        scroll-margin-top: var(--nav-offset);
+    }
+
+    .extra h3 {
+        margin-top: 0;
+        font-family: var(--font-heading);
+        font-weight: 400;
+        font-size: 2rem;
+        letter-spacing: 0.01em;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    .extra > * + * {
+        margin-top: 1rem;
+    }
+
+    .support {
+        padding: clamp(1.25rem, 3vw, 2rem);
+        border-radius: var(--radius-lg);
+        background: var(--surface-tint);
+        box-shadow: inset 0 0 0 1px var(--line);
     }
 </style>

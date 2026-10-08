@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Object Detectie)",
   "opt_yolo_desc": "Het snelle eerste AI-model dat elke frame scant. Zonder YOLO worden alle frames simpelweg doorgelaten.",
   "opt_yolo_model": "URL of lokaal pad naar een YOLO-modelbestand (.pt of .onnx).",
-  "opt_yolo_conf": "Vereiste zekerheid (0-1) voor een detectie. Kan ook per klasse worden ingesteld, bijv. { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Vereiste zekerheid (0-1) voor een detectie. Kan ook per klasse worden ingesteld, bijv. \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Maximale duur in seconden om frames te groeperen in één event (standaard 60).",
   "opt_yolo_timeout": "Seconden zonder detecties voordat een event als beëindigd wordt beschouwd (standaard 5).",
   "opt_yolo_cooldown": "Wachttijd in seconden na een event voordat een nieuwe mag starten (standaard 0). Kan per klasse.",

@@ -90,6 +90,7 @@
         CAMERAS.find((camera) => camera.brand === selectedBrand)?.streams ?? []
     );
 
+    /** @param {string} url */
     async function copyUrl(url) {
         try {
             await navigator.clipboard.writeText(url);
@@ -129,7 +130,7 @@
                         <td class="copy-col">
                             <button
                                 type="button"
-                                class="btn btn--outline copy-btn"
+                                class="btn btn--ghost btn--sm copy-btn"
                                 onclick={() => copyUrl(stream.url)}
                             >
                                 {copiedUrl === stream.url
@@ -147,31 +148,53 @@
 <style>
     .rtsp-finder {
         margin: 1rem 0 1.5rem;
+        padding: 1.25rem;
+        border-radius: var(--radius-lg);
+        background: var(--bg-sunken);
     }
 
     .brand-label {
         display: block;
-        font-weight: bold;
-        color: var(--primary);
         margin-bottom: 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
     }
 
     .brand-select {
         width: 100%;
         max-width: 320px;
-        padding: 0.6rem 0.8rem;
-        border: 1px solid var(--soft-gray);
+        min-height: 2.9rem;
+        padding: 0.6rem 2.5rem 0.6rem 1rem;
+        border: 0;
         border-radius: var(--radius-sm);
-        background: var(--card-bg);
+        background: var(--card-bg)
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23386938' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")
+            right 0.85rem center / 1rem no-repeat;
+        box-shadow: 0 0 0 1px var(--line-strong);
         color: var(--text-main);
         font-family: var(--font-body);
         font-size: 1rem;
-        margin-bottom: 1.5rem;
+        font-weight: 500;
+        appearance: none;
+        cursor: pointer;
+    }
+
+    .brand-select:focus-visible {
+        outline: 2px solid var(--accent-amber);
+        outline-offset: 2px;
+    }
+
+    .table-container {
+        margin-bottom: 0;
     }
 
     .stream-col {
         white-space: nowrap;
         width: 1%;
+        font-weight: 600;
     }
 
     .copy-col {
@@ -181,11 +204,10 @@
 
     .rtsp-url {
         word-break: break-all;
+        white-space: normal !important;
     }
 
     .copy-btn {
-        padding: 0.4rem 0.9rem;
-        font-size: 0.85rem;
         white-space: nowrap;
     }
 </style>

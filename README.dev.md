@@ -55,7 +55,8 @@ Run `npm run check` before opening a PR.
 ```
 src/
 ├── routes/                        Pages — the folder name is the URL
-│   ├── +layout.svelte             Navbar, Footer, Lightbox, language modal
+│   ├── +layout.svelte             Navbar, Footer, language modal, skip link
+│   ├── +error.svelte              404 / error page
 │   ├── +layout.ts                 prerender = true, trailingSlash = 'always'
 │   ├── +page.svelte               Home
 │   ├── about-us/
@@ -66,11 +67,14 @@ src/
 │   └── projects/                  cowcatcher / calvingcatcher / ai-detector
 ├── lib/
 │   ├── components/                Reusable components (see below)
+│   ├── components/hero/           The animated barn camera + phone on the homepage
 │   ├── actions/reveal.js          Scroll-reveal animation action
-│   ├── stores/lightbox.svelte.js  Lightbox state ($state rune)
+│   ├── utils/text.js              Helpers to reuse existing translations cleanly
 │   ├── config/
 │   │   ├── languages.js           The 10 locales — single source of truth
-│   │   └── projects.js            The 3 projects — used by home and navbar
+│   │   ├── projects.js            The 3 projects — used by home, navbar and footer
+│   │   ├── links.js               External links (GitHub, Telegram, Hugging Face, …)
+│   │   └── videos.js              Explainer video per language (Dutch vs. the rest)
 │   └── assets/                    Images, imported so Vite fingerprints them
 ├── app.css                        Design tokens + global utility classes
 └── app.html                       HTML shell, font preconnect
@@ -104,11 +108,16 @@ Everything uses runes. No `export let`, no `$:`, no `on:click`.
 
 ```css
 --primary  --accent-amber  --accent-teal  --text-main  --text-muted
---bg-color  --card-bg  --border-soft  --surface-tint
---radius  --radius-sm  --font-heading  --font-body
+--bg-color  --bg-sunken  --card-bg  --surface-tint  --primary-soft  --amber-soft
+--forest  --on-dark  --on-dark-muted  --line  --line-strong  --line-dark
+--radius-sm  --radius  --radius-lg  --radius-xl  --radius-pill
+--shadow-sm  --shadow-md  --shadow-lg  --ease-out  --ease-spring
+--font-heading  --font-body  --font-mono
 ```
 
-Global classes worth knowing: `.page-container`, `.card-grid`, `.info-section`, `.custom-card`, `.doc-page`, `.doc-section`, `.project-page`, `.official-links`, and the `.btn` family (`.btn--solid`, `.btn--outline`, `.btn--amber`, `.btn--ink`, `.btn--lg`, `.btn--block`).
+Global classes worth knowing: `.container`, `.section`, `.section-head`, `.eyebrow`, `.h-display`, `.h-section`, `.lead`, `.bezel` / `.bezel__inner`, `.surface`, `.chip`, `.prose` (install guides), `.setup-steps`, `.check-list`, `.note`, `.tip-box`, `.table-container`, and the `.btn` family (`.btn--solid`, `.btn--ghost`, `.btn--amber`, `.btn--ink`, `.btn--light`, `.btn--ghost-dark`, `.btn--sm`, `.btn--lg`, `.btn--block`). A trailing arrow goes in its own circle: `<span class="btn__icon"><Icon name="arrow-right" /></span>`.
+
+Icons come from `Icon.svelte` (one line set, same stroke everywhere) — add a new `name` there rather than pasting SVGs into pages.
 
 **Never hard-code a colour.** If a value isn't in the tokens, add it there.
 
@@ -119,26 +128,25 @@ Scroll reveals come from the `reveal` action:
 ```svelte
 <section use:reveal>…</section>                        <!-- this element -->
 <div class="card-grid" use:reveal={{ stagger: 100 }}>   <!-- children, in sequence -->
-<div class="project-page" use:reveal={{ each: true }}>  <!-- each child on its own trigger -->
 ```
 
-It sets its classes from JavaScript only, so content stays visible without JS, and it returns early under `prefers-reduced-motion`. Any new animation must honour that media query too — there is a global rule in `app.css`, but component-level `transform` on `:hover` needs its own opt-out.
+It sets its classes from JavaScript only, so content stays visible without JS, skips anything already on screen at load, and returns early under `prefers-reduced-motion`. Any new animation must honour that media query too — there is a global rule in `app.css`, but component-level `transform` on `:hover` needs its own opt-out.
 
 ### Images that can be enlarged
 
-Use a `<button>`, never a clickable `<div>`, so keyboard and screen-reader users can reach it:
+Use `ZoomableImage` — it is a `<button>`, so keyboard and screen-reader users can reach it, and it opens its own lightbox (Escape or click to close):
 
 ```svelte
-<script>
-  import { openLightbox } from '$lib/stores/lightbox.svelte.js';
-</script>
-
-<button class="zoomable" onclick={() => openLightbox(src, alt)} aria-label="Enlarge …">
-  <img {src} {alt} />
-</button>
+<ZoomableImage src={screenshot} alt="Add stream screen of the web interface" />
 ```
 
-The `<Lightbox />` itself lives once in `+layout.svelte`.
+### The homepage animation
+
+`components/hero/` draws the barn camera in SVG: `Cow` and `LyingCow` are the animals, `BarnScene` is the camera image with the AI box, `PhoneMock` is the Telegram message, and `HeroAnimation` runs the timeline (phases 0–5 per scene). It only plays while it is on screen, has a pause button, and shows the final frame without motion under `prefers-reduced-motion`. Its texts are in `messages/<locale>/site.json` (`home_anim_*`).
+
+### The explainer video
+
+Set the YouTube IDs in `src/lib/config/videos.js`: `nl` for Dutch visitors, `default` for every other language. The iframe (youtube-nocookie.com) is only inserted once the visitor scrolls near it.
 
 ---
 
@@ -146,16 +154,23 @@ The `<Lightbox />` itself lives once in `+layout.svelte`.
 
 | Component | Use it for |
 |---|---|
-| `ProjectHero` | Hero header on a project page (logo, title, subtitle) |
-| `InfoWithImage` | Text beside an image carousel — crossfade, arrows, dots, click to zoom |
-| `HighlightBlock` | Callout block; pass `size="large"` and `actions` for a CTA |
-| `FeatureCard` | Small feature tile in a grid |
-| `ProjectCard` | Linked card with logo, used on home and download pages |
-| `MediaCard` | Base layout for `MediaCardPicture` and `MediaCardGif` |
-| `CarouselDots` | Dot navigation — shared by every carousel |
-| `HardwareSection` | Hardware option list with accordion and buy links |
-| `Lightbox` | Full-screen image viewer (mounted once in the layout) |
-| `FeaturedIn` | Press logo carousel |
+| `PageHeader` | Top of every subpage: breadcrumbs, eyebrow, title, lead, optional `actions` / `aside` snippets |
+| `Seo` | `<title>` and meta description for a page |
+| `InstallProgress` | The 1-2-3 step bar on the installation pages |
+| `DocLayout` | Install guide layout with a sticky table of contents |
+| `InstallStep` | One numbered step in a guide (gets `id="step-N"` for the table of contents) |
+| `InstallCommonSteps` | Steps 4–8, shared by the Windows and macOS guides |
+| `DownloadCard` | "Download via GitHub Releases" card in the guide headers |
+| `PagerNav` | Previous / next links at the bottom of a page |
+| `ProjectDetail` | Full CowCatcher / CalvingCatcher page, driven by the message prefix |
+| `HardwareSection` | Hardware category with option cards, "more info" and buy links |
+| `Gallery` | Crossfading image carousel with arrows and dots |
+| `ZoomableImage` | Image that opens in a lightbox |
+| `VideoEmbed` | Lazy-loaded YouTube video, chosen per language |
+| `FeaturedIn` | Press logo marquee |
+| `RtspUrlFinder` | RTSP URL templates per camera brand, with copy buttons |
+| `Navbar` / `Footer` / `Logo` / `LanguageSelect` / `LanguageModal` | Site chrome |
+| `Icon` | All icons |
 
 ---
 
@@ -249,10 +264,8 @@ Two things reviewers will look for: internal links use `base`, and new colours c
 
 Worth picking up if you are looking for something to do:
 
-- **No per-page `<title>` or meta description** on most routes — only `about-us` sets one
 - **All ten locales share one URL**, and only English is prerendered, so translated content is invisible to search engines and to the retrieval layer behind AI assistants
-- **`<html lang>` is hard-coded** in `app.html` and does not follow the selected locale
+- **`<html lang>` is only corrected in the browser** — the prerendered HTML says `nl`, the layout sets the real locale after load
 - **No JSON-LD** structured data
-- **No favicon**
 - **Press logos are hotlinked** from a third-party CDN and will break if it moves
 - **mdsvex is configured but unused** — long documentation pages could be written as `.svx` Markdown instead of Svelte markup

@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Rilevamento Oggetti)",
   "opt_yolo_desc": "L'AI veloce di primo passaggio che scansiona ogni fotogramma. Senza YOLO, i fotogrammi passano semplicemente oltre.",
   "opt_yolo_model": "URL o percorso locale a un file modello YOLO (.pt o .onnx).",
-  "opt_yolo_conf": "Affidabilità richiesta (0-1). Può anche essere una soglia per classe, es. { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Affidabilità richiesta (0-1). Può anche essere una soglia per classe, es. \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Durata massima in secondi per raggruppare i fotogrammi in un unico evento (default 60).",
   "opt_yolo_timeout": "Secondi di assenza di rilevamento prima che l'evento sia considerato concluso (default 5).",
   "opt_yolo_cooldown": "Secondi di attesa prima di iniziare un nuovo evento. Impedisce avvisi ripetuti. Può essere impostato per classe.",

@@ -11,7 +11,7 @@
   "opt_yolo_title": "2. YOLO (Object Detection)",
   "opt_yolo_desc": "The fast first-pass AI that scans every frame. Without YOLO, all frames simply pass through.",
   "opt_yolo_model": "URL or local path to a YOLO model file (.pt or .onnx).",
-  "opt_yolo_conf": "Confidence required (0-1). Can also be a per-class threshold, e.g., { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Confidence required (0-1). Can also be a per-class threshold, e.g., \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Maximum duration in seconds to group frames into one event (default 60).",
   "opt_yolo_timeout": "Seconds of no detections before the event is considered over (default 5).",
   "opt_yolo_cooldown": "Seconds to wait before starting a new event. Prevents repeat alerts. Can be per class.",
@@ -73,7 +73,7 @@
   "opt_onnx_winml": "For Windows ML build only. Tries to register ML execution providers (default true).",
   "opt_onnx_opset": "ONNX opset used when exporting. Lower values can improve compatibility (default 20).",
 
-  "options_btn_back": "Back to home",
-  "options_github_text": "Bekijk de volledige documentatie, voorbeeldconfiguraties en de Docker setup op onze officiële GitHub pagina.",
-  "options_github_btn": "Bekijk op GitHub"
+  "options_btn_back": "Back to the installation overview",
+  "options_github_text": "View the full documentation, example configurations and the Docker setup on our official GitHub page.",
+  "options_github_btn": "View on GitHub"
 }

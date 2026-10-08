@@ -1,461 +1,855 @@
 /* ==========================================================================
    CowCatcherAI — centraal stylesheet
-   Eén bron voor design-tokens, body-styling en gedeelde utility-classes.
+   Eén bron voor design-tokens, basisstijlen en gedeelde utility-classes.
    Wordt één keer geladen via src/routes/+layout.svelte.
    ========================================================================== */
 
 :root {
-	/* ── Merkkleuren ── */
+	/* ── Merkkleuren (ongewijzigd) ── */
 	--primary: #386938; /* Emerald Green */
 	--primary-hover: oklch(28% 0.05 145); /* Donkerder groen */
 	--accent-amber: oklch(65% 0.16 75); /* Deep Amber */
 	--accent-amber-hover: oklch(60% 0.16 75);
 	--accent-teal: oklch(60% 0.09 195); /* Muted Teal */
 
+	/* ── Afgeleid van de merkkleuren ── */
+	--primary-soft: oklch(94% 0.035 145); /* Lichtgroene vlakken */
+	--primary-ink: oklch(36% 0.08 145); /* Groen voor tekst op licht */
+	--forest: oklch(23% 0.035 150); /* Diepgroen voor donkere vlakken */
+	--forest-raised: oklch(28% 0.04 150);
+	--amber-soft: oklch(95% 0.045 80);
+	--amber-ink: oklch(48% 0.12 70);
+	--alert: oklch(63% 0.2 28); /* REC-lampje, live-indicator */
+
 	/* ── Neutralen ── */
 	--bg-color: oklch(98% 0.005 145); /* Off White */
+	--bg-sunken: oklch(96.2% 0.01 145);
 	--card-bg: #ffffff;
 	--text-main: oklch(22% 0.02 145); /* Deep Ink */
-	--text-muted: oklch(42% 0.07 145);
+	--text-muted: oklch(42% 0.04 145);
 	--soft-gray: oklch(85% 0.01 145);
 	--border-soft: #e0eee0; /* Zachtgroene rand */
 	--surface-tint: #eaf3ea; /* Lichtgroen paneel */
+	--line: oklch(22% 0.02 145 / 0.09);
+	--line-strong: oklch(22% 0.02 145 / 0.16);
+
+	/* ── Op donkere ondergrond ── */
+	--on-dark: oklch(97% 0.008 145);
+	--on-dark-muted: oklch(80% 0.025 145);
+	--line-dark: oklch(100% 0 0 / 0.12);
 
 	/* ── Typografie ── */
 	--font-heading: 'Bebas Kai', 'Bebas Neue', sans-serif;
 	--font-body: 'Roboto', sans-serif;
+	--font-mono: ui-monospace, 'SFMono-Regular', 'Cascadia Mono', Menlo, Consolas, monospace;
 
 	/* ── Vorm ── */
-	--radius-sm: 8px;
-	--radius: 12px;
-	--radius-lg: 20px;
+	--radius-xs: 6px;
+	--radius-sm: 10px;
+	--radius: 16px;
+	--radius-lg: 24px;
+	--radius-xl: 32px;
+	--radius-pill: 999px;
 
-	/* ── Schaduwen ── */
-	--shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
-	--shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
-	--shadow-lg: 0 8px 25px rgba(0, 0, 0, 0.03);
-	--shadow-hover: 0 6px 20px rgba(0, 0, 0, 0.15);
+	/* ── Schaduwen — getint met het groen van de achtergrond ── */
+	--shadow-sm: 0 1px 2px oklch(25% 0.05 145 / 0.06), 0 2px 8px oklch(25% 0.05 145 / 0.04);
+	--shadow-md: 0 2px 4px oklch(25% 0.05 145 / 0.05), 0 14px 32px -10px oklch(25% 0.05 145 / 0.16);
+	--shadow-lg: 0 4px 10px oklch(25% 0.05 145 / 0.05), 0 36px 72px -20px oklch(22% 0.06 145 / 0.3);
+	--shadow-hover: 0 6px 16px oklch(25% 0.05 145 / 0.08), 0 24px 48px -16px oklch(25% 0.06 145 / 0.26);
+
+	/* ── Beweging ── */
+	--ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+	--ease-spring: cubic-bezier(0.32, 0.72, 0, 1);
+	--dur-fast: 0.2s;
+	--dur: 0.4s;
+	--dur-slow: 0.8s;
+
+	/* ── Layout ── */
+	--container: 1200px;
+	--gutter: clamp(1rem, 4vw, 2rem);
+	--section-y: clamp(4.5rem, 10vw, 8rem);
+	--nav-offset: 6.5rem;
+
+	/* ── Lagen ── */
+	--z-raised: 2;
+	--z-nav: 50;
+	--z-overlay: 60;
+	--z-modal: 70;
+	--z-grain: 80;
+
+	color-scheme: light;
 }
 
 /* ==========================================================================
    Basis
    ========================================================================== */
 
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+	scroll-padding-top: var(--nav-offset);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	html {
+		scroll-behavior: smooth;
+	}
+}
+
 body {
 	margin: 0;
 	background-color: var(--bg-color);
 	color: var(--text-main);
 	font-family: var(--font-body);
-	line-height: 1.6;
+	font-size: 1.0625rem;
+	line-height: 1.65;
 	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
 }
 
-/* ==========================================================================
-   Gedeelde layout-utilities
-   ========================================================================== */
-
-/* Standaard pagina-container. Breedte wordt begrensd door <main> in de layout. */
-.page-container {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 2rem 1rem;
+/* Fijne korrel over de hele pagina, zodat vlakke kleuren minder digitaal ogen. */
+body::after {
+	content: '';
+	position: fixed;
+	inset: 0;
+	z-index: var(--z-grain);
+	pointer-events: none;
+	opacity: 0.035;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
-@media (min-width: 768px) {
-	.page-container {
-		padding: 4rem 2rem;
-	}
-}
-
-/* Gecentreerde intro-kop met witte kaart (installation + download) */
-.info-section {
-	text-align: center;
-	background: var(--card-bg);
-	border: 1px solid var(--soft-gray);
-	border-radius: 16px;
-	padding: 3rem 2rem;
-	margin-bottom: 4rem;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
-	border-top: 5px solid var(--accent-teal);
-}
-
-.info-section h1 {
-	font-family: var(--font-heading);
-	font-size: clamp(2.5rem, 8vw, 4.5rem);
-	color: var(--primary);
-	margin-top: 0;
-	margin-bottom: 1rem;
-	text-transform: uppercase;
-	line-height: 1;
-}
-
-.info-text {
-	font-size: 1.15rem;
+::selection {
+	background: var(--accent-amber);
 	color: var(--text-main);
-	max-width: 800px;
-	margin: 0 auto;
-	line-height: 1.6;
 }
 
-/* Grid met kaarten die netjes uitvullen */
-.card-grid {
-	display: grid;
-	gap: 1.5rem;
-	grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+h1,
+h2,
+h3,
+h4 {
+	margin: 0;
+	text-wrap: balance;
 }
 
-@media (min-width: 768px) {
-	.card-grid {
-		gap: 2rem;
-	}
+h1,
+h2 {
+	font-family: var(--font-heading);
+	font-weight: 400;
+	line-height: 0.95;
+	letter-spacing: 0.01em;
+	text-transform: uppercase;
 }
 
-/* Kaart met groene bovenrand — gebruikt op de projectpagina's */
-.custom-card {
-	background: var(--card-bg);
-	padding: 25px;
-	border-radius: var(--radius);
-	box-shadow: var(--shadow-sm);
-	margin-bottom: 1.5rem;
-	border-top: 4px solid var(--primary);
-	box-sizing: border-box;
+h3,
+h4 {
+	font-family: var(--font-body);
+	font-weight: 600;
+	line-height: 1.3;
+	letter-spacing: -0.01em;
 }
 
-.img-fluid {
-	width: 100%;
+p {
+	margin: 0;
+	text-wrap: pretty;
+}
+
+img,
+svg,
+video {
+	max-width: 100%;
+}
+
+img {
 	height: auto;
-	border-radius: var(--radius);
 	display: block;
 }
 
-/* Voettekst "Part of the Official Open Source Project" */
-.official-links {
-	margin-top: 4rem;
-	text-align: center;
-	font-size: 0.85rem;
-	border-top: 1px solid var(--accent-teal);
-	padding-top: 2rem;
-}
-
-.official-links a {
-	color: var(--primary);
-	font-weight: bold;
-	text-decoration: none;
-	transition: color 0.2s ease;
-}
-
-.official-links a:hover {
-	color: var(--accent-amber);
-}
-
-/* ==========================================================================
-   Projectdetailpagina's (cowcatcher, calvingcatcher)
-   Deze pagina's delen hun volledige opmaak; die staat daarom hier in plaats
-   van gedupliceerd in elk +page.svelte.
-   ========================================================================== */
-
-.project-page {
-	max-width: 1200px;
-	margin: 0 auto;
-	padding: 1.5rem 2rem 4rem;
-}
-
-.project-page h1,
-.project-page h2 {
-	font-family: var(--font-heading);
-	color: var(--primary);
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-weight: normal;
-}
-
-.project-page h2 {
-	font-size: 2rem;
-	margin-top: 2.5rem;
-	padding-bottom: 0.5rem;
-}
-
-.project-page ul {
-	list-style-type: square;
-	padding-left: 1.5rem;
-	margin: 0;
-}
-
-.project-page li {
-	margin-bottom: 0.75rem;
-	color: var(--text-main);
-}
-
-.stacked-sections {
-	margin-bottom: 3rem;
-}
-
-.workflow-box {
-	background: var(--accent-amber);
-	color: var(--text-main);
-	padding: 2rem;
-	border-radius: var(--radius);
-	font-weight: bold;
-	text-align: center;
-	margin: 2.5rem 0;
-	font-size: 1.25rem;
-	box-shadow: var(--shadow-sm);
-}
-
-/* ==========================================================================
-   Documentatiepagina's (Windows, macOS, docker)
-   Deze drie pagina's deelden een identiek stijlblok; dat staat nu hier.
-   ========================================================================== */
-
-.doc-page {
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 2rem 1rem;
-}
-
-.doc-section {
-	background: var(--card-bg);
-	border: 1px solid var(--soft-gray);
-	border-radius: var(--radius);
-	padding: 3rem 2rem;
-	box-shadow: var(--shadow-sm);
-	border-top: 5px solid var(--primary);
-}
-
-.doc-section h1 {
-	font-family: var(--font-heading);
-	color: var(--primary);
-	font-size: 3rem;
-	margin-top: 0;
-	margin-bottom: 1rem;
-}
-
-.doc-section h3 {
-	color: var(--primary);
-	font-size: 1.5rem;
-	margin-top: 2.5rem;
-	margin-bottom: 1rem;
-}
-
-.doc-section h4 {
-	color: var(--text-main);
-	font-size: 1.2rem;
-	margin-top: 1.5rem;
-}
-
-.doc-section .intro {
-	font-size: 1.15rem;
-	color: var(--text-main);
-	margin-bottom: 2rem;
-	line-height: 1.6;
-}
-
-.download-box {
-	background: var(--bg-color);
-	border: 1px solid var(--accent-teal);
-	border-radius: var(--radius-sm);
-	padding: 1.5rem;
-	margin-bottom: 2rem;
-	text-align: center;
-}
-
-.table-container {
-	overflow-x: auto;
-	margin-bottom: 2.5rem;
-}
-
-.doc-section table {
-	width: 100%;
-	border-collapse: collapse;
-	margin-bottom: 1rem;
-}
-
-.doc-section th,
-.doc-section td {
-	padding: 1rem;
-	text-align: left;
-	border-bottom: 1px solid var(--soft-gray);
-}
-
-.doc-section th {
-	background-color: var(--bg-color);
-	color: var(--primary);
-	font-weight: bold;
-}
-
-.doc-section code {
-	font-family: monospace;
-	background: oklch(97% 0.01 145);
-	padding: 0.2rem 0.4rem;
-	border-radius: 4px;
-	color: var(--text-main);
-}
-
-.doc-section pre {
-	background: var(--text-main);
-	color: var(--bg-color);
-	padding: 1rem;
-	border-radius: var(--radius-sm);
-	overflow-x: auto;
-	font-size: 0.9rem;
-	line-height: 1.5;
-	margin-bottom: 1.5rem;
-}
-
-/* Code binnen een <pre> erft de donkere achtergrond van het blok zelf. */
-.doc-section pre code {
-	background: none;
-	padding: 0;
+a {
 	color: inherit;
 }
 
-.setup-steps {
-	padding-left: 1.5rem;
+button {
+	font: inherit;
+	color: inherit;
 }
 
-.setup-steps li {
-	margin-bottom: 1rem;
-	line-height: 1.6;
+:focus-visible {
+	outline: 2px solid var(--accent-amber);
+	outline-offset: 3px;
+	border-radius: 4px;
+}
+
+code,
+kbd {
+	font-family: var(--font-mono);
+	font-size: 0.88em;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.container {
+	width: 100%;
+	max-width: calc(var(--container) + var(--gutter) * 2);
+	margin-inline: auto;
+	padding-inline: var(--gutter);
+}
+
+.container--narrow {
+	max-width: calc(860px + var(--gutter) * 2);
+}
+
+.section {
+	padding-block: var(--section-y) calc(var(--section-y) + 0.5rem);
+}
+
+.section--tight {
+	padding-block: calc(var(--section-y) * 0.6);
+}
+
+/* Kop van een sectie: eyebrow, titel en intro. */
+.section-head {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr);
+	gap: 1.25rem;
+	margin-bottom: clamp(2.5rem, 5vw, 4rem);
+	max-width: 760px;
+}
+
+.section-head--split {
+	max-width: none;
+}
+
+@media (min-width: 900px) {
+	.section-head--split {
+		grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+		align-items: end;
+		column-gap: 4rem;
+	}
+
+	.section-head--split .eyebrow {
+		grid-column: 1 / -1;
+	}
+}
+
+.section-head--center {
+	margin-inline: auto;
+	text-align: center;
+	justify-items: center;
+}
+
+/* ==========================================================================
+   Typografie-utilities
+   ========================================================================== */
+
+.eyebrow {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.6rem;
+	width: fit-content;
+	max-width: 100%;
+	padding: 0.4rem 0.85rem 0.4rem 0.7rem;
+	border-radius: var(--radius-pill);
+	background: var(--primary-soft);
+	color: var(--primary-ink);
+	font-size: 0.72rem;
+	font-weight: 600;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+	line-height: 1.3;
+}
+
+.eyebrow::before {
+	content: '';
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: var(--accent-amber);
+	flex-shrink: 0;
+}
+
+.eyebrow--dark {
+	background: oklch(100% 0 0 / 0.08);
+	color: var(--on-dark);
+	box-shadow: inset 0 0 0 1px var(--line-dark);
+}
+
+.h-display {
+	font-size: clamp(3.25rem, 8.5vw, 7rem);
+	line-height: 0.88;
 	color: var(--text-main);
 }
 
-.note {
-	font-size: 0.9rem;
+.h-section {
+	font-size: clamp(2.6rem, 6vw, 4.5rem);
+	line-height: 0.92;
+	color: var(--text-main);
+}
+
+.h-section em,
+.h-display em {
+	font-style: normal;
+	color: var(--primary);
+}
+
+.lead {
+	font-size: clamp(1.08rem, 1.6vw, 1.25rem);
+	line-height: 1.6;
 	color: var(--text-muted);
-	background: #fff8e1;
-	padding: 1rem;
-	border-left: 4px solid var(--accent-amber);
-	border-radius: 4px;
-	margin: 1rem 0;
+	max-width: 62ch;
 }
 
-.tip-box {
-	background: var(--border-soft);
-	border-left: 4px solid var(--primary);
-	padding: 1.5rem;
-	border-radius: 4px;
-	margin-top: 2rem;
-	color: var(--text-main);
-	line-height: 1.6;
+.muted {
+	color: var(--text-muted);
 }
 
 .text-link {
 	color: var(--primary);
+	font-weight: 600;
 	text-decoration: underline;
-	font-weight: bold;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+	transition: color var(--dur-fast) var(--ease-out);
 }
 
 .text-link:hover {
-	color: var(--accent-amber);
+	color: var(--amber-ink);
+}
+
+.visually-hidden {
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
 }
 
 /* ==========================================================================
    Knoppen
-   Basis + modifiers. Vervangt de losse .demo-btn / .cta-btn / .primary-btn /
-   .btn-primary / .linktree-btn varianten die eerder per pagina bestonden.
+   Pil-vorm met optioneel een eigen cirkel voor het pijltje (.btn__icon).
    ========================================================================== */
 
 .btn {
+	--btn-bg: var(--primary);
+	--btn-fg: #ffffff;
+	--btn-ring: transparent;
+	--btn-icon-bg: oklch(100% 0 0 / 0.16);
+
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	gap: 0.75rem;
-	padding: 0.8rem 1.5rem;
-	border: 2px solid transparent;
-	border-radius: var(--radius-sm);
+	min-height: 3rem;
+	padding: 0.7rem 1.4rem;
+	border: 0;
+	border-radius: var(--radius-pill);
+	background: var(--btn-bg);
+	color: var(--btn-fg);
+	box-shadow: inset 0 0 0 1px var(--btn-ring);
 	font-family: var(--font-body);
-	font-weight: bold;
+	font-size: 0.98rem;
+	font-weight: 500;
+	line-height: 1.2;
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
-	transition: all 0.2s ease;
-	box-sizing: border-box;
+	transition:
+		background-color var(--dur) var(--ease-spring),
+		color var(--dur) var(--ease-spring),
+		box-shadow var(--dur) var(--ease-spring),
+		transform var(--dur) var(--ease-spring);
+	-webkit-tap-highlight-color: transparent;
 }
 
-.btn:hover {
-	transform: translateY(-3px);
+.btn:has(.btn__icon) {
+	padding-right: 0.4rem;
 }
 
-/* ── Maten ── */
-.btn--lg {
-	padding: 1rem 2rem;
-	font-size: 1.1rem;
+.btn:active {
+	transform: scale(0.98);
 }
 
-/* Grote afgeronde CTA-knop met kopfont */
-.btn--pill {
-	padding: 1.1rem 2.5rem;
-	border-radius: 50px;
-	font-family: var(--font-heading);
-	font-size: 1.3rem;
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+.btn__icon {
+	display: inline-grid;
+	place-items: center;
+	width: 2.2rem;
+	height: 2.2rem;
+	border-radius: 50%;
+	background: var(--btn-icon-bg);
+	flex-shrink: 0;
+	transition: transform var(--dur) var(--ease-spring);
 }
 
-.btn--pill:hover {
-	transform: translateY(-4px);
+.btn__icon svg {
+	width: 1rem;
+	height: 1rem;
+}
+
+.btn:hover .btn__icon {
+	transform: translateX(3px) scale(1.06);
+}
+
+.btn:hover .btn__icon--up {
+	transform: translate(2px, -2px) scale(1.06);
+}
+
+.btn:hover .btn__icon--down {
+	transform: translateY(2px) scale(1.06);
+}
+
+.btn:hover .btn__icon--back {
+	transform: translateX(-3px) scale(1.06);
+}
+
+.btn--solid:hover,
+.btn--primary:hover {
+	--btn-bg: var(--primary-hover);
 	box-shadow: var(--shadow-hover);
+}
+
+.btn--ghost,
+.btn--outline {
+	--btn-bg: transparent;
+	--btn-fg: var(--text-main);
+	--btn-ring: var(--line-strong);
+	--btn-icon-bg: var(--primary-soft);
+}
+
+.btn--ghost:hover,
+.btn--outline:hover {
+	--btn-bg: var(--card-bg);
+	--btn-ring: var(--primary);
+	--btn-fg: var(--primary);
+}
+
+.btn--amber {
+	--btn-bg: var(--accent-amber);
+	--btn-fg: var(--text-main);
+	--btn-icon-bg: oklch(22% 0.02 145 / 0.1);
+}
+
+.btn--amber:hover {
+	--btn-bg: var(--accent-amber-hover);
+	box-shadow: var(--shadow-hover);
+}
+
+.btn--ink {
+	--btn-bg: var(--text-main);
+	--btn-fg: var(--bg-color);
+}
+
+.btn--ink:hover {
+	--btn-bg: var(--primary);
+}
+
+.btn--light {
+	--btn-bg: var(--on-dark);
+	--btn-fg: var(--forest);
+	--btn-icon-bg: var(--primary-soft);
+}
+
+.btn--light:hover {
+	--btn-bg: #ffffff;
+}
+
+.btn--ghost-dark {
+	--btn-bg: transparent;
+	--btn-fg: var(--on-dark);
+	--btn-ring: var(--line-dark);
+	--btn-icon-bg: oklch(100% 0 0 / 0.1);
+}
+
+.btn--ghost-dark:hover {
+	--btn-bg: oklch(100% 0 0 / 0.08);
+	--btn-ring: oklch(100% 0 0 / 0.3);
+}
+
+.btn--sm {
+	min-height: 2.4rem;
+	padding: 0.45rem 1rem;
+	font-size: 0.88rem;
+}
+
+.btn--lg {
+	min-height: 3.5rem;
+	padding: 0.85rem 1.75rem;
+	font-size: 1.05rem;
 }
 
 .btn--block {
 	width: 100%;
 }
 
-/* ── Varianten ── */
-.btn--solid {
-	background-color: var(--primary);
-	border-color: var(--primary);
-	color: #ffffff;
-}
-
-.btn--solid:hover {
-	background-color: var(--accent-amber);
-	border-color: var(--accent-amber);
-	color: var(--text-main);
-}
-
-.btn--outline {
-	background-color: transparent;
-	border-color: var(--primary);
-	color: var(--primary);
-}
-
-.btn--outline:hover {
-	background-color: var(--accent-teal);
-	border-color: var(--accent-teal);
-	color: #ffffff;
-}
-
-.btn--amber {
-	background-color: var(--accent-amber);
-	border-color: var(--accent-amber);
-	color: #ffffff;
-}
-
-.btn--amber:hover {
-	background-color: var(--accent-amber-hover);
-	border-color: var(--accent-amber-hover);
-}
-
-.btn--ink {
-	background-color: var(--text-main);
-	border-color: var(--text-main);
-	color: var(--bg-color);
-}
-
-.btn--ink:hover {
-	background-color: var(--primary);
-	border-color: var(--primary);
-}
-
 .btn svg {
-	fill: currentColor;
 	flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
 	.btn--responsive-block {
 		width: 100%;
+	}
+}
+
+.btn-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.75rem;
+}
+
+/* ==========================================================================
+   Oppervlakken
+   ========================================================================== */
+
+/* Dubbele rand: een buitenschaal met een binnenkern, als een plaat in een frame. */
+.bezel {
+	padding: 0.45rem;
+	border-radius: var(--radius-xl);
+	background: oklch(22% 0.02 145 / 0.035);
+	box-shadow: inset 0 0 0 1px var(--line);
+}
+
+.bezel__inner {
+	border-radius: calc(var(--radius-xl) - 0.45rem);
+	background: var(--card-bg);
+	box-shadow:
+		var(--shadow-sm),
+		inset 0 1px 0 oklch(100% 0 0 / 0.8);
+	overflow: hidden;
+}
+
+.surface {
+	background: var(--card-bg);
+	border-radius: var(--radius-lg);
+	box-shadow:
+		0 0 0 1px var(--line),
+		var(--shadow-sm);
+}
+
+.chip {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.25rem 0.65rem;
+	border-radius: var(--radius-xs);
+	background: var(--primary-soft);
+	color: var(--primary-ink);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.chip--amber {
+	background: var(--amber-soft);
+	color: var(--amber-ink);
+}
+
+/* ==========================================================================
+   Documentatie-inhoud (installatiehandleidingen)
+   ========================================================================== */
+
+.prose {
+	color: var(--text-main);
+	line-height: 1.7;
+}
+
+.prose > * + * {
+	margin-top: 1rem;
+}
+
+.prose h2 {
+	font-size: clamp(2.1rem, 4vw, 2.9rem);
+	margin-top: 3.5rem;
+	margin-bottom: 1.25rem;
+	scroll-margin-top: var(--nav-offset);
+}
+
+.prose > h2:first-child {
+	margin-top: 0;
+}
+
+.prose h3 {
+	font-size: 1.25rem;
+	margin-top: 2.25rem;
+}
+
+.prose h4 {
+	font-size: 1.05rem;
+	margin-top: 1.75rem;
+	color: var(--primary-ink);
+}
+
+.prose strong {
+	font-weight: 600;
+}
+
+.prose a:not(.btn) {
+	color: var(--primary);
+	font-weight: 500;
+	text-underline-offset: 3px;
+}
+
+.prose a:not(.btn):hover {
+	color: var(--amber-ink);
+}
+
+.prose :not(pre) > code,
+.prose kbd {
+	padding: 0.12em 0.4em;
+	border-radius: var(--radius-xs);
+	background: var(--surface-tint);
+	color: var(--primary-ink);
+	white-space: nowrap;
+}
+
+.prose kbd {
+	background: var(--card-bg);
+	box-shadow:
+		inset 0 0 0 1px var(--line-strong),
+		0 1px 0 var(--line-strong);
+	color: var(--text-main);
+}
+
+.prose pre {
+	margin: 1.25rem 0;
+	padding: 1.1rem 1.25rem;
+	border-radius: var(--radius);
+	background: var(--forest);
+	color: var(--on-dark);
+	font-size: 0.86rem;
+	line-height: 1.6;
+	overflow-x: auto;
+	box-shadow: inset 0 0 0 1px var(--line-dark);
+}
+
+.prose pre code {
+	font-size: inherit;
+	white-space: pre;
+}
+
+.prose ul,
+.prose ol {
+	padding-left: 1.25rem;
+}
+
+.prose li + li {
+	margin-top: 0.55rem;
+}
+
+.prose li::marker {
+	color: var(--primary);
+	font-weight: 600;
+}
+
+/* Genummerde stappenlijst met ronde cijfers. */
+.setup-steps {
+	list-style: none;
+	counter-reset: step;
+	padding-left: 0 !important;
+	display: grid;
+	gap: 0.7rem;
+}
+
+.setup-steps > li {
+	counter-increment: step;
+	position: relative;
+	padding-left: 2.4rem;
+	margin: 0 !important;
+}
+
+.setup-steps > li::before {
+	content: counter(step);
+	position: absolute;
+	left: 0;
+	top: 0.1rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--primary-soft);
+	color: var(--primary-ink);
+	font-size: 0.8rem;
+	font-weight: 700;
+}
+
+/* Lijst met vinkjes (o.a. "zo blijft het 24/7 draaien"). */
+.check-list {
+	list-style: none;
+	padding-left: 0 !important;
+	display: grid;
+	gap: 0.8rem;
+}
+
+.check-list > li {
+	position: relative;
+	padding-left: 2.1rem;
+	margin: 0 !important;
+}
+
+.check-list > li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.2rem;
+	width: 1.35rem;
+	height: 1.35rem;
+	border-radius: 50%;
+	background: var(--primary-soft)
+		url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23386938' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.2 4.2L19 7'/%3E%3C/svg%3E")
+		center / 0.8rem no-repeat;
+}
+
+.table-container {
+	overflow-x: auto;
+	margin: 1.25rem 0;
+	border-radius: var(--radius);
+	box-shadow: inset 0 0 0 1px var(--line);
+	background: var(--card-bg);
+}
+
+.table-container table {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.95rem;
+}
+
+.table-container th,
+.table-container td {
+	padding: 0.85rem 1rem;
+	text-align: left;
+	vertical-align: top;
+	border-bottom: 1px solid var(--line);
+}
+
+.table-container tr:last-child td {
+	border-bottom: 0;
+}
+
+.table-container th {
+	background: var(--bg-sunken);
+	color: var(--text-muted);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+}
+
+.table-container td code {
+	white-space: nowrap;
+}
+
+.note,
+.tip-box {
+	position: relative;
+	margin: 1.25rem 0;
+	padding: 1rem 1.15rem 1rem 3rem;
+	border-radius: var(--radius);
+	background: var(--amber-soft);
+	color: var(--text-main);
+	font-size: 0.95rem;
+	line-height: 1.6;
+}
+
+.note::before,
+.tip-box::before {
+	content: '!';
+	position: absolute;
+	left: 1rem;
+	top: 1rem;
+	width: 1.35rem;
+	height: 1.35rem;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	background: var(--accent-amber);
+	color: var(--text-main);
+	font-size: 0.8rem;
+	font-weight: 700;
+	line-height: 1;
+}
+
+.tip-box {
+	background: var(--primary-soft);
+}
+
+.tip-box::before {
+	content: '✓';
+	background: var(--primary);
+	color: #ffffff;
+}
+
+.note :is(code, kbd),
+.tip-box :is(code, kbd) {
+	background: oklch(100% 0 0 / 0.65);
+}
+
+/* ==========================================================================
+   Scroll-reveal (zie $lib/actions/reveal.js)
+   De classes worden alleen via JavaScript gezet, dus zonder JS blijft alles
+   zichtbaar.
+   ========================================================================== */
+
+.reveal-init {
+	opacity: 0;
+	transform: translateY(28px);
+	filter: blur(6px);
+}
+
+.reveal-in {
+	opacity: 1;
+	transform: none;
+	filter: none;
+	transition:
+		opacity var(--dur-slow) var(--ease-out),
+		transform var(--dur-slow) var(--ease-out),
+		filter var(--dur-slow) var(--ease-out);
+	transition-delay: var(--reveal-delay, 0ms);
+}
+
+/* ==========================================================================
+   Toegankelijkheid
+   ========================================================================== */
+
+.skip-link {
+	position: fixed;
+	top: 0.75rem;
+	left: 0.75rem;
+	z-index: var(--z-modal);
+	padding: 0.7rem 1.1rem;
+	border-radius: var(--radius-pill);
+	background: var(--text-main);
+	color: var(--bg-color);
+	font-weight: 600;
+	text-decoration: none;
+	transform: translateY(-200%);
+	transition: transform var(--dur) var(--ease-spring);
+}
+
+.skip-link:focus {
+	transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
 	}
 }

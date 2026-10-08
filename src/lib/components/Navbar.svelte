@@ -1,224 +1,332 @@
-<script lang="ts">
-  import * as m from '$lib/paraglide/messages.js';
-  import { base } from '$app/paths';
-  import { getLocale, setLocale } from '$lib/paraglide/runtime';
-  import { languages } from '$lib/config/languages.js';
-  import { projects } from '$lib/config/projects.js';
+<script>
+	import * as m from '$lib/paraglide/messages.js';
+	import { base } from '$app/paths';
+	import { page } from '$app/state';
+	import { afterNavigate } from '$app/navigation';
+	import { projects } from '$lib/config/projects.js';
+	import Logo from './Logo.svelte';
+	import Icon from './Icon.svelte';
+	import LanguageSelect from './LanguageSelect.svelte';
 
-  let isOpen = $state(false);
+	let isOpen = $state(false);
+	let scrollY = $state(0);
 
-  // setLocale herlaadt de pagina, dus dit hoeft niet reactief te zijn.
-  const currentLocale = getLocale();
+	const links = [
+		...projects.map((project) => ({ href: project.link, label: () => project.name.replace('-', ' ') })),
+		{ href: '/about-us', label: m.nav_about }
+	];
 
-  const mainLinks = [
-    { href: `${base}/`, label: m.nav_home },
-    { href: `${base}/installation`, label: m.nav_install },
-    { href: `${base}/about-us`, label: m.nav_about }
-  ];
+	/** @param {string} href */
+	function isActive(href) {
+		return page.url.pathname.startsWith(`${base}${href}`);
+	}
 
-  function closeMenu() {
-    isOpen = false;
-  }
+	const installActive = $derived(isActive('/installation'));
 
-  function handleLocaleChange(event: Event) {
-    const target = event.currentTarget as HTMLSelectElement;
-    setLocale(target.value as Parameters<typeof setLocale>[0]);
-    closeMenu();
-  }
+	function close() {
+		isOpen = false;
+	}
+
+	afterNavigate(close);
+
+	$effect(() => {
+		document.documentElement.style.overflow = isOpen ? 'hidden' : '';
+		return () => (document.documentElement.style.overflow = '');
+	});
 </script>
 
-<nav>
-  <div class="logo">CowCatcherAI</div>
+<svelte:window bind:scrollY onkeydown={(e) => e.key === 'Escape' && close()} />
 
-  <button
-    class="hamburger"
-    onclick={() => (isOpen = !isOpen)}
-    aria-label="Toggle navigation"
-    aria-expanded={isOpen}
-  >
-    <span class="bar" class:open={isOpen}></span>
-    <span class="bar" class:open={isOpen}></span>
-    <span class="bar" class:open={isOpen}></span>
-  </button>
+<header class="nav-wrap" class:scrolled={scrollY > 12} class:open={isOpen}>
+	<nav class="nav" aria-label="Main">
+		<a href="{base}/" class="brand" aria-label="CowCatcher AI — home">
+			<Logo size={34} />
+		</a>
 
-  <div class="links" class:open={isOpen}>
-    {#each mainLinks as link}
-      <a href={link.href} onclick={closeMenu}>{link.label()}</a>
-    {/each}
+		<ul class="links">
+			{#each links as link (link.href)}
+				<li>
+					<a
+						href="{base}{link.href}"
+						class:active={isActive(link.href)}
+						aria-current={isActive(link.href) ? 'page' : undefined}
+					>
+						{link.label()}
+					</a>
+				</li>
+			{/each}
+		</ul>
 
-    {#each projects as project}
-      <a href="{base}{project.link}" class="mobile-only" onclick={closeMenu}>{project.name}</a>
-    {/each}
+		<div class="actions">
+			<span class="desktop-only"><LanguageSelect /></span>
+			<a href="{base}/installation" class="btn btn--sm install-btn" class:btn--ink={!installActive} class:btn--solid={installActive}>
+				{m.nav_install()}
+			</a>
+			<button
+				type="button"
+				class="burger"
+				onclick={() => (isOpen = !isOpen)}
+				aria-expanded={isOpen}
+				aria-controls="mobile-menu"
+				aria-label={isOpen ? m.nav_close() : m.nav_menu()}
+			>
+				<span class="burger-line"></span>
+				<span class="burger-line"></span>
+			</button>
+		</div>
+	</nav>
+</header>
 
-    <div class="lang-switcher">
-      <select
-        value={currentLocale}
-        onchange={handleLocaleChange}
-        class="lang-dropdown"
-        aria-label="Change language"
-      >
-        {#each languages as lang}
-          <option value={lang.code}>
-            {lang.flag} {lang.label}
-          </option>
-        {/each}
-      </select>
-    </div>
-  </div>
-</nav>
+<div id="mobile-menu" class="menu" class:open={isOpen} aria-hidden={!isOpen} inert={!isOpen}>
+	<div class="menu-inner container">
+		<ul class="menu-links">
+			<li style="--i: 0">
+				<a href="{base}/" onclick={close}>{m.nav_home()}</a>
+			</li>
+			{#each links as link, i (link.href)}
+				<li style="--i: {i + 1}">
+					<a href="{base}{link.href}" onclick={close} class:active={isActive(link.href)}>{link.label()}</a>
+				</li>
+			{/each}
+			<li style="--i: {links.length + 1}">
+				<a href="{base}/installation" onclick={close} class:active={installActive}>{m.nav_install()}</a>
+			</li>
+		</ul>
+
+		<div class="menu-foot" style="--i: {links.length + 2}">
+			<LanguageSelect variant="full" />
+			<a href="{base}/installation" class="btn btn--solid btn--lg" onclick={close}>
+				{m.front_page_intro_btn_install()}
+				<span class="btn__icon"><Icon name="arrow-right" /></span>
+			</a>
+		</div>
+	</div>
+</div>
 
 <style>
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: var(--primary);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    position: relative;
-    z-index: 100;
-    font-family: var(--font-body);
-  }
+	.nav-wrap {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: var(--z-nav);
+		padding: 0.9rem var(--gutter) 0;
+		pointer-events: none;
+	}
 
-  .logo {
-    color: var(--bg-color);
-    font-family: var(--font-heading);
-    font-weight: 800;
-    font-size: 1.5rem;
-    letter-spacing: 1px;
-  }
+	.nav {
+		pointer-events: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 1rem;
+		max-width: var(--container);
+		margin: 0 auto;
+		padding: 0.45rem 0.45rem 0.45rem 0.9rem;
+		border-radius: var(--radius-pill);
+		background: oklch(98% 0.006 145 / 0.72);
+		backdrop-filter: blur(18px) saturate(1.4);
+		-webkit-backdrop-filter: blur(18px) saturate(1.4);
+		box-shadow:
+			inset 0 0 0 1px oklch(100% 0 0 / 0.6),
+			0 0 0 1px var(--line);
+		transition:
+			box-shadow var(--dur) var(--ease-spring),
+			background-color var(--dur) var(--ease-spring);
+	}
 
-  .links {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
-  }
+	.scrolled .nav,
+	.open .nav {
+		background: oklch(98.5% 0.006 145 / 0.88);
+		box-shadow:
+			inset 0 0 0 1px oklch(100% 0 0 / 0.7),
+			0 0 0 1px var(--line),
+			var(--shadow-md);
+	}
 
-  a {
-    text-decoration: none;
-    color: var(--bg-color);
-    font-weight: bold;
-    transition: all 0.2s ease;
-  }
+	.brand {
+		display: inline-flex;
+		text-decoration: none;
+		border-radius: var(--radius-sm);
+	}
 
-  a:hover {
-    color: var(--accent-amber);
-  }
+	.links {
+		display: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 0.15rem;
+	}
 
-  .mobile-only {
-    display: none;
-  }
+	.links a {
+		position: relative;
+		display: block;
+		padding: 0.55rem 0.85rem;
+		border-radius: var(--radius-pill);
+		color: var(--text-muted);
+		font-size: 0.93rem;
+		font-weight: 500;
+		text-decoration: none;
+		transition:
+			color var(--dur-fast) var(--ease-out),
+			background-color var(--dur-fast) var(--ease-out);
+	}
 
-  .lang-switcher {
-    display: flex;
-    align-items: center;
-    margin-left: 0.5rem;
-    padding-left: 1rem;
-    border-left: 1px solid oklch(85% 0.01 145 / 0.4);
-  }
+	.links a:hover {
+		color: var(--text-main);
+		background: oklch(22% 0.02 145 / 0.05);
+	}
 
-  .lang-dropdown {
-    background: transparent;
-    border: 1px solid oklch(85% 0.01 145 / 0.4);
-    color: var(--bg-color);
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    padding: 0.25rem 0.5rem;
-    border-radius: 5px;
-    outline: none;
-    transition: all 0.2s ease;
-  }
+	.links a.active {
+		color: var(--primary);
+		background: var(--primary-soft);
+	}
 
-  .lang-dropdown:hover {
-    border-color: var(--accent-amber);
-  }
+	.actions {
+		display: flex;
+		align-items: center;
+		gap: 0.45rem;
+	}
 
-  .lang-dropdown option {
-    background: var(--primary);
-    color: white;
-  }
+	.desktop-only {
+		display: none;
+	}
 
-  .hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-  }
+	.install-btn {
+		display: none;
+	}
 
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: var(--bg-color);
-    border-radius: 2px;
-    transition: all 0.3s ease-in-out;
-  }
+	/* ── Hamburger: twee lijnen die tot een kruis draaien ── */
+	.burger {
+		position: relative;
+		width: 2.75rem;
+		height: 2.75rem;
+		border: 0;
+		border-radius: 50%;
+		background: var(--text-main);
+		cursor: pointer;
+		transition: background-color var(--dur) var(--ease-spring);
+	}
 
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
+	.burger-line {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 1.05rem;
+		height: 1.6px;
+		margin-left: -0.525rem;
+		border-radius: 2px;
+		background: var(--bg-color);
+		transition: transform var(--dur) var(--ease-spring);
+	}
 
-    .bar.open:nth-child(1) {
-      transform: translateY(8px) rotate(45deg);
-    }
-    .bar.open:nth-child(2) {
-      opacity: 0;
-    }
-    .bar.open:nth-child(3) {
-      transform: translateY(-8px) rotate(-45deg);
-    }
+	.burger-line:first-child {
+		transform: translateY(-3.5px);
+	}
 
-    .links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: var(--primary);
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-in-out;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-    }
+	.burger-line:last-child {
+		transform: translateY(3.5px);
+	}
 
-    .links.open {
-      max-height: 600px;
-    }
+	.open .burger {
+		background: var(--primary);
+	}
 
-    .links a {
-      padding: 1rem 2rem;
-      width: 100%;
-      border-top: 1px solid oklch(85% 0.01 145 / 0.2);
-      box-sizing: border-box;
-    }
+	.open .burger-line:first-child {
+		transform: rotate(45deg);
+	}
 
-    .mobile-only {
-      display: block;
-    }
+	.open .burger-line:last-child {
+		transform: rotate(-45deg);
+	}
 
-    .lang-switcher {
-      border-left: none;
-      border-top: 1px solid oklch(85% 0.01 145 / 0.2);
-      margin-left: 0;
-      padding: 1.5rem 2rem;
-      width: 100%;
-      box-sizing: border-box;
-    }
+	/* ── Mobiel menu: schermvullend glas met getrapte links ── */
+	.menu {
+		position: fixed;
+		inset: 0;
+		z-index: calc(var(--z-nav) - 1);
+		background: oklch(97% 0.008 145 / 0.9);
+		backdrop-filter: blur(28px);
+		-webkit-backdrop-filter: blur(28px);
+		opacity: 0;
+		visibility: hidden;
+		transition:
+			opacity var(--dur) var(--ease-spring),
+			visibility 0s linear var(--dur);
+	}
 
-    .lang-dropdown {
-      width: 100%;
-      font-size: 1rem;
-      padding: 0.75rem 1.2rem;
-      border-radius: 50px;
-      background: rgba(255, 255, 255, 0.1);
-      box-sizing: border-box;
-      text-align: center;
-    }
-  }
+	.menu.open {
+		opacity: 1;
+		visibility: visible;
+		transition:
+			opacity var(--dur) var(--ease-spring),
+			visibility 0s;
+	}
+
+	.menu-inner {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100dvh;
+		padding-top: 7rem;
+		padding-bottom: 2rem;
+	}
+
+	.menu-links {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.menu-links li,
+	.menu-foot {
+		opacity: 0;
+		transform: translateY(2rem);
+		transition:
+			opacity 0.5s var(--ease-out),
+			transform 0.6s var(--ease-spring);
+	}
+
+	.menu.open .menu-links li,
+	.menu.open .menu-foot {
+		opacity: 1;
+		transform: none;
+		transition-delay: calc(80ms + var(--i) * 45ms);
+	}
+
+	.menu-links a {
+		display: block;
+		padding: 0.35rem 0;
+		font-family: var(--font-heading);
+		font-size: clamp(2.6rem, 11vw, 3.6rem);
+		line-height: 1;
+		color: var(--text-main);
+		text-decoration: none;
+	}
+
+	.menu-links a.active {
+		color: var(--primary);
+	}
+
+	.menu-foot {
+		display: grid;
+		gap: 0.75rem;
+		padding-top: 2rem;
+	}
+
+	@media (min-width: 1080px) {
+		.links,
+		.desktop-only {
+			display: flex;
+		}
+
+		.install-btn {
+			display: inline-flex;
+		}
+
+		.burger,
+		.menu {
+			display: none;
+		}
+	}
 </style>

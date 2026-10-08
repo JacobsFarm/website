@@ -1,12 +1,20 @@
 <script>
     import * as m from '$lib/paraglide/messages.js';
-    import { base } from '$app/paths';
+    import { links } from '$lib/config/links.js';
+    import { stripNumber } from '$lib/utils/text.js';
+    import Seo from '$lib/components/Seo.svelte';
+    import PageHeader from '$lib/components/PageHeader.svelte';
+    import InstallProgress from '$lib/components/InstallProgress.svelte';
+    import DocLayout from '$lib/components/DocLayout.svelte';
+    import PagerNav from '$lib/components/PagerNav.svelte';
+    import Icon from '$lib/components/Icon.svelte';
 
     /**
      * De configuratiemodules van de AI-detector.
      * Elke module heeft één of meer groepen variabelen; een groep met een
      * `label` wordt als subkop weergegeven (zoals Disk / Telegram / Webhook).
      */
+    /** @type {Array<{ title: () => string, desc: () => string, groups: Array<{ label?: string, vars: Array<{ name: string, desc: () => string }> }> }>} */
     const modules = [
         {
             title: m.opt_det_title,
@@ -131,222 +139,171 @@
             ]
         }
     ];
+
+    const toc = modules.map((module, i) => ({ id: `module-${i + 1}`, label: stripNumber(module.title()) }));
 </script>
 
-<div class="container">
-    <header class="page-header">
-        <h1>{m.options_title()}</h1>
-        <p class="intro-text">{m.options_intro()}</p>
-    </header>
+<Seo title={m.options_title()} description={m.options_intro()} />
 
-    <div class="content-wrapper">
-        {#each modules as module}
-            <section class="config-module">
-                <h2>{module.title()}</h2>
-                <p class="module-desc">{module.desc()}</p>
+<PageHeader
+    eyebrow="{m.step_label()} 3 · config.json"
+    title={m.options_title()}
+    lead={m.options_intro()}
+    crumbs={[{ href: '/installation', label: m.nav_install() }]}
+/>
 
-                {#each module.groups as group, groupIndex}
-                    {#if group.label}
-                        <h3 class="sub-module-title" class:spaced={groupIndex > 0}>{group.label}</h3>
-                    {/if}
-                    <ul class="variable-list">
-                        {#each group.vars as variable}
-                            <li>
-                                <span class="var-name">{variable.name}</span>
-                                <span class="var-desc">{variable.desc()}</span>
-                            </li>
-                        {/each}
-                    </ul>
-                {/each}
-            </section>
-        {/each}
-    </div>
-
-    <div class="action-buttons">
-        <a href="{base}/installation" class="btn btn--solid">&larr; {m.options_btn_back()}</a>
-    </div>
-
-    <section class="github-section">
-        <p>{m.options_github_text()}</p>
-        <a
-            href="https://github.com/ESchouten/ai-detector/tree/main"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn--amber github-btn"
-        >
-            {m.options_github_btn()}
-        </a>
-    </section>
-
-    <footer class="official-links">
-        <p>
-            Part of the <a
-                href="https://github.com/CowCatcherAI/CowCatcherAI"
-                target="_blank"
-                rel="noopener noreferrer">Official Open Source Project</a
-            >
-        </p>
-    </footer>
+<div class="container progress-wrap">
+    <InstallProgress current={3} />
 </div>
 
+<DocLayout {toc}>
+    {#each modules as module, i (module.title)}
+        <section class="module" id="module-{i + 1}">
+            <header class="module-head">
+                <span class="module-num">0{i + 1}</span>
+                <div>
+                    <h2>{stripNumber(module.title())}</h2>
+                    <p>{module.desc()}</p>
+                </div>
+            </header>
+
+            {#each module.groups as group}
+                {#if group.label}
+                    <h3 class="group-label">{group.label}</h3>
+                {/if}
+                <dl class="vars">
+                    {#each group.vars as variable (variable.name)}
+                        <div class="var">
+                            <dt><code>{variable.name}</code></dt>
+                            <dd>{variable.desc()}</dd>
+                        </div>
+                    {/each}
+                </dl>
+            {/each}
+        </section>
+    {/each}
+
+    <div class="github">
+        <span class="github-icon"><Icon name="github" size={26} /></span>
+        <p>{m.options_github_text()}</p>
+        <a href={links.detectorConfig} target="_blank" rel="noopener noreferrer" class="btn btn--ink">
+            {m.options_github_btn()}
+            <span class="btn__icon btn__icon--up"><Icon name="arrow-up-right" /></span>
+        </a>
+    </div>
+
+    <PagerNav
+        prev={{ href: '/installation/download', label: stripNumber(m.install_card_software_title()), hint: `${m.step_label()} 2` }}
+        next={{ href: '/installation', label: m.options_btn_back(), hint: m.nav_install() }}
+    />
+</DocLayout>
+
 <style>
-    .container {
-        max-width: 1000px;
-        margin: 0 auto;
-        padding: 4rem 1rem;
+    .progress-wrap {
+        margin-bottom: clamp(2.5rem, 5vw, 4rem);
     }
 
-    .page-header {
-        text-align: center;
-        margin-bottom: 3rem;
-    }
-
-    h1 {
-        font-family: var(--font-heading);
-        font-size: clamp(2.5rem, 6vw, 4rem);
-        color: var(--primary);
-        margin-top: 0;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-        line-height: 1;
-    }
-
-    .intro-text {
-        font-size: 1.2rem;
-        color: var(--accent-teal);
-        font-weight: 500;
-        line-height: 1.5;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
-    /* --- Modules --- */
-    .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 2rem;
-        margin-bottom: 3rem;
-    }
-
-    .config-module {
+    .module {
+        margin: 0 0 1.25rem !important;
+        padding: clamp(1.25rem, 3vw, 2rem);
+        border-radius: var(--radius-lg);
         background: var(--card-bg);
-        border: 1px solid var(--border-soft);
-        border-radius: var(--radius);
-        padding: 2.5rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-        border-left: 5px solid var(--primary);
-        transition: transform 0.2s, border-left-color 0.2s;
+        box-shadow:
+            0 0 0 1px var(--line),
+            var(--shadow-sm);
+        scroll-margin-top: var(--nav-offset);
     }
 
-    .config-module:hover {
-        transform: translateX(3px);
-        border-left-color: var(--accent-amber);
-    }
-
-    .config-module h2 {
-        font-family: var(--font-heading);
-        font-size: 2.2rem;
-        color: var(--primary);
-        margin-top: 0;
+    .module-head {
+        display: flex;
+        gap: 1rem;
+        align-items: flex-start;
+        padding-bottom: 1.25rem;
         margin-bottom: 0.5rem;
+        border-bottom: 1px solid var(--line);
     }
 
-    .sub-module-title {
+    .module-num {
+        flex-shrink: 0;
         font-family: var(--font-heading);
-        font-size: 1.5rem;
-        color: var(--accent-teal);
-        margin-bottom: 1rem;
-        border-bottom: 1px solid var(--border-soft);
-        padding-bottom: 0.5rem;
+        font-size: 2.6rem;
+        line-height: 0.85;
+        color: var(--accent-amber);
     }
 
-    .sub-module-title.spaced {
-        margin-top: 2.5rem;
+    .module-head h2 {
+        margin: 0 0 0.5rem;
+        font-size: clamp(1.8rem, 3.5vw, 2.3rem);
     }
 
-    .module-desc {
-        font-size: 1.1rem;
+    .module-head p {
         color: var(--text-muted);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
     }
 
-    /* --- Variabelenlijst --- */
-    .variable-list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-    }
-
-    .variable-list li {
-        background: var(--bg-color);
-        padding: 1rem;
-        border-radius: var(--radius-sm);
-        border: 1px dashed #cde0cd;
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .var-name {
-        font-family: monospace;
-        font-weight: bold;
-        color: var(--primary);
-        font-size: 1.1rem;
-        background: var(--surface-tint);
-        padding: 0.2rem 0.6rem;
-        border-radius: 4px;
+    .group-label {
         display: inline-block;
-        align-self: flex-start;
+        margin: 1.75rem 0 0.25rem !important;
+        padding: 0.2rem 0.6rem;
+        border-radius: var(--radius-xs);
+        background: var(--amber-soft);
+        color: var(--amber-ink);
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
-    .var-desc {
+    .vars {
+        margin: 0 !important;
+    }
+
+    .var {
+        display: grid;
+        gap: 0.35rem;
+        padding: 0.95rem 0;
+        border-bottom: 1px dashed var(--line-strong);
+    }
+
+    .var:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+
+    .var dt code {
+        font-weight: 600;
+    }
+
+    .var dd {
+        margin: 0;
         color: var(--text-muted);
-        font-size: 1rem;
-        line-height: 1.5;
+        font-size: 0.97rem;
     }
 
-    @media (min-width: 768px) {
-        .variable-list li {
-            flex-direction: row;
-            align-items: center;
+    @media (min-width: 720px) {
+        .var {
+            grid-template-columns: 12rem minmax(0, 1fr);
             gap: 1.5rem;
-        }
-        .var-name {
-            min-width: 220px;
-            flex-shrink: 0;
-            align-self: center;
+            align-items: baseline;
         }
     }
 
-    /* --- Overig --- */
-    .github-section {
-        text-align: center;
-        padding: 2.5rem;
+    .github {
+        display: grid;
+        gap: 1rem;
+        justify-items: start;
+        margin-top: 2.5rem !important;
+        padding: clamp(1.5rem, 3vw, 2rem);
+        border-radius: var(--radius-lg);
         background: var(--surface-tint);
+        box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    .github-icon {
+        display: grid;
+        place-items: center;
+        width: 3rem;
+        height: 3rem;
         border-radius: var(--radius);
-        border: 1px dashed var(--primary);
-        margin: 3rem 0;
-    }
-
-    .github-section p {
-        font-size: 1.1rem;
-        color: var(--text-main);
-        margin-bottom: 1.5rem;
-        font-weight: 500;
-    }
-
-    .github-btn {
-        padding: 0.8rem 2rem;
-        font-size: 1.1rem;
-    }
-
-    .action-buttons {
-        display: flex;
-        justify-content: flex-start;
-        margin-top: 2rem;
+        background: var(--text-main);
+        color: var(--bg-color);
     }
 </style>

@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Detecção de Objetos)",
   "opt_yolo_desc": "A IA rápida de primeira passagem que escaneia cada quadro. Sem o YOLO, todos os quadros simplesmente passam direto.",
   "opt_yolo_model": "URL ou caminho local para um arquivo de modelo YOLO (.pt ou .onnx).",
-  "opt_yolo_conf": "Confiança necessária (0-1). Também pode ser um limite por classe, ex: { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Confiança necessária (0-1). Também pode ser um limite por classe, ex: \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Duração máxima em segundos para agrupar quadros em um único evento (padrão 60).",
   "opt_yolo_timeout": "Segundos sem detecções antes que o evento seja considerado finalizado (padrão 5).",
   "opt_yolo_cooldown": "Segundos de espera antes de iniciar um novo evento. Evita alertas repetidos. Pode ser por classe.",

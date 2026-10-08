@@ -1,146 +1,192 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
-  import { setLocale } from '$lib/paraglide/runtime';
-  import { languages, languageCodes } from '$lib/config/languages.js';
+	import { browser } from '$app/environment';
+	import { setLocale } from '$lib/paraglide/runtime';
+	import { languages, languageCodes } from '$lib/config/languages.js';
+	import Logo from './Logo.svelte';
+	import Icon from './Icon.svelte';
 
-  // --- CONFIGURATIE ---
-  // true  = Toon de popup ALTIJD bij het opstarten (negeer opslag).
-  // false = Toon de popup alleen als er nog geen taal is opgeslagen.
-  const FORCE_SHOW = false;
-  const STORAGE_KEY = 'lang_chosen';
+	// --- CONFIGURATIE ---
+	// true  = Toon de popup ALTIJD bij het opstarten (negeer opslag).
+	// false = Toon de popup alleen als er nog geen taal is opgeslagen.
+	const FORCE_SHOW = false;
+	const STORAGE_KEY = 'lang_chosen';
 
-  let show = $state(browser && (FORCE_SHOW || !localStorage.getItem(STORAGE_KEY)));
+	function hasChosen() {
+		try {
+			return Boolean(localStorage.getItem(STORAGE_KEY));
+		} catch {
+			return true;
+		}
+	}
 
-  // Standaard selectie gebaseerd op browsertaal, anders Engels.
-  let selectedLocale = $state('en');
+	let show = $state(browser && (FORCE_SHOW || !hasChosen()));
 
-  if (browser) {
-    const navLang = navigator.language.toLowerCase().split('-')[0];
-    if (languageCodes.includes(navLang)) {
-      selectedLocale = navLang;
-    }
-  }
+	// Standaard selectie gebaseerd op browsertaal, anders Engels.
+	let selectedLocale = $state('en');
 
-  function choose() {
-    if (browser) {
-      localStorage.setItem(STORAGE_KEY, selectedLocale);
-    }
-    setLocale(selectedLocale as Parameters<typeof setLocale>[0]);
-    show = false;
-  }
+	if (browser) {
+		const navLang = navigator.language.toLowerCase().split('-')[0];
+		if (languageCodes.includes(navLang)) {
+			selectedLocale = navLang;
+		}
+	}
+
+	function choose(code: string) {
+		selectedLocale = code;
+		try {
+			localStorage.setItem(STORAGE_KEY, code);
+		} catch {
+			// Opslag geblokkeerd: dan alleen voor deze sessie.
+		}
+		show = false;
+		setLocale(code as Parameters<typeof setLocale>[0]);
+	}
 </script>
 
 {#if show}
-  <div class="backdrop" role="dialog" aria-modal="true" aria-label="Kies je taal">
-    <div class="modal">
-      <div class="globe">🌍</div>
-      <h2>Choose your language</h2>
-      <p>Select your preferred language</p>
+	<div class="backdrop">
+		<div class="modal" role="dialog" aria-modal="true" aria-labelledby="lang-title">
+			<div class="head">
+				<Logo size={40} wordmark={false} />
+				<div>
+					<h2 id="lang-title">Choose your language</h2>
+					<p>Select your preferred language</p>
+				</div>
+			</div>
 
-      <div class="options">
-        <select bind:value={selectedLocale} class="modal-dropdown">
-          {#each languages as lang}
-            <option value={lang.code}>
-              {lang.flag} {lang.name}
-            </option>
-          {/each}
-        </select>
-
-        <button class="confirm-btn" onclick={choose} aria-label="Confirm">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="3"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
+			<ul class="grid">
+				{#each languages as lang (lang.code)}
+					<li>
+						<button
+							type="button"
+							class="option"
+							class:suggested={lang.code === selectedLocale}
+							onclick={() => choose(lang.code)}
+							lang={lang.code}
+						>
+							<span class="flag" aria-hidden="true">{lang.flag}</span>
+							<span class="name">{lang.name}</span>
+							{#if lang.code === selectedLocale}
+								<span class="tick"><Icon name="check" size={16} stroke={2.2} /></span>
+							{/if}
+						</button>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
 {/if}
 
 <style>
-  .backdrop {
-    position: fixed;
-    inset: 0;
-    background: oklch(22% 0.02 145 / 0.55);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    backdrop-filter: blur(4px);
-  }
+	.backdrop {
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-modal);
+		display: grid;
+		place-items: center;
+		padding: 1rem;
+		background: oklch(22% 0.03 150 / 0.55);
+		backdrop-filter: blur(6px);
+		-webkit-backdrop-filter: blur(6px);
+		animation: fade 0.4s var(--ease-out);
+	}
 
-  .modal {
-    background: var(--bg-color);
-    border-radius: var(--radius-lg);
-    padding: 2.5rem 2rem;
-    max-width: 360px;
-    width: 90%;
-    text-align: center;
-    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.25);
-  }
+	.modal {
+		width: min(100%, 30rem);
+		max-height: calc(100dvh - 2rem);
+		overflow-y: auto;
+		padding: 1.75rem;
+		border-radius: var(--radius-xl);
+		background: var(--bg-color);
+		box-shadow:
+			inset 0 0 0 1px oklch(100% 0 0 / 0.7),
+			var(--shadow-lg);
+		animation: rise 0.6s var(--ease-spring);
+	}
 
-  .globe {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+	.head {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1.5rem;
+	}
 
-  h2 {
-    margin: 0 0 0.25rem;
-    font-size: 1.4rem;
-    color: var(--text-main);
-  }
+	h2 {
+		font-size: 2rem;
+		color: var(--text-main);
+	}
 
-  p {
-    color: var(--text-muted);
-    margin: 0 0 1.75rem;
-    font-size: 0.9rem;
-  }
+	p {
+		color: var(--text-muted);
+		font-size: 0.92rem;
+	}
 
-  .options {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
+	.grid {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 0.5rem;
+	}
 
-  .modal-dropdown {
-    width: 100%;
-    padding: 1.1rem 0.75rem;
-    border: 2px solid var(--soft-gray);
-    border-radius: 14px;
-    background: white;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-main);
-    cursor: pointer;
-    outline: none;
-  }
+	.option {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 0.65rem;
+		padding: 0.8rem 0.9rem;
+		border: 0;
+		border-radius: var(--radius);
+		background: var(--card-bg);
+		box-shadow: inset 0 0 0 1px var(--line);
+		text-align: left;
+		font-weight: 500;
+		cursor: pointer;
+		transition:
+			box-shadow var(--dur) var(--ease-spring),
+			transform var(--dur) var(--ease-spring);
+	}
 
-  .confirm-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1.1rem;
-    border: none;
-    border-radius: 14px;
-    background: var(--primary);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.2s ease;
-  }
+	.option:hover {
+		box-shadow:
+			inset 0 0 0 1px var(--primary),
+			var(--shadow-sm);
+	}
 
-  .confirm-btn:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(56, 105, 56, 0.3);
-  }
+	.option:active {
+		transform: scale(0.98);
+	}
+
+	.option.suggested {
+		box-shadow: inset 0 0 0 2px var(--primary);
+		background: var(--primary-soft);
+	}
+
+	.flag {
+		font-size: 1.25rem;
+		line-height: 1;
+	}
+
+	.name {
+		flex: 1;
+	}
+
+	.tick {
+		color: var(--primary);
+		display: inline-flex;
+	}
+
+	@keyframes fade {
+		from {
+			opacity: 0;
+		}
+	}
+
+	@keyframes rise {
+		from {
+			opacity: 0;
+			transform: translateY(24px) scale(0.98);
+		}
+	}
 </style>

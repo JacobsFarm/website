@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Detectarea obiectelor)",
   "opt_yolo_desc": "Inteligența artificială rapidă de primă etapă care scanează fiecare cadru. Fără YOLO, toate cadrele trec pur și simplu neprocesate.",
   "opt_yolo_model": "URL sau cale locală către un fișier model YOLO (.pt sau .onnx).",
-  "opt_yolo_conf": "Nivel de încredere necesar (0-1). Poate fi și un prag per clasă, ex: { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Nivel de încredere necesar (0-1). Poate fi și un prag per clasă, ex: \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Durata maximă în secunde pentru a grupa cadrele într-un singur eveniment (implicit 60).",
   "opt_yolo_timeout": "Secunde fără detecții înainte ca evenimentul să fie considerat încheiat (implicit 5).",
   "opt_yolo_cooldown": "Secunde de așteptare înainte de a începe un nou eveniment. Previne alertele repetate. Poate fi setat per clasă.",

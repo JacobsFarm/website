@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Detección de objetos)",
   "opt_yolo_desc": "La IA rápida de primera pasada que escanea cada fotograma. Sin YOLO, todos los fotogramas simplemente pasan de largo.",
   "opt_yolo_model": "URL o ruta local a un archivo de modelo YOLO (.pt o .onnx).",
-  "opt_yolo_conf": "Confianza requerida (0-1). También puede ser un umbral por clase, p. ej., { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Confianza requerida (0-1). También puede ser un umbral por clase, p. ej., \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Duración máxima en segundos para agrupar fotogramas en un solo evento (por defecto 60).",
   "opt_yolo_timeout": "Segundos sin detecciones antes de que el evento se considere terminado (por defecto 5).",
   "opt_yolo_cooldown": "Segundos a esperar antes de comenzar un nuevo evento. Evita alertas repetidas. Puede ser por clase.",

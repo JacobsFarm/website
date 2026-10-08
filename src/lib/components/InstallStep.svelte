@@ -1,97 +1,107 @@
 <script>
-    import ZoomableImage from '$lib/components/ZoomableImage.svelte';
+	import ZoomableImage from '$lib/components/ZoomableImage.svelte';
 
-    /**
-     * Eén stap uit de installatiehandleiding: genummerde badge, titel, inhoud
-     * (children) en optioneel een schermafbeelding met bijschrift.
-     */
-    let { number, title, image = null, imageAlt = '', caption = '', children } = $props();
+	/**
+	 * Eén stap uit de installatiehandleiding: genummerde badge, titel, inhoud
+	 * (children) en optioneel een schermafbeelding met bijschrift.
+	 * Krijgt `id="step-<nummer>"`, zodat de inhoudsopgave ernaar kan linken.
+	 */
+	let { number, title, image = null, imageAlt = '', caption = '', children } = $props();
 </script>
 
-<section class="step">
-    <div class="step-head">
-        <span class="step-num">{number}</span>
-        <h3>{title}</h3>
-    </div>
+<section class="step" id="step-{number}">
+	<div class="step-head">
+		<span class="step-num">{number}</span>
+		<h3>{title}</h3>
+	</div>
 
-    <div class="step-body">
-        {@render children()}
+	<div class="step-body">
+		{@render children()}
 
-        {#if image}
-            <figure class="step-figure">
-                <ZoomableImage src={image} alt={imageAlt} class="step-figure-img" />
-                {#if caption}
-                    <figcaption>{caption}</figcaption>
-                {/if}
-            </figure>
-        {/if}
-    </div>
+		{#if image}
+			<figure class="step-figure">
+				<ZoomableImage src={image} alt={imageAlt} />
+				{#if caption}
+					<figcaption>{caption}</figcaption>
+				{/if}
+			</figure>
+		{/if}
+	</div>
 </section>
 
 <style>
-    .step {
-        border: 1px solid var(--border-soft);
-        border-left: 5px solid var(--primary);
-        border-radius: var(--radius-sm);
-        background: var(--bg-color);
-        padding: 1.5rem;
-        margin-bottom: 1.5rem;
-    }
+	.step {
+		position: relative;
+		margin: 0 0 1.25rem !important;
+		padding: clamp(1.25rem, 3vw, 2rem);
+		border-radius: var(--radius-lg);
+		background: var(--card-bg);
+		box-shadow:
+			0 0 0 1px var(--line),
+			var(--shadow-sm);
+		scroll-margin-top: var(--nav-offset);
+	}
 
-    .step-head {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
-    }
+	.step-head {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1.25rem;
+		padding-bottom: 1.25rem;
+		border-bottom: 1px solid var(--line);
+	}
 
-    .step-num {
-        flex: 0 0 auto;
-        width: 2.4rem;
-        height: 2.4rem;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background: var(--primary);
-        color: #ffffff;
-        font-family: var(--font-heading);
-        font-size: 1.3rem;
-        line-height: 1;
-    }
+	.step-num {
+		display: grid;
+		place-items: center;
+		flex-shrink: 0;
+		width: 2.9rem;
+		height: 2.9rem;
+		padding-top: 0.15rem;
+		border-radius: var(--radius-sm);
+		background: var(--primary);
+		color: #fff;
+		font-family: var(--font-heading);
+		font-size: 1.6rem;
+		line-height: 1;
+		box-shadow: inset 0 -3px 0 oklch(0% 0 0 / 0.15);
+	}
 
-    /* De h3 uit .doc-section heeft een ruime bovenmarge; binnen de kop van een
-       stap staat de titel naast de badge en is die marge ongewenst. */
-    .step-head h3 {
-        margin: 0;
-        font-size: 1.5rem;
-        color: var(--primary);
-    }
+	/* De h3 uit .prose heeft een ruime bovenmarge; naast de badge niet nodig. */
+	.step-head h3 {
+		margin: 0;
+		font-size: clamp(1.15rem, 2vw, 1.4rem);
+	}
 
-    /* De inhoud komt uit de bovenliggende pagina, dus :global is nodig om de
-       eerste en laatste alinea van een stap netjes tegen de rand te zetten. */
-    .step-body > :global(*:first-child) {
-        margin-top: 0;
-    }
+	/* Vaste ritmiek tussen de blokken in een stap; een kopje hoort bij wat erna komt. */
+	.step-body > :global(* + *) {
+		margin-top: 1rem;
+	}
 
-    .step-body > :global(*:last-child) {
-        margin-bottom: 0;
-    }
+	.step-body > :global(h4) {
+		margin-top: 1.75rem;
+	}
 
-    .step-figure {
-        margin: 1.5rem 0 0;
-    }
+	.step-body > :global(h4 + *) {
+		margin-top: 0.5rem;
+	}
 
-    .step-figure :global(.step-figure-img img) {
-        border: 1px solid var(--soft-gray);
-        border-radius: var(--radius-sm);
-    }
+	.step-body > :global(*:first-child) {
+		margin-top: 0;
+	}
 
-    .step-figure figcaption {
-        font-size: 0.9rem;
-        color: var(--text-muted);
-        line-height: 1.5;
-        margin-top: 0.6rem;
-        font-style: italic;
-    }
+	.step-body > :global(*:last-child) {
+		margin-bottom: 0;
+	}
+
+	.step-figure {
+		margin: 1.5rem 0 0;
+	}
+
+	.step-figure figcaption {
+		margin-top: 0.65rem;
+		font-size: 0.88rem;
+		color: var(--text-muted);
+		line-height: 1.5;
+	}
 </style>

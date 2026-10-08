@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Detekcja obiektów)",
   "opt_yolo_desc": "Szybka sztuczna inteligencja pierwszego przejścia, która skanuje każdą klatkę. Bez YOLO żadne klatki nie są przetwarzane.",
   "opt_yolo_model": "Adres URL lub lokalna ścieżka do pliku modelu YOLO (.pt lub .onnx).",
-  "opt_yolo_conf": "Wymagana pewność (0-1). Może być również progiem dla konkretnej klasy, np. { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Wymagana pewność (0-1). Może być również progiem dla konkretnej klasy, np. \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Maksymalny czas trwania w sekundach dla zgrupowania klatek w jedno zdarzenie (domyślnie 60).",
   "opt_yolo_timeout": "Sekundy bez detekcji, po których zdarzenie uznaje się za zakończone (domyślnie 5).",
   "opt_yolo_cooldown": "Sekundy oczekiwania przed rozpoczęciem nowego zdarzenia. Zapobiega powtarzającym się alertom. Można ustawić dla każdej klasy.",

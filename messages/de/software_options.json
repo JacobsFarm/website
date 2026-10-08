@@ -9,7 +9,7 @@
   "opt_yolo_title": "2. YOLO (Objekterkennung)",
   "opt_yolo_desc": "Die schnelle KI im ersten Durchlauf, die jedes Frame scannt. Ohne YOLO werden keine Frames verarbeitet.",
   "opt_yolo_model": "URL oder lokaler Pfad zu einer YOLO-Modelldatei (.pt oder .onnx).",
-  "opt_yolo_conf": "Erforderliche Konfidenz (0-1). Kann auch ein Schwellenwert pro Klasse sein, z. B. { \"person\": 0.85 }.",
+  "opt_yolo_conf": "Erforderliche Konfidenz (0-1). Kann auch ein Schwellenwert pro Klasse sein, z. B. \\{ \"person\": 0.85 \\}.",
   "opt_yolo_timemax": "Maximale Dauer in Sekunden, um Frames zu einem Ereignis zu gruppieren (Standard 60).",
   "opt_yolo_timeout": "Sekunden ohne Erkennung, bis das Ereignis als beendet gilt (Standard 5).",
   "opt_yolo_cooldown": "Sekunden Wartezeit vor dem Start eines neuen Ereignisses. Verhindert wiederholte Alarme. Kann pro Klasse definiert werden.",
