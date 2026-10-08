@@ -294,6 +294,7 @@
 		width: 2.2rem;
 		height: 2.2rem;
 		border-radius: 50%;
+		padding: 0.3rem;
 		background: #fff;
 		object-fit: contain;
 	}

@@ -3,7 +3,7 @@
     import { links } from '$lib/config/links.js';
     import ProjectDetail from '$lib/components/ProjectDetail.svelte';
 
-    import logo from '$lib/assets/CowCatchter-logo-875x875.jpg';
+    import logo from '$lib/assets/CowCatchterAI logo.svg';
     import cowcatcher1 from '$lib/assets/cowcatcher_1.jpg';
     import cowcatcher3 from '$lib/assets/cowcatcher_3.jpg';
     import cowcatcher4 from '$lib/assets/cowcatcher_4.png';

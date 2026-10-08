@@ -1,7 +1,7 @@
 import * as m from '$lib/paraglide/messages.js';
 
-import cowcatcherLogo from '$lib/assets/CowCatchter-logo-875x875.jpg';
-import calvingcatcherLogo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
+import cowcatcherLogo from '$lib/assets/CowCatchterAI logo.svg';
+import calvingcatcherLogo from '$lib/assets/calvingcatcherAI logo.svg';
 import aiDetectorLogo from '$lib/assets/Ai-detector-logo-800x800.jpg';
 
 /**

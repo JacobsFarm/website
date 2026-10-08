@@ -3,7 +3,7 @@
     import { links } from '$lib/config/links.js';
     import ProjectDetail from '$lib/components/ProjectDetail.svelte';
 
-    import logo from '$lib/assets/calvingcatcher-logo-875x-875.jpg';
+    import logo from '$lib/assets/calvingcatcherAI logo.svg';
     import calvingcatcher1 from '$lib/assets/calvingcatcher_1.jpg';
     import calvingcatcher2 from '$lib/assets/calvingcatcher_2.jpg';
     import calvingcatcher3 from '$lib/assets/calvingcatcher_3.jpg';
