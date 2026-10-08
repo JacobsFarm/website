@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Chaleur détectée",
   "home_anim_heat_body": "Chevauchement repéré sur la caméra 3. Regardez la photo et le clip.",
   "home_anim_calving_title": "Vêlage en cours",
-  "home_anim_calving_body": "Poche des eaux et pattes visibles dans le box de vêlage.",
+  "home_anim_bag_title": "Poche des eaux repérée",
+  "home_anim_bag_body": "Le vêlage commence dans le box de vêlage. Gardez un œil sur elle.",
+  "home_anim_calving_body": "Les pattes sont visibles. Il est temps d'aller la voir.",
+  "home_anim_calf_title": "Le veau sort",
+  "home_anim_calf_body": "La tête et le corps sont sortis. Vérifiez que le veau respire bien.",
 
   "home_how_eyebrow": "Comment ça marche",
   "home_how_title": "De la caméra de l'étable à votre téléphone",

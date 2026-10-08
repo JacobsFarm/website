@@ -8,6 +8,7 @@
 	 * Fases (0–5):
 	 *   0 rust · 1 actie begint · 2 gedrag zichtbaar · 3 AI tekent kader
 	 *   4 foto vastgelegd · 5 melding verstuurd
+	 *   Alleen afkalven: 6 lichaam van het kalf komt eruit · 7 derde melding
 	 *
 	 * @property {'heat'|'calving'} scene
 	 * @property {number}  phase
@@ -40,7 +41,9 @@
 	const box = $derived(
 		scene === 'heat'
 			? { x: 186, y: 136, w: 306, h: 210 }
-			: { x: 296, y: 228, w: 120, h: 102 }
+			: phase >= 6
+				? { x: 300, y: 222, w: 150, h: 110 }
+				: { x: 296, y: 228, w: 120, h: 102 }
 	);
 </script>
 
@@ -155,7 +158,7 @@
 		{/each}
 
 		<g transform="translate(84,352) scale(1.15)">
-			<LyingCow uid="{uid}-calving" labour={phase >= 1} waterBag={phase >= 2} legs={phase >= 4} />
+			<LyingCow uid="{uid}-calving" labour={phase >= 1} waterBag={phase >= 2} legs={phase >= 4} calf={phase >= 6} />
 		</g>
 	{/if}
 
@@ -178,7 +181,7 @@
 	</g>
 
 	{#if !still}
-		<rect width="640" height="400" class="flash" class:on={phase >= 4} />
+		<rect width="640" height="400" class="flash" class:on={phase === 4 || phase === 6} />
 	{/if}
 </svg>
 

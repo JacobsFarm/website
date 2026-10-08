@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Călduri detectate",
   "home_anim_heat_body": "Încălecare observată pe camera 3. Verifică fotografia și clipul.",
   "home_anim_calving_title": "Fătarea a început",
-  "home_anim_calving_body": "Punga cu apă și picioarele sunt vizibile în boxa de fătare.",
+  "home_anim_bag_title": "Punga cu apă detectată",
+  "home_anim_bag_body": "Fătarea începe în boxa de fătare. Urmăriți-o.",
+  "home_anim_calving_body": "Picioarele sunt acum vizibile. E timpul să mergeți s-o verificați.",
+  "home_anim_calf_title": "Vițelul iese",
+  "home_anim_calf_body": "Capul și corpul au ieșit. Verificați dacă vițelul respiră bine.",
 
   "home_how_eyebrow": "Cum funcționează",
   "home_how_title": "De la camera din grajd la telefonul tău",

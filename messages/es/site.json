@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Celo detectado",
   "home_anim_heat_body": "Monta detectada en la cámara 3. Revisa la foto y el clip.",
   "home_anim_calving_title": "Parto iniciado",
-  "home_anim_calving_body": "Bolsa de aguas y patas visibles en el box de partos.",
+  "home_anim_bag_title": "Bolsa de aguas detectada",
+  "home_anim_bag_body": "El parto empieza en el box de partos. Vigílala.",
+  "home_anim_calving_body": "Ya se ven las patas. Es hora de ir a verla.",
+  "home_anim_calf_title": "El ternero está saliendo",
+  "home_anim_calf_body": "La cabeza y el cuerpo ya han salido. Comprueba que el ternero respira bien.",
 
   "home_how_eyebrow": "Cómo funciona",
   "home_how_title": "De la cámara del establo a tu móvil",

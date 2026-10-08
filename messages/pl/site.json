@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Wykryto ruję",
   "home_anim_heat_body": "Obskakiwanie widoczne na kamerze 3. Sprawdź zdjęcie i klip.",
   "home_anim_calving_title": "Wycielenie się rozpoczęło",
-  "home_anim_calving_body": "Pęcherz płodowy i nóżki widoczne w kojcu porodowym.",
+  "home_anim_bag_title": "Wykryto pęcherz płodowy",
+  "home_anim_bag_body": "Wycielenie zaczyna się w kojcu porodowym. Miej ją na oku.",
+  "home_anim_calving_body": "Nóżki są już widoczne. Czas do niej zajrzeć.",
+  "home_anim_calf_title": "Cielę wychodzi",
+  "home_anim_calf_body": "Głowa i tułów są już na zewnątrz. Sprawdź, czy cielę dobrze oddycha.",
 
   "home_how_eyebrow": "Jak to działa",
   "home_how_title": "Od kamery w oborze do twojego telefonu",

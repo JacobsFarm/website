@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Cio detectado",
   "home_anim_heat_body": "Monta vista na câmera 3. Confira a foto e o clipe.",
   "home_anim_calving_title": "Parto iniciado",
-  "home_anim_calving_body": "Bolsa d'água e patas visíveis na baia de parto.",
+  "home_anim_bag_title": "Bolsa d'água detectada",
+  "home_anim_bag_body": "O parto está começando na baia de parto. Fique de olho nela.",
+  "home_anim_calving_body": "As patas já estão visíveis. Hora de ir vê-la.",
+  "home_anim_calf_title": "O bezerro está saindo",
+  "home_anim_calf_body": "Cabeça e corpo já saíram. Verifique se o bezerro está respirando bem.",
 
   "home_how_eyebrow": "Como funciona",
   "home_how_title": "Da câmera do estábulo para o seu celular",

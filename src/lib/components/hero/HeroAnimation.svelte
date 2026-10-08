@@ -18,6 +18,7 @@
 	const SCENES = {
 		heat: {
 			steps: [700, 2000, 3300, 4400, 5000],
+			alerts: [5000],
 			duration: 10500,
 			clock: 2 * 3600 + 14 * 60 + 3,
 			cam: '03',
@@ -25,19 +26,22 @@
 			labels: ['mounting', 'mounting']
 		},
 		calving: {
-			steps: [700, 1900, 3200, 4500, 5200],
-			duration: 10500,
+			// Meldingen bij de waterblaas, de pootjes en het lichaam van het kalf.
+			steps: [700, 1600, 2500, 5000, 5700, 8200, 8900],
+			alerts: [3200, 5700, 8900],
+			duration: 13800,
 			clock: 4 * 3600 + 37 * 60 + 41,
 			cam: '07',
-			conf: [0.87, 0.91],
-			labels: ['water bag', 'legs']
+			conf: [0.87, 0.91, 0.95],
+			labels: ['water bag', 'legs', 'calf']
 		}
 	};
 
-	const order = /** @type {const} */ (['heat', 'calving']);
+	const order = /** @type {const} */ (['calving', 'heat']);
 
-	let scene = $state(/** @type {'heat'|'calving'} */ ('heat'));
+	let scene = $state(/** @type {'heat'|'calving'} */ ('calving'));
 	let phase = $state(0);
+	let alerts = $state(0);
 	let elapsed = $state(0);
 	let ms = $state(38);
 	let restart = $state(0);
@@ -55,11 +59,14 @@
 
 	const cfg = $derived(SCENES[scene]);
 	const running = $derived(inView && docVisible && !paused && !reduced);
-	const shownPhase = $derived(reduced ? 5 : phase);
-	const stageIndex = $derived(shownPhase >= 4 ? 1 : 0);
-	const shownConf = $derived(reduced ? cfg.conf[1] : conf.current);
+	const shownPhase = $derived(reduced ? cfg.steps.length : phase);
+	const shownAlerts = $derived(reduced ? cfg.alerts.length : alerts);
+	// Terwijl de AI een nieuwe stap bevestigt, staat de status weer op analyseren.
+	const sent = $derived(shownAlerts > 0 && shownPhase !== 4 && shownPhase !== 6);
+	const stageIndex = $derived(Math.min(shownPhase >= 6 ? 2 : shownPhase >= 4 ? 1 : 0, cfg.labels.length - 1));
+	const shownConf = $derived(reduced ? cfg.conf[stageIndex] : conf.current);
 	const label = $derived(`${cfg.labels[stageIndex]} ${shownConf.toFixed(2)}`);
-	const finalLabel = $derived(`${cfg.labels[1]} ${cfg.conf[1].toFixed(2)}`);
+	const tag = (/** @type {number} */ i) => `${cfg.labels[i]} ${cfg.conf[i].toFixed(2)}`;
 
 	const fmt = (/** @type {number} */ n) => String(n).padStart(2, '0');
 	const clockSeconds = $derived(cfg.clock + elapsed);
@@ -78,12 +85,14 @@
 		const config = SCENES[current];
 		untrack(() => {
 			phase = 0;
+			alerts = 0;
 			elapsed = 0;
 			conf.set(0, { duration: 0 });
 			runId += 1;
 		});
 
 		const timers = config.steps.map((t, i) => setTimeout(() => (phase = i + 1), t));
+		config.alerts.forEach((t, i) => timers.push(setTimeout(() => (alerts = i + 1), t)));
 		timers.push(
 			setTimeout(() => {
 				scene = order[(order.indexOf(current) + 1) % order.length];
@@ -107,6 +116,7 @@
 		untrack(() => {
 			if (p === 3) conf.target = c[0];
 			if (p === 4) conf.target = c[1];
+			if (p === 6) conf.target = c[2];
 		});
 	});
 
@@ -136,6 +146,18 @@
 		if (scene === key) restart += 1;
 		else scene = key;
 	}
+
+	// Berichten in de chat, in volgorde van binnenkomst. `phase` bepaalt wat de
+	// foto in het bericht laat zien.
+	const messages = $derived(
+		scene === 'heat'
+			? [{ phase: 5, label: tag(1), title: m.home_anim_heat_title(), body: m.home_anim_heat_body() }]
+			: [
+					{ phase: 3, label: tag(0), title: m.home_anim_bag_title(), body: m.home_anim_bag_body() },
+					{ phase: 5, label: tag(1), title: m.home_anim_calving_title(), body: m.home_anim_calving_body() },
+					{ phase: 7, label: tag(2), title: m.home_anim_calf_title(), body: m.home_anim_calf_body() }
+				]
+	);
 
 	const tabLabel = (/** @type {string} */ key) => (key === 'heat' ? m.home_anim_tab_heat() : m.home_anim_tab_calving());
 </script>
@@ -192,8 +214,8 @@
 					</div>
 
 					<div class="hud-row bottom">
-						<span class="pill status" class:sent={shownPhase >= 5}>
-							{#if shownPhase >= 5}
+						<span class="pill status" class:sent>
+							{#if sent}
 								<Icon name="check" size={12} stroke={2.6} />
 								{m.home_anim_sent()}
 							{:else}
@@ -218,10 +240,8 @@
 		<div class="phone-wrap">
 			<PhoneMock
 				{scene}
-				phase={shownPhase}
-				label={finalLabel}
-				title={scene === 'heat' ? m.home_anim_heat_title() : m.home_anim_calving_title()}
-				body={scene === 'heat' ? m.home_anim_heat_body() : m.home_anim_calving_body()}
+				{messages}
+				arrived={shownAlerts}
 				clock={phoneClock}
 				status={m.home_anim_status()}
 				now={m.home_anim_now()}

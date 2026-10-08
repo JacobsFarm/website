@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Heat detected",
   "home_anim_heat_body": "Mounting seen on camera 3. Check the photo and the clip.",
   "home_anim_calving_title": "Calving started",
-  "home_anim_calving_body": "Water bag and legs visible in the calving pen.",
+  "home_anim_bag_title": "Water bag spotted",
+  "home_anim_bag_body": "Calving is starting in the calving pen. Keep an eye on her.",
+  "home_anim_calving_body": "Legs are visible now. Time to check on her.",
+  "home_anim_calf_title": "Calf is coming out",
+  "home_anim_calf_body": "Head and body are out. Check that the calf is breathing.",
 
   "home_how_eyebrow": "How it works",
   "home_how_title": "From barn camera to your phone",

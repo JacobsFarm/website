@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Calore rilevato",
   "home_anim_heat_body": "Monta rilevata sulla telecamera 3. Controlla la foto e il clip.",
   "home_anim_calving_title": "Parto iniziato",
-  "home_anim_calving_body": "Sacco amniotico e zampe visibili nel box parto.",
+  "home_anim_bag_title": "Sacco amniotico rilevato",
+  "home_anim_bag_body": "Il parto sta iniziando nel box parto. Tienila d'occhio.",
+  "home_anim_calving_body": "Le zampe sono ora visibili. È ora di andare a controllare.",
+  "home_anim_calf_title": "Il vitello sta uscendo",
+  "home_anim_calf_body": "Testa e corpo sono fuori. Controlla che il vitello respiri bene.",
 
   "home_how_eyebrow": "Come funziona",
   "home_how_title": "Dalla telecamera della stalla al tuo telefono",

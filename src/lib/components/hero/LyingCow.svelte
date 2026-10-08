@@ -9,29 +9,42 @@
 	 * @property {boolean} labour   - Weeën: staart omhoog, kop iets geheven.
 	 * @property {boolean} waterBag - Waterblaas zichtbaar.
 	 * @property {boolean} legs     - Voorpootjes van het kalf zichtbaar.
+	 * @property {boolean} calf     - Kop en lichaam van het kalf komen eruit.
 	 */
-	let { uid, labour = false, waterBag = false, legs = false } = $props();
+	let { uid, labour = false, waterBag = false, legs = false, calf = false } = $props();
 
 	const body =
 		'M28,-62 C26,-90 64,-100 116,-98 C166,-96 204,-88 212,-62 C218,-36 206,-12 182,-8 L58,-8 C36,-8 30,-32 28,-62 Z';
 </script>
 
-<g class="lying" class:labour class:water-bag={waterBag} class:legs>
+<g class="lying" class:labour class:water-bag={waterBag} class:legs class:calf-out={calf}>
 	<defs>
 		<clipPath id="{uid}-clip"><path d={body} /></clipPath>
 	</defs>
 
 	<ellipse class="ground-shadow" cx="118" cy="1" rx="122" ry="8" />
 
-	<!-- Pootjes van het kalf: liggen achter de romp en schuiven naar buiten. -->
-	<g class="calf-legs">
-		<g transform="rotate(8 210 -62)">
-			<rect x="190" y="-67" width="58" height="9" rx="4.5" class="calf" />
-			<rect x="242" y="-68.5" width="13" height="12" rx="3.5" class="calf-hoof" />
+	<!-- Het kalf ligt achter de romp. Eerst schuiven de pootjes naar buiten,
+	     daarna glijdt het hele kalf (kop op de pootjes) schuin naar beneden. -->
+	<g class="calf-all" style="transform-origin: 214px -56px">
+		<g class="calf-legs">
+			<g transform="rotate(8 210 -62)">
+				<rect x="190" y="-67" width="58" height="9" rx="4.5" class="calf" />
+				<rect x="242" y="-68.5" width="13" height="12" rx="3.5" class="calf-hoof" />
+			</g>
+			<g transform="rotate(22 210 -54)">
+				<rect x="190" y="-58" width="52" height="9" rx="4.5" class="calf" />
+				<rect x="236" y="-59.5" width="13" height="12" rx="3.5" class="calf-hoof" />
+			</g>
 		</g>
-		<g transform="rotate(22 210 -54)">
-			<rect x="190" y="-58" width="52" height="9" rx="4.5" class="calf" />
-			<rect x="236" y="-59.5" width="13" height="12" rx="3.5" class="calf-hoof" />
+
+		<g class="calf-body">
+			<ellipse cx="146" cy="-62" rx="38" ry="18" class="calf" />
+			<ellipse cx="140" cy="-70" rx="12" ry="7" class="calf-patch" />
+			<path d="M168,-70 C170,-80 186,-80 194,-72 L202,-62 C205,-57 201,-52 195,-53 L178,-56 C170,-58 166,-63 168,-70 Z" class="calf" />
+			<ellipse cx="172" cy="-75" rx="6" ry="3.5" class="calf-patch" transform="rotate(-25 172 -75)" />
+			<circle cx="185" cy="-69" r="1.8" class="eye" />
+			<ellipse cx="199" cy="-57" rx="3" ry="2.4" class="calf-nose" />
 		</g>
 	</g>
 
@@ -104,6 +117,14 @@
 		fill: var(--calf-leg);
 	}
 
+	.calf-patch {
+		fill: oklch(48% 0.04 70);
+	}
+
+	.calf-nose {
+		fill: var(--cow-pink);
+	}
+
 	.calf-hoof {
 		fill: var(--calf-hoof);
 	}
@@ -173,6 +194,20 @@
 
 	.legs .calf-legs {
 		transform: none;
+	}
+
+	.calf-all {
+		transition: transform 1.6s var(--ease-spring);
+	}
+
+	.calf-out .calf-all {
+		transform: translate(62px, 8px) rotate(16deg);
+	}
+
+	/* De waterblaas is gebroken zodra het kalf eruit komt. */
+	.calf-out .bag {
+		transform: scale(0.3);
+		opacity: 0;
 	}
 
 	@keyframes breathe {

@@ -4,27 +4,56 @@
 	import Icon from '../Icon.svelte';
 
 	/**
-	 * Telefoon met een Telegram-achtige chat. Bij fase 5 komt de melding binnen:
-	 * eerst een pushbericht bovenin, daarna de foto en de videoclip in de chat.
+	 * Telefoon met een Telegram-achtige chat. Elke keer dat `arrived` oploopt
+	 * komt er een melding binnen: de telefoon trilt, er verschijnt een
+	 * pushbericht bovenin en daarna het bericht met foto in de chat. Na het
+	 * laatste bericht volgt de videoclip.
+	 *
+	 * @typedef {{ phase: number, label: string, title: string, body: string }} Message
 	 */
 	let {
 		scene = 'heat',
-		phase = 0,
-		label = '',
-		title = '',
-		body = '',
+		/** @type {Message[]} */
+		messages = [],
+		arrived = 0,
 		clock = '02:14',
 		status = '',
 		now = 'now',
 		clip = 'Video clip'
 	} = $props();
 
-	const arrived = $derived(phase >= 5);
+	/** @type {HTMLElement} */
+	let device;
+
 	const emoji = $derived(scene === 'heat' ? '🐄' : '🐮');
+	const latest = $derived(messages[arrived - 1]);
+	const done = $derived(arrived > 0 && arrived >= messages.length);
+
+	// Trillen bij elke nieuwe melding.
+	$effect(() => {
+		if (arrived === 0 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+		const buzz = device.animate(
+			[
+				{ transform: 'none' },
+				{ transform: 'translateX(-1px) rotate(-0.6deg)', offset: 0.1 },
+				{ transform: 'translateX(2px) rotate(0.8deg)', offset: 0.2 },
+				{ transform: 'translateX(-3px) rotate(-1deg)', offset: 0.3 },
+				{ transform: 'translateX(3px) rotate(1deg)', offset: 0.4 },
+				{ transform: 'translateX(-3px) rotate(-1deg)', offset: 0.5 },
+				{ transform: 'translateX(3px) rotate(1deg)', offset: 0.6 },
+				{ transform: 'translateX(-3px) rotate(-1deg)', offset: 0.7 },
+				{ transform: 'translateX(2px) rotate(0.8deg)', offset: 0.8 },
+				{ transform: 'translateX(-1px) rotate(-0.6deg)', offset: 0.9 },
+				{ transform: 'none' }
+			],
+			{ duration: 600, delay: 100, easing: 'cubic-bezier(0.36, 0.07, 0.19, 0.97)' }
+		);
+		return () => buzz.cancel();
+	});
 </script>
 
-<div class="phone" class:arrived>
-	<div class="device">
+<div class="phone">
+	<div class="device" bind:this={device}>
 		<div class="screen">
 			<div class="island"></div>
 
@@ -36,13 +65,17 @@
 				</span>
 			</div>
 
-			<div class="banner" class:show={arrived}>
-				<Logo size={22} wordmark={false} />
-				<div class="banner-text">
-					<span class="banner-top"><b>CowCatcher AI</b><span>{now}</span></span>
-					<span class="banner-msg">{emoji} {title}</span>
-				</div>
-			</div>
+			{#key arrived}
+				{#if latest}
+					<div class="banner show">
+						<Logo size={22} wordmark={false} />
+						<div class="banner-text">
+							<span class="banner-top"><b>CowCatcher AI</b><span>{now}</span></span>
+							<span class="banner-msg">{emoji} {latest.title}</span>
+						</div>
+					</div>
+				{/if}
+			{/key}
 
 			<div class="chat-head">
 				<Icon name="arrow-left" size={14} stroke={2} />
@@ -53,25 +86,29 @@
 			<div class="chat">
 				<span class="sys">{status}</span>
 
-				<div class="bubble photo" class:show={arrived}>
-					<div class="thumb">
-						{#key scene}
-							<BarnScene {scene} phase={5} {label} still />
-						{/key}
+				{#each messages as msg, i (`${scene}-${i}`)}
+					<div class="slot photo" class:show={arrived > i}>
+						<div class="bubble">
+							<div class="thumb">
+								<BarnScene {scene} phase={msg.phase} label={msg.label} still />
+							</div>
+							<div class="msg">
+								<b>{emoji} {msg.title}</b>
+								<p>{msg.body}</p>
+								<span class="meta">
+									<span class="conf">{msg.label}</span>
+									<span>{clock} ✓✓</span>
+								</span>
+							</div>
+						</div>
 					</div>
-					<div class="msg">
-						<b>{emoji} {title}</b>
-						<p>{body}</p>
-						<span class="meta">
-							<span class="conf">{label}</span>
-							<span>{clock} ✓✓</span>
-						</span>
-					</div>
-				</div>
+				{/each}
 
-				<div class="bubble clip" class:show={arrived}>
-					<span class="clip-thumb"><Icon name="play" size={12} /></span>
-					<span>{clip} · 0:08</span>
+				<div class="slot clip" class:show={done}>
+					<div class="bubble">
+						<span class="clip-thumb"><Icon name="play" size={12} /></span>
+						<span>{clip} · 0:08</span>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -94,10 +131,6 @@
 			inset 0 0 0 1.4cqw #0c0f0c,
 			0 2px 6px oklch(15% 0.03 150 / 0.3),
 			0 30px 60px -18px oklch(15% 0.04 150 / 0.55);
-	}
-
-	.arrived .device {
-		animation: buzz 0.6s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.1s;
 	}
 
 	.screen {
@@ -181,10 +214,11 @@
 
 	.chat {
 		flex: 1;
+		min-height: 0;
+		overflow: hidden;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		gap: 2.4cqw;
 		padding: 3cqw 3.4cqw 6cqw;
 		background:
 			radial-gradient(circle at 20% 20%, oklch(100% 0 0 / 0.5) 0 1px, transparent 1.5px) 0 0 / 9cqw 9cqw,
@@ -204,6 +238,25 @@
 		line-height: 1.3;
 	}
 
+	/* Een bericht neemt pas ruimte in als het binnenkomt; oudere berichten
+	   schuiven dan omhoog, net als in een echte chat. */
+	.slot {
+		display: grid;
+		grid-template-rows: 0fr;
+		transition:
+			grid-template-rows 0.5s var(--ease-out),
+			margin-top 0.5s var(--ease-out);
+	}
+
+	.slot.show {
+		grid-template-rows: 1fr;
+		margin-top: 2.4cqw;
+	}
+
+	.slot > .bubble {
+		min-height: 0;
+	}
+
 	.bubble {
 		max-width: 92%;
 		border-radius: 4.5cqw 4.5cqw 4.5cqw 1.2cqw;
@@ -217,20 +270,22 @@
 			transform 0.6s var(--ease-spring);
 	}
 
-	.bubble.show {
+	.show > .bubble {
 		opacity: 1;
 		transform: none;
 	}
 
-	.photo.show {
+	.photo.show,
+	.photo.show > .bubble {
 		transition-delay: 0.45s;
 	}
 
-	.clip.show {
+	.clip.show,
+	.clip.show > .bubble {
 		transition-delay: 1.1s;
 	}
 
-	.photo {
+	.photo > .bubble {
 		padding: 1.2cqw;
 	}
 
@@ -278,7 +333,7 @@
 		white-space: nowrap;
 	}
 
-	.clip {
+	.clip > .bubble {
 		display: flex;
 		align-items: center;
 		gap: 2.4cqw;
@@ -362,26 +417,6 @@
 		100% {
 			opacity: 0;
 			transform: translateY(-140%);
-		}
-	}
-
-	@keyframes buzz {
-		10%,
-		90% {
-			transform: translateX(-1px) rotate(-0.6deg);
-		}
-		20%,
-		80% {
-			transform: translateX(2px) rotate(0.8deg);
-		}
-		30%,
-		50%,
-		70% {
-			transform: translateX(-3px) rotate(-1deg);
-		}
-		40%,
-		60% {
-			transform: translateX(3px) rotate(1deg);
 		}
 	}
 </style>

@@ -38,7 +38,11 @@
   "home_anim_heat_title": "Brunst erkannt",
   "home_anim_heat_body": "Aufspringen auf Kamera 3 erkannt. Sehen Sie sich Foto und Clip an.",
   "home_anim_calving_title": "Kalbung hat begonnen",
-  "home_anim_calving_body": "Fruchtblase und Klauen in der Abkalbebox sichtbar.",
+  "home_anim_bag_title": "Fruchtblase erkannt",
+  "home_anim_bag_body": "Die Kalbung beginnt in der Abkalbebox. Behalten Sie sie im Auge.",
+  "home_anim_calving_body": "Die Klauen sind jetzt sichtbar. Zeit, nach ihr zu sehen.",
+  "home_anim_calf_title": "Kalb kommt heraus",
+  "home_anim_calf_body": "Kopf und Körper sind draußen. Prüfen Sie, ob das Kalb gut atmet.",
 
   "home_how_eyebrow": "So funktioniert es",
   "home_how_title": "Von der Stallkamera aufs Handy",
