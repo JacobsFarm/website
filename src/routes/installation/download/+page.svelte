@@ -8,6 +8,9 @@
     import InstallProgress from '$lib/components/InstallProgress.svelte';
     import PagerNav from '$lib/components/PagerNav.svelte';
     import Icon from '$lib/components/Icon.svelte';
+    import ZoomableImage from '$lib/components/ZoomableImage.svelte';
+
+    import setupImg from '$lib/assets/app_setup_cameras.jpg';
 
     import windowsLogo from '$lib/assets/download_windows_logo.jpg';
     import macOSLogo from '$lib/assets/download_macOS_logo.jpg';
@@ -26,14 +29,14 @@
             link: '/installation/download/macOS',
             desc: m.download_card_macos_desc,
             logo: macOSLogo,
-            meta: 'Apple Silicon · Intel'
+            meta: 'macOS 14+ · Apple Silicon'
         },
         {
             title: m.download_card_linux_title,
             link: '/installation/download/docker',
             desc: m.download_card_linux_desc,
             logo: linuxLogo,
-            meta: 'Docker · Jetson'
+            meta: 'Ubuntu · Docker · Jetson'
         }
     ];
 </script>
@@ -70,6 +73,14 @@
         {/each}
     </ul>
 
+    <section class="how" use:reveal>
+        <div class="how-copy">
+            <h2>{m.download_how_title()}</h2>
+            <p>{m.download_how_text()}</p>
+        </div>
+        <ZoomableImage src={setupImg} alt="Setup of AI Detector in the browser: connect your cameras" />
+    </section>
+
     <div class="pager-wrap">
         <PagerNav
             prev={{ href: '/installation/hardware', label: stripNumber(m.install_card_hardware_title()), hint: `${m.step_label()} 1` }}
@@ -79,6 +90,37 @@
 </div>
 
 <style>
+    .how {
+        display: grid;
+        gap: 1.5rem;
+        align-items: center;
+        margin-top: clamp(2.5rem, 5vw, 4rem);
+        padding: clamp(1.25rem, 3vw, 2rem);
+        border-radius: var(--radius-xl);
+        background: var(--surface-tint);
+        box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    .how-copy {
+        display: grid;
+        gap: 0.75rem;
+    }
+
+    .how h2 {
+        font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    }
+
+    .how p {
+        color: var(--text-muted);
+    }
+
+    @media (min-width: 900px) {
+        .how {
+            grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+            gap: 3rem;
+        }
+    }
+
     .choose {
         margin: clamp(3rem, 6vw, 4.5rem) 0 1.5rem;
         font-size: clamp(2rem, 4vw, 2.8rem);

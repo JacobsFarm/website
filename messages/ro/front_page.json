@@ -7,7 +7,6 @@
   "front_page_calvingcatcher_title": "CalvingCatcher",
   "front_page_calvingcatcher_desc": "Un instrument de viziune care detectează etapele cheie ale fătării, de la punga de apă și picioare până la cap și vițelul nou-născut.",
   "front_page_ai_detector_title": "AI Detector",
-  "front_page_ai_detector_desc": "Instrumentul local pentru utilizarea modelelor de viziune, cu multe setări personale pentru a-l adapta preferințelor tale.",
   "front_page_intro_title": "Pentru fermieri, de către fermieri",
   "front_page_intro_p1": "Suntem o comunitate globală de fermieri care au dezvoltat împreună un instrument puternic de viziune computerizată — deschis, onest și construit pentru practica din lumea reală. Ceea ce este în mod normal posibil doar cu transmițătoare scumpe și abonamente costisitoare, noi facem accesibil tuturor.",
   "front_page_intro_p2": "Software-ul nostru este complet gratuit de descărcat și utilizat. Fără costuri ascunse, fără obligații. Ceea ce descarci astăzi rămâne al tău și pur și simplu funcționează — chiar și peste ani de acum încolo. Și, poate cel mai important: toate datele tale rămân complet sub propriul tău control.",
@@ -32,5 +31,6 @@
   "front_page_stats_detections": "Detecții",
   "front_page_stats_countries": "Țări",
   "front_page_stats_disclaimer": "*Nu știm exact câte ferme folosesc software-ul, deoarece totul rulează local. Acest număr prezintă doar fermele care au contactat activ proiectul.",
-  "front_page_featured_in_title": "Prezentat în"
+  "front_page_featured_in_title": "Prezentat în",
+  "front_page_ai_detector_desc": "Aplicația care rulează modelele noastre de viziune pe propriul tău calculator: configurare în browser, alerte pe telefon."
 }

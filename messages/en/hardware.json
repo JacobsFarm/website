@@ -2,28 +2,25 @@
   "hardware_more_info": "More information",
   "hardware_title": "Hardware Installation",
   "hardware_intro": "For CowCatcherAI, you need two main hardware components: security cameras and a computer to process the images using AI. Choose the setup that best fits your farm.",
-  
   "hardware_computer_title": "1. The Computer (AI Host)",
   "hardware_computer_intro": "The software runs locally on your own hardware for maximum privacy and speed. Depending on the number of cameras and your budget, you can choose from the following setups:",
   "hardware_comp_opt1_title": "Gaming PC (NVIDIA GPU)",
   "hardware_comp_opt1_desc": "Maximum speed and performance. Suitable for up to 15 cameras.",
-  "hardware_comp_opt1_more": "Requires an NVIDIA GPU from generation RTX 3060 (for CUDA 13) or from generation GTX (for CUDA 12.6). This setup extracts the maximum speed from the program, making it ideal for large barns.",
+  "hardware_comp_opt1_more": "AI Detector uses a supported NVIDIA graphics card automatically, both on Windows and in the Docker container on Linux. This gives the highest speed, ideal for large barns with many cameras.",
   "hardware_comp_opt2_title": "Mac mini (M4)",
   "hardware_comp_opt2_desc": "Energy-efficient, compact, and extremely user-friendly. Suitable for up to 8 cameras.",
-  "hardware_comp_opt2_more": "Its strength lies in low energy consumption and ease of use. It runs the native OS version of our program seamlessly.",
-  "hardware_comp_opt3_title": "NVIDIA Jetson Nano",
+  "hardware_comp_opt2_more": "Its strength lies in low energy consumption and ease of use. Detection runs on the Neural Engine of the Apple Silicon chip. Requires macOS 14 or newer; Intel Macs are not supported.",
+  "hardware_comp_opt3_title": "NVIDIA Jetson Orin Nano",
   "hardware_comp_opt3_desc": "Edge computing with the lowest purchase price and energy consumption. Suitable for up to 6 cameras.",
-  "hardware_comp_opt3_more": "Disadvantages are the complexity of the installation and the requirement to use the Docker version of the program.",
+  "hardware_comp_opt3_more": "Runs AI Detector in the Docker container on JetPack 7.2. The installation takes a little more work than on Windows or Mac; the Linux / Docker guide explains every step.",
   "hardware_comp_opt4_title": "Refurbished Desktop (Intel i5)",
   "hardware_comp_opt4_desc": "The lowest purchase price. Suitable for 1 or 2 cameras.",
-  "hardware_comp_opt4_more": "Has a slower processing time (around 250 ms) and an average energy consumption of about 100 watts. This setup runs the WINML version of our program.",
-
+  "hardware_comp_opt4_more": "Has a slower processing time and an average energy consumption of about 100 watts. On Windows, AI Detector runs on Windows ML here, which works with any Intel or AMD graphics.",
   "hardware_cameras_title": "2. The Cameras",
   "hardware_cameras_intro": "You can use almost any IP camera, provided it supports RTSP (Real-Time Streaming Protocol). Ensure they are mounted high for a clear view.",
   "hardware_cam_opt1_title": "Standard IP Camera",
   "hardware_cam_opt1_desc": "Basic RTSP supported network camera.",
   "hardware_cam_opt1_more": "Ideal for well-lit barns. Make sure it has a stable wired connection to your network switch.",
-
   "hardware_requirements_title": "3. Requirements",
   "hardware_requirements_intro": "To connect everything reliably, you will need the following networking and protection components:",
   "hardware_req_opt1_title": "PoE Network Switch",
@@ -35,7 +32,6 @@
   "hardware_req_opt3_title": "Waterproof Box",
   "hardware_req_opt3_desc": "Protection against water and dust in the barn.",
   "hardware_req_opt3_more": "In the barn, water and dust are your biggest enemies. The cleanest solution is to tuck the cable connection away in a neat waterproof box with cable glands (wartels). At the very least, make sure to tape the connection completely tight.",
-
   "hardware_diy_title": "4. DIY Cable Making",
   "hardware_diy_intro": "Making and routing the cables yourself is easy and very manageable. Instead of buying pre-made cables with connectors, you can install them yourself. Here is what you need:",
   "hardware_diy_opt1_title": "Pass-through Crimp Tool",
@@ -50,7 +46,6 @@
   "hardware_diy_opt4_title": "Impact-Resistant PVC Pipes",
   "hardware_diy_opt4_desc": "Heavy-duty PVC conduit to protect the routing.",
   "hardware_diy_opt4_more": "Use impact-resistant PVC pipes to neatly hide and protect the cables from animals, dust, or physical damage in the barn.",
-
   "hardware_btn_back": "Back to overview",
   "hardware_btn_next": "Proceed to Software"
 }

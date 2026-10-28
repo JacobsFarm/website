@@ -6,147 +6,108 @@
     import PageHeader from '$lib/components/PageHeader.svelte';
     import InstallProgress from '$lib/components/InstallProgress.svelte';
     import DocLayout from '$lib/components/DocLayout.svelte';
+    import InstallStep from '$lib/components/InstallStep.svelte';
     import PagerNav from '$lib/components/PagerNav.svelte';
     import Icon from '$lib/components/Icon.svelte';
 
+    import imgRecordings from '$lib/assets/app_recordings.jpg';
+    import imgViewer from '$lib/assets/app_recording_viewer.jpg';
+    import imgCamerasLive from '$lib/assets/app_cameras_live.jpg';
+    import imgCamerasHistory from '$lib/assets/app_cameras_history.jpg';
+    import imgDetectors from '$lib/assets/app_detectors.jpg';
+    import imgDetectorEdit from '$lib/assets/app_detector_edit.jpg';
+    import imgStatus from '$lib/assets/app_status.jpg';
+    import imgAlerts from '$lib/assets/app_alerts.jpg';
+    import imgQuietHours from '$lib/assets/app_alerts_quiet_hours.jpg';
+    import imgAiCheck from '$lib/assets/app_ai_check.jpg';
+    import imgDevices from '$lib/assets/app_devices.jpg';
+    import imgStorage from '$lib/assets/app_storage.jpg';
+    import imgSettings from '$lib/assets/app_settings.jpg';
+
     /**
-     * De configuratiemodules van de AI-detector.
-     * Elke module heeft één of meer groepen variabelen; een groep met een
-     * `label` wordt als subkop weergegeven (zoals Disk / Telegram / Webhook).
+     * Rondleiding door de app, pagina voor pagina. Elke sectie heeft een
+     * korte uitleg, de belangrijkste punten en de bijbehorende
+     * schermafbeeldingen (gevoelige gegevens zijn daarin afgeschermd).
      */
-    /** @type {Array<{ title: () => string, desc: () => string, groups: Array<{ label?: string, vars: Array<{ name: string, desc: () => string }> }> }>} */
-    const modules = [
+    const sections = [
         {
-            title: m.opt_det_title,
-            desc: m.opt_det_desc,
-            groups: [
-                {
-                    vars: [
-                        { name: 'source', desc: m.opt_det_source },
-                        { name: 'interval', desc: m.opt_det_interval },
-                        { name: 'frame_retention', desc: m.opt_det_retention }
-                    ]
-                }
+            title: m.use_rec_title,
+            desc: m.use_rec_desc,
+            items: [m.use_rec_1, m.use_rec_2, m.use_rec_3, m.use_rec_4, m.use_rec_5],
+            images: [
+                { src: imgRecordings, alt: 'Recordings page of AI Detector', caption: m.use_rec_caption },
+                { src: imgViewer, alt: 'Recording viewer with a detected mount', caption: m.use_rec_viewer_caption }
             ]
         },
         {
-            title: m.opt_yolo_title,
-            desc: m.opt_yolo_desc,
-            groups: [
-                {
-                    vars: [
-                        { name: 'model', desc: m.opt_yolo_model },
-                        { name: 'confidence', desc: m.opt_yolo_conf },
-                        { name: 'time_max', desc: m.opt_yolo_timemax },
-                        { name: 'timeout', desc: m.opt_yolo_timeout },
-                        { name: 'cooldown', desc: m.opt_yolo_cooldown },
-                        { name: 'include_trailing_time', desc: m.opt_yolo_trailing },
-                        { name: 'frames_min', desc: m.opt_yolo_framesmin },
-                        { name: 'imgsz', desc: m.opt_yolo_imgsz },
-                        { name: 'strategy', desc: m.opt_yolo_strat }
-                    ]
-                }
+            title: m.use_cam_title,
+            desc: m.use_cam_desc,
+            items: [m.use_cam_1, m.use_cam_2, m.use_cam_3, m.use_cam_4],
+            images: [
+                { src: imgCamerasLive, alt: 'Cameras page with live pictures', caption: m.use_cam_caption },
+                { src: imgCamerasHistory, alt: 'Camera history of the last 24 hours', caption: m.use_cam_history_caption }
             ]
         },
         {
-            title: m.opt_vlm_title,
-            desc: m.opt_vlm_desc,
-            groups: [
-                {
-                    vars: [
-                        { name: 'prompt', desc: m.opt_vlm_prompt },
-                        { name: 'model', desc: m.opt_vlm_model },
-                        { name: 'key', desc: m.opt_vlm_key },
-                        { name: 'url', desc: m.opt_vlm_url },
-                        { name: 'strategy', desc: m.opt_vlm_strat }
-                    ]
-                }
+            title: m.use_det_title,
+            desc: m.use_det_desc,
+            items: [m.use_det_1, m.use_det_2, m.use_det_3, m.use_det_4, m.use_det_5],
+            images: [
+                { src: imgDetectors, alt: 'Detectors page with three detectors', caption: m.use_det_caption },
+                { src: imgDetectorEdit, alt: 'Editing a detector: preset and cameras', caption: m.use_det_edit_caption }
             ]
         },
         {
-            title: m.opt_exp_title,
-            desc: m.opt_exp_desc,
-            groups: [
-                {
-                    label: 'Disk (Opslag)',
-                    vars: [
-                        { name: 'directory', desc: m.opt_exp_disk_dir },
-                        { name: 'strategy', desc: m.opt_exp_disk_strat },
-                        { name: 'confidence', desc: m.opt_exp_disk_conf },
-                        { name: 'export_rejected', desc: m.opt_exp_disk_rej }
-                    ]
-                },
-                {
-                    label: 'Telegram',
-                    vars: [
-                        { name: 'token', desc: m.opt_exp_tele_token },
-                        { name: 'chat', desc: m.opt_exp_tele_chat },
-                        { name: 'confidence', desc: m.opt_exp_tele_conf },
-                        { name: 'alert_every', desc: m.opt_exp_tele_alert },
-                        { name: 'include_plot', desc: m.opt_exp_tele_plot },
-                        { name: 'include_crop', desc: m.opt_exp_tele_crop },
-                        { name: 'include_video', desc: m.opt_exp_tele_vid },
-                        { name: 'video_width', desc: m.opt_exp_tele_width },
-                        { name: 'video_crf', desc: m.opt_exp_tele_crf },
-                        { name: 'export_rejected', desc: m.opt_exp_tele_rej }
-                    ]
-                },
-                {
-                    label: 'Webhook',
-                    vars: [
-                        { name: 'url', desc: m.opt_exp_web_url },
-                        { name: 'token', desc: m.opt_exp_web_token },
-                        { name: 'confidence', desc: m.opt_exp_web_conf },
-                        { name: 'data_type', desc: m.opt_exp_web_type },
-                        { name: 'data_max', desc: m.opt_exp_web_max },
-                        { name: 'include_plot', desc: m.opt_exp_web_plot },
-                        { name: 'include_crop', desc: m.opt_exp_web_crop },
-                        { name: 'include_video', desc: m.opt_exp_web_vid },
-                        { name: 'video_width', desc: m.opt_exp_web_width },
-                        { name: 'video_crf', desc: m.opt_exp_web_crf },
-                        { name: 'export_rejected', desc: m.opt_exp_web_rej }
-                    ]
-                }
+            title: m.use_status_title,
+            desc: m.use_status_desc,
+            items: [m.use_status_1, m.use_status_2, m.use_status_3, m.use_status_4],
+            images: [{ src: imgStatus, alt: 'Monitoring status page', caption: m.use_status_caption }]
+        },
+        {
+            title: m.use_alerts_title,
+            desc: m.use_alerts_desc,
+            items: [m.use_alerts_1, m.use_alerts_2, m.use_alerts_3, m.use_alerts_4],
+            images: [
+                { src: imgAlerts, alt: 'Alerts settings with Telegram recipients', caption: m.use_alerts_caption },
+                { src: imgQuietHours, alt: 'Telegram recipient with quiet hours', caption: m.use_alerts_quiet_caption }
             ]
         },
         {
-            title: m.opt_health_title,
-            desc: m.opt_health_desc,
-            groups: [
-                {
-                    vars: [
-                        { name: 'url', desc: m.opt_health_url },
-                        { name: 'method', desc: m.opt_health_method },
-                        { name: 'interval', desc: m.opt_health_interval },
-                        { name: 'timeout', desc: m.opt_health_timeout },
-                        { name: 'headers', desc: m.opt_health_headers },
-                        { name: 'body', desc: m.opt_health_body }
-                    ]
-                }
+            title: m.use_ai_title,
+            desc: m.use_ai_desc,
+            items: [m.use_ai_1, m.use_ai_2, m.use_ai_3],
+            images: [{ src: imgAiCheck, alt: 'AI check settings page', caption: m.use_ai_caption }]
+        },
+        {
+            title: m.use_devices_title,
+            desc: m.use_devices_desc,
+            items: [m.use_devices_1, m.use_devices_2, m.use_devices_3],
+            images: [{ src: imgDevices, alt: 'Devices settings page', caption: m.use_devices_caption }]
+        },
+        {
+            title: m.use_storage_title,
+            desc: m.use_storage_desc,
+            items: [m.use_storage_1, m.use_storage_2, m.use_storage_3, m.use_storage_4],
+            images: [
+                { src: imgStorage, alt: 'Storage settings page', caption: m.use_storage_caption },
+                { src: imgSettings, alt: 'Settings overview of AI Detector', caption: m.use_settings_caption }
             ]
         },
         {
-            title: m.opt_onnx_title,
-            desc: m.opt_onnx_desc,
-            groups: [
-                {
-                    vars: [
-                        { name: 'provider', desc: m.opt_onnx_provider },
-                        { name: 'winml', desc: m.opt_onnx_winml },
-                        { name: 'opset', desc: m.opt_onnx_opset }
-                    ]
-                }
-            ]
+            title: m.use_more_title,
+            desc: m.use_more_desc,
+            items: [m.use_more_1, m.use_more_2, m.use_more_3, m.use_more_4, m.use_more_5],
+            images: []
         }
     ];
 
-    const toc = modules.map((module, i) => ({ id: `module-${i + 1}`, label: stripNumber(module.title()) }));
+    const toc = sections.map((section, i) => ({ id: `step-${i + 1}`, label: section.title() }));
 </script>
 
 <Seo title={m.options_title()} description={m.options_intro()} />
 
 <PageHeader
-    eyebrow="{m.step_label()} 3 · config.json"
+    eyebrow="{m.step_label()} 3"
     title={m.options_title()}
     lead={m.options_intro()}
     crumbs={[{ href: '/installation', label: m.nav_install() }]}
@@ -157,36 +118,25 @@
 </div>
 
 <DocLayout {toc}>
-    {#each modules as module, i (module.title)}
-        <section class="module" id="module-{i + 1}">
-            <header class="module-head">
-                <span class="module-num">0{i + 1}</span>
-                <div>
-                    <h2>{stripNumber(module.title())}</h2>
-                    <p>{module.desc()}</p>
-                </div>
-            </header>
-
-            {#each module.groups as group}
-                {#if group.label}
-                    <h3 class="group-label">{group.label}</h3>
-                {/if}
-                <dl class="vars">
-                    {#each group.vars as variable (variable.name)}
-                        <div class="var">
-                            <dt><code>{variable.name}</code></dt>
-                            <dd>{variable.desc()}</dd>
-                        </div>
-                    {/each}
-                </dl>
-            {/each}
-        </section>
+    {#each sections as section, i (section.title)}
+        <InstallStep
+            number={i + 1}
+            title={section.title()}
+            images={section.images.map((image) => ({ ...image, caption: image.caption() }))}
+        >
+            <p class="section-desc">{section.desc()}</p>
+            <ul class="check-list">
+                {#each section.items as item}
+                    <li>{@html item()}</li>
+                {/each}
+            </ul>
+        </InstallStep>
     {/each}
 
     <div class="github">
         <span class="github-icon"><Icon name="github" size={26} /></span>
         <p>{m.options_github_text()}</p>
-        <a href={links.detectorConfig} target="_blank" rel="noopener noreferrer" class="btn btn--ink">
+        <a href={links.detectorRepo} target="_blank" rel="noopener noreferrer" class="btn btn--ink">
             {m.options_github_btn()}
             <span class="btn__icon btn__icon--up"><Icon name="arrow-up-right" /></span>
         </a>
@@ -203,87 +153,8 @@
         margin-bottom: clamp(2.5rem, 5vw, 4rem);
     }
 
-    .module {
-        margin: 0 0 1.25rem !important;
-        padding: clamp(1.25rem, 3vw, 2rem);
-        border-radius: var(--radius-lg);
-        background: var(--card-bg);
-        box-shadow:
-            0 0 0 1px var(--line),
-            var(--shadow-sm);
-        scroll-margin-top: var(--nav-offset);
-    }
-
-    .module-head {
-        display: flex;
-        gap: 1rem;
-        align-items: flex-start;
-        padding-bottom: 1.25rem;
-        margin-bottom: 0.5rem;
-        border-bottom: 1px solid var(--line);
-    }
-
-    .module-num {
-        flex-shrink: 0;
-        font-family: var(--font-heading);
-        font-size: 2.6rem;
-        line-height: 0.85;
-        color: var(--accent-amber);
-    }
-
-    .module-head h2 {
-        margin: 0 0 0.5rem;
-        font-size: clamp(1.8rem, 3.5vw, 2.3rem);
-    }
-
-    .module-head p {
+    .section-desc {
         color: var(--text-muted);
-    }
-
-    .group-label {
-        display: inline-block;
-        margin: 1.75rem 0 0.25rem !important;
-        padding: 0.2rem 0.6rem;
-        border-radius: var(--radius-xs);
-        background: var(--amber-soft);
-        color: var(--amber-ink);
-        font-size: 0.8rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-    }
-
-    .vars {
-        margin: 0 !important;
-    }
-
-    .var {
-        display: grid;
-        gap: 0.35rem;
-        padding: 0.95rem 0;
-        border-bottom: 1px dashed var(--line-strong);
-    }
-
-    .var:last-child {
-        border-bottom: 0;
-        padding-bottom: 0;
-    }
-
-    .var dt code {
-        font-weight: 600;
-    }
-
-    .var dd {
-        margin: 0;
-        color: var(--text-muted);
-        font-size: 0.97rem;
-    }
-
-    @media (min-width: 720px) {
-        .var {
-            grid-template-columns: 12rem minmax(0, 1fr);
-            gap: 1.5rem;
-            align-items: baseline;
-        }
     }
 
     .github {

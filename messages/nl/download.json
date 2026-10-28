@@ -1,10 +1,12 @@
 {
   "download_title": "Installatie & Downloads",
-  "download_intro_text": "De installatie is zo makkelijk mogelijk ontworpen. Volg simpelweg de stappen voor jouw besturingssysteem hieronder en je kunt direct aan de slag met CowCatcherAI.",
+  "download_intro_text": "Eén app voor tochtdetectie en afkalfdetectie: AI Detector. Download hem voor je computer, open hem en de setup gaat verder in je browser. Kies hieronder je systeem voor de stap-voor-stap-handleiding.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Voor download op Windows 10 en Windows 11 computers.",
+  "download_card_windows_desc": "Voor pc's met Windows 10 (22H2 of nieuwer) of Windows 11. Gebruikt automatisch een NVIDIA-videokaart als je die hebt.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Voor Apple devices zoals de MacBook of andere Mac computers.",
+  "download_card_macos_desc": "Voor Macs met Apple Silicon (M1 of nieuwer) en macOS 14 of nieuwer. Heel stil en zuinig.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Voor het Linux operating systeem en edge computers (zoals de Jetson Nano Orin of Raspberry Pi). Deze installatie verloopt via Docker."
+  "download_card_linux_desc": "Ubuntu-pakket, Docker-container voor een pc met NVIDIA-videokaart, of een NVIDIA Jetson Orin edge-computer.",
+  "download_how_title": "Downloaden, openen, klaar",
+  "download_how_text": "Welk systeem je ook kiest, de installatie eindigt altijd hetzelfde: de setup opent in je browser en leidt je door drie korte stappen — camera's, detectie en start."
 }

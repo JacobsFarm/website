@@ -1,36 +1,66 @@
 {
-  "ai_detector_desc": "Narzędzie do detekcji AI oparte na przeglądarce.",
-  "ai_detector_title": "WebApp AI Detector",
-  "ai_detector_text": "Informacje o aplikacji przeglądarkowej.",
-  "ai_detector_hero_title": "Detektor AI",
-  "ai_detector_hero_subtitle": "Jeden program dla Calving i Cowcatcher. Monitoruj strumienie wideo, chwytaj akcję i otrzymuj błyskawiczne powiadomienia.",
+  "ai_detector_desc": "Aplikacja, która uruchamia CowCatcher i CalvingCatcher na Twoim własnym komputerze.",
+  "ai_detector_title": "AI Detector",
+  "ai_detector_text": "Informacje o aplikacji AI Detector.",
+
+  "ai_detector_hero_title": "AI Detector",
+  "ai_detector_hero_subtitle": "Jedna aplikacja dla CowCatcher i CalvingCatcher. Obserwuje kamery w oborze na Twoim własnym komputerze, zapisuje to, co widzi, i powiadamia Cię na telefonie.",
   "ai_detector_btn_download": "Pobierz aplikację",
-  "ai_detector_btn_github": "Zobacz źródło",
+  "ai_detector_btn_github": "Zobacz kod źródłowy",
+  "ai_detector_hero_img_alt": "Strona Recordings w AI Detector z wykrytymi kryciami",
+
   "ai_detector_about_title": "Jeden detektor, nieskończone możliwości",
-  "ai_detector_about_p1": "W Cowcatcher AI trenujemy i rozwijamy modele wizyjne. AI Detector to warstwa oprogramowania, która stosuje te modele w praktyce – wykorzystując zdobytą wiedzę do wykonywania dokładnych detekcji w świecie rzeczywistym.",
-  "ai_detector_about_p2": "Detektor może być również używany poza modelami dostarczonymi przez Cowcatcher i wykorzystywany w Twoich własnych projektach – na przykład do powiadamiania o ludziach, samochodach, podjeżdżających traktorach itp.",
+  "ai_detector_about_p1": "W Cowcatcher AI trenujemy i rozwijamy modele wizyjne. AI Detector to aplikacja, która stosuje te modele w praktyce: czyta Twoje kamery, rozpoznaje ruję i cielenie i mówi Ci, kiedy to ma znaczenie.",
+  "ai_detector_about_p2": "Instalujesz ją jak każdy inny program. Konfiguracja działa w przeglądarce w trzech krokach — kamery, wykrywanie, start — a preset dostarcza wszystko, czego potrzebuje AI. Presety same utrzymują Twoje detektory na bieżąco z nowszymi modelami.",
+
+  "ai_detector_video_title": "Zobacz w dwie minuty",
+  "ai_detector_video_desc": "Od pobrania do pierwszego alertu: krótka wycieczka po konfiguracji, alertach Telegram, sprawdzaniu AI i nagraniach (po angielsku).",
+
   "ai_detector_media_title": "Inteligentne przechwytywanie i alerty",
-  "ai_detector_image_title": "Detekcja obrazu",
-  "ai_detector_image_desc": "Możesz wybrać, w jaki sposób chcesz otrzymywać obrazy z detekcji. Opcje obejmują pełny obraz, widok powiększony wokół wykrytego obiektu (na przykład przy wycieleniu) lub oba jednocześnie. Detektor AI automatycznie wybiera najlepszy uchwycony moment do wysłania, pomagając Ci podjąć najbardziej świadomą decyzję.",
-  "ai_detector_video_title": "Detekcja wideo",
-  "ai_detector_video_desc": "Detektor może wysłać krótki film ze zdarzenia. Dzięki specjalnej technice nagrywa on płynne wideo, niezależnie od wydajności komputera. Jest to przydatne do wykrywania rui, ponieważ pomaga określić, czy krowa stoi spokojnie, czy aktywnie obskakuje inne sztuki.",
-  "ai_detector_feature_local_title": "100% lokalne przetwarzanie",
-  "ai_detector_feature_local_desc": "Zachowaj prywatność swoich danych. Detekcja obiektów odbywa się całkowicie lokalnie na Twoim sprzęcie przy użyciu błyskawicznych modeli YOLO. Do podstawowej detekcji nie jest wymagana chmura.",
-  "ai_detector_feature_network_title": "Dostęp w całej sieci",
-  "ai_detector_feature_network_desc": "Uzyskaj dostęp do intuicyjnego panelu WebApp z telefonu komórkowego, tabletu lub komputera stacjonarnego. Tak długo, jak jesteś podłączony do tej samej sieci Wi-Fi co komputer główny, masz pełną kontrolę.",
-  "ai_detector_feature_custom_title": "Wysoka konfigurowalność",
-  "ai_detector_feature_custom_desc": "Dostosuj system do siebie. Niezależnie od tego, czy monitorujesz krowy, ludzi czy pojazdy, cały system można łatwo dostosować za pomocą jednego pliku config.json.",
+
+  "ai_detector_image_title": "Wykrywanie na zdjęciach",
+  "ai_detector_image_desc": "Każde wykrycie zapisuje się z najlepszym uchwyconym momentem, z narysowaną ramką wykrycia. W Telegramie od razu dostajesz zdjęcie i możesz je potwierdzić albo oznaczyć jako fałszywy alarm przyciskiem 👍 lub 👎.",
+
+  "ai_detector_video_clip_title": "Wykrywanie na wideo",
+  "ai_detector_video_desc_clip": "Detektor nagrywa też krótki, płynny film ze zdarzenia, niezależnie od wydajności Twojego komputera. Przydatne przy wykrywaniu rui: od razu widzisz, czy krowa stoi w bezruchu, czy aktywnie obskakuje.",
+
+  "ai_detector_feature_local_title": "Przetwarzanie w 100% lokalne",
+  "ai_detector_feature_local_desc": "Twoje nagrania zostają na Twojej farmie. Wykrywanie działa w całości na Twoim komputerze — na karcie NVIDIA GPU, Windows ML, Apple Neural Engine lub Jetsonie.",
+
+  "ai_detector_feature_network_title": "Na każdym telefonie",
+  "ai_detector_feature_network_desc": "Otwórz panel na telefonie, tablecie lub laptopie przez aidetector.local. Połącz się jednorazowym kodem i dodaj go na ekran główny.",
+
+  "ai_detector_feature_custom_title": "Presety, które są zawsze aktualne",
+  "ai_detector_feature_custom_desc": "Wybierz Cow Catcher albo Calving Catcher i gotowe. Nowsze modele przychodzą same; pliki konfiguracyjne nie są potrzebne.",
+
+  "ai_detector_feature_alerts_title": "Telegram z weryfikacją",
+  "ai_detector_feature_alerts_desc": "Alerty ze zdjęciem i klipem, przyciski 👍/👎, wielu odbiorców i ciche godziny w nocy.",
+
+  "ai_detector_feature_check_title": "Sprawdzanie AI (opcjonalne)",
+  "ai_detector_feature_check_desc": "Pozwól Google Gemini sprawdzić każdy klip dwa razy, zanim dostaniesz alert, aby odfiltrować fałszywe alarmy.",
+
+  "ai_detector_feature_monitor_title": "Zawsze wiesz, że działa",
+  "ai_detector_feature_monitor_desc": "Status na żywo dla każdej kamery, 30-dniowa historia tego, co naprawdę było obserwowane, powiadomienia o offline i heartbeat.",
+
   "ai_detector_how_title": "Jak to działa",
-  "ai_detector_step_1_title": "Krok 1: Szybkie skanowanie lokalne",
-  "ai_detector_step_1_desc": "Detektor łączy się ze strumieniami RTSP lub plikami wideo. Szybki model YOLO skanuje każdą klatkę w poszukiwaniu konkretnych obiektów.",
-  "ai_detector_step_2_title": "Krok 2: Inteligentna weryfikacja VLM (opcjonalnie)",
-  "ai_detector_step_2_desc": "Aby wyeliminować fałszywe alarmy, możesz opcjonalnie zadać sztucznej inteligencji typu Vision Language (np. Gemini) niestandardowe pytanie dotyczące nagrania (np. „Czy tam naprawdę jest człowiek?”).",
-  "ai_detector_step_3_title": "Krok 3: Błyskawiczne alerty",
-  "ai_detector_step_3_desc": "Potwierdzone detekcje mogą być zapisywane na dysku, przesyłane do webhooka lub wysyłane bezpośrednio na czat Telegram wraz ze zdjęciami i klipami wideo.",
+  "ai_detector_step_1_title": "Krok 1: podłącz kamery",
+  "ai_detector_step_1_desc": "Kamery w Twojej sieci znajdują się same. Sprawdź obrazy i nadaj każdej kamerze nazwę.",
+
+  "ai_detector_step_2_title": "Krok 2: wybierz, co wykrywać",
+  "ai_detector_step_2_desc": "Wybierz preset — Cow Catcher do rui, Calving Catcher do cielenia — i kamery, które ma obserwować.",
+
+  "ai_detector_step_3_title": "Krok 3: uruchom monitoring",
+  "ai_detector_step_3_desc": "Monitoring działa w tle, także po zamknięciu przeglądarki. Wykrycia pojawiają się w Recordings i na telefonie.",
+
   "ai_detector_install_title": "Prosta instalacja",
-  "ai_detector_install_desc": "Rozpoczęcie pracy zajmuje minuty, a nie godziny. Wybierz konfigurację pasującą do Twojego środowiska.",
-  "ai_detector_install_win_title": "Plik wykonywalny Windows",
-  "ai_detector_install_win_desc": "Zalecane podejście. Po prostu pobierz plik .exe dla swojego sprzętu, umieść go w folderze, kliknij dwukrotnie i wypełnij wygenerowany plik config.json.",
-  "ai_detector_install_docker_title": "Kontener Docker",
-  "ai_detector_install_docker_desc": "Idealny dla komputerów Edge, systemu Linux lub konfiguracji z automatycznym restartem. Użyj dostarczonego pliku docker-compose, aby błyskawicznie uruchomić detektor i aplikację internetową."
+  "ai_detector_install_desc": "Pobierz, otwórz, gotowe. Konfiguracja odbywa się w przeglądarce.",
+
+  "ai_detector_install_win_title": "Windows",
+  "ai_detector_install_win_desc": "Windows 10 (22H2+) lub 11. Rozpakuj plik zip i uruchom instalator. Używa karty NVIDIA GPU, gdy jest obecna, w przeciwnym razie Windows ML.",
+
+  "ai_detector_install_mac_title": "Mac",
+  "ai_detector_install_mac_desc": "macOS 14+ na Apple Silicon. Otwórz plik .dmg i przeciągnij AI Detector do Programów.",
+
+  "ai_detector_install_docker_title": "Ubuntu, Docker i Jetson",
+  "ai_detector_install_docker_desc": "Pakiet dla Ubuntu, kontener Docker dla komputera z NVIDIA albo Jetson Orin z JetPack 7.2."
 }

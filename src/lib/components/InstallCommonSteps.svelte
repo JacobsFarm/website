@@ -1,29 +1,53 @@
-<script>
+<script module>
     import * as m from '$lib/paraglide/messages.js';
-    import { base } from '$app/paths';
-    import InstallStep from '$lib/components/InstallStep.svelte';
-    import RtspUrlFinder from '$lib/components/RtspUrlFinder.svelte';
-
-    import imgRtspEnable from '$lib/assets/installation_software_rtsp_enabling.jpg';
-    import imgAddStream from '$lib/assets/installation_software_add stream.jpg';
-    import imgTelegram from '$lib/assets/installation_software_telegram_adding.jpg';
-    import imgDetector from '$lib/assets/installation_software_step_7.jpg';
-    import imgTerminal from '$lib/assets/installation_software_running_ai_detector_terminal.jpg';
 
     /**
-     * Stappen 4 t/m 8 van de installatie. Deze zijn identiek voor Windows en
-     * macOS: de webinterface en de AI-motor werken op beide systemen hetzelfde.
-     * Alleen stap 1 t/m 3 (downloaden, uitpakken, beveiliging) staan per
-     * platform op de pagina zelf.
-     *
-     * De schermafbeelding van de terminal komt van een Windows-pc; op andere
-     * platformen laten we die weg en volstaat het voorbeeld in tekstvorm.
+     * Inhoudsopgave-items voor de gedeelde stappen, zodat elke platformpagina
+     * dezelfde nummering gebruikt als de stappen zelf.
+     * @param {number} start nummer van de eerste gedeelde stap
      */
-    let { showTerminalImage = true } = $props();
+    export function commonToc(start) {
+        return [
+            m.inst_cams_title,
+            m.inst_setup_cams_title,
+            m.inst_setup_det_title,
+            m.inst_setup_start_title,
+            m.inst_tele_title,
+            m.inst_ai_title,
+            m.inst_phone_title
+        ].map((title, i) => ({ id: `step-${start + i}`, label: title() }));
+    }
+</script>
+
+<script>
+    import InstallStep from '$lib/components/InstallStep.svelte';
+    import RtspUrlFinder from '$lib/components/RtspUrlFinder.svelte';
+    import { links } from '$lib/config/links.js';
+
+    import imgRtspEnable from '$lib/assets/installation_software_rtsp_enabling.jpg';
+    import imgSetupCameras from '$lib/assets/app_setup_cameras.jpg';
+    import imgAddCamera from '$lib/assets/app_add_camera.jpg';
+    import imgSetupDetection from '$lib/assets/app_setup_detection.jpg';
+    import imgSetupStart from '$lib/assets/app_setup_start.jpg';
+    import imgTelegramToken from '$lib/assets/app_setup_telegram_token.jpg';
+    import imgTelegramQr from '$lib/assets/app_setup_telegram_qr.jpg';
+    import imgAiCheck from '$lib/assets/app_aicheck_connect.jpg';
+    import imgDevices from '$lib/assets/app_devices.jpg';
+
+    /**
+     * De stappen na het installeren. Deze zijn op elk platform gelijk: zodra
+     * AI Detector draait, gaat alles verder in de browser. Alleen downloaden
+     * en installeren staan per platform op de pagina zelf.
+     *
+     * @property {number} start nummer van de eerste stap op deze pagina
+     * @property children platform-specifieke tips, getoond vóór opslag en hulp
+     */
+    /** @type {{ start?: number, children?: import('svelte').Snippet }} */
+    let { start = 3, children } = $props();
 </script>
 
 <InstallStep
-    number="4"
+    number={start}
     title={m.inst_cams_title()}
     image={imgRtspEnable}
     imageAlt="Enabling the RTSP toggle in the Reolink camera app"
@@ -37,30 +61,24 @@
         <li>{@html m.inst_cams_hikvision()}</li>
         <li>{@html m.inst_cams_others()}</li>
     </ul>
-
-    <h4>{m.inst_cams_ip_title()}</h4>
-    <p>{@html m.inst_cams_ip_text()}</p>
-
-    <h4>{m.inst_cams_substream_title()}</h4>
-    <p>{@html m.inst_cams_substream_text()}</p>
 </InstallStep>
 
 <InstallStep
-    number="5"
-    title={m.inst_stream_title()}
-    image={imgAddStream}
-    imageAlt="Add stream screen of the CowCatcher AI web interface"
-    caption={m.inst_stream_caption()}
+    number={start + 1}
+    title={m.inst_setup_cams_title()}
+    images={[
+        { src: imgSetupCameras, alt: 'Setup step 1 of AI Detector: connect your cameras', caption: m.inst_setup_cams_caption() },
+        { src: imgAddCamera, alt: 'Add cameras screen with the cameras found on the network', caption: m.inst_setup_cams_add_caption() }
+    ]}
 >
     <ol class="setup-steps">
-        <li>{m.inst_stream_1()}</li>
-        <li>{@html m.inst_stream_2()}</li>
-        <li>{@html m.inst_stream_3()}</li>
-        <li>{@html m.inst_stream_4()}</li>
-        <li>{@html m.inst_stream_5()}</li>
-        <li>{@html m.inst_stream_6()}</li>
-        <li>{@html m.inst_stream_7()}</li>
+        <li>{@html m.inst_setup_cams_1()}</li>
+        <li>{m.inst_setup_cams_2()}</li>
+        <li>{m.inst_setup_cams_3()}</li>
+        <li>{@html m.inst_setup_cams_4()}</li>
+        <li>{@html m.inst_setup_cams_5()}</li>
     </ol>
+    <p class="note">{@html m.inst_setup_existing()}</p>
 
     <h4>{m.inst_stream_urls_title()}</h4>
     <p class="note">{@html m.inst_stream_urls_note()}</p>
@@ -68,11 +86,48 @@
 </InstallStep>
 
 <InstallStep
-    number="6"
+    number={start + 2}
+    title={m.inst_setup_det_title()}
+    image={imgSetupDetection}
+    imageAlt="Setup step 2 of AI Detector: choose a preset"
+    caption={m.inst_setup_det_caption()}
+>
+    <p>{@html m.inst_setup_det_intro()}</p>
+    <ul class="plain-list">
+        <li>{@html m.inst_preset_cc()}</li>
+        <li>{@html m.inst_preset_calv()}</li>
+        <li>{@html m.inst_preset_tailup()}</li>
+        <li>{@html m.inst_preset_general()}</li>
+    </ul>
+    <ol class="setup-steps">
+        <li>{m.inst_setup_det_1()}</li>
+        <li>{m.inst_setup_det_2()}</li>
+        <li>{@html m.inst_setup_det_3()}</li>
+    </ol>
+</InstallStep>
+
+<InstallStep
+    number={start + 3}
+    title={m.inst_setup_start_title()}
+    image={imgSetupStart}
+    imageAlt="Setup step 3 of AI Detector: start monitoring"
+    caption={m.inst_setup_start_caption()}
+>
+    <ol class="setup-steps">
+        <li>{@html m.inst_setup_start_1()}</li>
+        <li>{m.inst_setup_start_2()}</li>
+        <li>{@html m.inst_setup_start_3()}</li>
+        <li>{m.inst_setup_start_4()}</li>
+    </ol>
+</InstallStep>
+
+<InstallStep
+    number={start + 4}
     title={m.inst_tele_title()}
-    image={imgTelegram}
-    imageAlt="Add Telegram notification screen of the CowCatcher AI web interface"
-    caption={m.inst_tele_caption()}
+    images={[
+        { src: imgTelegramToken, alt: 'Connect Telegram dialog with the BotFather instructions', caption: m.inst_tele_caption_token() },
+        { src: imgTelegramQr, alt: 'Connect Telegram dialog with a QR code to scan', caption: m.inst_tele_caption_qr() }
+    ]}
 >
     <p>{m.inst_tele_intro()}</p>
 
@@ -84,108 +139,84 @@
         <li>{@html m.inst_tele_5()}</li>
     </ol>
 
+    <h4>{m.inst_tele_review_title()}</h4>
+    <p>{m.inst_tele_review_text()}</p>
+
     <h4>{m.inst_tele_groups_title()}</h4>
     <p>{@html m.inst_tele_groups_text()}</p>
-
-    <h4>{m.inst_tele_webhook_title()}</h4>
-    <p>{m.inst_tele_webhook_text()}</p>
 </InstallStep>
 
 <InstallStep
-    number="7"
-    title={m.inst_det_title()}
-    image={imgDetector}
-    imageAlt="Add detector screen of the CowCatcher AI web interface"
-    caption={m.inst_det_caption()}
+    number={start + 5}
+    title={m.inst_ai_title()}
+    image={imgAiCheck}
+    imageAlt="Connect validator screen to link Google Gemini"
+    caption={m.inst_ai_caption()}
 >
-    <p>{@html m.inst_det_intro()}</p>
-
-    <h4>{m.inst_det_cc_title()}</h4>
+    <p>{m.inst_ai_intro()}</p>
     <ol class="setup-steps">
-        <li>{@html m.inst_det_cc_1()}</li>
-        <li>{m.inst_det_cc_2()}</li>
-        <li>{m.inst_det_cc_3()}</li>
-        <li>{@html m.inst_det_cc_4()}</li>
+        <li>{@html m.inst_ai_1()}</li>
+        <li>{@html m.inst_ai_2()}</li>
+        <li>{@html m.inst_ai_3()}</li>
+        <li>{m.inst_ai_4()}</li>
     </ol>
+    <p class="note">{@html m.inst_ai_note()}</p>
+</InstallStep>
 
-    <h4>{m.inst_det_calv_title()}</h4>
+<InstallStep
+    number={start + 6}
+    title={m.inst_phone_title()}
+    image={imgDevices}
+    imageAlt="Devices page of AI Detector with the connected browsers"
+    caption={m.inst_phone_caption()}
+>
+    <p>{m.inst_phone_intro()}</p>
     <ol class="setup-steps">
-        <li>{@html m.inst_det_calv_1()}</li>
-        <li>{m.inst_det_calv_2()}</li>
-        <li>{@html m.inst_det_calv_3()}</li>
-        <li>{@html m.inst_det_calv_4()}</li>
+        <li>{@html m.inst_phone_1()}</li>
+        <li>{@html m.inst_phone_2()}</li>
+        <li>{@html m.inst_phone_3()}</li>
+        <li>{@html m.inst_phone_4()}</li>
     </ol>
+    <p class="note">{m.inst_phone_note()}</p>
+</InstallStep>
 
-    <h4>{m.inst_det_conf_title()}</h4>
-    <p>{m.inst_det_conf_intro()}</p>
+{@render children?.()}
+
+<section class="extra" id="storage">
+    <h3>{m.inst_storage_title()}</h3>
+    <p>{m.inst_storage_text()}</p>
     <div class="table-container">
         <table>
-            <thead>
-                <tr>
-                    <th>{m.inst_det_conf_th_value()}</th>
-                    <th>{m.inst_det_conf_th_meaning()}</th>
-                </tr>
-            </thead>
             <tbody>
                 <tr>
-                    <td><code>0.92</code></td>
-                    <td>{m.inst_det_conf_092()}</td>
+                    <th>{m.inst_storage_win()}</th>
+                    <td><code>%LOCALAPPDATA%\AI Detector</code></td>
                 </tr>
                 <tr>
-                    <td><code>0.90</code></td>
-                    <td>{@html m.inst_det_conf_090()}</td>
+                    <th>{m.inst_storage_mac()}</th>
+                    <td><code>~/Library/Application Support/AI Detector</code></td>
                 </tr>
                 <tr>
-                    <td><code>0.88</code></td>
-                    <td>{m.inst_det_conf_088()}</td>
+                    <th>{m.inst_storage_linux()}</th>
+                    <td><code>~/.local/share/ai-detector</code></td>
                 </tr>
                 <tr>
-                    <td><code>0.85</code></td>
-                    <td>{m.inst_det_conf_085()}</td>
+                    <th>{m.inst_storage_docker()}</th>
+                    <td>{m.inst_storage_docker_path()}</td>
                 </tr>
             </tbody>
         </table>
     </div>
-
-    <h4>{m.inst_det_advanced_title()}</h4>
-    <p>{@html m.inst_det_advanced_text()}</p>
-    <p>
-        <a href="{base}/installation/options" class="text-link">{m.inst_det_options_link()} &rarr;</a>
-    </p>
-</InstallStep>
-
-<InstallStep
-    number="8"
-    title={m.inst_start_title()}
-    image={showTerminalImage ? imgTerminal : null}
-    imageAlt="Terminal window with the detection log of the AI detector"
-    caption={m.inst_start_caption()}
->
-    <ol class="setup-steps">
-        <li>{@html m.inst_start_1()}</li>
-        <li>{@html m.inst_start_2()}</li>
-        <li>{m.inst_start_3()}</li>
-    </ol>
-
-    <h4>{m.inst_start_log_title()}</h4>
-    <p>{m.inst_start_log_text()}</p>
-    <pre><code>aidetector.detection.detector - INFO - Detection time: 38ms for 1 frame(s). Avg: 38ms
-aidetector.detection.detector - INFO - Detection time: 37ms for 1 frame(s). Avg: 37ms
-aidetector.detection.detector - INFO - Checking for timeouts</code></pre>
-</InstallStep>
-
-<section class="extra" id="storage">
-    <h3>{m.inst_storage_title()}</h3>
-    <p>{@html m.inst_storage_text()}</p>
 </section>
 
 <section class="extra support" id="support">
     <h3>{m.inst_support_title()}</h3>
     <ul class="plain-list">
+        <li>{@html m.inst_support_diag()}</li>
         <li>{@html m.inst_support_youtube()}</li>
         <li>
             {@html m.inst_support_email()}
-            <a href="mailto:cowcatcherai@gmail.com" class="text-link">cowcatcherai@gmail.com</a>
+            <a href="mailto:{links.email}" class="text-link">{links.email}</a>
         </li>
         <li>{@html m.inst_support_community()}</li>
     </ul>
@@ -222,6 +253,10 @@ aidetector.detection.detector - INFO - Checking for timeouts</code></pre>
 
     .extra > * + * {
         margin-top: 1rem;
+    }
+
+    .extra th {
+        white-space: nowrap;
     }
 
     .support {

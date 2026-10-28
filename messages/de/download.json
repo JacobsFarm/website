@@ -1,10 +1,12 @@
 {
-  "download_title": "Installation und Downloads",
-  "download_intro_text": "Die Installation ist so einfach wie möglich gestaltet. Folgen Sie einfach den Schritten für Ihr Betriebssystem unten, und Sie können sofort mit CowCatcherAI loslegen.",
+  "download_title": "Installation & Downloads",
+  "download_intro_text": "Eine App für die Erkennung von Brunst und Kalbung: AI Detector. Lade sie für deinen Computer herunter und öffne sie, dann geht die Einrichtung im Browser weiter. Wähle unten dein System für die Schritt-für-Schritt-Anleitung.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Zum Download für Computer mit Windows 10 und Windows 11.",
+  "download_card_windows_desc": "Für PCs mit Windows 10 (22H2 oder neuer) oder Windows 11. Nutzt automatisch eine NVIDIA-Grafikkarte, wenn du eine hast.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Für Apple-Geräte wie das MacBook oder andere Mac-Computer.",
+  "download_card_macos_desc": "Für Macs mit Apple Silicon (M1 oder neuer) und macOS 14 oder neuer. Sehr leise und energiesparend.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Für das Linux-Betriebssystem und Edge-Computer (wie Jetson Nano Orin oder Raspberry Pi). Diese Installation erfolgt über Docker."
+  "download_card_linux_desc": "Ubuntu-Paket, Docker-Container für einen PC mit NVIDIA-GPU oder ein NVIDIA-Jetson-Orin-Edge-Computer.",
+  "download_how_title": "Herunterladen, öffnen, fertig",
+  "download_how_text": "Egal welches System du wählst, die Installation endet immer gleich: Die Einrichtung öffnet sich im Browser und führt dich in drei kurzen Schritten durch Kameras, Erkennung und Start."
 }

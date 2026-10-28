@@ -10,13 +10,15 @@
     import ZoomableImage from '$lib/components/ZoomableImage.svelte';
     import Icon from '$lib/components/Icon.svelte';
 
-    import liveViewImg from '$lib/assets/ai_detector_live_view.png';
-    import dashboardImg from '$lib/assets/ai_detector_home_page.png';
+    import recordingsImg from '$lib/assets/app_recordings.jpg';
+    import setupCamerasImg from '$lib/assets/app_setup_cameras.jpg';
+    import setupDetectionImg from '$lib/assets/app_setup_detection.jpg';
     import imageDetectionImg1 from '$lib/assets/ai_detector_pictured_detection.jpg';
     import imageDetectionImg2 from '$lib/assets/ai_detector_pictured_detection-2-896x512.jpg';
     import imageDetectionImg3 from '$lib/assets/ai_detector_pictured_detection-3-896x512.jpg';
     import imageDetectionImg4 from '$lib/assets/ai_detector_pictured_detection-4-896x512.jpg';
     import imageDetectionImg5 from '$lib/assets/ai_detector_pictured_detection-5-896x512.jpg';
+    import viewerImg from '$lib/assets/app_recording_viewer.jpg';
     import originalGif from '$lib/assets/ai_detector_video_detection.gif';
     import originalGif2 from '$lib/assets/ai_detector_video_detection-2-896x512.gif';
 
@@ -24,15 +26,21 @@
         (src, i) => ({ src, alt: `Detection photo sent by the AI Detector, example ${i + 1}` })
     );
 
-    const clips = [originalGif, originalGif2].map((src, i) => ({
-        src,
-        alt: `Short detection clip recorded by the AI Detector, example ${i + 1}`
-    }));
+    const clips = [
+        { src: viewerImg, alt: 'Recording viewer of AI Detector with a detected mount' },
+        ...[originalGif, originalGif2].map((src, i) => ({
+            src,
+            alt: `Short detection clip recorded by the AI Detector, example ${i + 1}`
+        }))
+    ];
 
     const features = [
         { icon: 'shield', title: m.ai_detector_feature_local_title, desc: m.ai_detector_feature_local_desc },
         { icon: 'phone', title: m.ai_detector_feature_network_title, desc: m.ai_detector_feature_network_desc },
-        { icon: 'sliders', title: m.ai_detector_feature_custom_title, desc: m.ai_detector_feature_custom_desc }
+        { icon: 'sliders', title: m.ai_detector_feature_custom_title, desc: m.ai_detector_feature_custom_desc },
+        { icon: 'telegram', title: m.ai_detector_feature_alerts_title, desc: m.ai_detector_feature_alerts_desc },
+        { icon: 'spark', title: m.ai_detector_feature_check_title, desc: m.ai_detector_feature_check_desc },
+        { icon: 'eye', title: m.ai_detector_feature_monitor_title, desc: m.ai_detector_feature_monitor_desc }
     ];
 
     const steps = [
@@ -40,6 +48,12 @@
         { title: m.ai_detector_step_2_title, desc: m.ai_detector_step_2_desc },
         { title: m.ai_detector_step_3_title, desc: m.ai_detector_step_3_desc }
     ].map((step) => ({ ...splitLabel(step.title()), desc: step.desc() }));
+
+    const installs = [
+        { href: '/installation/download/Windows', icon: 'computer', title: m.ai_detector_install_win_title, desc: m.ai_detector_install_win_desc },
+        { href: '/installation/download/macOS', icon: 'computer', title: m.ai_detector_install_mac_title, desc: m.ai_detector_install_mac_desc },
+        { href: '/installation/download/docker', icon: 'code', title: m.ai_detector_install_docker_title, desc: m.ai_detector_install_docker_desc }
+    ];
 </script>
 
 <Seo title={m.ai_detector_hero_title()} description={m.ai_detector_hero_subtitle()} />
@@ -58,26 +72,8 @@
     {/snippet}
 
     {#snippet aside()}
-        <div class="code-window" aria-label="Example config.json">
-            <div class="code-bar">
-                <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-                <span class="file">config.json</span>
-            </div>
-            <pre><code><span class="p">{'{'}</span>
-  <span class="k">"detectors"</span>: [{'{'}
-    <span class="k">"detection"</span>: {'{'}
-      <span class="k">"source"</span>: [<span class="s">"rtsp://…/sub"</span>]
-    {'}'},
-    <span class="k">"yolo"</span>: {'{'}
-      <span class="k">"model"</span>: <span class="s">"cowcatcherV15.pt"</span>,
-      <span class="k">"confidence"</span>: <span class="n">0.90</span>,
-      <span class="k">"frames_min"</span>: <span class="n">4</span>
-    {'}'},
-    <span class="k">"exporters"</span>: {'{'}
-      <span class="k">"telegram"</span>: [{'{'} <span class="k">"chat"</span>: <span class="s">"…"</span> {'}'}]
-    {'}'}
-  {'}'}]
-<span class="p">{'}'}</span></code></pre>
+        <div class="app-window">
+            <ZoomableImage src={recordingsImg} alt={m.ai_detector_hero_img_alt()} />
         </div>
     {/snippet}
 </PageHeader>
@@ -93,11 +89,31 @@
     </div>
 </section>
 
+<!-- ── Uitlegvideo ── -->
+<section class="section video-section">
+    <div class="container">
+        <header class="section-head" use:reveal>
+            <h2 class="h-section">{m.ai_detector_video_title()}</h2>
+            <p class="lead">{m.ai_detector_video_desc()}</p>
+        </header>
+        <div class="video-frame bezel" use:reveal>
+            <!-- svelte-ignore a11y_media_has_caption -->
+            <video
+                src="{base}/video/ai-detector-en.mp4"
+                poster="{base}/video/ai-detector-en-poster.jpg"
+                controls
+                preload="none"
+                playsinline
+            ></video>
+        </div>
+    </div>
+</section>
+
 <!-- ── Foto's en video ── -->
 <section class="section media-section">
     <div class="container">
         <header class="section-head" use:reveal>
-            <span class="eyebrow">Telegram · Webhook · Disk</span>
+            <span class="eyebrow">Telegram · Recordings</span>
             <h2 class="h-section">{m.ai_detector_media_title()}</h2>
         </header>
 
@@ -113,10 +129,10 @@
         <div class="media-row media-row--reverse" use:reveal>
             <div class="media-copy">
                 <span class="media-icon"><Icon name="play" size={18} /></span>
-                <h3>{m.ai_detector_video_title()}</h3>
-                <p>{m.ai_detector_video_desc()}</p>
+                <h3>{m.ai_detector_video_clip_title()}</h3>
+                <p>{m.ai_detector_video_desc_clip()}</p>
             </div>
-            <Gallery items={clips} interval={9000} label={m.ai_detector_video_title()} />
+            <Gallery items={clips} interval={9000} label={m.ai_detector_video_clip_title()} />
         </div>
     </div>
 </section>
@@ -154,8 +170,8 @@
             </ol>
         </div>
         <div class="how-media" use:reveal={{ stagger: 120 }}>
-            <ZoomableImage src={liveViewImg} alt="AI Detector live view with camera streams" />
-            <ZoomableImage src={dashboardImg} alt="AI Detector home page with recent detections" />
+            <ZoomableImage src={setupCamerasImg} alt="AI Detector setup step 1: connect your cameras" />
+            <ZoomableImage src={setupDetectionImg} alt="AI Detector setup step 2: choose what to detect" />
         </div>
     </div>
 </section>
@@ -169,18 +185,14 @@
         </header>
 
         <div class="install-options" use:reveal={{ stagger: 100 }}>
-            <a href="{base}/installation/download/Windows" class="install-option">
-                <span class="io-icon"><Icon name="computer" size={24} /></span>
-                <h3>{m.ai_detector_install_win_title()}</h3>
-                <p>{m.ai_detector_install_win_desc()}</p>
-                <span class="io-link">{m.read_more()} <Icon name="arrow-right" size={16} /></span>
-            </a>
-            <a href="{base}/installation/download/docker" class="install-option">
-                <span class="io-icon"><Icon name="code" size={24} /></span>
-                <h3>{m.ai_detector_install_docker_title()}</h3>
-                <p>{m.ai_detector_install_docker_desc()}</p>
-                <span class="io-link">{m.read_more()} <Icon name="arrow-right" size={16} /></span>
-            </a>
+            {#each installs as option (option.href)}
+                <a href="{base}{option.href}" class="install-option">
+                    <span class="io-icon"><Icon name={option.icon} size={24} /></span>
+                    <h3>{option.title()}</h3>
+                    <p>{option.desc()}</p>
+                    <span class="io-link">{m.read_more()} <Icon name="arrow-right" size={16} /></span>
+                </a>
+            {/each}
         </div>
 
         <div class="install-cta" use:reveal>
@@ -193,70 +205,29 @@
 </section>
 
 <style>
-    /* ── Codevenster in de kop ── */
-    .code-window {
+    /* ── Schermafbeelding in de kop ── */
+    .app-window {
         border-radius: var(--radius-lg);
-        background: var(--forest);
+        background: var(--card-bg);
         box-shadow:
-            inset 0 0 0 1px var(--line-dark),
+            0 0 0 1px var(--line),
             var(--shadow-lg);
         overflow: hidden;
         transform: rotate(-1.2deg);
     }
 
-    .code-bar {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        padding: 0.75rem 1rem;
-        border-bottom: 1px solid var(--line-dark);
+    /* ── Uitlegvideo ── */
+    .video-frame {
+        max-width: 60rem;
+        margin-inline: auto;
     }
 
-    .dots {
-        display: inline-flex;
-        gap: 0.4rem;
-    }
-
-    .dots i {
-        width: 0.65rem;
-        height: 0.65rem;
-        border-radius: 50%;
-        background: oklch(100% 0 0 / 0.18);
-    }
-
-    .dots i:first-child {
-        background: var(--accent-amber);
-    }
-
-    .file {
-        font-family: var(--font-mono);
-        font-size: 0.8rem;
-        color: var(--on-dark-muted);
-    }
-
-    .code-window pre {
-        margin: 0;
-        padding: 1.25rem 1.25rem 1.5rem;
-        overflow-x: auto;
-        font-size: 0.82rem;
-        line-height: 1.7;
-        color: var(--on-dark);
-    }
-
-    .k {
-        color: oklch(82% 0.08 145);
-    }
-
-    .s {
-        color: oklch(82% 0.12 80);
-    }
-
-    .n {
-        color: oklch(80% 0.09 195);
-    }
-
-    .p {
-        color: var(--on-dark-muted);
+    .video-frame video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: calc(var(--radius-xl) - 0.5rem);
+        background: var(--forest);
     }
 
     /* ── Over ── */
@@ -514,7 +485,7 @@
 
     @media (min-width: 800px) {
         .install-options {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
     }
 </style>

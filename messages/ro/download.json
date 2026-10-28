@@ -1,10 +1,12 @@
 {
-  "download_title": "Instalare și Descărcări",
-  "download_intro_text": "Instalarea este concepută pentru a fi cât mai ușoară posibil. Pur și simplu urmează pașii pentru sistemul tău de operare de mai jos și poți începe imediat cu CowCatcherAI.",
+  "download_title": "Instalare și descărcări",
+  "download_intro_text": "O singură aplicație pentru detectarea călduririi și a fătării: AI Detector. Descarcă-o pentru computerul tău, deschide-o, iar configurarea continuă în browser. Alege mai jos sistemul tău pentru ghidul pas cu pas.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Pentru descărcare pe computere cu Windows 10 și Windows 11.",
+  "download_card_windows_desc": "Pentru PC-uri cu Windows 10 (22H2 sau mai nou) sau Windows 11. Folosește automat o placă grafică NVIDIA, dacă ai una.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Pentru dispozitive Apple, cum ar fi MacBook sau alte computere Mac.",
+  "download_card_macos_desc": "Pentru Mac-uri cu Apple Silicon (M1 sau mai nou) și macOS 14 sau mai nou. Foarte silențioasă și eficientă energetic.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Pentru sistemul de operare Linux și computere edge (cum ar fi Jetson Nano Orin sau Raspberry Pi). Această instalare se face prin Docker."
+  "download_card_linux_desc": "Pachet Ubuntu, container Docker pentru un PC cu placă grafică NVIDIA sau un calculator edge NVIDIA Jetson Orin.",
+  "download_how_title": "Descarci, deschizi, gata",
+  "download_how_text": "Indiferent de sistemul ales, instalarea se termină mereu la fel: configurarea se deschide în browser și te ghidează prin trei pași scurți — camere, detecție și pornire."
 }

@@ -1,36 +1,66 @@
 {
-  "ai_detector_desc": "Instrument de detectare AI bazat pe browser.",
-  "ai_detector_title": "WebApp AI Detector",
-  "ai_detector_text": "Informații despre aplicația de browser.",
-  "ai_detector_hero_title": "Detector AI",
-  "ai_detector_hero_subtitle": "Un singur program pentru Calving (fătare) și Cowcatcher. Monitorizează-ți fluxurile video, surprinde acțiunea și primește alerte instantanee.",
+  "ai_detector_desc": "Aplicația care rulează CowCatcher și CalvingCatcher pe propriul tău calculator.",
+  "ai_detector_title": "AI Detector",
+  "ai_detector_text": "Informații despre aplicația AI Detector.",
+
+  "ai_detector_hero_title": "AI Detector",
+  "ai_detector_hero_subtitle": "O singură aplicație pentru CowCatcher și CalvingCatcher. Urmărește camerele din grajd de pe propriul tău calculator, înregistrează ce vede și te alertează pe telefon.",
   "ai_detector_btn_download": "Descarcă aplicația",
-  "ai_detector_btn_github": "Vezi sursa",
-  "ai_detector_about_title": "Un detector, posibilități infinite",
-  "ai_detector_about_p1": "La Cowcatcher AI, antrenăm și dezvoltăm modelele de viziune. AI Detector este stratul software care aplică aceste modele în practică — folosind cunoștințele învățate pentru a efectua detecții precise în lumea reală.",
-  "ai_detector_about_p2": "Detectorul poate fi folosit și în afara modelelor furnizate de Cowcatcher, pentru propriile proiecte — de exemplu, alerte pentru oameni, mașini, tractoare care sosesc etc.",
+  "ai_detector_btn_github": "Vezi codul sursă",
+  "ai_detector_hero_img_alt": "Pagina Recordings din AI Detector, cu montări detectate",
+
+  "ai_detector_about_title": "Un singur detector, posibilități nelimitate",
+  "ai_detector_about_p1": "La Cowcatcher AI antrenăm și dezvoltăm modelele de viziune. AI Detector este aplicația care pune aceste modele în practică: citește camerele tale, recunoaște călduriile și fătarea și te anunță când contează.",
+  "ai_detector_about_p2": "O instalezi ca orice alt program. Configurarea rulează în browser, în trei pași — camere, detecție, pornire — iar un preset oferă tot ce are nevoie AI-ul. Presetele îți țin detectoarele actualizate cu modele mai noi, singure.",
+
+  "ai_detector_video_title": "Vezi totul în două minute",
+  "ai_detector_video_desc": "De la descărcare până la prima alertă: un tur scurt al configurării, al alertelor Telegram, al verificării AI și al înregistrărilor (în engleză).",
+
   "ai_detector_media_title": "Captură inteligentă și alerte",
-  "ai_detector_image_title": "Detectare imagini",
-  "ai_detector_image_desc": "Poți alege cum dorești să primești imaginile detecțiilor. Opțiunile includ imaginea completă, o vizualizare mărită în jurul detecției (de exemplu, pentru fătare) sau ambele. Detectorul AI selectează automat cel mai bun moment capturat pentru a ți-l trimite, ajutându-te să iei cea mai informată decizie.",
-  "ai_detector_video_title": "Detectare video",
-  "ai_detector_video_desc": "Detectorul poate trimite un scurt clip video al evenimentului. Folosind o tehnică specială, acesta înregistrează un video fluid, indiferent de performanța computerului tău. Acest lucru este util pentru detectarea estrului (căldurilor), deoarece ajută la determinarea dacă vaca stă nemișcată sau montează activ.",
+
+  "ai_detector_image_title": "Detecție prin imagini",
+  "ai_detector_image_desc": "Fiecare detecție este salvată cu cel mai bun moment capturat, cu caseta de detecție desenată pe ea. În Telegram primești imaginea imediat și o poți confirma sau marca drept alarmă falsă cu 👍 sau 👎.",
+
+  "ai_detector_video_clip_title": "Detecție video",
+  "ai_detector_video_desc_clip": "Detectorul înregistrează și un scurt videoclip fluid al evenimentului, indiferent de performanța calculatorului tău. Util pentru detectarea călduririi: vezi imediat dacă o vacă stă nemișcată sau montează activ.",
+
   "ai_detector_feature_local_title": "Procesare 100% locală",
-  "ai_detector_feature_local_desc": "Păstrează-ți datele private. Detectarea obiectelor rulează complet local pe hardware-ul tău folosind modele YOLO ultra-rapide. Nu este nevoie de cloud pentru detectarea principală.",
-  "ai_detector_feature_network_title": "Oriunde în rețeaua ta",
-  "ai_detector_feature_network_desc": "Accesează panoul WebApp intuitiv de pe telefonul mobil, tabletă sau desktop. Atât timp cât ești conectat la aceeași rețea Wi-Fi ca și computerul gazdă, ai control total.",
-  "ai_detector_feature_custom_title": "Suficient de configurabil",
-  "ai_detector_feature_custom_desc": "Adaptează-l nevoilor tale. Fie că urmărești vaci, oameni sau vehicule, întregul sistem este ușor de ajustat printr-un singur fișier config.json.",
+  "ai_detector_feature_local_desc": "Imaginile tale rămân la ferma ta. Detecția rulează complet pe propriul tău calculator — pe o placă NVIDIA GPU, Windows ML, Apple Neural Engine sau un Jetson.",
+
+  "ai_detector_feature_network_title": "Pe orice telefon",
+  "ai_detector_feature_network_desc": "Deschide panoul de control pe telefon, tabletă sau laptop prin aidetector.local. Conectează-te cu un cod de unică folosință și pune-l pe ecranul de start.",
+
+  "ai_detector_feature_custom_title": "Presete mereu actualizate",
+  "ai_detector_feature_custom_desc": "Alege Cow Catcher sau Calving Catcher și ai terminat. Modelele noi sosesc singure; nu sunt necesare fișiere de configurare.",
+
+  "ai_detector_feature_alerts_title": "Telegram cu verificare",
+  "ai_detector_feature_alerts_desc": "Alerte cu fotografie și clip, butoane 👍/👎, mai mulți destinatari și ore de liniște noaptea.",
+
+  "ai_detector_feature_check_title": "Verificare AI (opțională)",
+  "ai_detector_feature_check_desc": "Lasă Google Gemini să verifice încă o dată fiecare clip înainte să primești o alertă, pentru a filtra alarmele false.",
+
+  "ai_detector_feature_monitor_title": "Știi mereu că funcționează",
+  "ai_detector_feature_monitor_desc": "Stare live pe fiecare cameră, un istoric de 30 de zile al celor urmărite cu adevărat, notificări când o cameră este offline și heartbeat.",
+
   "ai_detector_how_title": "Cum funcționează",
-  "ai_detector_step_1_title": "Pasul 1: Scanare locală rapidă",
-  "ai_detector_step_1_desc": "Detectorul se conectează la fluxurile tale RTSP sau la fișierele video. Un model YOLO rapid scanează fiecare cadru căutând obiecte specifice.",
-  "ai_detector_step_2_title": "Pasul 2: Verificare VLM inteligentă (Opțional)",
-  "ai_detector_step_2_desc": "Pentru a filtra alarmele false, poți întreba opțional o inteligență artificială de tip Vision Language (cum este Gemini) o întrebare personalizată despre filmare (ex. „Chiar există o persoană?”).",
-  "ai_detector_step_3_title": "Pasul 3: Alerte instantanee",
-  "ai_detector_step_3_desc": "Detecțiile confirmate pot fi salvate pe disc, postate pe un webhook sau trimise direct în chat-ul tău de Telegram, împreună cu imagini și clipuri video.",
+  "ai_detector_step_1_title": "Pasul 1: Conectează camerele",
+  "ai_detector_step_1_desc": "Camerele din rețeaua ta sunt găsite singure. Verifică imaginile și dă fiecărei camere un nume.",
+
+  "ai_detector_step_2_title": "Pasul 2: Alege ce să detectezi",
+  "ai_detector_step_2_desc": "Alege un preset — Cow Catcher pentru călduri, Calving Catcher pentru fătare — și camerele pe care trebuie să le urmărească.",
+
+  "ai_detector_step_3_title": "Pasul 3: Pornește monitorizarea",
+  "ai_detector_step_3_desc": "Monitorizarea rulează în fundal, chiar și când închizi browserul. Detecțiile apar în Recordings și pe telefonul tău.",
+
   "ai_detector_install_title": "Instalare simplă",
-  "ai_detector_install_desc": "Configurarea durează câteva minute, nu ore. Alege varianta care se potrivește mediului tău.",
-  "ai_detector_install_win_title": "Executabil Windows",
-  "ai_detector_install_win_desc": "Abordarea recomandată. Pur și simplu descarcă fișierul .exe pentru hardware-ul tău, pune-l într-un folder, fă dublu clic și completează fișierul config.json generat.",
-  "ai_detector_install_docker_title": "Container Docker",
-  "ai_detector_install_docker_desc": "Perfect pentru computere Edge, Linux sau configurări cu repornire automată. Folosește fișierul docker-compose furnizat pentru a rula detectorul și aplicația web instantaneu."
+  "ai_detector_install_desc": "Descarci, deschizi, gata. Configurarea se face în browser.",
+
+  "ai_detector_install_win_title": "Windows",
+  "ai_detector_install_win_desc": "Windows 10 (22H2+) sau 11. Dezarhivează fișierul zip și rulează instalatorul. Folosește o placă NVIDIA GPU dacă există, altfel Windows ML.",
+
+  "ai_detector_install_mac_title": "Mac",
+  "ai_detector_install_mac_desc": "macOS 14+ pe Apple Silicon. Deschide fișierul .dmg și trage AI Detector în Aplicații.",
+
+  "ai_detector_install_docker_title": "Ubuntu, Docker și Jetson",
+  "ai_detector_install_docker_desc": "Pachet Ubuntu, container Docker pentru un PC NVIDIA sau un Jetson Orin cu JetPack 7.2."
 }

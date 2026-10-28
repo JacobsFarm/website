@@ -1,36 +1,66 @@
 {
-  "ai_detector_desc": "Browser-baseret AI-registreringsværktøj.",
-  "ai_detector_title": "AI-detektor WebApp",
-  "ai_detector_text": "Information om browser-applikationen.",
-  "ai_detector_hero_title": "AI-detektor",
-  "ai_detector_hero_subtitle": "Ét softwareprogram til både Calving (kælving) og Cowcatcher. Overvåg dine videostreams, fang begivenhederne og få øjeblikkelige advarsler.",
-  "ai_detector_btn_download": "Hent App",
-  "ai_detector_btn_github": "Se kildekode",
+  "ai_detector_desc": "Appen, der kører CowCatcher og CalvingCatcher på din egen computer.",
+  "ai_detector_title": "AI Detector",
+  "ai_detector_text": "Information om AI Detector-applikationen.",
+
+  "ai_detector_hero_title": "AI Detector",
+  "ai_detector_hero_subtitle": "Én app til både CowCatcher og CalvingCatcher. Den overvåger dine stald-kameraer på din egen computer, optager det, den ser, og advarer dig på din telefon.",
+  "ai_detector_btn_download": "Download appen",
+  "ai_detector_btn_github": "Se kildekoden",
+  "ai_detector_hero_img_alt": "Recordings-siden i AI Detector med registrerede opridninger",
+
   "ai_detector_about_title": "Én detektor, uendelige muligheder",
-  "ai_detector_about_p1": "Hos Cowcatcher AI træner og udvikler vi vision-modellerne. AI Detector er det softwarelag, der anvender disse modeller i praksis – ved at bruge deres lærte viden til at udføre nøjagtige registreringer i den virkelige verden.",
-  "ai_detector_about_p2": "Detektoren kan også bruges uden for Cowcatcher-modellerne til dine egne projekter – for eksempel til at give besked om mennesker, biler, traktorer der ankommer osv.",
-  "ai_detector_media_title": "Smart Capture & advarsler",
+  "ai_detector_about_p1": "Hos Cowcatcher AI træner og udvikler vi visionmodellerne. AI Detector er appen, der anvender disse modeller i praksis: den læser dine kameraer, genkender brunst og kælvning og fortæller dig, når det betyder noget.",
+  "ai_detector_about_p2": "Du installerer den som ethvert andet program. Opsætningen kører i din browser i tre trin — kameraer, registrering, start — og en forudindstilling leverer alt, AI'en har brug for. Forudindstillinger holder også dine detektorer opdateret med nyere modeller af sig selv.",
+
+  "ai_detector_video_title": "Se den på to minutter",
+  "ai_detector_video_desc": "Fra download til den første alarm: en kort rundtur gennem opsætning, Telegram-alarmer, AI-kontrollen og optagelserne (på engelsk).",
+
+  "ai_detector_media_title": "Smart optagelse og alarmer",
+
   "ai_detector_image_title": "Billedregistrering",
-  "ai_detector_image_desc": "Du kan vælge, hvordan du vil modtage billeder af registreringer. Mulighederne inkluderer det fulde billede, et zoomet billede omkring registreringen (f.eks. ved kælving) eller begge dele. AI-detektoren vælger automatisk det bedste øjeblik at sende til dig, så du kan tage den mest informerede beslutning.",
-  "ai_detector_video_title": "Videoregistrering",
-  "ai_detector_video_desc": "Detektoren kan sende en kort video af hændelsen. Ved hjælp af en speciel teknik optager den en flydende video, uanset din computers ydeevne. Dette er nyttigt til brunstovervågning, da det hjælper med at afgøre, om koen står stille eller aktivt rider (i brunst).",
+  "ai_detector_image_desc": "Hver registrering gemmes med det bedste indfangede øjeblik, og registreringsboksen er tegnet på. I Telegram får du billedet med det samme og kan bekræfte det eller markere det som falsk alarm med 👍 eller 👎.",
+
+  "ai_detector_video_clip_title": "Videoregistrering",
+  "ai_detector_video_desc_clip": "Detektoren optager også et kort, jævnt videoklip af hændelsen, uanset din computers ydeevne. Nyttigt til registrering af brunst: du ser med det samme, om en ko står stille, eller om hun aktivt opriver.",
+
   "ai_detector_feature_local_title": "100% lokal behandling",
-  "ai_detector_feature_local_desc": "Hold dine data private. Objekterregistrering kører fuldstændig lokalt på din hardware ved hjælp af lynhurtige YOLO-modeller. Ingen sky (cloud) er påkrævet til selve registreringen.",
-  "ai_detector_feature_network_title": "Overalt på dit netværk",
-  "ai_detector_feature_network_desc": "Få adgang til det intuitive WebApp-dashboard fra din mobil, tablet eller computer. Så længe du er forbundet til det samme Wi-Fi-netværk som værtscomputeren, har du fuld kontrol.",
-  "ai_detector_feature_custom_title": "Høj grad af konfiguration",
-  "ai_detector_feature_custom_desc": "Gør det til dit eget. Uanset om du vil have advarsler om køer, mennesker eller køretøjer, kan hele systemet nemt tilpasses gennem en enkelt config.json-fil.",
+  "ai_detector_feature_local_desc": "Dine optagelser bliver på din gård. Registreringen kører helt på din egen computer — på et NVIDIA GPU, Windows ML, Apple Neural Engine eller en Jetson.",
+
+  "ai_detector_feature_network_title": "På enhver telefon",
+  "ai_detector_feature_network_desc": "Åbn dashboardet på din telefon, tablet eller bærbare via aidetector.local. Forbind med en engangskode, og læg det på din startskærm.",
+
+  "ai_detector_feature_custom_title": "Forudindstillinger, der holder sig opdateret",
+  "ai_detector_feature_custom_desc": "Vælg Cow Catcher eller Calving Catcher, så er du færdig. Nyere modeller kommer af sig selv; ingen konfigurationsfiler er nødvendige.",
+
+  "ai_detector_feature_alerts_title": "Telegram med gennemgang",
+  "ai_detector_feature_alerts_desc": "Alarmer med foto og klip, 👍/👎-knapper, flere modtagere og quiet hours om natten.",
+
+  "ai_detector_feature_check_title": "AI-kontrol (valgfri)",
+  "ai_detector_feature_check_desc": "Lad Google Gemini dobbelttjekke hvert klip, før du får en alarm, for at filtrere falske alarmer fra.",
+
+  "ai_detector_feature_monitor_title": "Ved altid, at det virker",
+  "ai_detector_feature_monitor_desc": "Live-status pr. kamera, en 30-dages historik over, hvad der rent faktisk blev overvåget, notifikationer ved offline og et heartbeat.",
+
   "ai_detector_how_title": "Sådan virker det",
-  "ai_detector_step_1_title": "Trin 1: Hurtig lokal scanning",
-  "ai_detector_step_1_desc": "Detektoren forbinder til dine RTSP-streams eller videofiler. En hurtig YOLO-model scanner hver frame for specifikke objekter.",
-  "ai_detector_step_2_title": "Trin 2: Smart VLM-verificering (Valgfrit)",
-  "ai_detector_step_2_desc": "For at filtrere falske alarmer fra, kan du vælge at spørge en Vision Language AI (som Gemini) om et specifikt spørgsmål til optagelserne (f.eks. 'Er der virkelig en person?').",
-  "ai_detector_step_3_title": "Trin 3: Øjeblikkelige advarsler",
-  "ai_detector_step_3_desc": "Bekræftede registreringer kan gemmes på disken, sendes til en webhook eller sendes direkte til din Telegram-chat komplet med billeder og videoklip.",
-  "ai_detector_install_title": "Simpel installation",
-  "ai_detector_install_desc": "Det tager minutter, ikke timer, at komme i gang. Vælg det setup, der passer til dit miljø.",
-  "ai_detector_install_win_title": "Windows-fil (.exe)",
-  "ai_detector_install_win_desc": "Den anbefalede tilgang. Download blot .exe-filen til din hardware, læg den i en mappe, dobbeltklik og udfyld den genererede config.json.",
-  "ai_detector_install_docker_title": "Docker-container",
-  "ai_detector_install_docker_desc": "Perfekt til Edge-computere, Linux eller setups med automatisk genstart. Brug den medfølgende docker-compose-fil til at få detektoren og web-appen op at køre med det samme."
+  "ai_detector_step_1_title": "Trin 1: Forbind dine kameraer",
+  "ai_detector_step_1_desc": "Kameraerne på dit netværk bliver fundet af sig selv. Tjek billederne, og giv hvert kamera et navn.",
+
+  "ai_detector_step_2_title": "Trin 2: Vælg hvad der skal registreres",
+  "ai_detector_step_2_desc": "Vælg en forudindstilling — Cow Catcher til brunst, Calving Catcher til kælvning — og de kameraer, den skal holde øje med.",
+
+  "ai_detector_step_3_title": "Trin 3: Start overvågning",
+  "ai_detector_step_3_desc": "Overvågningen kører i baggrunden, også når du lukker browseren. Registreringer vises i Recordings og på din telefon.",
+
+  "ai_detector_install_title": "Enkel installation",
+  "ai_detector_install_desc": "Download, åbn, færdig. Opsætningen foregår i din browser.",
+
+  "ai_detector_install_win_title": "Windows",
+  "ai_detector_install_win_desc": "Windows 10 (22H2+) eller 11. Udpak zip-filen, og kør installationen. Bruger et NVIDIA GPU, når det findes, ellers Windows ML.",
+
+  "ai_detector_install_mac_title": "Mac",
+  "ai_detector_install_mac_desc": "macOS 14+ på Apple Silicon. Åbn .dmg-filen, og træk AI Detector over i Programmer.",
+
+  "ai_detector_install_docker_title": "Ubuntu, Docker & Jetson",
+  "ai_detector_install_docker_desc": "Ubuntu-pakke, Docker-container til en NVIDIA-pc eller en Jetson Orin med JetPack 7.2."
 }

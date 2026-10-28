@@ -7,21 +7,17 @@
     import DocLayout from '$lib/components/DocLayout.svelte';
     import DownloadCard from '$lib/components/DownloadCard.svelte';
     import InstallStep from '$lib/components/InstallStep.svelte';
-    import InstallCommonSteps from '$lib/components/InstallCommonSteps.svelte';
+    import InstallCommonSteps, { commonToc } from '$lib/components/InstallCommonSteps.svelte';
     import PagerNav from '$lib/components/PagerNav.svelte';
 
-    import imgReleases from '$lib/assets/installation_software_github_releases.jpg';
+    import imgRelease from '$lib/assets/app_github_release.jpg';
 
     const toc = [
         { id: 'requirements', label: m.os_macos_req_title() },
         { id: 'step-1', label: m.os_macos_step1_title() },
         { id: 'step-2', label: m.os_macos_step2_title() },
         { id: 'step-3', label: m.os_macos_step3_title() },
-        { id: 'step-4', label: m.inst_cams_title() },
-        { id: 'step-5', label: m.inst_stream_title() },
-        { id: 'step-6', label: m.inst_tele_title() },
-        { id: 'step-7', label: m.inst_det_title() },
-        { id: 'step-8', label: m.inst_start_title() },
+        ...commonToc(4),
         { id: 'keep-running', label: m.os_macos_keep_title() },
         { id: 'support', label: m.inst_support_title() }
     ];
@@ -30,7 +26,7 @@
 <Seo title={m.os_macos_title()} description={m.os_macos_intro()} />
 
 <PageHeader
-    eyebrow="macOS · Apple Silicon & Intel"
+    eyebrow="macOS 14+ · Apple Silicon"
     title={m.os_macos_title()}
     lead={m.os_macos_intro()}
     crumbs={[
@@ -59,28 +55,29 @@
         <table>
             <thead>
                 <tr>
-                    <th>{m.os_table_file()}</th>
-                    <th>{m.os_table_hardware()}</th>
-                    <th>{m.os_table_speed()}</th>
+                    <th>{m.os_table_mac()}</th>
+                    <th>{m.os_table_engine()}</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><code>aidetector-osx-&lt;version&gt;.zip</code></td>
-                    <td>{m.os_hw_macos_any()}</td>
-                    <td>{m.os_speed_macos()}</td>
+                    <td>{m.os_hw_apple_silicon()}</td>
+                    <td>{m.os_engine_neural()}</td>
                 </tr>
             </tbody>
         </table>
     </div>
+    <p class="note">
+        <strong>{m.os_note_title()}:</strong> {m.os_note_text()}
+    </p>
 
     <h2 id="steps">{m.inst_steps_title()}</h2>
 
     <InstallStep
         number="1"
         title={m.os_macos_step1_title()}
-        image={imgReleases}
-        imageAlt="GitHub releases page of the AI detector with the macOS download file"
+        image={imgRelease}
+        imageAlt="The latest AI Detector release on GitHub with the macOS download file under Assets"
         caption={m.os_macos_step1_caption()}
     >
         <ol class="setup-steps">
@@ -94,7 +91,6 @@
             <li>{@html m.os_macos_step2_1()}</li>
             <li>{@html m.os_macos_step2_2()}</li>
             <li>{@html m.os_macos_step2_3()}</li>
-            <li>{@html m.os_macos_step2_4()}</li>
         </ol>
     </InstallStep>
 
@@ -122,25 +118,20 @@
             <li>{@html m.os_macos_step3_c_1()}</li>
             <li>
                 {@html m.os_macos_step3_c_2()}
-                <pre><code>sudo xattr -rd com.apple.quarantine /Users/yourname/Desktop/Cowcatcher</code></pre>
+                <pre><code>sudo xattr -rd com.apple.quarantine "/Applications/AI Detector.app"</code></pre>
             </li>
             <li>{@html m.os_macos_step3_c_3()}</li>
-            <li>{m.os_macos_step3_c_4()}</li>
         </ol>
     </InstallStep>
 
-    <InstallCommonSteps showTerminalImage={false} />
-
-    <h2 id="keep-running">{m.os_macos_keep_title()}</h2>
-    <ul class="check-list">
-        <li>{@html m.os_macos_keep_1()}</li>
-        <li>{@html m.os_macos_keep_2()}</li>
-        <li>{@html m.os_macos_keep_3()}</li>
-    </ul>
-
-    <div class="tip-box">
-        <strong>{m.os_tip_title()}:</strong> {@html m.os_tip_text()}
-    </div>
+    <InstallCommonSteps start={4}>
+        <h2 id="keep-running">{m.os_macos_keep_title()}</h2>
+        <ul class="check-list">
+            <li>{@html m.os_macos_keep_1()}</li>
+            <li>{@html m.os_macos_keep_2()}</li>
+            <li>{@html m.os_macos_keep_3()}</li>
+        </ul>
+    </InstallCommonSteps>
 
     <PagerNav
         prev={{ href: '/installation/download', label: m.inst_back_to_platforms() }}

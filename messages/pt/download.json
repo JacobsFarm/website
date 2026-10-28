@@ -1,10 +1,12 @@
 {
-  "download_title": "Instalação & Downloads",
-  "download_intro_text": "A instalação foi projetada para ser o mais fácil possível. Basta seguir os passos para o seu sistema operacional abaixo e você poderá começar a usar o CowCatcherAI imediatamente.",
+  "download_title": "Instalação e Downloads",
+  "download_intro_text": "Um único app para detecção de cio e de parto: AI Detector. Baixe para o seu computador, abra e a configuração continua no seu navegador. Escolha o seu sistema abaixo para o guia passo a passo.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Para download em computadores Windows 10 e Windows 11.",
+  "download_card_windows_desc": "Para PCs com Windows 10 (22H2 ou mais recente) ou Windows 11. Usa uma placa de vídeo NVIDIA automaticamente, quando houver uma.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Para dispositivos Apple como o MacBook ou outros computadores Mac.",
+  "download_card_macos_desc": "Para Macs com Apple Silicon (M1 ou mais recente) e macOS 14 ou mais recente. Muito silencioso e econômico em energia.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Para o sistema operacional Linux e computadores edge (como o Jetson Nano Orin ou Raspberry Pi). Esta instalação é feita via Docker."
+  "download_card_linux_desc": "Pacote Ubuntu, contêiner Docker para um PC com GPU NVIDIA, ou um computador de borda NVIDIA Jetson Orin.",
+  "download_how_title": "Baixe, abra, pronto",
+  "download_how_text": "Qualquer que seja o sistema escolhido, a instalação sempre termina do mesmo jeito: a configuração abre no seu navegador e guia você por três passos curtos — câmeras, detecção e início."
 }

@@ -5,98 +5,117 @@
     import PageHeader from '$lib/components/PageHeader.svelte';
     import InstallProgress from '$lib/components/InstallProgress.svelte';
     import DocLayout from '$lib/components/DocLayout.svelte';
+    import DownloadCard from '$lib/components/DownloadCard.svelte';
     import InstallStep from '$lib/components/InstallStep.svelte';
+    import InstallCommonSteps, { commonToc } from '$lib/components/InstallCommonSteps.svelte';
     import PagerNav from '$lib/components/PagerNav.svelte';
     import Icon from '$lib/components/Icon.svelte';
 
+    /**
+     * Drie routes op Linux: het Ubuntu-pakket, de container op een pc met
+     * NVIDIA-kaart en de container op een Jetson. Daarna gaat de installatie
+     * verder in de browser, net als op Windows en macOS.
+     */
     const toc = [
-        { id: 'step-1', label: m.docker_step1_title() },
-        { id: 'step-2', label: m.docker_step2_title() },
-        { id: 'step-3', label: m.docker_step3_title() },
-        { id: 'step-4', label: m.docker_step4_title() },
-        { id: 'step-5', label: m.docker_step5_title() }
+        { id: 'requirements', label: m.docker_routes_title() },
+        { id: 'step-1', label: m.docker_deb_title() },
+        { id: 'step-2', label: m.docker_nvidia_title() },
+        { id: 'step-3', label: m.docker_jetson_title() },
+        { id: 'step-4', label: m.docker_open_title() },
+        ...commonToc(5),
+        { id: 'support', label: m.inst_support_title() }
     ];
-
-    const configJson = `{
-  "detectors": [
-    {
-      "detection": {
-        "source": [
-          "rtsp://admin:YourPassword123@192.168.100.22:554/h264Preview_01_sub"
-        ]
-      },
-      "yolo": {
-        "model": "https://github.com/CowCatcherAI/CowCatcherAI/releases/download/model-V16/cowcatcherV15.pt",
-        "confidence": 0.84,
-        "frames_min": 4,
-        "timeout": 6,
-        "time_max": 50
-      },
-      "exporters": {
-        "telegram": [
-          {
-            "token": "<your_bot_token>",
-            "chat": "<your_chat_id>",
-            "alert_every": 5,
-            "confidence": 0.87
-          }
-        ],
-        "disk": {
-          "directory": "mounts"
-        }
-      }
-    }
-  ]
-}`;
 </script>
 
 <Seo title={m.docker_title()} description={m.docker_intro()} />
 
 <PageHeader
-    eyebrow="Linux · Docker · Jetson"
+    eyebrow="Ubuntu · Docker · Jetson"
     title={m.docker_title()}
     lead={m.docker_intro()}
     crumbs={[
         { href: '/installation', label: m.nav_install() },
         { href: '/installation/download', label: stripNumber(m.install_card_software_title()) }
     ]}
-/>
+>
+    {#snippet aside()}
+        <DownloadCard
+            heading={m.windows_download_heading()}
+            desc={m.docker_download_desc()}
+            button={m.windows_btn_releases()}
+        />
+    {/snippet}
+</PageHeader>
 
 <div class="container progress-wrap">
     <InstallProgress current={2} />
 </div>
 
 <DocLayout {toc}>
-    <InstallStep number="1" title={m.docker_step1_title()}>
+    <h2 id="requirements">{m.docker_routes_title()}</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>{m.docker_routes_th_host()}</th>
+                    <th>{m.docker_routes_th_route()}</th>
+                    <th>{m.docker_routes_th_engine()}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{m.docker_route_deb_host()}</td>
+                    <td><a href="#step-1" class="text-link">A · <code>.deb</code></a></td>
+                    <td>{m.docker_route_deb_engine()}</td>
+                </tr>
+                <tr>
+                    <td>{m.docker_route_nvidia_host()}</td>
+                    <td><a href="#step-2" class="text-link">B · <code>compose.yml</code></a></td>
+                    <td>{m.docker_route_nvidia_engine()}</td>
+                </tr>
+                <tr>
+                    <td>{m.docker_route_jetson_host()}</td>
+                    <td><a href="#step-3" class="text-link">C · <code>compose.jetson.yml</code></a></td>
+                    <td>{m.docker_route_jetson_engine()}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h2 id="steps">{m.inst_steps_title()}</h2>
+
+    <InstallStep number="1" title={m.docker_deb_title()}>
+        <ol class="setup-steps">
+            <li>{@html m.docker_deb_1()}</li>
+            <li>
+                {@html m.docker_deb_2()}
+                <pre><code>cd ~/Downloads
+sudo apt install ./AI-Detector-*-linux-amd64.deb</code></pre>
+            </li>
+            <li>{@html m.docker_deb_3()}</li>
+            <li>{@html m.docker_deb_4()}</li>
+        </ol>
+        <p class="note">{@html m.docker_deb_update()}</p>
+    </InstallStep>
+
+    <InstallStep number="2" title={m.docker_nvidia_title()}>
+        <p>{m.docker_nvidia_req()}</p>
+        <pre><code>git clone https://github.com/ESchouten/ai-detector.git
+cd ai-detector/example
+sudo docker compose up -d</code></pre>
+        <p>{@html m.docker_nvidia_open()}</p>
+    </InstallStep>
+
+    <InstallStep number="3" title={m.docker_jetson_title()}>
         <div class="options">
             <div class="option">
-                <h4>{m.docker_step1_opt1_title()}</h4>
+                <h4>{m.docker_jetson_flash_title()}</h4>
                 <ol class="setup-steps">
-                    <li>{m.docker_step1_opt1_step1()}</li>
-                    <li>{m.docker_step1_opt1_step2()}</li>
-                    <li>{m.docker_step1_opt1_step3()}</li>
-                    <li>{m.docker_step1_opt1_step4()}</li>
-                    <li>{m.docker_step1_opt1_step5()}</li>
-                    <li>{m.docker_step1_opt1_step6()}</li>
+                    <li>{m.docker_jetson_flash_1()}</li>
+                    <li>{m.docker_jetson_flash_2()}</li>
+                    <li>{m.docker_jetson_flash_3()}</li>
                 </ol>
-                <p class="note"><strong>{m.docker_important()}:</strong> {m.docker_step1_opt1_note()}</p>
-                <a
-                    href="https://www.youtube.com/watch?v=-PjMC0gyH9s&t=1307s"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="video-link"
-                >
-                    <Icon name="play" size={14} />
-                    {m.docker_video_link()}
-                </a>
-            </div>
-
-            <div class="option">
-                <h4>{m.docker_step1_opt2_title()}</h4>
-                <ol class="setup-steps">
-                    <li>{m.docker_step1_opt2_step1()}</li>
-                    <li>{m.docker_step1_opt2_step2()}</li>
-                </ol>
+                <p class="note"><strong>{m.docker_important()}:</strong> {m.docker_jetson_flash_note()}</p>
                 <a
                     href="https://www.youtube.com/watch?v=497u-CcYvE8"
                     target="_blank"
@@ -109,81 +128,50 @@
             </div>
 
             <div class="option">
-                <h4>{m.docker_step1_opt3_title()}</h4>
-                <ol class="setup-steps">
-                    <li>{m.docker_step1_opt3_step1()}</li>
-                    <li>{m.docker_step1_opt3_step2()}</li>
-                    <li>{m.docker_step1_opt3_step3()}</li>
-                    <li>{m.docker_step1_opt3_step4()}</li>
-                </ol>
-            </div>
-        </div>
-    </InstallStep>
-
-    <InstallStep number="2" title={m.docker_step2_title()}>
-        <p>{m.docker_step2_desc()}</p>
-        <pre><code>sudo apt update
-sudo apt install -y docker.io
+                <h4>{m.docker_jetson_docker_title()}</h4>
+                <p>{m.docker_jetson_docker_desc()}</p>
+                <pre><code>sudo apt update
+sudo apt install -y docker.io git
 sudo systemctl enable --now docker
-sudo apt install -y nvidia-container-runtime nvidia-container-toolkit
+sudo apt install -y nvidia-container-toolkit
 sudo nvidia-ctk runtime configure --runtime=docker
 sudo systemctl restart docker</code></pre>
-    </InstallStep>
+            </div>
 
-    <InstallStep number="3" title={m.docker_step3_title()}>
-        <p>{m.docker_step3_desc()}</p>
-        <pre><code>sudo docker pull ghcr.io/eschouten/ai-detector:main-jetpack6</code></pre>
-    </InstallStep>
+            <div class="option">
+                <h4>{m.docker_jetson_start_title()}</h4>
+                <p>{m.docker_jetson_start_desc()}</p>
+                <pre><code>git clone https://github.com/ESchouten/ai-detector.git
+cd ai-detector/example
+sudo docker compose -f compose.jetson.yml up -d</code></pre>
+            </div>
 
-    <InstallStep number="4" title={m.docker_step4_title()}>
-        <p>{m.docker_step4_desc()}</p>
-        <pre><code>touch compose.yml
-touch config.json</code></pre>
-
-        <h4>{m.docker_step4_file1()}</h4>
-        <p>{m.docker_step4_file1_desc()}</p>
-        <pre><code>services:
-  aidetector:
-    image: "ghcr.io/eschouten/ai-detector:main-jetpack6"
-    runtime: nvidia
-    ipc: host
-    ulimits:
-      memlock: -1
-      stack: 67108864
-    volumes:
-      - ./config.json:/app/config.json
-      - ./sprong24.mp4:/app/sprong24.mp4
-      - ./detections/:/app/detections
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              count: all
-              capabilities: [gpu]</code></pre>
-
-        <h4>{m.docker_step4_file2()}</h4>
-        <p>{m.docker_step4_file2_desc()}</p>
-        <pre><code>{configJson}</code></pre>
-    </InstallStep>
-
-    <InstallStep number="5" title={m.docker_step5_title()}>
-        <p>{m.docker_step5_start()}:</p>
-        <pre><code>sudo docker compose up</code></pre>
-
-        <p>{m.docker_step5_stop()}:</p>
-        <pre><code>sudo docker compose down</code></pre>
+            <div class="option">
+                <h4>{m.docker_jetson_auto_title()}</h4>
+                <p>{@html m.docker_jetson_auto_desc()}</p>
+                <pre><code>cd ~/ai-detector
+python3 distribution/linux_startup.py install --compose example/compose.jetson.yml</code></pre>
+                <p class="note">{@html m.docker_jetson_auto_note()}</p>
+            </div>
+        </div>
 
         <div class="tip-box">
-            <strong>{m.docker_step5_modify_title()}</strong>
-            <ol class="setup-steps">
-                <li><code>sudo docker compose down</code></li>
-                <li>{m.docker_step5_modify_step2()}</li>
-                <li><code>sudo docker compose up</code></li>
-            </ol>
-            <p>{m.docker_step5_result()}</p>
+            <strong>{m.docker_manage_title()}</strong>
+            <p>{m.docker_manage_update()}:</p>
+            <pre><code>sudo docker compose pull && sudo docker compose up -d</code></pre>
+            <p>{m.docker_manage_stop()}:</p>
+            <pre><code>sudo docker compose down</code></pre>
+            <p>{m.docker_manage_logs()}:</p>
+            <pre><code>sudo docker compose logs -f aidetector</code></pre>
+            <p>{@html m.docker_jetson_compose_note()}</p>
         </div>
     </InstallStep>
+
+    <InstallStep number="4" title={m.docker_open_title()}>
+        <p>{@html m.docker_open_text()}</p>
+    </InstallStep>
+
+    <InstallCommonSteps start={5} />
 
     <PagerNav
         prev={{ href: '/installation/download', label: m.inst_back_to_platforms() }}
@@ -202,6 +190,7 @@ touch config.json</code></pre>
     }
 
     .option {
+        min-width: 0;
         padding: 1.25rem;
         border-radius: var(--radius);
         background: var(--bg-sunken);

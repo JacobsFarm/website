@@ -22,7 +22,7 @@ Dairy farmers lose money on missed heats and unattended calvings. The commercial
 |---|---|---|
 | **CowCatcher** | Mounting behaviour — the primary visual sign of a cow in heat (oestrus) | Catch heats you would otherwise miss, without hardware on the animal |
 | **CalvingCatcher** | Calving stages: water bag, legs, head, newborn calf | Be there for the calvings that need you |
-| **AI Detector** | The local application that runs the models | One config file, alerts to Telegram or your own webhook |
+| **AI Detector** | The app that runs the models on your own computer | Setup in your browser, alerts on your phone via Telegram |
 
 All three are developed in the open by a community of dairy farmers, and are free to download and run.
 
@@ -41,14 +41,14 @@ All three are developed in the open by a community of dairy farmers, and are fre
 
 ```
 IP camera  ──►  AI Detector  ──►  YOLO vision model  ──►  Alert
-(RTSP feed)     (your PC)         (heat / calving)        (Telegram, webhook, disk)
+(RTSP feed)     (your PC)         (heat / calving)        (Telegram, recordings)
 ```
 
 1. The AI Detector pulls frames from your existing camera over the network
 2. A YOLO model scores each frame for mounting behaviour or calving stages
-3. When enough consecutive frames pass your confidence threshold, you get an alert — with image, crop and short video clip if you want them
+3. When the model is sure enough, the event is saved as a recording and you get a Telegram alert with photo and short video clip
 
-Everything runs on your own machine. There is no cloud step, no account, and no upload.
+Everything runs on your own machine. There is no account and no upload — only the optional AI check sends clips of detected events to the model provider you connect.
 
 ---
 
@@ -59,7 +59,7 @@ Everything runs on your own machine. There is no cloud step, no account, and no 
 | **Computer** | Any recent desktop or refurbished PC | NVIDIA GPU desktop, Mac mini (M-series), or Jetson Orin Nano |
 | **Camera** | One PoE IP camera with an RTSP stream, pointed at the group | One per pen you want covered |
 | **Network** | PoE switch and Cat6 cabling to the barn | — |
-| **OS** | Windows, macOS, or Linux/Docker | — |
+| **OS** | Windows 10 22H2+ / 11, macOS 14+ (Apple Silicon), Ubuntu, or Docker/Jetson | — |
 
 Full details, product photos and buying links: **[Hardware guide](https://jacobsfarm.github.io/website/installation/hardware/)**
 
@@ -77,14 +77,14 @@ The software is released under the **GNU GPL v3.0**: you may use it, study it, m
 
 - Video is processed **on your own machine**
 - No frames, clips or detections are sent to us or to any third party
-- Alerts go only where you configure them (your Telegram chat, your webhook, your disk)
+- Alerts go only where you configure them (your Telegram chat) and recordings stay on your disk
 - There is no telemetry and no account system
 
 ---
 
 ## Languages
 
-The site ships in ten languages, fully translated — including the technical installation guides.
+The site ships in ten languages. English and Dutch are complete; pages without a translation fall back to English.
 
 | | | | | |
 |---|---|---|---|---|
@@ -102,8 +102,8 @@ Translations live in `messages/<locale>/`. Correcting a phrase means editing one
 | [Home](https://jacobsfarm.github.io/website/) | Overview of the three tools, live demos, field validation |
 | [Installation](https://jacobsfarm.github.io/website/installation/) | Step-by-step route from hardware to running system |
 | [Hardware](https://jacobsfarm.github.io/website/installation/hardware/) | Computers, cameras, PoE switches, cabling, DIY enclosures |
-| [Download](https://jacobsfarm.github.io/website/installation/download/) | Windows, macOS and Docker/Jetson install guides |
-| [Configuration](https://jacobsfarm.github.io/website/installation/options/) | Reference for every setting in the AI Detector config |
+| [Download](https://jacobsfarm.github.io/website/installation/download/) | Windows, macOS and Linux/Docker/Jetson install guides |
+| [Using the app](https://jacobsfarm.github.io/website/installation/options/) | Tour of every page and setting of the AI Detector app |
 | [Projects](https://jacobsfarm.github.io/website/projects/cowcatcher/) | Background on CowCatcher, CalvingCatcher and the AI Detector |
 | [About us](https://jacobsfarm.github.io/website/about-us/) | Who builds this and why |
 

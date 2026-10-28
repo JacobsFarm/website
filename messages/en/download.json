@@ -1,10 +1,12 @@
 {
   "download_title": "Installation & Downloads",
-  "download_intro_text": "The installation is designed to be as easy as possible. Simply follow the steps for your operating system below and you can get started with CowCatcherAI right away.",
+  "download_intro_text": "One app for heat and calving detection: AI Detector. Download it for your computer, open it, and setup continues in your browser. Choose your system below for the step-by-step guide.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "For download on Windows 10 and Windows 11 computers.",
+  "download_card_windows_desc": "For PCs with Windows 10 (22H2 or newer) or Windows 11. Uses an NVIDIA graphics card automatically when you have one.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "For Apple devices such as the MacBook or other Mac computers.",
+  "download_card_macos_desc": "For Macs with Apple Silicon (M1 or newer) and macOS 14 or newer. Very quiet and energy-efficient.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "For the Linux operating system and edge computers (such as the Jetson Nano Orin or Raspberry Pi). This installation is done via Docker."
+  "download_card_linux_desc": "Ubuntu package, Docker container for a PC with an NVIDIA GPU, or an NVIDIA Jetson Orin edge computer.",
+  "download_how_title": "Download, open, done",
+  "download_how_text": "Whatever system you choose, the installation always ends the same way: setup opens in your browser and guides you through three short steps — cameras, detection and start."
 }

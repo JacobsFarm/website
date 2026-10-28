@@ -1,10 +1,12 @@
 {
-  "download_title": "Installation & downloads",
-  "download_intro_text": "Installationen er designet til at være så nem som muligt. Følg blot trinnene for dit operativsystem nedenfor, så kan du komme i gang med CowCatcherAI med det samme.",
+  "download_title": "Installation & Downloads",
+  "download_intro_text": "Én app til registrering af brunst og kælvning: AI Detector. Download den til din computer, åbn den, og opsætningen fortsætter i din browser. Vælg dit system nedenfor for en trin-for-trin-guide.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Til download på computere med Windows 10 og Windows 11.",
+  "download_card_windows_desc": "Til pc'er med Windows 10 (22H2 eller nyere) eller Windows 11. Bruger automatisk et NVIDIA-grafikkort, når du har et.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Til Apple-enheder som MacBook eller andre Mac-computere.",
+  "download_card_macos_desc": "Til Mac'er med Apple Silicon (M1 eller nyere) og macOS 14 eller nyere. Meget stille og energieffektiv.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Til Linux-operativsystemet og edge-computere (som Jetson Nano Orin eller Raspberry Pi). Denne installation sker via Docker."
+  "download_card_linux_desc": "Ubuntu-pakke, Docker-container til en pc med NVIDIA GPU, eller en NVIDIA Jetson Orin edge-computer.",
+  "download_how_title": "Download, åbn, færdig",
+  "download_how_text": "Uanset hvilket system du vælger, slutter installationen altid på samme måde: opsætningen åbner i din browser og guider dig gennem tre korte trin — kameraer, registrering og start."
 }

@@ -1,10 +1,12 @@
 {
-  "download_title": "Installation et Téléchargements",
-  "download_intro_text": "L'installation est conçue pour être aussi simple que possible. Suivez simplement les étapes correspondant à votre système d'exploitation ci-dessous et vous pourrez commencer avec CowCatcherAI immédiatement.",
+  "download_title": "Installation et téléchargements",
+  "download_intro_text": "Une seule application pour la détection des chaleurs et des vêlages : AI Detector. Téléchargez-la pour votre ordinateur, ouvrez-la, et la configuration se poursuit dans votre navigateur. Choisissez votre système ci-dessous pour le guide pas à pas.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Pour le téléchargement sur les ordinateurs Windows 10 et Windows 11.",
+  "download_card_windows_desc": "Pour les PC avec Windows 10 (22H2 ou plus récent) ou Windows 11. Utilise automatiquement une carte graphique NVIDIA si vous en avez une.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Pour les appareils Apple tels que le MacBook ou d'autres ordinateurs Mac.",
+  "download_card_macos_desc": "Pour les Mac avec Apple Silicon (M1 ou plus récent) et macOS 14 ou plus récent. Très silencieux et économe en énergie.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Pour le système d'exploitation Linux et les ordinateurs edge (tels que le Jetson Nano Orin ou le Raspberry Pi). Cette installation se fait via Docker."
+  "download_card_linux_desc": "Paquet Ubuntu, conteneur Docker pour un PC avec GPU NVIDIA, ou un ordinateur embarqué NVIDIA Jetson Orin.",
+  "download_how_title": "Télécharger, ouvrir, c'est fait",
+  "download_how_text": "Quel que soit le système choisi, l'installation se termine toujours de la même façon : la configuration s'ouvre dans votre navigateur et vous guide en trois étapes courtes — caméras, détection et démarrage."
 }

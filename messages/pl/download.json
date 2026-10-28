@@ -1,10 +1,12 @@
 {
   "download_title": "Instalacja i pobieranie",
-  "download_intro_text": "Instalacja została zaprojektowana tak, aby była jak najprostsza. Postępuj zgodnie z poniższymi krokami dla swojego systemu operacyjnego, aby od razu zacząć korzystać z CowCatcherAI.",
+  "download_intro_text": "Jedna aplikacja do wykrywania rui i cielenia: AI Detector. Pobierz ją na swój komputer, otwórz, a konfiguracja dalej odbędzie się w przeglądarce. Wybierz poniżej swój system, aby zobaczyć instrukcję krok po kroku.",
   "download_card_windows_title": "Windows",
-  "download_card_windows_desc": "Do pobrania na komputery z systemem Windows 10 i Windows 11.",
+  "download_card_windows_desc": "Dla komputerów z Windows 10 (22H2 lub nowszym) albo Windows 11. Gdy masz kartę graficzną NVIDIA, używa jej automatycznie.",
   "download_card_macos_title": "macOS",
-  "download_card_macos_desc": "Dla urządzeń Apple, takich jak MacBook lub inne komputery Mac.",
+  "download_card_macos_desc": "Dla Maców z Apple Silicon (M1 lub nowszym) i macOS 14 lub nowszym. Bardzo cichy i oszczędny.",
   "download_card_linux_title": "Linux / Docker",
-  "download_card_linux_desc": "Dla systemu Linux i komputerów edge (takich jak Jetson Nano Orin lub Raspberry Pi). Instalacja odbywa się przez Dockera."
+  "download_card_linux_desc": "Pakiet dla Ubuntu, kontener Docker dla komputera z kartą graficzną NVIDIA albo komputer brzegowy NVIDIA Jetson Orin.",
+  "download_how_title": "Pobierz, otwórz, gotowe",
+  "download_how_text": "Niezależnie od wybranego systemu instalacja zawsze kończy się tak samo: konfiguracja otwiera się w przeglądarce i prowadzi Cię przez trzy krótkie kroki — kamery, wykrywanie i start."
 }

@@ -1,50 +1,66 @@
 {
-  "ai_detector_desc": "Browser-based AI detection tool.",
-  "ai_detector_title": "AI Detector WebApp",
-  "ai_detector_text": "Information about the browser application.",
-  
+  "ai_detector_desc": "The app that runs CowCatcher and CalvingCatcher on your own computer.",
+  "ai_detector_title": "AI Detector",
+  "ai_detector_text": "Information about the AI Detector application.",
+
   "ai_detector_hero_title": "AI Detector",
-  "ai_detector_hero_subtitle": "One software program for both Calving and Cowcatcher. Monitor your video streams, catch the action, and get instant alerts.",
+  "ai_detector_hero_subtitle": "One app for both CowCatcher and CalvingCatcher. It watches your barn cameras on your own computer, records what it sees and alerts you on your phone.",
   "ai_detector_btn_download": "Download App",
   "ai_detector_btn_github": "View Source",
+  "ai_detector_hero_img_alt": "The Recordings page of AI Detector with detected mounts",
 
   "ai_detector_about_title": "One Detector, Endless Possibilities",
-  "ai_detector_about_p1": "At Cowcatcher AI, we train and develop the vision models. The AI Detector is the software layer that applies these models in practice—using their learned knowledge to perform accurate, real-world detections.",
-  "ai_detector_about_p2": "The detector could also be used outside the Cowcatcher provided models and used for your own projects—for example, alerting for people, cars, tractors pulling up, etc.",
+  "ai_detector_about_p1": "At Cowcatcher AI, we train and develop the vision models. The AI Detector is the app that applies these models in practice: it reads your cameras, recognizes heat and calving, and tells you when it matters.",
+  "ai_detector_about_p2": "You install it like any other program. Setup runs in your browser in three steps — cameras, detection, start — and a preset supplies everything the AI needs. Presets also keep your detectors up to date with newer models by themselves.",
+
+  "ai_detector_video_title": "See it in two minutes",
+  "ai_detector_video_desc": "From download to the first alert: a short tour of setup, Telegram alerts, the AI check and the recordings.",
 
   "ai_detector_media_title": "Smart Capture & Alerts",
-  
+
   "ai_detector_image_title": "Image Detection",
-  "ai_detector_image_desc": "You can choose how you would like to receive images of detections. Options include the full image, a zoomed-in view around the detection (for example, for calving), or both. The AI detector automatically selects the best captured moment to send to you, helping you make the most informed decision.",
-  
-  "ai_detector_video_title": "Video Detection",
-  "ai_detector_video_desc": "The detector can send a short video of the event. Using a special technique, it records a smooth video, regardless of your computer’s performance. This is useful for estrus detection, as it helps determine whether the cow is standing still or actively mounting (in heat).",
+  "ai_detector_image_desc": "Every detection is saved with the best captured moment, with the detection box drawn on it. In Telegram you get the picture right away and can confirm it or mark it as a false alarm with 👍 or 👎.",
+
+  "ai_detector_video_clip_title": "Video Detection",
+  "ai_detector_video_desc_clip": "The detector also records a short, smooth video of the event, regardless of your computer’s performance. Useful for heat detection: you see straight away whether a cow is standing still or actively mounting.",
 
   "ai_detector_feature_local_title": "100% Local Processing",
-  "ai_detector_feature_local_desc": "Keep your data private. Object detection runs completely locally on your hardware using lightning-fast YOLO models. No cloud required for the core detection.",
-  
-  "ai_detector_feature_network_title": "Anywhere on Your Network",
-  "ai_detector_feature_network_desc": "Access the intuitive WebApp dashboard from your mobile phone, tablet, or desktop. As long as you are connected to the same Wi-Fi network as the host computer, you have full control.",
-  
-  "ai_detector_feature_custom_title": "Highly Configurable",
-  "ai_detector_feature_custom_desc": "Make it your own. Whether you're alerting for cows, people, or vehicles, the entire system is easily tweaked through a single config.json file.",
+  "ai_detector_feature_local_desc": "Your footage stays on your farm. Detection runs entirely on your own computer — on an NVIDIA GPU, Windows ML, the Apple Neural Engine or a Jetson.",
+
+  "ai_detector_feature_network_title": "On Every Phone",
+  "ai_detector_feature_network_desc": "Open the dashboard on your phone, tablet or laptop via aidetector.local. Connect with a one-time code and put it on your home screen.",
+
+  "ai_detector_feature_custom_title": "Presets That Stay Up to Date",
+  "ai_detector_feature_custom_desc": "Choose Cow Catcher or Calving Catcher and you are done. Newer models arrive by themselves; no configuration files needed.",
+
+  "ai_detector_feature_alerts_title": "Telegram With Review",
+  "ai_detector_feature_alerts_desc": "Alerts with photo and clip, 👍/👎 buttons, several recipients and quiet hours at night.",
+
+  "ai_detector_feature_check_title": "AI Check (Optional)",
+  "ai_detector_feature_check_desc": "Let Google Gemini double-check each clip before you get an alert, to filter out false alarms.",
+
+  "ai_detector_feature_monitor_title": "Always Know It Works",
+  "ai_detector_feature_monitor_desc": "Live status per camera, a 30-day history of what was really watched, offline notifications and a heartbeat.",
 
   "ai_detector_how_title": "How it Works",
-  "ai_detector_step_1_title": "Step 1: Fast Local Scanning",
-  "ai_detector_step_1_desc": "The detector connects to your RTSP streams or video files. A fast YOLO model scans every frame looking for specific objects.",
-  
-  "ai_detector_step_2_title": "Step 2: Smart VLM Verification (Optional)",
-  "ai_detector_step_2_desc": "To filter out false alarms, you can optionally ask a Vision Language AI (like Gemini) a custom question about the footage (e.g., 'Is there really a person?').",
-  
-  "ai_detector_step_3_title": "Step 3: Instant Alerts",
-  "ai_detector_step_3_desc": "Confirmed detections can be saved to disk, posted to a webhook, or sent straight to your Telegram chat complete with images and video clips.",
+  "ai_detector_step_1_title": "Step 1: Connect your cameras",
+  "ai_detector_step_1_desc": "The cameras on your network are found by themselves. Check the pictures and give each camera a name.",
+
+  "ai_detector_step_2_title": "Step 2: Choose what to detect",
+  "ai_detector_step_2_desc": "Pick a preset — Cow Catcher for heat, Calving Catcher for calving — and the cameras it should watch.",
+
+  "ai_detector_step_3_title": "Step 3: Start monitoring",
+  "ai_detector_step_3_desc": "Monitoring runs in the background, also when you close the browser. Detections appear in Recordings and on your phone.",
 
   "ai_detector_install_title": "Simple Installation",
-  "ai_detector_install_desc": "Getting started takes minutes, not hours. Choose the setup that fits your environment.",
-  
-  "ai_detector_install_win_title": "Windows Executable",
-  "ai_detector_install_win_desc": "The recommended approach. Just download the .exe for your hardware, put it in a folder, double-click, and fill out the generated config.json.",
-  
-  "ai_detector_install_docker_title": "Docker Container",
-  "ai_detector_install_docker_desc": "Perfect for Edge computers, Linux, or auto-reboot setups. Use the provided docker-compose file to get the detector and web app running instantly."
+  "ai_detector_install_desc": "Download, open, done. Setup happens in your browser.",
+
+  "ai_detector_install_win_title": "Windows",
+  "ai_detector_install_win_desc": "Windows 10 (22H2+) or 11. Extract the zip and run the setup. Uses an NVIDIA GPU when present, otherwise Windows ML.",
+
+  "ai_detector_install_mac_title": "Mac",
+  "ai_detector_install_mac_desc": "macOS 14+ on Apple Silicon. Open the .dmg and drag AI Detector to Applications.",
+
+  "ai_detector_install_docker_title": "Ubuntu, Docker & Jetson",
+  "ai_detector_install_docker_desc": "Ubuntu package, Docker container for an NVIDIA PC, or a Jetson Orin with JetPack 7.2."
 }

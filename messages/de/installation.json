@@ -1,17 +1,11 @@
 {
   "install_title": "Installationsanleitung",
-  "install_info_text": "Die Installation der Kameras und des Computers können Sie problemlos selbst durchführen. Die Software ist mit allen Kameramarken kompatibel. Im Abschnitt 'Hardware-Installation' erklären wir alles im Detail. Wenn Sie bereits Kameras installiert haben, können Sie die Software sofort herunterladen. Sobald dies erfolgreich war, können Sie die Möglichkeiten unserer Software im Abschnitt 'Software-Optionen' erkunden.",
   "install_card_hardware_title": "1. Hardware-Installation",
   "install_card_hardware_desc": "Lesen Sie alles über die benötigten Kameras, den Computer und wie man sie korrekt installiert.",
   "install_card_software_title": "2. Software-Download",
-  "install_card_software_desc": "Ist Ihre Hardware bereit? Laden Sie die CowCatcherAI-Software direkt herunter und installieren Sie sie.",
-  "install_card_options_title": "3. Software-Optionen",
-  "install_card_options_desc": "Entdecken Sie alle Funktionen und erweiterten Einstellungen unserer Software.",
-  "install_text": "Wählen Sie Ihre Plattform:",
-  "install_jetson_link": "Jetson Nano Einrichtung",
-  "install_pc_link": "PC Einrichtung",
-  "jetson_title": "Jetson Nano-Installation",
-  "jetson_text": "Schritt 1: Flashen Sie die SD-Karte mit JetPack 4.6...",
-  "pc_title": "PC-Installation",
-  "pc_text": "Schritt 1: Installieren Sie Python und die notwendigen CUDA-Bibliotheken..."
+  "install_info_text": "Die Installation der Hardware für Kameras und Computer kannst du selbst problemlos erledigen. Die Software funktioniert mit fast jeder IP-Kamera-Marke. Im Abschnitt „Hardware-Installation“ erklären wir alles genau. Du hast schon Kameras? Dann lade die AI-Detector-App direkt herunter: Die Einrichtung läuft in drei kurzen Schritten im Browser. Danach erklärt „Die App verwenden“ jede Seite und Einstellung.",
+  "install_card_software_desc": "Ist deine Hardware bereit? Lade die AI-Detector-App für Windows, Mac oder Linux herunter und folge der Einrichtung.",
+  "install_card_options_title": "3. Die App verwenden",
+  "install_card_options_desc": "Ein Rundgang durch jede Seite: Recordings, Cameras, Detectors, Benachrichtigungen und Einstellungen.",
+  "install_text": "Wählen Sie Ihre Plattform:"
 }

@@ -7,7 +7,6 @@
   "front_page_calvingcatcher_title": "Kalbcatcher",
   "front_page_calvingcatcher_desc": "Ein Vision-Tool, das wichtige Phasen der Abkalbung erkennt, von der Fruchtblase und den Beinen bis zum Kopf und dem neugeborenen Kalb.",
   "front_page_ai_detector_title": "AI-Erkennung",
-  "front_page_ai_detector_desc": "Das lokale Tool zur Nutzung der Vision-Modelle, mit vielen persönlichen Einstellungen zur Anpassung an Ihre Vorlieben.",
   "front_page_intro_title": "Von Landwirten, für Landwirte",
   "front_page_intro_p1": "Wir sind eine weltweite Gemeinschaft von Landwirten, die gemeinsam ein leistungsstarkes Computer-Vision-Tool entwickelt haben – offen, ehrlich und für die reale Praxis gebaut. Was normalerweise nur mit teuren Transpondern und kostspieligen Abonnements möglich ist, machen wir für jeden zugänglich.",
   "front_page_intro_p2": "Unsere Software kann völlig kostenlos heruntergeladen und genutzt werden. Keine versteckten Kosten, keine Verpflichtungen. Was Sie heute herunterladen, bleibt Ihres und funktioniert einfach – auch noch in Jahren. Und was vielleicht noch wichtiger ist: Alle Ihre Daten bleiben vollständig unter Ihrer eigenen Kontrolle.",
@@ -32,5 +31,6 @@
   "front_page_stats_detections": "Erkennungen",
   "front_page_stats_countries": "Länder",
   "front_page_stats_disclaimer": "*Wir wissen nicht genau, wie viele Betriebe die Software nutzen, da alles lokal läuft. Diese Zahl umfasst nur die Betriebe, die das Projekt aktiv kontaktiert haben.",
+  "front_page_ai_detector_desc": "Die App, die unsere Vision-Modelle auf deinem eigenen Computer ausführt: Einrichtung im Browser, Benachrichtigungen auf dem Handy.",
   "front_page_featured_in_title": "Bekannt aus"
 }

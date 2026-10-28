@@ -666,8 +666,16 @@ kbd {
 .setup-steps > li {
 	counter-increment: step;
 	position: relative;
+	min-width: 0;
 	padding-left: 2.4rem;
 	margin: 0 !important;
+}
+
+/* Lange bestandsnamen (AI-Detector-…-setup.zip) mogen op een telefoon afbreken. */
+.setup-steps :not(pre) > code,
+.prose p > code {
+	white-space: normal;
+	overflow-wrap: anywhere;
 }
 
 .setup-steps > li::before {

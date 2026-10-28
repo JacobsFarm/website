@@ -6,16 +6,11 @@
   "hardware_computer_intro": "Programul rulează local pe hardware-ul tău pentru confidențialitate maximă și viteză. În funcție de numărul de camere și bugetul tău, poți alege dintre următoarele configurări:",
   "hardware_comp_opt1_title": "PC de joc (NVIDIA GPU)",
   "hardware_comp_opt1_desc": "Viteză și performanță maxime. Potrivit pentru până la 15 camere.",
-  "hardware_comp_opt1_more": "Necesită o GPU NVIDIA din generația RTX 3060 (pentru CUDA 13) sau din generația GTX (pentru CUDA 12.6). Această configurare extrage viteza maximă din program, fiind ideală pentru ferme mari.",
   "hardware_comp_opt2_title": "Mac mini (M4)",
   "hardware_comp_opt2_desc": "Eficientă energetic, compactă și foarte ușor de utilizat. Potrivit pentru până la 8 camere.",
-  "hardware_comp_opt2_more": "Forța sa constă în consum redus de energie și ușurința de folosire. Rulează versiunea nativă a sistemului de operare al programului fără probleme.",
-  "hardware_comp_opt3_title": "NVIDIA Jetson Nano",
   "hardware_comp_opt3_desc": "Calcul la marginea rețelei cu prețul de achiziție cel mai scăzut și consum minim de energie. Potrivit pentru până la 6 camere.",
-  "hardware_comp_opt3_more": "Neajunsurile sunt complexitatea instalării și cerința utilizării versiunii Docker ale programului.",
   "hardware_comp_opt4_title": "Desktop refuzat (Intel i5)",
   "hardware_comp_opt4_desc": "Prețul de achiziție cel mai scăzut. Potrivit pentru 1 sau 2 camere.",
-  "hardware_comp_opt4_more": "Are un timp de procesare mai lent (circa 250 ms) și un consum mediu de energie de aproximativ 100 watt. Acest setară rulează versiunea WINML a programului nostru.",
   "hardware_cameras_title": "1. Camerele",
   "hardware_cameras_intro": "Poți folosi aproape orice cameră IP, cu condiția să sprijine RTSP (Real-Time Streaming Protocol). Asigură-te că sunt montate înalt pentru o vizualizare clară.",
   "hardware_cam_opt1_title": "Camera IP Standard",
@@ -47,5 +42,10 @@
   "hardware_diy_opt4_desc": "Conduit PVC de mare rezistență pentru protejarea cablurilor.",
   "hardware_diy_opt4_more": "Utilizează tuburi PVC rezistente la impact pentru a ascunde și proteja cablurile în mod neat și de la animale, praf sau daune fizice în curte.",
   "hardware_btn_back": "Înapoi la prezentarea generală",
-  "hardware_btn_next": "Continuă către Software"
+  "hardware_btn_next": "Continuă către Software",
+  "hardware_comp_opt1_more": "AI Detector folosește automat o placă grafică NVIDIA compatibilă, atât pe Windows, cât și în containerul Docker pe Linux. Asta oferă cea mai mare viteză, ideală pentru grajduri mari cu multe camere.",
+  "hardware_comp_opt2_more": "Punctul său forte este consumul redus de energie și ușurința în utilizare. Detecția rulează pe Neural Engine al cipului Apple Silicon. Necesită macOS 14 sau mai nou; Mac-urile Intel nu sunt suportate.",
+  "hardware_comp_opt3_title": "NVIDIA Jetson Orin Nano",
+  "hardware_comp_opt3_more": "Rulează AI Detector în containerul Docker pe JetPack 7.2. Instalarea necesită puțin mai mult efort decât pe Windows sau Mac; ghidul Linux / Docker explică fiecare pas.",
+  "hardware_comp_opt4_more": "Are un timp de procesare mai lent și un consum mediu de energie de aproximativ 100 de wați. Pe Windows, AI Detector rulează aici pe Windows ML, care funcționează cu orice placă grafică Intel sau AMD."
 }

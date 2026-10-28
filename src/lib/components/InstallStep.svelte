@@ -5,8 +5,11 @@
 	 * Eén stap uit de installatiehandleiding: genummerde badge, titel, inhoud
 	 * (children) en optioneel een schermafbeelding met bijschrift.
 	 * Krijgt `id="step-<nummer>"`, zodat de inhoudsopgave ernaar kan linken.
+	 * Meer schermafbeeldingen? Geef `images` mee: [{ src, alt, caption }].
 	 */
-	let { number, title, image = null, imageAlt = '', caption = '', children } = $props();
+	let { number, title, image = null, imageAlt = '', caption = '', images = [], children } = $props();
+
+	const figures = $derived(image ? [{ src: image, alt: imageAlt, caption }, ...images] : images);
 </script>
 
 <section class="step" id="step-{number}">
@@ -18,14 +21,14 @@
 	<div class="step-body">
 		{@render children()}
 
-		{#if image}
+		{#each figures as figure (figure.src)}
 			<figure class="step-figure">
-				<ZoomableImage src={image} alt={imageAlt} />
-				{#if caption}
-					<figcaption>{caption}</figcaption>
+				<ZoomableImage src={figure.src} alt={figure.alt} />
+				{#if figure.caption}
+					<figcaption>{figure.caption}</figcaption>
 				{/if}
 			</figure>
-		{/if}
+		{/each}
 	</div>
 </section>
 

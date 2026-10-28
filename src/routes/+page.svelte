@@ -16,7 +16,7 @@
 
 	import imgHeat from '$lib/assets/cowcatcher_2.jpg';
 	import imgCalving from '$lib/assets/calvingcatcher_2.jpg';
-	import imgDetector from '$lib/assets/installation_software_step_7.jpg';
+	import imgDetector from '$lib/assets/app_setup_detection.jpg';
 	import imgHardware from '$lib/assets/installation_hardware_1.jpg';
 	import imgSoftware from '$lib/assets/installation_software_1.jpg';
 	import imgOptions from '$lib/assets/installation_software_options_1.jpg';
@@ -218,7 +218,7 @@
 						<span class="tool-link">{m.read_more()} <Icon name="arrow-right" size={16} /></span>
 					</div>
 					<div class="tool-media tool-media--screen">
-						<img src={imgDetector} alt="The AI Detector web interface: adding a detector with the Cow Catcher preset" loading="lazy" />
+						<img src={imgDetector} alt="The AI Detector setup in the browser: choose what to detect, such as the Cow Catcher preset" loading="lazy" />
 					</div>
 				</div>
 			</a>
