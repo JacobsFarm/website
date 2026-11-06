@@ -52,9 +52,9 @@
 
 	// Tellers die oplopen zodra het statistiekblok in beeld komt.
 	const stats = [
-		{ target: 55, suffix: '', label: m.front_page_stats_farms },
-		{ target: 200, suffix: 'K+', label: m.front_page_stats_detections },
-		{ target: 6, suffix: '', label: m.front_page_stats_countries }
+		{ target: 70, suffix: '', label: m.front_page_stats_farms },
+		{ target: 300, suffix: 'K+', label: m.front_page_stats_detections },
+		{ target: 8, suffix: '', label: m.front_page_stats_countries }
 	].map((stat) => ({
 		...stat,
 		tween: new Tween(0, { duration: 2200, easing: cubicOut })
