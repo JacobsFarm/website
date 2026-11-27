@@ -2,65 +2,46 @@
   "ai_detector_desc": "De app die CowCatcher en CalvingCatcher op je eigen computer laat draaien.",
   "ai_detector_title": "AI Detector",
   "ai_detector_text": "Informatie over de AI Detector-app.",
-
   "ai_detector_hero_title": "AI Detector",
   "ai_detector_hero_subtitle": "Eén app voor zowel CowCatcher als CalvingCatcher. Hij bewaakt je stalcamera's op je eigen computer, neemt op wat hij ziet en waarschuwt je op je telefoon.",
   "ai_detector_btn_download": "App downloaden",
   "ai_detector_btn_github": "Broncode bekijken",
   "ai_detector_hero_img_alt": "De pagina Recordings van AI Detector met gedetecteerde bespringingen",
-
   "ai_detector_about_title": "Eén detector, eindeloze mogelijkheden",
   "ai_detector_about_p1": "Bij Cowcatcher AI trainen en ontwikkelen we de beeldherkenningsmodellen. AI Detector is de app die deze modellen in de praktijk toepast: hij leest je camera's, herkent tocht en afkalven en laat het je weten als het ertoe doet.",
   "ai_detector_about_p2": "Je installeert hem als elk ander programma. De setup loopt in je browser in drie stappen — camera's, detectie, start — en een preset levert alles wat de AI nodig heeft. Presets houden je detectors ook vanzelf bij met nieuwere modellen.",
-
   "ai_detector_video_title": "Bekijk het in twee minuten",
-  "ai_detector_video_desc": "Van download tot de eerste melding: een korte rondleiding langs de setup, Telegram-meldingen, de AI-controle en de opnames (Engels).",
-
+  "ai_detector_video_desc": "Van download tot de eerste melding: een korte rondleiding langs de setup, Telegram-meldingen, de AI-controle en de opnames.",
   "ai_detector_media_title": "Slimme opnames & meldingen",
-
   "ai_detector_image_title": "Fotodetectie",
   "ai_detector_image_desc": "Elke detectie wordt bewaard met het best vastgelegde moment, met het detectiekader erop. In Telegram krijg je de foto meteen en kun je hem met 👍 of 👎 bevestigen of als vals alarm markeren.",
-
   "ai_detector_video_clip_title": "Videodetectie",
   "ai_detector_video_desc_clip": "De detector neemt ook een kort, vloeiend filmpje van de gebeurtenis op, ongeacht hoe snel je computer is. Handig bij tochtdetectie: je ziet direct of een koe stilstaat of actief bespringt.",
-
   "ai_detector_feature_local_title": "100% lokaal",
   "ai_detector_feature_local_desc": "Je beelden blijven op je bedrijf. De detectie draait volledig op je eigen computer — op een NVIDIA-kaart, Windows ML, de Apple Neural Engine of een Jetson.",
-
   "ai_detector_feature_network_title": "Op elke telefoon",
   "ai_detector_feature_network_desc": "Open het dashboard op je telefoon, tablet of laptop via aidetector.local. Koppel met een eenmalige code en zet hem op je beginscherm.",
-
   "ai_detector_feature_custom_title": "Presets die bijblijven",
   "ai_detector_feature_custom_desc": "Kies Cow Catcher of Calving Catcher en je bent klaar. Nieuwere modellen komen vanzelf binnen; geen configuratiebestanden nodig.",
-
-  "ai_detector_feature_alerts_title": "Telegram met beoordeling",
-  "ai_detector_feature_alerts_desc": "Meldingen met foto en filmpje, 👍/👎-knoppen, meerdere ontvangers en stille uren 's nachts.",
-
+  "ai_detector_feature_alerts_title": "Telegram & telefoonalarm",
+  "ai_detector_feature_alerts_desc": "Meldingen met foto en clip, 👍/👎-knoppen, meerdere ontvangers en stille uren — plus een optioneel hard telefoonalarm (ntfy) dat je ’s nachts wakker maakt.",
   "ai_detector_feature_check_title": "AI-controle (optioneel)",
   "ai_detector_feature_check_desc": "Laat Google Gemini elk fragment nog eens controleren voordat je een melding krijgt, tegen vals alarm.",
-
   "ai_detector_feature_monitor_title": "Altijd weten dat het werkt",
   "ai_detector_feature_monitor_desc": "Live status per camera, 30 dagen geschiedenis van wat echt bewaakt is, meldingen bij offline camera's en een heartbeat.",
-
   "ai_detector_how_title": "Hoe het werkt",
   "ai_detector_step_1_title": "Stap 1: Koppel je camera's",
   "ai_detector_step_1_desc": "De camera's in je netwerk worden vanzelf gevonden. Controleer de beelden en geef elke camera een naam.",
-
   "ai_detector_step_2_title": "Stap 2: Kies wat je wilt detecteren",
   "ai_detector_step_2_desc": "Kies een preset — Cow Catcher voor tocht, Calving Catcher voor afkalven — en de camera's die hij moet bewaken.",
-
   "ai_detector_step_3_title": "Stap 3: Start de bewaking",
   "ai_detector_step_3_desc": "De bewaking draait op de achtergrond, ook als je de browser sluit. Detecties verschijnen in Recordings en op je telefoon.",
-
   "ai_detector_install_title": "Eenvoudige installatie",
   "ai_detector_install_desc": "Downloaden, openen, klaar. De setup gaat in je browser.",
-
   "ai_detector_install_win_title": "Windows",
   "ai_detector_install_win_desc": "Windows 10 (22H2+) of 11. Pak de zip uit en start de setup. Gebruikt een NVIDIA-kaart als die er is, anders Windows ML.",
-
   "ai_detector_install_mac_title": "Mac",
   "ai_detector_install_mac_desc": "macOS 14+ op Apple Silicon. Open de .dmg en sleep AI Detector naar Apps.",
-
   "ai_detector_install_docker_title": "Ubuntu, Docker & Jetson",
   "ai_detector_install_docker_desc": "Ubuntu-pakket, Docker-container voor een NVIDIA-pc, of een Jetson Orin met JetPack 7.2."
 }

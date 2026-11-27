@@ -26,5 +26,7 @@
   "windows_keep_title": "Hold det kørende 24/7",
   "windows_keep_1": "<strong>Brug et netværkskabel.</strong> Forbind både pc'en og IP-kameraerne med kabel (UTP/ethernet). Wi-Fi i en stald kan være ustabilt, og det får kamerabillederne til at hakke.",
   "windows_keep_2": "<strong>Ingen indstillinger for dvale er nødvendige.</strong> Mens overvågningen er tændt, holder AI Detector selv pc'en vågen. En bærbar computer går stadig i dvale, når du lukker låget, eller når den kører på batteri — så lad den bærbare stå åben og tilsluttet.",
-  "windows_keep_3": "<strong>Opdateringer.</strong> Vælg <em>Check for Updates</em> i AI Detector-menuen (ikonet ved uret). Detektorer lavet ud fra en forudindstilling får også nyere modeller af sig selv."
+  "windows_keep_3": "<strong>Opdateringer.</strong> Vælg <em>Check for Updates</em> i AI Detector-menuen (ikonet ved uret). Detektorer lavet ud fra en forudindstilling får også nyere modeller af sig selv.",
+  "windows_step2_tip": "<strong>Tip:</strong> vil du undgå den blå advarsel? Højreklik på installationsfilen, vælg <em>Egenskaber</em>, sæt flueben ved <strong>Fjern blokering</strong> nederst og klik <strong>OK</strong>. Start derefter installationen.",
+  "windows_step2_5": "Windows spørger, om AI Detector må bruge netværket. Klik <strong>Tillad</strong>: det er nødvendigt for at finde dine kameraer."
 }

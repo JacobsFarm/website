@@ -1,7 +1,6 @@
 {
   "options_title": "Uso de la aplicación",
   "options_intro": "Todo se configura en la propia aplicación, sin archivos de configuración. Esta guía recorre cada página: Recordings, Cameras, Detectors y Settings.",
-
   "use_rec_title": "Recordings",
   "use_rec_desc": "Cada detección aparece aquí con una foto y un clip de vídeo corto, agrupada por día.",
   "use_rec_1": "Haz clic en una grabación para abrir el visor. Con las teclas de flecha recorres todas las grabaciones.",
@@ -11,7 +10,6 @@
   "use_rec_5": "<strong>Export</strong> descarga un ZIP del filtro actual, opcionalmente entre dos fechas. <em>Only the original photos</em> crea un ZIP pequeño para compartir con las personas que entrenan los modelos.",
   "use_rec_caption": "Recordings: cada detección con confianza, categoría y tu revisión.",
   "use_rec_viewer_caption": "El visor reproduce el clip con el recuadro de detección; confírmalo o márcalo como falsa alarma.",
-
   "use_cam_title": "Cameras",
   "use_cam_desc": "Las imágenes en directo de todas las cámaras, con los últimos recuadros de detección arriba.",
   "use_cam_1": "<strong>Live</strong> muestra hasta cuatro imágenes en directo a la vez; haz clic en <em>Show live picture</em> para ver las demás. Una cámara muestra su primera imagen en su siguiente fotograma clave, lo que puede tardar unos segundos.",
@@ -20,7 +18,6 @@
   "use_cam_4": "<strong>Add camera</strong> vuelve a buscar en la red o te deja introducir tú mismo una stream URL.",
   "use_cam_caption": "Cameras → Live: cada cámara con el detector que la vigila.",
   "use_cam_history_caption": "Cameras → History: el verde es vigilado, las marcas son grabaciones, los huecos muestran por qué no se vio nada.",
-
   "use_det_title": "Detectors y preajustes",
   "use_det_desc": "Un detector une cámaras, un modelo de IA y destinatarios de avisos.",
   "use_det_1": "Haz clic en un detector para cambiar su preajuste, nombre, cámaras, destinatarios de Telegram y comprobación con IA. Los cambios solo se aplican tras <strong>Save detector</strong>.",
@@ -30,38 +27,33 @@
   "use_det_5": "¿Cambiaste tú los ajustes de detección? Entonces el detector los conserva y ya no se actualiza. Elige de nuevo el preajuste para seguirlo.",
   "use_det_caption": "Detectors: cada detector con sus cámaras y destinatarios de avisos.",
   "use_det_edit_caption": "Un detector: elige un preajuste, un nombre y las cámaras que vigila.",
-
   "use_status_title": "Estado de la monitorización y latido",
   "use_status_desc": "El estado arriba a la izquierda siempre está visible. Haz clic en él para ver por cámara si se están analizando imágenes recientes en este momento.",
   "use_status_1": "Una cámara solo cuenta como monitorizada cuando cada detector asignado la analiza realmente con imágenes recientes.",
   "use_status_2": "<strong>Pause monitoring</strong> detiene la detección y la mantiene pausada también en el siguiente inicio.",
   "use_status_3": "Un detector que se detiene se vuelve a arrancar solo. Si sigue fallando, todas las páginas muestran que la monitorización se ha detenido y por qué.",
-  "use_status_4": "<strong>Heartbeat</strong>: el detector llama a una dirección que elijas (por ejemplo Healthchecks.io o Uptime Kuma) mientras se ejecuta. Recibes un aviso cuando las llamadas se detienen: es el único aviso que también funciona cuando el ordenador está apagado o sin internet.",
+  "use_status_4": "<strong>Latido</strong>: el detector llama a una dirección que elijas (por ejemplo Healthchecks.io o Uptime Kuma) mientras funciona. Si dejan de llegar las llamadas, recibes un aviso — el único que también funciona con el ordenador apagado o sin Internet. Mira el <a href=\"../../tutorials/heartbeat-healthchecks/\">tutorial</a>.",
   "use_status_caption": "Estado de la monitorización: cada cámara con la hora de su última imagen analizada.",
-
   "use_alerts_title": "Avisos y horas de silencio",
   "use_alerts_desc": "En Settings → Alerts gestionas a todas las personas que reciben un mensaje de Telegram.",
   "use_alerts_1": "Cada destinatario elige qué detectores le avisan. Un mismo bot puede atender varios chats.",
   "use_alerts_2": "<strong>Quiet hours</strong>: los avisos entre dos horas llegan sin sonido, por ejemplo de noche. Deja ambas vacías para tener sonido a cualquier hora.",
-  "use_alerts_3": "<strong>Camera offline notifications</strong> (desactivado por defecto): tras cinco minutos sin monitorización, los destinatarios de la cámara reciben un mensaje, y otro cuando vuelve a estar disponible.",
+  "use_alerts_3": "<strong>Cámara sin conexión</strong> (desactivado por defecto, aparece al conectar una alarma de móvil): una cámara que lleva cinco minutos sin vigilarse se notifica a la alarma como aviso normal, y otra vez cuando vuelve.",
   "use_alerts_4": "<strong>Send test alert</strong> comprueba que un destinatario sigue funcionando.",
   "use_alerts_caption": "Settings → Alerts: destinatarios y notificaciones de cámara sin conexión.",
   "use_alerts_quiet_caption": "Un destinatario con horas de silencio de 22:00 a 06:00.",
-
   "use_ai_title": "Comprobación con IA",
   "use_ai_desc": "Opcional: deja que un modelo de lenguaje y visión vuelva a comprobar cada clip antes de enviar un aviso.",
   "use_ai_1": "Conecta Google Gemini con una clave de Google AI Studio. Otros proveedores se configuran en <em>Advanced → AI connections</em>.",
   "use_ai_2": "Una conexión se guarda una vez y la usan cuantos detectores quieras, cada uno con su propia pregunta.",
   "use_ai_3": "La grabación muestra si la comprobación con IA confirmó o rechazó el evento.",
   "use_ai_caption": "Settings → AI check: sin conexión, cada detección se graba y se avisa tal cual.",
-
   "use_devices_title": "Otros dispositivos y tu teléfono",
   "use_devices_desc": "Abre el panel en cualquier teléfono u ordenador de la misma red.",
   "use_devices_1": "Ve a <code>http://aidetector.local/</code> o <code>http://&lt;computer-IP&gt;/</code>. ¿El puerto 80 ya está en uso? Entonces la aplicación pasa a <code>:8080</code> o al siguiente número libre. El código QR bajo <strong>Settings → Devices</strong> siempre abre la dirección correcta.",
   "use_devices_2": "Cada navegador nuevo necesita un código de un solo uso de <strong>Settings → Devices</strong>. El ordenador en el que se ejecuta AI Detector siempre es de confianza.",
   "use_devices_3": "En un iPhone o iPad puedes añadir la app a la pantalla de inicio. En Android, <strong>Settings → Home screen shortcut</strong> explica cómo añadir un enlace.",
   "use_devices_caption": "Settings → Devices: los navegadores conectados, cada uno con un botón para quitar el acceso.",
-
   "use_storage_title": "Almacenamiento, copia de seguridad y recuperación",
   "use_storage_desc": "Las grabaciones se conservan hasta que las elimines. Nada se borra automáticamente.",
   "use_storage_1": "<strong>Settings → Storage</strong> muestra el espacio libre y elimina grabaciones anteriores a una fecha que elijas. Exporta antes las que quieras conservar.",
@@ -70,16 +62,19 @@
   "use_storage_4": "¿No se puede leer un archivo de ajustes? Entonces cada página ofrece <strong>Recover settings</strong>, que restaura los últimos ajustes válidos.",
   "use_storage_caption": "Settings → Storage: espacio libre, eliminación de grabaciones antiguas y la caché de modelos.",
   "use_settings_caption": "Settings: avisos, comprobación con IA, dispositivos, almacenamiento, avanzado, idioma, apariencia y copia de seguridad.",
-
   "use_more_title": "Avanzado, registros, idioma y actualizaciones",
   "use_more_desc": "Para quien quiera afinar o necesite ayuda.",
-  "use_more_1": "<strong>Advanced</strong> te permite editar umbrales, prompts y el motor de detección en JSON. Solo hace falta en situaciones especiales; los preajustes lo configuran todo por ti.",
+  "use_more_1": "<strong>Avanzado</strong> permite editar umbrales, preguntas y el motor de detección en JSON. Solo hace falta en casos especiales; los presets lo ajustan todo. Cada ajuste se explica en la <a href=\"../configuration/\">referencia de configuración</a>.",
   "use_more_2": "<strong>Logs</strong> muestra la actividad reciente. <em>Download diagnostics</em> reúne registros, datos del sistema y ajustes con datos sensibles ocultos para un informe de error.",
-  "use_more_3": "<strong>Language</strong>: English, Nederlands, Deutsch o Français, para cada dispositivo y también para las respuestas de Telegram.",
+  "use_more_3": "<strong>Idioma</strong>: English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe o 简体中文 — para cada dispositivo y para las respuestas de Telegram.",
   "use_more_4": "<strong>Appearance</strong>: claro, oscuro o automático.",
-  "use_more_5": "<strong>Updates</strong>: en Windows y Mac mediante <em>Check for Updates</em> en el menú de AI Detector; en Ubuntu instalando el paquete nuevo; con Docker mediante <code>docker compose pull</code>.",
-
+  "use_more_5": "<strong>Actualizaciones</strong>: en Windows y Mac con <em>Check for Updates</em> en el menú de AI Detector; en Ubuntu con las actualizaciones normales del sistema; con Docker con <code>docker compose pull && docker compose up -d</code>.",
   "options_btn_back": "Volver a la vista general de instalación",
   "options_github_text": "Lee la guía completa de la aplicación, informa de un error o sigue las nuevas versiones en la página oficial de AI Detector en GitHub.",
-  "options_github_btn": "Ver en GitHub"
+  "options_github_btn": "Ver en GitHub",
+  "use_alarm_title": "Alarma de móvil (ntfy)",
+  "use_alarm_desc": "Una alarma fuerte en tu móvil ante una detección, también de noche, con una imagen de lo que vio el detector.",
+  "use_alarm_1": "<strong>Conectar ntfy</strong> en Ajustes → Alertas o en el editor del detector. Instala la app gratuita ntfy, suscríbete al nombre que muestra la aplicación y confirma la alarma de prueba. Sin cuenta.",
+  "use_alarm_2": "Hay una alarma por instalación; elige qué detectores pueden hacerla sonar. Funciona junto a Telegram o sin él.",
+  "use_alarm_3": "Android puede sonar aunque esté en No molestar hasta que mires. Un iPhone muestra la alarma pero queda en silencio en modo silencio. La alarma necesita Internet."
 }

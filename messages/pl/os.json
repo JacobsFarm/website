@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Pobierz plik dla macOS z najnowszego wydania.",
   "os_btn_releases": "Przejdź do Releases",
   "os_macos_req_title": "Zanim zaczniesz",
-  "os_macos_req_text": "Potrzebujesz Maca z procesorem Apple Silicon (M1, M2, M3, M4 lub nowszym) i macOS 14 Sonoma lub nowszym. Wykrywanie działa na Neural Engine tego układu: szybko, cicho i bardzo oszczędnie.",
+  "os_macos_req_text": "Potrzebujesz Maca z procesorem Apple Silicon (M1, M2, M3, M4, M5, M6 lub nowszym) i macOS 14 Sonoma lub nowszym. Wykrywanie działa na Neural Engine tego układu: szybko, cicho i bardzo oszczędnie.",
   "os_table_mac": "Twój Mac",
   "os_table_engine": "Wykrywanie działa na",
   "os_hw_apple_silicon": "Mac z Apple Silicon (M1 lub nowszy), macOS 14+",

@@ -12,7 +12,10 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"check:links": "node scripts/check-links.mjs",
+		"check:links:external": "node scripts/check-links.mjs --external",
+		"import-tutorials": "node scripts/import-tutorials.mjs"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.2",

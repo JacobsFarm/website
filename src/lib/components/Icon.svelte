@@ -80,6 +80,10 @@
 		<path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14" />
 	{:else if name === 'eye'}
 		<path d="M2.5 12C5 7.5 8.2 5.5 12 5.5s7 2 9.5 6.5c-2.5 4.5-5.7 6.5-9.5 6.5S5 16.5 2.5 12Z" /><circle cx="12" cy="12" r="3" />
+	{:else if name === 'search'}
+		<circle cx="11" cy="11" r="6.5" /><path d="m20 20-4.4-4.4" />
+	{:else if name === 'star'}
+		<path d="m12 3.8 2.5 5.1 5.6.8-4 3.9 1 5.6-5.1-2.6-5 2.6.9-5.6-4-3.9 5.6-.8L12 3.8Z" />
 	{:else if name === 'clock'}
 		<circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 2" />
 	{:else if name === 'heart'}

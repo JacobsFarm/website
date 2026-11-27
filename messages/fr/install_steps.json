@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision et Dahua</strong> — le RTSP et l'ONVIF sont généralement activés par défaut. Vous n'avez rien à modifier.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — diffusent aussi le RTSP par défaut, sur le port standard 554.",
   "inst_cams_rtsp_enable_caption": "Exemple : activation du RTSP dans l'application Reolink, sous Network → Advanced → Server Settings.",
-
   "inst_setup_cams_title": "Configuration 1 sur 3 — Connecter vos caméras",
   "inst_setup_cams_1": "Au démarrage d'AI Detector, la configuration s'ouvre toute seule dans votre navigateur. Rien ne s'ouvre ? Allez à <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Choisissez votre langue en haut à droite : English, Nederlands, Deutsch ou Français.",
+  "inst_setup_cams_2": "Choisissez votre langue en haut à droite. L’application parle English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe et 简体中文.",
   "inst_setup_cams_3": "Les caméras trouvées sur votre réseau sont déjà cochées. Une caméra qui nécessite son propre identifiant demande son nom d'utilisateur et son mot de passe.",
   "inst_setup_cams_4": "Une caméra manque ? Cliquez sur <strong>Enter a stream URL instead</strong> et collez son adresse RTSP — utilisez le tableau ci-dessous pour la trouver.",
   "inst_setup_cams_5": "Vérifiez l'image de chaque caméra et donnez à chacune un nom reconnaissable, par exemple <code>Génisses étable 1</code> ou <code>Case de vêlage</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "URL RTSP",
   "inst_rtsp_finder_copy": "Copier",
   "inst_rtsp_finder_copied": "Copié !",
-
   "inst_setup_det_title": "Configuration 2 sur 3 — Choisir ce qu'il faut détecter",
   "inst_setup_det_intro": "Un détecteur surveille les caméras que vous choisissez, enregistre ce qu'il voit et alerte les personnes que vous désignez. Choisissez un <strong>préréglage</strong> : il fournit le modèle d'IA et tous les réglages, et il maintient le détecteur à jour avec les nouveaux modèles.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — détection des chaleurs : reconnaît le comportement de chevauchement.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Les alertes sur téléphone et la vérification par IA peuvent être ajoutées tout de suite ou plus tard (voir les étapes suivantes).",
   "inst_setup_det_3": "Vous voulez un second détecteur ? Après la configuration, allez dans <strong>Detectors → Add detector</strong> et choisissez un autre préréglage.",
   "inst_setup_det_caption": "Étape 2 de la configuration : choisissez un préréglage et les caméras qu'il doit surveiller.",
-
   "inst_setup_start_title": "Configuration 3 sur 3 — Démarrer la surveillance",
   "inst_setup_start_1": "Chaque caméra est vérifiée une fois. Cliquez ensuite sur <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "Au premier démarrage, AI Detector télécharge le modèle et le prépare pour votre matériel. Cela peut prendre quelques minutes.",
+  "inst_setup_start_2": "Au premier démarrage, l’AI Detector télécharge le modèle optimisé pour votre ordinateur (environ 2 Go) et le prépare. Selon votre connexion, cela prend de quelques minutes à une demi-heure. La surveillance démarre ensuite d’elle-même.",
   "inst_setup_start_3": "Dès que les caméras sont réellement analysées, <strong>Recordings</strong> s'ouvre. Le point vert en haut à gauche indique <em>Monitoring</em>.",
   "inst_setup_start_4": "La surveillance continue de tourner lorsque vous fermez le navigateur.",
   "inst_setup_start_caption": "Étape 3 de la configuration : chaque caméra est vérifiée, puis la surveillance démarre et continue en arrière-plan.",
-
   "inst_tele_title": "Alertes sur téléphone via Telegram",
   "inst_tele_intro": "Telegram est le moyen gratuit le plus rapide de recevoir une alerte sur votre téléphone, avec le clip vidéo de la détection. Vous créez votre propre bot une seule fois ; cela prend environ deux minutes.",
   "inst_tele_1": "Ouvrez un détecteur (ou allez dans <strong>Settings → Alerts → Add recipient</strong>) et cliquez sur <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Chaque alerte comporte des boutons 👍 et 👎. Votre réponse est enregistrée avec l'enregistrement dans AI Detector : vous constituez ainsi une archive vérifiée sans ouvrir l'ordinateur.",
   "inst_tele_groups_title": "Plusieurs destinataires et heures calmes",
   "inst_tele_groups_text": "Un seul bot peut envoyer des alertes à différents chats : par exemple un groupe <em>Détection des chaleurs</em> pour l'éleveur et le personnel, et un groupe <em>Alertes vêlage</em> pour l'équipe de nuit. Avec les <strong>quiet hours</strong> activées pour un destinataire, les alertes reçues entre deux heures (par exemple la nuit) arrivent sans son — elles arrivent quand même.",
-
   "inst_ai_title": "Vérification par IA contre les fausses alertes (facultatif)",
   "inst_ai_intro": "Avec la vérification par IA, un modèle de vision et de langage examine à nouveau chaque clip avant que vous ne receviez une alerte. Il filtre la plupart des fausses alertes. Le préréglage fournit la question à laquelle l'IA répond.",
   "inst_ai_1": "Allez dans <strong>Settings → AI check</strong> et cliquez sur <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "Dans chaque détecteur, vous pouvez activer ou désactiver la vérification par IA.",
   "inst_ai_note": "Google propose une offre gratuite limitée. Les clips des événements détectés sont envoyés à Google pour être vérifiés ; tout le reste reste sur votre ordinateur. D'autres fournisseurs peuvent être configurés sous <em>Advanced → AI connections</em>.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini : collez votre clé API depuis Google AI Studio.",
-
   "inst_phone_title": "Ouvrir AI Detector sur votre téléphone",
   "inst_phone_intro": "Vous pouvez ouvrir le tableau de bord sur chaque téléphone, tablette ou ordinateur connecté au même réseau que l'ordinateur d'IA.",
   "inst_phone_1": "Sur l'ordinateur d'IA, allez dans <strong>Settings → Devices</strong> et cliquez sur <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "Sur un iPhone ou un iPad, vous pouvez placer AI Detector sur l'écran d'accueil ; il s'ouvre alors comme une application. Les instructions se trouvent sous <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "La connexion à l'intérieur de votre réseau n'est pas chiffrée (HTTP). Utilisez-la uniquement sur un réseau de confiance.",
   "inst_phone_caption": "Settings → Devices : connectez téléphones et ordinateurs avec un code à usage unique.",
-
   "inst_storage_title": "Où sont stockées vos données",
   "inst_storage_text": "Chaque détection est enregistrée avec une photo et un clip vidéo sur votre propre ordinateur. Les paramètres, modèles et enregistrements se trouvent en dehors du programme : ils restent donc après une désinstallation ou une mise à jour. Sauvegardez ce dossier de temps en temps :",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "le dossier à côté du fichier Compose",
-
   "inst_support_title": "Aide et assistance",
   "inst_support_diag": "<strong>Un problème ?</strong> Allez dans <strong>Settings → Logs</strong> et cliquez sur <strong>Download diagnostics</strong>. Ce fichier contient tout ce qu'il faut pour un rapport de bug. Vérifiez-le et retirez les adresses de vos caméras avant de le partager.",
   "inst_support_youtube": "<strong>YouTube</strong> — recherchez « CowCatcher AI » pour des vidéos guides et des astuces.",
   "inst_support_email": "<strong>E-mail</strong> — des questions ou des problèmes ? Écrivez-nous directement :",
   "inst_support_community": "<strong>Communauté Facebook / Telegram</strong> — posez votre question dans notre groupe pour une aide rapide et les expériences d'autres éleveurs.",
-  "inst_back_to_platforms": "Retour à l'aperçu des plateformes"
+  "inst_back_to_platforms": "Retour à l'aperçu des plateformes",
+  "inst_alarm_title": "Alarme sur le téléphone pour vous réveiller (facultatif)",
+  "inst_alarm_intro": "En plus de Telegram, l’AI Detector peut faire sonner fort votre téléphone lors d’une détection, même la nuit, avec une image de ce qu’il a vu. Il utilise l’application gratuite ntfy, sans compte.",
+  "inst_alarm_1": "Installez l’application gratuite <strong>ntfy</strong> sur votre téléphone (Android ou iPhone).",
+  "inst_alarm_2": "Dans l’AI Detector, allez dans <strong>Paramètres → Alertes</strong> (ou ouvrez un détecteur) et cliquez sur <strong>Connecter ntfy</strong>.",
+  "inst_alarm_3": "Abonnez-vous dans l’application ntfy au nom affiché par l’AI Detector, confirmez l’alarme de test et choisissez les détecteurs qui peuvent la déclencher.",
+  "inst_alarm_4": "Sur Android, l’alarme peut sonner malgré Ne pas déranger et continuer jusqu’à ce que vous regardiez ; les étapes sont indiquées pendant la connexion. Un iPhone affiche l’alarme mais reste muet en mode silencieux.",
+  "inst_alarm_note": "Chaque téléphone abonné au nom sonne : gardez donc ce nom pour vous. L’alarme passe par le service ntfy.sh et nécessite Internet. Avec l’alarme connectée, <strong>Caméra hors ligne</strong> peut aussi vous prévenir quand une caméra n’est plus surveillée.",
+  "inst_heartbeat_title": "Être prévenu quand l’ordinateur s’arrête",
+  "inst_heartbeat_text": "Coupure de courant, plantage ou pas d’Internet ? L’AI Detector ne peut alors plus rien envoyer lui-même. Un battement de cœur avec le service gratuit Healthchecks.io vous envoie un message Telegram quand les appels de votre ordinateur s’arrêtent."
 }

@@ -26,5 +26,7 @@
   "windows_keep_title": "Keep it running 24/7",
   "windows_keep_1": "<strong>Use a network cable.</strong> Connect both the PC and the IP cameras with a wired connection (UTP/ethernet). Wi-Fi in a barn can be unstable, which makes the camera pictures stutter.",
   "windows_keep_2": "<strong>No sleep settings needed.</strong> While monitoring is on, AI Detector keeps the PC awake by itself. A laptop still goes to sleep when you close the lid or when it runs on battery — so keep a laptop open and plugged in.",
-  "windows_keep_3": "<strong>Updates.</strong> Choose <em>Check for Updates</em> in the AI Detector menu (the icon next to the clock). Detectors made from a preset also get newer models by themselves."
+  "windows_keep_3": "<strong>Updates.</strong> Choose <em>Check for Updates</em> in the AI Detector menu (the icon next to the clock). Detectors made from a preset also get newer models by themselves.",
+  "windows_step2_tip": "<strong>Tip:</strong> want to skip that blue warning? Right-click the setup file, choose <em>Properties</em>, tick <strong>Unblock</strong> at the bottom and click <strong>OK</strong>. Then start the setup.",
+  "windows_step2_5": "Windows asks whether AI Detector may use the network. Click <strong>Allow</strong>: it needs this to find your cameras."
 }

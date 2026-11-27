@@ -26,5 +26,7 @@
   "windows_keep_title": "Mantenlo en marcha 24/7",
   "windows_keep_1": "<strong>Usa un cable de red.</strong> Conecta tanto el PC como las cámaras IP con cable (UTP/ethernet). El Wi-Fi en un establo puede ser inestable, lo que hace que las imágenes de la cámara se entrecorten.",
   "windows_keep_2": "<strong>No hacen falta ajustes de suspensión.</strong> Mientras la monitorización está activa, AI Detector mantiene el PC despierto por sí mismo. Un portátil sigue entrando en suspensión al cerrar la tapa o cuando funciona con batería, así que mantén el portátil abierto y enchufado.",
-  "windows_keep_3": "<strong>Actualizaciones.</strong> Elige <em>Check for Updates</em> en el menú de AI Detector (el icono junto al reloj). Los detectores creados a partir de un preajuste también reciben modelos más nuevos por sí mismos."
+  "windows_keep_3": "<strong>Actualizaciones.</strong> Elige <em>Check for Updates</em> en el menú de AI Detector (el icono junto al reloj). Los detectores creados a partir de un preajuste también reciben modelos más nuevos por sí mismos.",
+  "windows_step2_tip": "<strong>Consejo:</strong> ¿quieres evitar el aviso azul? Haz clic derecho en el archivo de instalación, elige <em>Propiedades</em>, marca <strong>Desbloquear</strong> abajo y pulsa <strong>Aceptar</strong>. Después inicia la instalación.",
+  "windows_step2_5": "Windows pregunta si el AI Detector puede usar la red. Haz clic en <strong>Permitir</strong>: lo necesita para encontrar tus cámaras."
 }

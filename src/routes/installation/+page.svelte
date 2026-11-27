@@ -7,6 +7,10 @@
     import Seo from '$lib/components/Seo.svelte';
     import PageHeader from '$lib/components/PageHeader.svelte';
     import Icon from '$lib/components/Icon.svelte';
+    import TutorialCard from '$lib/components/TutorialCard.svelte';
+    import { tutorialBySlug } from '$lib/content/tutorials.js';
+
+    const installTutorial = tutorialBySlug('install-ai-detector');
 
     import hardwareImg from '$lib/assets/installation_hardware_1.jpg';
     import softwareImg from '$lib/assets/installation_software_1.jpg';
@@ -15,21 +19,21 @@
     const steps = [
         {
             title: m.install_card_hardware_title,
-            link: '/installation/hardware',
+            link: '/installation/hardware/',
             desc: m.install_card_hardware_desc,
             img: hardwareImg,
             icon: 'wrench'
         },
         {
             title: m.install_card_software_title,
-            link: '/installation/download',
+            link: '/installation/download/',
             desc: m.install_card_software_desc,
             img: softwareImg,
             icon: 'download'
         },
         {
             title: m.install_card_options_title,
-            link: '/installation/options',
+            link: '/installation/options/',
             desc: m.install_card_options_desc,
             img: optionsImg,
             icon: 'sliders'
@@ -49,11 +53,11 @@
 
 <PageHeader eyebrow={m.nav_install()} title={m.install_title()} lead={m.install_info_text()}>
     {#snippet actions()}
-        <a href="{base}/installation/hardware" class="btn btn--solid btn--lg">
+        <a href="{base}/installation/hardware/" class="btn btn--solid btn--lg">
             {stripNumber(m.install_card_hardware_title())}
             <span class="btn__icon"><Icon name="arrow-right" /></span>
         </a>
-        <a href="{base}/installation/download" class="btn btn--ghost btn--lg">
+        <a href="{base}/installation/download/" class="btn btn--ghost btn--lg">
             <Icon name="download" size={18} />
             {stripNumber(m.install_card_software_title())}
         </a>
@@ -83,12 +87,31 @@
     </ol>
 </section>
 
+<section class="container watch-section">
+    <div class="watch" use:reveal>
+        <div class="watch-copy">
+            <span class="eyebrow">{m.tutorials_eyebrow()}</span>
+            <h2 class="h-section">{m.tutorials_install_cta_title()}</h2>
+            <p class="lead">{m.tutorials_install_cta_text()}</p>
+            <div class="watch-links">
+                <a href="{base}/tutorials/" class="btn btn--ghost">
+                    <Icon name="play" size={16} /> {m.tutorials_all()}
+                </a>
+                <a href="{base}/installation/configuration/" class="text-link">{m.config_nav_label()} &rarr;</a>
+            </div>
+        </div>
+        {#if installTutorial}
+            <TutorialCard tutorial={installTutorial} />
+        {/if}
+    </div>
+</section>
+
 <section class="section container needs-section">
     <div class="needs-grid">
         <div class="needs-head" use:reveal>
             <h2 class="h-section">{m.cowcatcher_needs_title()}</h2>
             <p class="lead">{m.hardware_intro()}</p>
-            <a href="{base}/installation/hardware" class="text-link">
+            <a href="{base}/installation/hardware/" class="text-link">
                 {stripNumber(m.install_card_hardware_title())} &rarr;
             </a>
         </div>
@@ -239,6 +262,46 @@
     @media (min-width: 900px) {
         .route {
             grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+    }
+
+    /* ── Liever kijken ── */
+    .watch-section {
+        padding-top: clamp(3.5rem, 7vw, 5.5rem);
+    }
+
+    .watch {
+        display: grid;
+        gap: 2rem;
+        align-items: center;
+        padding: clamp(1.25rem, 3vw, 2rem);
+        border-radius: var(--radius-xl);
+        background: var(--surface-tint);
+        box-shadow: inset 0 0 0 1px var(--line);
+    }
+
+    .watch-copy {
+        display: grid;
+        gap: 1rem;
+        justify-items: start;
+    }
+
+    .watch-copy .h-section {
+        font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    }
+
+    .watch-links {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.75rem 1.5rem;
+    }
+
+    @media (min-width: 960px) {
+        .watch {
+            grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+            gap: 3rem;
+            padding: 2.5rem;
         }
     }
 

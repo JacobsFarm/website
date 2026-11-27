@@ -57,7 +57,7 @@
 	{/if}
 
 	{#snippet actions()}
-		<a href="{base}/installation" class="btn btn--solid btn--lg">
+		<a href="{base}/installation/" class="btn btn--solid btn--lg">
 			{m.front_page_intro_btn_install()}
 			<span class="btn__icon"><Icon name="arrow-right" /></span>
 		</a>
@@ -237,7 +237,7 @@
 				<p>{m.project_cta_text()}</p>
 			</div>
 			<div class="btn-row">
-				<a href="{base}/installation" class="btn btn--amber btn--lg">
+				<a href="{base}/installation/" class="btn btn--amber btn--lg">
 					{m.front_page_intro_btn_install()}
 					<span class="btn__icon"><Icon name="arrow-right" /></span>
 				</a>

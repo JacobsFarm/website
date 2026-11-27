@@ -1,7 +1,6 @@
 {
   "options_title": "Brug appen",
   "options_intro": "Alt sættes op i selve appen — ingen konfigurationsfiler. Denne vejledning gennemgår alle siderne: Recordings, Cameras, Detectors og Settings.",
-
   "use_rec_title": "Recordings",
   "use_rec_desc": "Hver registrering vises her med et foto og et kort videoklip, grupperet pr. dag.",
   "use_rec_1": "Klik på en optagelse for at åbne fremviseren. Med piletasterne bladrer du gennem alle optagelser.",
@@ -11,7 +10,6 @@
   "use_rec_5": "<strong>Export</strong> downloader en ZIP-fil med det aktuelle filter, eventuelt mellem to datoer. <em>Only the original photos</em> laver en lille ZIP-fil, som du kan dele med dem, der træner modellerne.",
   "use_rec_caption": "Recordings: hver registrering med sikkerhed, kategori og din gennemgang.",
   "use_rec_viewer_caption": "Fremviseren afspiller klippet med registreringsboksen; bekræft den, eller markér den som falsk alarm.",
-
   "use_cam_title": "Cameras",
   "use_cam_desc": "Live-billederne fra alle kameraer, med de seneste registreringsbokse øverst.",
   "use_cam_1": "<strong>Live</strong> viser op til fire live-billeder ad gangen; klik på <em>Show live picture</em> for de andre. Et kamera viser sit første billede ved næste keyframe, hvilket kan tage nogle sekunder.",
@@ -20,7 +18,6 @@
   "use_cam_4": "<strong>Add camera</strong> søger netværket igen eller lader dig indtaste en stream-URL selv.",
   "use_cam_caption": "Cameras → Live: hvert kamera med den detektor, der holder øje med det.",
   "use_cam_history_caption": "Cameras → History: grøn betyder overvåget, markeringer er optagelser, og huller viser, hvorfor intet blev set.",
-
   "use_det_title": "Detectors & forudindstillinger",
   "use_det_desc": "En detektor forbinder kameraer, en AI-model og modtagere af alarmer.",
   "use_det_1": "Klik på en detektor for at ændre dens forudindstilling, navn, kameraer, Telegram-modtagere og AI-kontrol. Ændringer træder kun i kraft efter <strong>Save detector</strong>.",
@@ -30,38 +27,33 @@
   "use_det_5": "Har du selv ændret registreringsindstillingerne? Så beholder detektoren dem, og den opdateres ikke længere. Vælg forudindstillingen igen for at følge den.",
   "use_det_caption": "Detectors: hver detektor med sine kameraer og alarmmodtagere.",
   "use_det_edit_caption": "En detektor: vælg en forudindstilling, et navn og de kameraer, den overvåger.",
-
   "use_status_title": "Overvågningsstatus & heartbeat",
   "use_status_desc": "Statussen øverst til venstre er altid synlig. Klik på den for at se pr. kamera, om friske billeder bliver analyseret lige nu.",
   "use_status_1": "Et kamera tæller kun som overvåget, når friske billeder rent faktisk bliver analyseret af hver detektor, der er tildelt det.",
   "use_status_2": "<strong>Pause monitoring</strong> stopper registreringen og holder den på pause, også ved næste start.",
   "use_status_3": "En detektor, der stopper, bliver startet igen af sig selv. Hvis den bliver ved med at fejle, viser alle sider, at overvågningen er stoppet, og hvorfor.",
-  "use_status_4": "<strong>Heartbeat</strong>: detektoren kalder en adresse, du vælger (f.eks. Healthchecks.io eller Uptime Kuma), mens den kører. Du får en advarsel, når kaldene stopper — den eneste advarsel, der også virker, når computeren er slukket eller uden internet.",
+  "use_status_4": "<strong>Hjerteslag</strong>: detektoren kalder en adresse efter eget valg (f.eks. Healthchecks.io eller Uptime Kuma), mens den kører. Stopper kaldene, får du en advarsel — den eneste, der også virker, når computeren er slukket eller uden internet. Se <a href=\"../../tutorials/heartbeat-healthchecks/\">vejledningen</a>.",
   "use_status_caption": "Overvågningsstatus: hvert kamera med tidspunktet for dets seneste analyserede billede.",
-
   "use_alerts_title": "Alarmer & quiet hours",
   "use_alerts_desc": "Under Settings → Alerts styrer du alle, der får en Telegram-besked.",
   "use_alerts_1": "Hver modtager vælger, hvilke detektorer der skal give dem en alarm. Én bot kan betjene flere chats.",
   "use_alerts_2": "<strong>Quiet hours</strong>: alarmer mellem to tidspunkter kommer uden lyd, f.eks. om natten. Lad begge felter stå tomme for lyd til enhver tid.",
-  "use_alerts_3": "<strong>Camera offline notifications</strong> (slået fra som standard): efter fem minutter uden overvågning får kameraets modtagere en besked, og igen når det er tilbage.",
+  "use_alerts_3": "<strong>Kamera offline</strong> (slået fra som standard, vises når en telefonalarm er forbundet): et kamera, der ikke har været overvåget i fem minutter, meldes til alarmen som en almindelig notifikation, og igen når det er tilbage.",
   "use_alerts_4": "<strong>Send test alert</strong> kontrollerer, at en modtager stadig virker.",
   "use_alerts_caption": "Settings → Alerts: modtagere og notifikationer om kamera offline.",
   "use_alerts_quiet_caption": "En modtager med quiet hours fra 22:00 til 06:00.",
-
   "use_ai_title": "AI-kontrol",
   "use_ai_desc": "Valgfrit: lad en vision language model dobbelttjekke hvert klip, før en alarm sendes.",
   "use_ai_1": "Forbind Google Gemini med en nøgle fra Google AI Studio. Andre udbydere indstilles under <em>Advanced → AI connections</em>.",
   "use_ai_2": "En forbindelse gemmes én gang og bruges af et vilkårligt antal detektorer, hver med sit eget spørgsmål.",
   "use_ai_3": "Optagelsen viser, om AI-kontrollen bekræftede eller afviste hændelsen.",
   "use_ai_caption": "Settings → AI check: uden en forbindelse bliver hver registrering optaget og alarmeret, som den er.",
-
   "use_devices_title": "Andre enheder & din telefon",
   "use_devices_desc": "Åbn dashboardet på enhver telefon eller computer på samme netværk.",
   "use_devices_1": "Gå til <code>http://aidetector.local/</code> eller <code>http://&lt;computer-IP&gt;/</code>. Er port 80 allerede i brug? Så flytter appen til <code>:8080</code> eller det næste ledige nummer. QR-koden under <strong>Settings → Devices</strong> åbner altid den rette adresse.",
   "use_devices_2": "Hver ny browser har brug for en engangskode fra <strong>Settings → Devices</strong>. Computeren, AI Detector kører på, er altid betroet.",
   "use_devices_3": "På en iPhone eller iPad kan du føje appen til din startskærm. På Android forklarer <strong>Settings → Home screen shortcut</strong>, hvordan du tilføjer et link.",
   "use_devices_caption": "Settings → Devices: de tilsluttede browsere, hver med en knap til at fjerne adgangen.",
-
   "use_storage_title": "Lagring, sikkerhedskopi & gendannelse",
   "use_storage_desc": "Optagelser gemmes, indtil du fjerner dem. Intet slettes automatisk.",
   "use_storage_1": "<strong>Settings → Storage</strong> viser den ledige plads og fjerner optagelser fra før en dato, du vælger. Eksportér dem, du vil beholde, først.",
@@ -70,16 +62,19 @@
   "use_storage_4": "Kan en indstillingsfil ikke læses? Så tilbyder hver side <strong>Recover settings</strong>, som gendanner de seneste gyldige indstillinger.",
   "use_storage_caption": "Settings → Storage: ledig plads, fjernelse af gamle optagelser og model-cachen.",
   "use_settings_caption": "Settings: alarmer, AI-kontrol, enheder, lagring, avanceret, sprog, udseende og sikkerhedskopi.",
-
   "use_more_title": "Avanceret, logs, sprog & opdateringer",
   "use_more_desc": "Til alle, der vil finjustere eller har brug for hjælp.",
-  "use_more_1": "<strong>Advanced</strong> lader dig redigere tærskelværdier, prompts og registreringsmotoren som JSON. Kun nødvendigt i særlige situationer; forudindstillinger sætter alt for dig.",
+  "use_more_1": "<strong>Avanceret</strong> lader dig redigere tærskler, spørgsmål og detektionsmotoren som JSON. Kun nødvendigt i særlige tilfælde; forudindstillingerne klarer alt. Alle indstillinger er forklaret i <a href=\"../configuration/\">konfigurationsreferencen</a>.",
   "use_more_2": "<strong>Logs</strong> viser nylig aktivitet. <em>Download diagnostics</em> samler logs, systemoplysninger og anonymiserede indstillinger til en fejlrapport.",
-  "use_more_3": "<strong>Language</strong>: English, Nederlands, Deutsch eller Français — for hver enhed og til Telegram-svarene.",
+  "use_more_3": "<strong>Sprog</strong>: English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe eller 简体中文 — for alle enheder og for svarene i Telegram.",
   "use_more_4": "<strong>Appearance</strong>: lys, mørk eller automatisk.",
-  "use_more_5": "<strong>Updates</strong>: på Windows og Mac via <em>Check for Updates</em> i AI Detector-menuen; på Ubuntu ved at installere den nye pakke; med Docker via <code>docker compose pull</code>.",
-
+  "use_more_5": "<strong>Opdateringer</strong>: på Windows og Mac via <em>Check for Updates</em> i AI Detector-menuen; på Ubuntu via de almindelige systemopdateringer; med Docker via <code>docker compose pull && docker compose up -d</code>.",
   "options_btn_back": "Tilbage til oversigten over installationen",
   "options_github_text": "Læs hele appens vejledning, rapportér en fejl, eller følg nye udgivelser på AI Detectors officielle GitHub-side.",
-  "options_github_btn": "Se på GitHub"
+  "options_github_btn": "Se på GitHub",
+  "use_alarm_title": "Telefonalarm (ntfy)",
+  "use_alarm_desc": "En høj alarm på din telefon ved en detektion, også om natten, med et billede af det, detektoren så.",
+  "use_alarm_1": "<strong>Forbind ntfy</strong> under Indstillinger → Alarmer eller i detektor-editoren. Installer den gratis app ntfy, abonner på det viste navn, og bekræft testalarmen. Ingen konto nødvendig.",
+  "use_alarm_2": "Der er én alarm pr. installation; vælg hvilke detektorer der må udløse den. Den virker sammen med Telegram eller uden.",
+  "use_alarm_3": "Android kan ringe gennem Forstyr ikke, indtil du kigger. En iPhone viser alarmen, men er stille i lydløs tilstand. Alarmen kræver internet."
 }

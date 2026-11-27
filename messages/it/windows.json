@@ -26,5 +26,7 @@
   "windows_keep_title": "Tienilo in funzione 24/7",
   "windows_keep_1": "<strong>Usa un cavo di rete.</strong> Collega sia il PC sia le telecamere IP con una connessione cablata (UTP/ethernet). Il Wi-Fi in una stalla può essere instabile e far scattare le immagini delle telecamere.",
   "windows_keep_2": "<strong>Non servono impostazioni di sospensione.</strong> Mentre il monitoraggio è attivo, AI Detector tiene il PC sveglio da solo. Un portatile va comunque in sospensione quando chiudi il coperchio o quando funziona a batteria — quindi tieni il portatile aperto e collegato alla corrente.",
-  "windows_keep_3": "<strong>Aggiornamenti.</strong> Scegli <em>Check for Updates</em> nel menu di AI Detector (l'icona accanto all'orologio). I rilevatori creati da un preset ricevono anche i modelli più recenti da soli."
+  "windows_keep_3": "<strong>Aggiornamenti.</strong> Scegli <em>Check for Updates</em> nel menu di AI Detector (l'icona accanto all'orologio). I rilevatori creati da un preset ricevono anche i modelli più recenti da soli.",
+  "windows_step2_tip": "<strong>Suggerimento:</strong> vuoi evitare l’avviso blu? Fai clic destro sul file di installazione, scegli <em>Proprietà</em>, spunta <strong>Annulla blocco</strong> in basso e clicca <strong>OK</strong>. Poi avvia l’installazione.",
+  "windows_step2_5": "Windows chiede se l’AI Detector può usare la rete. Clicca <strong>Consenti</strong>: serve per trovare le telecamere."
 }

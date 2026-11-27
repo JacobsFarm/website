@@ -1,0 +1,688 @@
+WEBVTT
+
+00:00:00.370 --> 00:00:04.250
+In this video I want to show how to install CowCatcher.
+
+00:00:06.650 --> 00:00:12.470
+There are several ways to get to the website, but the easiest is to type CowCatcher AI.
+
+00:00:13.670 --> 00:00:15.590
+Then it shows up on GitHub.
+
+00:00:17.210 --> 00:00:24.650
+You land on this page, and if you scroll down it says Powered by the AI Detector.
+
+00:00:25.130 --> 00:00:29.090
+Below it there is also an explanation of the next steps, but we click here.
+
+00:00:29.090 --> 00:00:34.490
+Here under Releases is the latest version.
+
+00:00:35.330 --> 00:00:36.470
+So we click that.
+
+00:00:37.830 --> 00:00:40.070
+Now let's see what we are going to install it on.
+
+00:00:41.070 --> 00:00:44.550
+I have a Windows computer, so I click this one.
+
+00:00:45.310 --> 00:00:46.790
+Then a folder starts downloading.
+
+00:00:48.090 --> 00:00:52.710
+If you have an Apple computer, such as a Mac mini, you download this version.
+
+00:00:54.940 --> 00:00:58.040
+If you have Linux, you install this version.
+
+00:00:58.860 --> 00:01:01.540
+Otherwise there are no differences in the installation
+
+00:01:02.000 --> 00:01:03.100
+between Apple and Windows.
+
+00:01:03.960 --> 00:01:05.240
+Linux works a little differently.
+
+00:01:06.400 --> 00:01:08.480
+As you can see at the top right, it has been downloaded.
+
+00:01:09.700 --> 00:01:11.060
+Then we go to Downloads.
+
+00:01:13.370 --> 00:01:14.830
+There you can extract it.
+
+00:01:16.410 --> 00:01:17.990
+It asks whether you want to extract it.
+
+00:01:18.110 --> 00:01:22.280
+Yes, it is doing that now.
+
+00:01:25.560 --> 00:01:27.120
+Then it opens automatically.
+
+00:01:27.680 --> 00:01:33.680
+And here we have the program: the AI Detector, the version, Windows.
+
+00:01:34.600 --> 00:01:36.060
+Then we can click it.
+
+00:01:37.200 --> 00:01:38.060
+And then it asks:
+
+00:01:38.080 --> 00:01:40.340
+Hey, this is an unprotected program.
+
+00:01:40.400 --> 00:01:41.080
+Are you sure?
+
+00:01:41.220 --> 00:01:44.100
+Then you click More info and then Run anyway.
+
+00:01:45.900 --> 00:01:50.900
+A second way to get around this: right-click the file.
+
+00:01:51.280 --> 00:01:52.480
+Properties.
+
+00:01:53.040 --> 00:01:54.100
+And click Unblock.
+
+00:01:54.900 --> 00:01:56.220
+Then that pop-up does not appear.
+
+00:01:56.900 --> 00:01:58.460
+Tick it and then OK.
+
+00:02:02.040 --> 00:02:08.020
+When you click it, it installs the AI Detector.
+
+00:02:10.400 --> 00:02:13.000
+So in the background it now starts installing the program.
+
+00:02:14.220 --> 00:02:17.600
+When the installation is done, you get one more pop-up.
+
+00:02:18.340 --> 00:02:25.980
+Here it asks whether the program should start automatically after your computer has been switched off.
+
+00:02:26.620 --> 00:02:27.480
+This is very handy.
+
+00:02:27.640 --> 00:02:32.480
+Of course, if your computer goes off, or you switch it off and start it again in the morning,
+
+00:02:32.700 --> 00:02:34.420
+the program starts again by itself.
+
+00:02:36.120 --> 00:02:37.720
+If you don't want that, click No.
+
+00:02:38.000 --> 00:02:38.660
+Do you want it?
+
+00:02:38.660 --> 00:02:40.760
+Which is really always the case: click Yes.
+
+00:02:41.600 --> 00:02:45.420
+And you can always switch it off again by telling the program:
+
+00:02:45.520 --> 00:02:48.500
+I want to pause detection now.
+
+00:02:49.300 --> 00:02:53.420
+Finally you get this pop-up asking whether to allow this program.
+
+00:02:54.080 --> 00:02:56.820
+Then you click Allow.
+
+00:02:58.420 --> 00:03:00.460
+In the background you could already see it had started.
+
+00:03:02.040 --> 00:03:03.700
+This is the AI Detector.
+
+00:03:04.440 --> 00:03:08.480
+The first time the program starts, it searches for all cameras
+
+00:03:08.660 --> 00:03:14.300
+connected to your network, so also the cameras you have installed.
+
+00:03:14.900 --> 00:03:16.120
+They show up here.
+
+00:03:16.220 --> 00:03:18.220
+Well, for me they are all here.
+
+00:03:18.600 --> 00:03:20.600
+I'm going to add one now.
+
+00:03:21.840 --> 00:03:24.480
+Then you click Connect cameras.
+
+00:03:26.560 --> 00:03:30.700
+Then it asks for the password of that camera.
+
+00:03:32.360 --> 00:03:33.760
+You can type it in here.
+
+00:03:35.260 --> 00:03:39.600
+And if the camera is not in this list, but you have mounted it
+
+00:03:39.600 --> 00:03:49.600
+and can open it in its app, check in the settings whether the RTSP or ONVIF protocol is switched on.
+
+00:03:49.600 --> 00:03:52.780
+Here it also says connection failed, because there was no password yet.
+
+00:03:52.780 --> 00:03:57.400
+So we try again now.
+
+00:03:57.400 --> 00:03:59.400
+It tries to connect to the camera.
+
+00:03:59.400 --> 00:04:01.400
+It can be opened.
+
+00:04:01.400 --> 00:04:03.400
+Well, that worked.
+
+00:04:03.400 --> 00:04:05.400
+We give the camera a name.
+
+00:04:05.400 --> 00:04:12.120
+In my case this is the back of the barn, looking at the left side.
+
+00:04:12.220 --> 00:04:14.220
+Right.
+
+00:04:14.220 --> 00:04:16.220
+Click Add camera.
+
+00:04:16.220 --> 00:04:18.220
+Here we decide: what are we going to do?
+
+00:04:18.220 --> 00:04:20.220
+Is it used for calving?
+
+00:04:20.220 --> 00:04:22.220
+Or for heat?
+
+00:04:22.220 --> 00:04:24.220
+So CowCatcher is heat.
+
+00:04:24.220 --> 00:04:26.220
+CalvingCatcher is calving.
+
+00:04:26.220 --> 00:04:28.220
+And then there is the Tail Up option.
+
+00:04:28.220 --> 00:04:30.220
+Which means the tail is raised.
+
+00:04:30.220 --> 00:04:32.220
+This is an extension of the calving part.
+
+00:04:32.220 --> 00:04:36.220
+Here we really check whether the cow has had her tail up for longer than a set number of minutes.
+
+00:04:36.220 --> 00:04:40.220
+Here we really check whether the cow has had her tail up for longer than a set number of minutes.
+
+00:04:40.220 --> 00:04:44.220
+Here we really check whether the cow has had her tail up for longer than a set number of minutes.
+
+00:04:44.220 --> 00:04:48.220
+That is of course a sign that she is about to calve.
+
+00:04:48.220 --> 00:04:50.220
+And then you get a detection for it.
+
+00:04:50.220 --> 00:04:52.220
+But here we are going to do heat.
+
+00:04:52.220 --> 00:04:54.220
+So we click CowCatcher.
+
+00:04:54.220 --> 00:04:56.220
+Here it says update automatically.
+
+00:04:56.220 --> 00:04:58.220
+When we have a new model,
+
+00:04:58.220 --> 00:05:00.220
+that happens automatically.
+
+00:05:00.220 --> 00:05:02.220
+You get it too.
+
+00:05:02.220 --> 00:05:04.220
+We call it Heat dairy cows here.
+
+00:05:04.220 --> 00:05:06.220
+We call it Heat dairy cows here.
+
+00:05:06.220 --> 00:05:08.220
+It applies to the dairy cows.
+
+00:05:08.220 --> 00:05:10.220
+It applies to the dairy cows.
+
+00:05:10.220 --> 00:05:12.220
+Here we can connect Telegram.
+
+00:05:12.220 --> 00:05:14.220
+Here we can connect Telegram.
+
+00:05:14.220 --> 00:05:16.220
+It is neatly explained here too.
+
+00:05:16.220 --> 00:05:18.220
+For example, if we open BotFather,
+
+00:05:18.220 --> 00:05:20.220
+it opens the bot for you right away.
+
+00:05:20.220 --> 00:05:22.220
+It opens the bot for you right away.
+
+00:05:22.220 --> 00:05:24.220
+Then follow these steps.
+
+00:05:24.220 --> 00:05:26.220
+We skip that briefly.
+
+00:05:26.220 --> 00:05:28.220
+What you get is a very long code.
+
+00:05:28.220 --> 00:05:30.220
+An API token.
+
+00:05:30.220 --> 00:05:32.220
+You fill it in here.
+
+00:05:32.220 --> 00:05:34.220
+We send the alert to my phone.
+
+00:05:34.220 --> 00:05:36.220
+We send the alert to my phone.
+
+00:05:36.220 --> 00:05:38.220
+A group is possible too.
+
+00:05:38.220 --> 00:05:41.530
+Then you go to Telegram.
+
+00:05:41.530 --> 00:05:43.530
+Connect.
+
+00:05:43.530 --> 00:05:45.530
+But it says the bot token is invalid.
+
+00:05:45.530 --> 00:05:47.530
+I can't send anything.
+
+00:05:47.530 --> 00:05:49.530
+Then you get an alert or an error message.
+
+00:05:49.530 --> 00:05:51.530
+We can skip that for now.
+
+00:05:51.530 --> 00:05:53.530
+We save the detector.
+
+00:05:53.530 --> 00:05:57.420
+We save the detector.
+
+00:05:57.420 --> 00:05:59.420
+It works.
+
+00:05:59.420 --> 00:06:05.840
+Then we start monitoring.
+
+00:06:05.840 --> 00:06:07.840
+Here you can see it automatically
+
+00:06:07.840 --> 00:06:09.840
+installing
+
+00:06:09.840 --> 00:06:11.840
+the optimised
+
+00:06:11.840 --> 00:06:13.840
+model
+
+00:06:13.840 --> 00:06:15.840
+for your computer.
+
+00:06:15.840 --> 00:06:17.840
+To get the very best
+
+00:06:17.840 --> 00:06:19.840
+performance out of it.
+
+00:06:19.840 --> 00:06:21.840
+We looked at
+
+00:06:21.840 --> 00:06:23.840
+two things.
+
+00:06:23.840 --> 00:06:25.840
+We want everything to be local.
+
+00:06:25.840 --> 00:06:27.840
+And we want the very highest performance.
+
+00:06:27.840 --> 00:06:29.840
+Not necessarily the most options.
+
+00:06:29.840 --> 00:06:31.840
+But we simply want it
+
+00:06:31.840 --> 00:06:33.840
+to run well on every computer.
+
+00:06:33.840 --> 00:06:35.840
+That is this check.
+
+00:06:35.840 --> 00:06:37.840
+And that the right software for it
+
+00:06:37.840 --> 00:06:39.840
+is downloaded.
+
+00:06:39.840 --> 00:06:41.840
+This can take
+
+00:06:41.840 --> 00:06:43.840
+a few minutes.
+
+00:06:43.840 --> 00:06:45.840
+Up to tens of minutes, depending on
+
+00:06:45.840 --> 00:06:47.840
+how fast your internet is.
+
+00:06:47.840 --> 00:06:49.840
+A fairly large file of 2 GB.
+
+00:06:49.840 --> 00:06:53.340
+It has finished installing.
+
+00:06:53.340 --> 00:06:55.340
+And then you are automatically
+
+00:06:55.340 --> 00:06:57.340
+taken to the main page.
+
+00:06:57.340 --> 00:06:59.340
+On this main page,
+
+00:06:59.340 --> 00:07:01.340
+in other words Recordings,
+
+00:07:01.340 --> 00:07:03.340
+all your detections come in.
+
+00:07:03.340 --> 00:07:05.340
+So besides Telegram,
+
+00:07:05.340 --> 00:07:07.340
+they are of course also stored
+
+00:07:07.340 --> 00:07:09.340
+locally on your computer.
+
+00:07:09.340 --> 00:07:11.340
+And you can view them here.
+
+00:07:11.340 --> 00:07:13.340
+So you don't need Telegram.
+
+00:07:13.340 --> 00:07:15.340
+For the alert on your phone you do.
+
+00:07:15.340 --> 00:07:17.340
+Then we move on to
+
+00:07:17.340 --> 00:07:19.340
+Monitoring. Very simple.
+
+00:07:19.340 --> 00:07:21.340
+A green dot: everything is running.
+
+00:07:21.340 --> 00:07:23.340
+It also says Monitoring active here.
+
+00:07:23.340 --> 00:07:25.340
+One camera is being monitored.
+
+00:07:25.340 --> 00:07:27.340
+We can pause it here.
+
+00:07:27.340 --> 00:07:29.340
+The number of cameras.
+
+00:07:29.340 --> 00:07:31.340
+And once more that it is active.
+
+00:07:31.340 --> 00:07:33.340
+Here we can also add a
+
+00:07:33.340 --> 00:07:35.340
+heartbeat. That means
+
+00:07:35.340 --> 00:07:37.340
+when the computer goes off,
+
+00:07:37.340 --> 00:07:39.340
+you get an alert on your phone
+
+00:07:39.340 --> 00:07:41.340
+that the program is no longer running.
+
+00:07:41.340 --> 00:07:43.340
+I made a separate video about that.
+
+00:07:43.340 --> 00:07:45.340
+You can easily set it up here.
+
+00:07:45.340 --> 00:07:47.340
+Below that we have
+
+00:07:47.340 --> 00:07:50.620
+the technical details.
+
+00:07:50.620 --> 00:07:52.620
+Here you can see where the files
+
+00:07:52.620 --> 00:07:54.620
+are stored locally on your computer.
+
+00:07:54.620 --> 00:07:56.620
+And you can
+
+00:07:56.620 --> 00:07:58.620
+also download your diagnostics.
+
+00:07:58.620 --> 00:08:00.620
+And view the log.
+
+00:08:00.620 --> 00:08:02.620
+If something goes wrong, you can see it here.
+
+00:08:02.620 --> 00:08:04.620
+For the technical people.
+
+00:08:04.620 --> 00:08:06.620
+Then we have the cameras here.
+
+00:08:06.620 --> 00:08:08.620
+You can quickly look back.
+
+00:08:08.620 --> 00:08:14.880
+You can change the name again.
+
+00:08:14.880 --> 00:08:16.880
+And you can add more cameras here.
+
+00:08:16.880 --> 00:08:18.880
+Then you simply click it again.
+
+00:08:18.880 --> 00:08:20.880
+It searches again.
+
+00:08:20.880 --> 00:08:22.880
+It's that simple.
+
+00:08:22.880 --> 00:08:24.880
+Then we have the detectors here.
+
+00:08:24.880 --> 00:08:26.880
+The detectors are really
+
+00:08:26.880 --> 00:08:28.880
+the settings we have made.
+
+00:08:28.880 --> 00:08:30.880
+And with the task.
+
+00:08:30.880 --> 00:08:32.880
+You can have several detectors.
+
+00:08:32.880 --> 00:08:34.880
+So you can have one detector for your
+
+00:08:34.880 --> 00:08:36.880
+heat in dairy cows. For heat in
+
+00:08:36.880 --> 00:08:38.880
+young stock.
+
+00:08:38.880 --> 00:08:40.880
+For heat,
+
+00:08:40.880 --> 00:08:42.880
+calving.
+
+00:08:42.880 --> 00:08:44.880
+Each with its own settings.
+
+00:08:44.880 --> 00:08:46.880
+And you can simply
+
+00:08:46.880 --> 00:08:48.880
+add more cameras.
+
+00:08:48.880 --> 00:08:50.880
+And/or
+
+00:08:50.880 --> 00:08:52.880
+add extra people
+
+00:08:52.880 --> 00:08:54.880
+the alert should go to.
+
+00:08:54.880 --> 00:08:56.880
+If you want, for example,
+
+00:08:56.880 --> 00:08:58.880
+to add calving as well,
+
+00:08:58.880 --> 00:09:00.880
+you click Add detector.
+
+00:09:00.880 --> 00:09:02.880
+Calving Catcher.
+
+00:09:02.880 --> 00:09:04.880
+Tick it.
+
+00:09:04.880 --> 00:09:06.880
+Here again the cameras.
+
+00:09:06.880 --> 00:09:08.880
+Then give it a name. Calving.
+
+00:09:08.880 --> 00:09:10.880
+So you can find it again.
+
+00:09:10.880 --> 00:09:12.880
+Here we do have two modes.
+
+00:09:12.880 --> 00:09:14.880
+Standard and Low Power.
+
+00:09:14.880 --> 00:09:16.880
+Low Power really means: your computer is not that strong.
+
+00:09:16.880 --> 00:09:18.880
+Instead of
+
+00:09:18.880 --> 00:09:20.880
+looking every 2 seconds, it looks every 5 seconds.
+
+00:09:20.880 --> 00:09:22.880
+And the
+
+00:09:22.880 --> 00:09:24.880
+Standard mode is really
+
+00:09:24.880 --> 00:09:26.880
+good enough for most people.
+
+00:09:26.880 --> 00:09:28.880
+Especially if you have a normal computer
+
+00:09:28.880 --> 00:09:30.880
+of 5 years old, Standard runs fine.
+
+00:09:30.880 --> 00:09:32.880
+If you have one
+
+00:09:32.880 --> 00:09:34.880
+with a graphics card, or a Mac mini,
+
+00:09:34.880 --> 00:09:36.880
+always run it on Standard.
+
+00:09:36.880 --> 00:09:40.480
+Other than that,
+
+00:09:40.480 --> 00:09:42.480
+those are really all the settings.
+
+00:09:42.480 --> 00:09:44.480
+The magic is of course in
+
+00:09:44.480 --> 00:09:46.480
+the detection. This program doesn't need
+
+00:09:46.480 --> 00:09:48.480
+to be any more complicated.
+
+00:09:48.480 --> 00:09:50.480
+It's simply install and go.
+
+00:09:50.480 --> 00:09:52.480
+And run.
+
+00:09:52.480 --> 00:09:54.480
+You can simply close the program.
+
+00:09:54.480 --> 00:09:56.480
+It keeps running in the background.
+
+00:09:56.480 --> 00:09:58.480
+A shortcut is created automatically
+
+00:09:58.480 --> 00:10:00.480
+on your computer.
+
+00:10:00.480 --> 00:10:02.480
+You can click it.
+
+00:10:02.480 --> 00:10:04.480
+And that's how you get back into the program.

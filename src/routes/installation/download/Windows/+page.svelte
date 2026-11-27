@@ -9,6 +9,7 @@
     import InstallStep from '$lib/components/InstallStep.svelte';
     import InstallCommonSteps, { commonToc } from '$lib/components/InstallCommonSteps.svelte';
     import PagerNav from '$lib/components/PagerNav.svelte';
+    import TutorialCallout from '$lib/components/TutorialCallout.svelte';
 
     import imgRelease from '$lib/assets/app_github_release.jpg';
 
@@ -29,8 +30,8 @@
     title={m.windows_title()}
     lead={m.windows_intro()}
     crumbs={[
-        { href: '/installation', label: m.nav_install() },
-        { href: '/installation/download', label: stripNumber(m.install_card_software_title()) }
+        { href: '/installation/', label: m.nav_install() },
+        { href: '/installation/download/', label: stripNumber(m.install_card_software_title()) }
     ]}
 >
     {#snippet aside()}
@@ -75,6 +76,7 @@
     </p>
 
     <h2 id="steps">{m.inst_steps_title()}</h2>
+    <TutorialCallout slug="install-ai-detector" text={m.tutorials_install_cta_text()} />
 
     <InstallStep
         number="1"
@@ -95,7 +97,9 @@
             <li>{m.windows_step2_2()}</li>
             <li>{@html m.windows_step2_3()}</li>
             <li>{@html m.windows_step2_4()}</li>
+            <li>{@html m.windows_step2_5()}</li>
         </ol>
+        <p class="tip-box">{@html m.windows_step2_tip()}</p>
     </InstallStep>
 
     <InstallCommonSteps start={3}>
@@ -105,11 +109,12 @@
             <li>{@html m.windows_keep_2()}</li>
             <li>{@html m.windows_keep_3()}</li>
         </ul>
+        <TutorialCallout slug="update-windows" />
     </InstallCommonSteps>
 
     <PagerNav
-        prev={{ href: '/installation/download', label: m.inst_back_to_platforms() }}
-        next={{ href: '/installation/options', label: stripNumber(m.install_card_options_title()), hint: m.next_step() }}
+        prev={{ href: '/installation/download/', label: m.inst_back_to_platforms() }}
+        next={{ href: '/installation/options/', label: stripNumber(m.install_card_options_title()), hint: m.next_step() }}
     />
 </DocLayout>
 

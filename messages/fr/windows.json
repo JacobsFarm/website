@@ -26,5 +26,7 @@
   "windows_keep_title": "Le garder en marche 24h/24, 7j/7",
   "windows_keep_1": "<strong>Utilisez un câble réseau.</strong> Reliez le PC et les caméras IP par une connexion filaire (UTP/Ethernet). Le Wi-Fi dans une grange peut être instable, ce qui fait saccader les images des caméras.",
   "windows_keep_2": "<strong>Aucun réglage de veille nécessaire.</strong> Pendant la surveillance, AI Detector empêche lui-même le PC de se mettre en veille. Un ordinateur portable passe tout de même en veille quand vous fermez le capot ou quand il fonctionne sur batterie — gardez donc un portable ouvert et branché.",
-  "windows_keep_3": "<strong>Mises à jour.</strong> Choisissez <em>Check for Updates</em> dans le menu d'AI Detector (l'icône à côté de l'horloge). Les détecteurs créés à partir d'un préréglage reçoivent aussi automatiquement les nouveaux modèles."
+  "windows_keep_3": "<strong>Mises à jour.</strong> Choisissez <em>Check for Updates</em> dans le menu d'AI Detector (l'icône à côté de l'horloge). Les détecteurs créés à partir d'un préréglage reçoivent aussi automatiquement les nouveaux modèles.",
+  "windows_step2_tip": "<strong>Astuce :</strong> pour éviter l’avertissement bleu, faites un clic droit sur le fichier d’installation, choisissez <em>Propriétés</em>, cochez <strong>Débloquer</strong> en bas et cliquez sur <strong>OK</strong>. Lancez ensuite l’installation.",
+  "windows_step2_5": "Windows demande si l’AI Detector peut utiliser le réseau. Cliquez sur <strong>Autoriser</strong> : c’est nécessaire pour trouver vos caméras."
 }

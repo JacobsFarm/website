@@ -1,0 +1,246 @@
+{
+	"nl": {
+		"title": "Staartdetectie (Tail Up) activeren",
+		"subtitle": "Korte handleiding – in 7 stappen een extra detector toevoegen",
+		"intro": "Naast de gewone afkalfdetectie (<strong>Calving Catcher</strong>) kun je een extra detector inschakelen die let op een <strong>omhoog gehouden staart</strong>: <strong>Calving Catcher Tailup</strong>. Hij draait naast de bestaande detector op dezelfde camera's.",
+		"steps": [
+			{
+				"title": "Detector toevoegen",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Ga in het menu links naar <strong>Detectors</strong>. Hier staat al de huidige detector (Calving Catcher voor het afkalven). Klik rechtsboven op <strong>+ Add detector</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_detectors.jpg",
+						"alt": "Detectors-pagina met Add detector",
+						"caption": "De pagina Detectors met de knop \"Add detector\"."
+					}
+				]
+			},
+			{
+				"title": "Kies \"Calving Catcher Tailup\"",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Kies bij <em>What do you want to detect?</em> de optie <strong>Calving Catcher Tailup</strong> (staart omhoog). De naam van de detector wordt automatisch ingevuld."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_preset.jpg",
+						"alt": "Preset Calving Catcher Tailup gekozen",
+						"caption": "De preset \"Calving Catcher Tailup\" is geselecteerd."
+					}
+				]
+			},
+			{
+				"title": "Kies de camera's",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik de camera's aan die de detector moet bewaken, bijvoorbeeld alle vier de camera's van je afkalfhok. Onder de camera's staat hoeveel er geselecteerd zijn (hier <em>4 cameras selected</em>)."
+					},
+					{
+						"type": "figure",
+						"src": "stap3_camera.jpg",
+						"alt": "Vier camera's geselecteerd",
+						"caption": "Alle vier de camera's zijn aangevinkt."
+					}
+				]
+			},
+			{
+				"title": "Meldingen en opslaan",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Scroll naar beneden. Bij <strong>Messages</strong> koppel je Telegram opnieuw via <em>Connect Telegram</em>. Is Telegram al eerder ingesteld, dan staat die al klaar en hoef je hem alleen nog aan te klikken. Een telefoonalarm (<em>Alarm</em>) en de <em>AI check</em> zijn optioneel. Klik daarna op <strong>Save detector</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_meldingen_opslaan.jpg",
+						"alt": "Meldingen en Save detector",
+						"caption": "Messages, Alarm en AI check zijn optioneel; sla op met \"Save detector\"."
+					},
+					{
+						"type": "tip",
+						"html": "Het instellen van een alarm via de app komt in een aparte video aan bod."
+					}
+				]
+			},
+			{
+				"title": "Controleer de detectors",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Je ziet de melding <em>Detector 'Calving Catcher Tailup' saved</em>. In de lijst staan nu <strong>twee detectors</strong>: Calving Catcher en Calving Catcher Tailup."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_opgeslagen.jpg",
+						"alt": "Twee detectors in de lijst",
+						"caption": "Beide detectors staan nu in de lijst."
+					}
+				]
+			},
+			{
+				"title": "Controleer de monitoring",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open <strong>Monitoring</strong>. Na het opslaan herstart de bewaking even; daarna zie je dat alle camera's weer netjes op <strong>Monitoring</strong> staan."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_monitoring.jpg",
+						"alt": "Monitoring van vier camera's",
+						"caption": "Alle camera's worden weer bewaakt."
+					}
+				]
+			},
+			{
+				"title": "Klaar!",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open <strong>Cameras</strong>. Bij elke camera staan nu twee labels: <strong>Calving Catcher</strong> (afkalven) en <strong>Calving Catcher Tailup</strong> (staart omhoog). Op deze camera's draait dus zowel afkalfdetectie als staartdetectie."
+					},
+					{
+						"type": "figure",
+						"src": "stap7_cameras.jpg",
+						"alt": "Camera's met twee detectorlabels",
+						"caption": "Elke camera toont beide detectors."
+					},
+					{
+						"type": "figure",
+						"src": "stap7_zoom.jpg",
+						"alt": "Inzoomen op de twee labels",
+						"caption": "Ingezoomd: de twee labels onderaan een camera."
+					}
+				]
+			}
+		]
+	},
+	"en": {
+		"title": "Activating Tail Up detection",
+		"subtitle": "Short guide – add an extra detector in 7 steps",
+		"intro": "Besides the regular calving detection (<strong>Calving Catcher</strong>) you can enable an extra detector that watches for a <strong>raised tail</strong>: <strong>Calving Catcher Tailup</strong>. It runs alongside the existing detector on the same cameras.",
+		"steps": [
+			{
+				"title": "Add a detector",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "In the left-hand menu go to <strong>Detectors</strong>. The current detector (Calving Catcher for calving) is already there. Click <strong>+ Add detector</strong> at the top right."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_detectors.jpg",
+						"alt": "Detectors page with Add detector",
+						"caption": "The Detectors page with the \"Add detector\" button."
+					}
+				]
+			},
+			{
+				"title": "Choose \"Calving Catcher Tailup\"",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Under <em>What do you want to detect?</em> choose <strong>Calving Catcher Tailup</strong> (tail up). The detector name is filled in automatically."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_preset.jpg",
+						"alt": "Calving Catcher Tailup preset selected",
+						"caption": "The \"Calving Catcher Tailup\" preset is selected."
+					}
+				]
+			},
+			{
+				"title": "Select the cameras",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Click the cameras the detector should watch, for example all four cameras of your calving pen. Below the cameras you can see how many are selected (here <em>4 cameras selected</em>)."
+					},
+					{
+						"type": "figure",
+						"src": "stap3_camera.jpg",
+						"alt": "Four cameras selected",
+						"caption": "All four cameras are ticked."
+					}
+				]
+			},
+			{
+				"title": "Notifications and save",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Scroll down. Under <strong>Messages</strong> connect Telegram again via <em>Connect Telegram</em>. If Telegram was set up before, it is already available and you only need to select it. A phone alarm (<em>Alarm</em>) and the <em>AI check</em> are optional. Then click <strong>Save detector</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_meldingen_opslaan.jpg",
+						"alt": "Notifications and Save detector",
+						"caption": "Messages, Alarm and AI check are optional; save with \"Save detector\"."
+					},
+					{
+						"type": "tip",
+						"html": "Setting up an alarm through the app is covered in a separate video."
+					}
+				]
+			},
+			{
+				"title": "Check the detectors",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "You will see the message <em>Detector 'Calving Catcher Tailup' saved</em>. The list now shows <strong>two detectors</strong>: Calving Catcher and Calving Catcher Tailup."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_opgeslagen.jpg",
+						"alt": "Two detectors in the list",
+						"caption": "Both detectors are now in the list."
+					}
+				]
+			},
+			{
+				"title": "Check monitoring",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open <strong>Monitoring</strong>. After saving, monitoring restarts briefly; afterwards all cameras show <strong>Monitoring</strong> again."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_monitoring.jpg",
+						"alt": "Monitoring of four cameras",
+						"caption": "All cameras are being watched again."
+					}
+				]
+			},
+			{
+				"title": "Done!",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open <strong>Cameras</strong>. Each camera now shows two labels: <strong>Calving Catcher</strong> (calving) and <strong>Calving Catcher Tailup</strong> (tail up). So these cameras run both calving detection and tail detection."
+					},
+					{
+						"type": "figure",
+						"src": "stap7_cameras.jpg",
+						"alt": "Cameras with two detector labels",
+						"caption": "Every camera shows both detectors."
+					},
+					{
+						"type": "figure",
+						"src": "stap7_zoom.jpg",
+						"alt": "Zoom on the two labels",
+						"caption": "Zoomed in: the two labels at the bottom of a camera."
+					}
+				]
+			}
+		]
+	}
+}

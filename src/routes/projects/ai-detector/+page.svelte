@@ -9,6 +9,7 @@
     import Gallery from '$lib/components/Gallery.svelte';
     import ZoomableImage from '$lib/components/ZoomableImage.svelte';
     import Icon from '$lib/components/Icon.svelte';
+    import VideoEmbed from '$lib/components/VideoEmbed.svelte';
 
     import recordingsImg from '$lib/assets/app_recordings.jpg';
     import setupCamerasImg from '$lib/assets/app_setup_cameras.jpg';
@@ -50,9 +51,9 @@
     ].map((step) => ({ ...splitLabel(step.title()), desc: step.desc() }));
 
     const installs = [
-        { href: '/installation/download/Windows', icon: 'computer', title: m.ai_detector_install_win_title, desc: m.ai_detector_install_win_desc },
-        { href: '/installation/download/macOS', icon: 'computer', title: m.ai_detector_install_mac_title, desc: m.ai_detector_install_mac_desc },
-        { href: '/installation/download/docker', icon: 'code', title: m.ai_detector_install_docker_title, desc: m.ai_detector_install_docker_desc }
+        { href: '/installation/download/Windows/', icon: 'computer', title: m.ai_detector_install_win_title, desc: m.ai_detector_install_win_desc },
+        { href: '/installation/download/macOS/', icon: 'computer', title: m.ai_detector_install_mac_title, desc: m.ai_detector_install_mac_desc },
+        { href: '/installation/download/docker/', icon: 'code', title: m.ai_detector_install_docker_title, desc: m.ai_detector_install_docker_desc }
     ];
 </script>
 
@@ -96,15 +97,8 @@
             <h2 class="h-section">{m.ai_detector_video_title()}</h2>
             <p class="lead">{m.ai_detector_video_desc()}</p>
         </header>
-        <div class="video-frame bezel" use:reveal>
-            <!-- svelte-ignore a11y_media_has_caption -->
-            <video
-                src="{base}/video/ai-detector-en.mp4"
-                poster="{base}/video/ai-detector-en-poster.jpg"
-                controls
-                preload="none"
-                playsinline
-            ></video>
+        <div class="video-frame" use:reveal>
+            <VideoEmbed title={m.ai_detector_video_title()} />
         </div>
     </div>
 </section>
@@ -196,9 +190,15 @@
         </div>
 
         <div class="install-cta" use:reveal>
-            <a href="{base}/installation" class="btn btn--solid btn--lg">
+            <a href="{base}/installation/" class="btn btn--solid btn--lg">
                 {m.front_page_intro_btn_install()}
                 <span class="btn__icon"><Icon name="arrow-right" /></span>
+            </a>
+            <a href="{base}/tutorials/" class="btn btn--ghost btn--lg">
+                <Icon name="play" size={16} /> {m.tutorials_title()}
+            </a>
+            <a href="{base}/installation/configuration/" class="btn btn--ghost btn--lg">
+                <Icon name="code" size={16} /> {m.config_nav_label()}
             </a>
         </div>
     </div>
@@ -220,14 +220,6 @@
     .video-frame {
         max-width: 60rem;
         margin-inline: auto;
-    }
-
-    .video-frame video {
-        display: block;
-        width: 100%;
-        aspect-ratio: 16 / 9;
-        border-radius: calc(var(--radius-xl) - 0.5rem);
-        background: var(--forest);
     }
 
     /* ── Over ── */
@@ -479,6 +471,8 @@
 
     .install-cta {
         display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
         justify-content: center;
         margin-top: 2.5rem;
     }

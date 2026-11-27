@@ -13,6 +13,7 @@
             m.inst_setup_det_title,
             m.inst_setup_start_title,
             m.inst_tele_title,
+            m.inst_alarm_title,
             m.inst_ai_title,
             m.inst_phone_title
         ].map((title, i) => ({ id: `step-${start + i}`, label: title() }));
@@ -20,7 +21,10 @@
 </script>
 
 <script>
+    import { base } from '$app/paths';
     import InstallStep from '$lib/components/InstallStep.svelte';
+    import TutorialCallout from '$lib/components/TutorialCallout.svelte';
+    import Icon from '$lib/components/Icon.svelte';
     import RtspUrlFinder from '$lib/components/RtspUrlFinder.svelte';
     import { links } from '$lib/config/links.js';
 
@@ -146,8 +150,19 @@
     <p>{@html m.inst_tele_groups_text()}</p>
 </InstallStep>
 
+<InstallStep number={start + 5} title={m.inst_alarm_title()}>
+    <p>{m.inst_alarm_intro()}</p>
+    <ol class="setup-steps">
+        <li>{@html m.inst_alarm_1()}</li>
+        <li>{@html m.inst_alarm_2()}</li>
+        <li>{@html m.inst_alarm_3()}</li>
+        <li>{@html m.inst_alarm_4()}</li>
+    </ol>
+    <p class="note">{@html m.inst_alarm_note()}</p>
+</InstallStep>
+
 <InstallStep
-    number={start + 5}
+    number={start + 6}
     title={m.inst_ai_title()}
     image={imgAiCheck}
     imageAlt="Connect validator screen to link Google Gemini"
@@ -164,7 +179,7 @@
 </InstallStep>
 
 <InstallStep
-    number={start + 6}
+    number={start + 7}
     title={m.inst_phone_title()}
     image={imgDevices}
     imageAlt="Devices page of AI Detector with the connected browsers"
@@ -209,17 +224,34 @@
     </div>
 </section>
 
+<section class="extra" id="heartbeat">
+    <h3>{m.inst_heartbeat_title()}</h3>
+    <p>{m.inst_heartbeat_text()}</p>
+    <TutorialCallout slug="heartbeat-healthchecks" />
+</section>
+
 <section class="extra support" id="support">
     <h3>{m.inst_support_title()}</h3>
     <ul class="plain-list">
         <li>{@html m.inst_support_diag()}</li>
-        <li>{@html m.inst_support_youtube()}</li>
+        <li>
+            <strong>{m.tutorials_title()}</strong> — {m.tutorials_lead()}
+            <a href="{base}/tutorials/" class="text-link">{m.tutorials_all()} &rarr;</a>
+        </li>
         <li>
             {@html m.inst_support_email()}
             <a href="mailto:{links.email}" class="text-link">{links.email}</a>
         </li>
         <li>{@html m.inst_support_community()}</li>
     </ul>
+    <div class="btn-row">
+        <a href={links.telegram} target="_blank" rel="noopener noreferrer" class="btn btn--solid btn--sm">
+            <Icon name="telegram" size={16} /> Telegram
+        </a>
+        <a href={links.facebook} target="_blank" rel="noopener noreferrer" class="btn btn--ghost btn--sm">
+            <Icon name="facebook" size={16} /> Facebook
+        </a>
+    </div>
 </section>
 
 <style>

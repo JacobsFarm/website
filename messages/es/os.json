@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Descarga el archivo de macOS desde la última versión publicada.",
   "os_btn_releases": "Ir a Releases",
   "os_macos_req_title": "Antes de empezar",
-  "os_macos_req_text": "Necesitas un Mac con Apple Silicon (M1, M2, M3, M4 o más reciente) y macOS 14 Sonoma o más reciente. La detección se ejecuta en el Neural Engine del chip: rápida, silenciosa y muy eficiente en energía.",
+  "os_macos_req_text": "Necesitas un Mac con Apple Silicon (M1, M2, M3, M4, M5, M6 o más reciente) y macOS 14 Sonoma o más reciente. La detección se ejecuta en el Neural Engine del chip: rápida, silenciosa y muy eficiente en energía.",
   "os_table_mac": "Tu Mac",
   "os_table_engine": "La detección se ejecuta en",
   "os_hw_apple_silicon": "Mac con Apple Silicon (M1 o más reciente), macOS 14+",

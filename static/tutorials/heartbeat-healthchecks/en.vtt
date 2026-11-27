@@ -1,0 +1,238 @@
+WEBVTT
+
+00:00:00.720 --> 00:00:11.720
+In this video I show how to set an alarm with healthchecks.io for when your AI Detector stops, so that you are notified.
+
+00:00:12.380 --> 00:00:15.260
+To start, we first have to sign in to Healthchecks.
+
+00:00:15.640 --> 00:00:18.200
+First you enter your e-mail address here.
+
+00:00:19.760 --> 00:00:22.160
+Then you confirm it.
+
+00:00:22.420 --> 00:00:27.920
+You get an e-mail; click the login link in it.
+
+00:00:28.640 --> 00:00:32.260
+Then you are signed in to the website right away.
+
+00:00:32.260 --> 00:00:36.480
+Then go to your account and set a password.
+
+00:00:37.820 --> 00:00:42.480
+First they ask again for a confirmation code that is sent to your e-mail.
+
+00:00:43.120 --> 00:00:44.500
+And then you can create a password.
+
+00:00:46.630 --> 00:00:49.050
+At this point you have created an account.
+
+00:00:50.410 --> 00:00:54.390
+Then we add Telegram, because that is where we want to be alerted.
+
+00:00:54.750 --> 00:00:58.410
+The website itself also describes how to do that.
+
+00:00:59.550 --> 00:01:00.770
+And I will show it now.
+
+00:01:01.270 --> 00:01:14.050
+What you do: go to Add Telegram.
+
+00:01:14.590 --> 00:01:17.370
+Type in: add Healthchecks bot.
+
+00:01:18.870 --> 00:01:21.330
+Make sure you have the right one, then start it.
+
+00:01:25.880 --> 00:01:29.100
+It then asks you to open that special link.
+
+00:01:29.660 --> 00:01:34.100
+Here you sign in again with your e-mail address and the password you just created.
+
+00:01:36.000 --> 00:01:42.100
+And here it asks you to confirm connecting Telegram.
+
+00:01:43.380 --> 00:01:46.340
+Then click Connect Telegram.
+
+00:01:47.580 --> 00:01:48.840
+From this point on you have...
+
+00:01:48.900 --> 00:01:53.000
+...the option to be notified by e-mail and by Telegram.
+
+00:01:57.890 --> 00:02:00.550
+Down here you can set a schedule.
+
+00:02:00.810 --> 00:02:05.730
+We want a ping to be sent to the website every minute.
+
+00:02:05.870 --> 00:02:08.070
+You can also set it to 10 minutes or 20 minutes.
+
+00:02:08.650 --> 00:02:10.210
+And a special grace time.
+
+00:02:10.690 --> 00:02:17.130
+The grace time is the time after the last ping was or was not received.
+
+00:02:17.130 --> 00:02:22.530
+In this case it first waits an hour before it alerts you.
+
+00:02:22.870 --> 00:02:26.710
+So you are not disturbed straight away as soon as it stops.
+
+00:02:29.270 --> 00:02:31.970
+We go to the AI Detector web app.
+
+00:02:32.770 --> 00:02:38.670
+There we add the option under Advanced.
+
+00:02:40.290 --> 00:02:41.830
+What we do: you type in...
+
+00:02:41.930 --> 00:02:44.310
+We go to CowCatcher AI on GitHub.
+
+00:02:47.940 --> 00:02:50.740
+And you look for the file health indicator.json.
+
+00:02:51.000 --> 00:02:51.800
+Click it.
+
+00:02:51.800 --> 00:02:55.800
+And copy these...
+
+00:02:57.160 --> 00:02:58.260
+Five lines.
+
+00:03:00.260 --> 00:03:03.840
+Then go back to the web app.
+
+00:03:04.660 --> 00:03:06.200
+Make sure it is in there.
+
+00:03:06.340 --> 00:03:08.760
+Look carefully at the example, at the number of spaces.
+
+00:03:13.370 --> 00:03:14.450
+Put it in like this.
+
+00:03:16.550 --> 00:03:24.110
+Then replace the https hc-ping link with the one from the website.
+
+00:03:24.950 --> 00:03:26.930
+The one you received.
+
+00:03:28.450 --> 00:03:29.810
+It is at the top there.
+
+00:03:30.170 --> 00:03:31.070
+Here: How To Ping.
+
+00:03:31.250 --> 00:03:32.070
+Copy it.
+
+00:03:32.070 --> 00:03:33.070
+You can click it once.
+
+00:03:33.070 --> 00:03:34.070
+Then it is copied automatically.
+
+00:03:34.070 --> 00:03:35.070
+Then paste it with Ctrl+V.
+
+00:03:35.070 --> 00:03:37.070
+Now it is in there.
+
+00:03:37.070 --> 00:03:39.070
+And then click Save.
+
+00:03:39.070 --> 00:03:45.070
+Well, as usual, you start the AI Detector now.
+
+00:03:45.070 --> 00:03:48.510
+The way you are used to.
+
+00:03:48.510 --> 00:03:50.510
+Here is an example of it having started.
+
+00:03:50.510 --> 00:03:54.510
+And you get a message in Telegram that it has started.
+
+00:03:54.510 --> 00:03:56.510
+Then it is green.
+
+00:03:56.510 --> 00:04:00.510
+We can do the same in the configuration file.
+
+00:04:00.510 --> 00:04:02.510
+We just did that.
+
+00:04:02.510 --> 00:04:03.510
+This is of course a second option.
+
+00:04:03.510 --> 00:04:05.510
+Fill it in here as well.
+
+00:04:05.510 --> 00:04:07.510
+And then you can save here too.
+
+00:04:07.510 --> 00:04:10.510
+There are two ways to set it up.
+
+00:04:10.510 --> 00:04:11.510
+Well, again.
+
+00:04:11.510 --> 00:04:12.510
+You start it.
+
+00:04:12.510 --> 00:04:13.510
+Once you have done that.
+
+00:04:13.510 --> 00:04:14.510
+There are two ways.
+
+00:04:14.510 --> 00:04:15.510
+Either through the web app.
+
+00:04:15.510 --> 00:04:18.510
+Or directly in the configuration file.
+
+00:04:18.510 --> 00:04:23.290
+Well, here again for example.
+
+00:04:23.290 --> 00:04:24.290
+You start it.
+
+00:04:24.290 --> 00:04:38.820
+As you know.
+
+00:04:38.820 --> 00:04:40.820
+It always takes a while to start.
+
+00:04:40.820 --> 00:04:44.820
+And here again the example that it has started.
+
+00:04:44.820 --> 00:04:46.820
+Because there it comes.
+
+00:04:46.820 --> 00:04:49.820
+And for example when you stop it.
+
+00:04:49.820 --> 00:04:51.820
+Or it has been closed.
+
+00:04:51.820 --> 00:04:53.820
+Then a red alert comes in.
+
+00:04:53.820 --> 00:04:56.820
+And on the website you can also see whether it is online.
+
+00:04:56.820 --> 00:05:02.470
+And that's it.

@@ -1,0 +1,260 @@
+{
+	"nl": {
+		"title": "Detecties opsturen",
+		"subtitle": "Korte handleiding – help ons het model slimmer te maken met jouw opnames",
+		"intro": "Alle detecties van jouw AI-detector worden <strong>lokaal</strong> op jouw computer opgeslagen. Door ze naar ons te sturen help je het model slimmer te maken. In deze handleiding exporteer je de detecties als <strong>ZIP-bestand</strong>, stuur je dat via <strong>Telegram</strong> naar ons op en ruim je daarna de oude opnames op.",
+		"steps": [
+			{
+				"title": "Ga naar Opnames en klik op Export",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open de AI-detector en kies in het menu links <strong>Opnames</strong> (<em>Recordings</em>). Klik rechtsboven op <strong>Export</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_opnames.jpg",
+						"alt": "Tabblad Recordings met Export rechtsboven",
+						"caption": "Tabblad Opnames (Recordings): de knop Export staat rechtsboven."
+					}
+				]
+			},
+			{
+				"title": "Kies de periode en alleen de originele foto's",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Er opent een scherm <strong>Export recordings</strong>. Hier stel je het volgende in:"
+					},
+					{
+						"type": "ul",
+						"items": [
+							"<strong>From date / To date</strong>: kies de periode die je wilt opsturen, bijvoorbeeld één dag. Laat je beide velden leeg, dan worden <strong>alle</strong> opnames meegenomen.",
+							"Vink <strong>\"Only the original photos\"</strong> aan."
+						]
+					},
+					{
+						"type": "note",
+						"html": "Het aanvinken van <strong>alleen de originele foto's</strong> is voor ons genoeg om het model slimmer te maken. Het bestand wordt hierdoor veel kleiner en de video's hebben wij niet nodig."
+					},
+					{
+						"type": "p",
+						"html": "Onderin zie je hoeveel opnames er geselecteerd zijn (in het voorbeeld 1.699 voor alle data, of 195 voor één dag)."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_export_dialoog.jpg",
+						"alt": "Export recordings met Only the original photos aangevinkt",
+						"caption": "\"Only the original photos\" is aangevinkt; onderin staat het aantal geselecteerde opnames.",
+						"small": true
+					}
+				]
+			},
+			{
+				"title": "Download de ZIP",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik op <strong>Download ZIP</strong>. Rechtsboven in je browser verschijnt het bestand <code>AI-Detector-recordings-[datum].zip</code>. Dit is het bestand dat je naar ons gaat sturen."
+					},
+					{
+						"type": "figure",
+						"src": "stap3_download_zip.jpg",
+						"alt": "Gedownload ZIP-bestand rechtsboven in de browser",
+						"caption": "Het ZIP-bestand staat in de downloads van je browser."
+					}
+				]
+			},
+			{
+				"title": "Open Telegram en zoek ons op",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Het makkelijkst is versturen via <strong>Telegram</strong>. Je kunt Telegram ook als <strong>web-app</strong> openen op je computer, je hoeft niets te installeren. Je kunt op twee manieren contact met ons maken:"
+					},
+					{
+						"type": "ul",
+						"items": [
+							"Word lid van de groep <strong>CowCatcher AI | opensource project</strong>. Je krijgt dan automatisch een bericht van ons met de vraag of je Cowcatcher draait of nog hulp nodig hebt. Reageer daarop, dan praat je met ons.",
+							"Of stuur direct een persoonlijk bericht naar <strong>Jacob5456</strong>."
+						]
+					},
+					{
+						"type": "figure",
+						"src": "stap4_telegram.jpg",
+						"alt": "Telegram web-app met de groep CowCatcher AI",
+						"caption": "Telegram als web-app, met de groep CowCatcher AI | opensource project."
+					}
+				]
+			},
+			{
+				"title": "Stuur het ZIP-bestand",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open de persoonlijke chat met ons. Voeg het ZIP-bestand toe met het paperclip-icoon (of sleep het bestand in het venster) en klik op <strong>Verzenden</strong>. Het bestand wordt nu naar ons gestuurd en wij gaan er verder mee aan de slag."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_verzenden.jpg",
+						"alt": "Telegram Send File met het ZIP-bestand",
+						"caption": "Het scherm \"Send File\": klik op de blauwe verzendknop.",
+						"small": true
+					}
+				]
+			},
+			{
+				"title": "Verwijder daarna de oude detecties (optioneel)",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Heb je de detecties opgestuurd, dan kun je ze verwijderen. Ga in de AI-detector naar <strong>Settings → Storage</strong> (opslag). Onder <strong>Remove old recordings</strong> kies je bij <strong>Recordings before</strong> de datum en klik je op <strong>Review</strong>. Je ziet hoeveel opnames er worden verwijderd. Klik daarna op de rode knop <strong>Remove … recordings</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_opslag.jpg",
+						"alt": "Storage met Remove old recordings",
+						"caption": "Settings → Storage: oude opnames verwijderen tot een gekozen datum."
+					},
+					{
+						"type": "warning",
+						"html": "<strong>Let op:</strong> verwijderde opnames kun je niet meer terughalen. Verwijder dus pas nadat je het ZIP-bestand hebt verstuurd. Instellingen en nieuwere opnames blijven bewaard."
+					},
+					{
+						"type": "tip",
+						"html": "De opslag is alleen nodig om opnames in de AI-detector te kunnen tonen. Gebruik je ze niet meer, dan kun je ze gerust allemaal verwijderen. Je schijf is dan weer leeg."
+					}
+				]
+			}
+		]
+	},
+	"en": {
+		"title": "Sending your detections",
+		"subtitle": "Short guide – help us make the model smarter with your recordings",
+		"intro": "All detections from your AI detector are stored <strong>locally</strong> on your computer. By sending them to us you help make the model smarter. In this guide you export the detections as a <strong>ZIP file</strong>, send it to us via <strong>Telegram</strong> and then clean up the old recordings.",
+		"steps": [
+			{
+				"title": "Go to Recordings and click Export",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open the AI detector and choose <strong>Recordings</strong> in the menu on the left. Click <strong>Export</strong> at the top right."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_opnames.jpg",
+						"alt": "Recordings tab with Export at the top right",
+						"caption": "The Recordings tab: the Export button is at the top right."
+					}
+				]
+			},
+			{
+				"title": "Choose the period and only the original photos",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The <strong>Export recordings</strong> window opens. Set the following:"
+					},
+					{
+						"type": "ul",
+						"items": [
+							"<strong>From date / To date</strong>: pick the period you want to send, for example one day. If you leave both fields empty, <strong>all</strong> recordings are included.",
+							"Tick <strong>\"Only the original photos\"</strong>."
+						]
+					},
+					{
+						"type": "note",
+						"html": "Ticking <strong>only the original photos</strong> is enough for us to make the model smarter. It makes the file much smaller, and we do not need the videos."
+					},
+					{
+						"type": "p",
+						"html": "At the bottom you see how many recordings are selected (in the example 1,699 for all data, or 195 for one day)."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_export_dialoog.jpg",
+						"alt": "Export recordings with Only the original photos ticked",
+						"caption": "\"Only the original photos\" is ticked; the number of selected recordings is shown at the bottom.",
+						"small": true
+					}
+				]
+			},
+			{
+				"title": "Download the ZIP",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Click <strong>Download ZIP</strong>. The file <code>AI-Detector-recordings-[date].zip</code> appears at the top right of your browser. This is the file you are going to send to us."
+					},
+					{
+						"type": "figure",
+						"src": "stap3_download_zip.jpg",
+						"alt": "Downloaded ZIP file at the top right of the browser",
+						"caption": "The ZIP file is in your browser's downloads."
+					}
+				]
+			},
+			{
+				"title": "Open Telegram and find us",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The easiest way to send it is via <strong>Telegram</strong>. You can also open Telegram as a <strong>web app</strong> on your computer, nothing to install. There are two ways to reach us:"
+					},
+					{
+						"type": "ul",
+						"items": [
+							"Join the group <strong>CowCatcher AI | opensource project</strong>. You will automatically get a message from us asking whether you are running Cowcatcher or still need help. Reply to it and you are talking to us.",
+							"Or send a personal message directly to <strong>Jacob5456</strong>."
+						]
+					},
+					{
+						"type": "figure",
+						"src": "stap4_telegram.jpg",
+						"alt": "Telegram web app with the CowCatcher AI group",
+						"caption": "Telegram as a web app, with the group CowCatcher AI | opensource project."
+					}
+				]
+			},
+			{
+				"title": "Send the ZIP file",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open the personal chat with us. Add the ZIP file with the paperclip icon (or drag the file into the window) and click <strong>Send</strong>. The file is now sent to us and we take it from there."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_verzenden.jpg",
+						"alt": "Telegram Send File with the ZIP file",
+						"caption": "The \"Send File\" window: click the blue send button.",
+						"small": true
+					}
+				]
+			},
+			{
+				"title": "Remove the old detections afterwards (optional)",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Once you have sent the detections you can remove them. In the AI detector go to <strong>Settings → Storage</strong>. Under <strong>Remove old recordings</strong>, pick the date at <strong>Recordings before</strong> and click <strong>Review</strong>. You see how many recordings will be removed. Then click the red <strong>Remove … recordings</strong> button."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_opslag.jpg",
+						"alt": "Storage with Remove old recordings",
+						"caption": "Settings → Storage: remove old recordings up to a chosen date."
+					},
+					{
+						"type": "warning",
+						"html": "<strong>Note:</strong> removed recordings cannot be restored. Only remove them after you have sent the ZIP file. Settings and newer recordings are kept."
+					},
+					{
+						"type": "tip",
+						"html": "Storage is only needed to show the recordings in the AI detector. If you no longer use them, you can safely remove them all. Your disk is then empty again."
+					}
+				]
+			}
+		]
+	}
+}

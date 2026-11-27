@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00:00.210 --> 00:00:07.590
+In deze video wil ik laten zien hoe je als boer kan omgaan in het geval dat je het kalf langer bij de koe houdt.
+
+00:00:07.590 --> 00:00:13.230
+Zonder dat je constant een melding krijgt van het kalf dat in het hok rondloopt, want dat klopt.
+
+00:00:14.110 --> 00:00:19.150
+We staan hier bij de camera's en dan gaan wij naar de detectors toe.
+
+00:00:19.430 --> 00:00:23.750
+Bij de detector heb je er eentje draaien, de calving catcher natuurlijk voor het kalf.
+
+00:00:25.510 --> 00:00:28.170
+En wat we dan nu gaan doen is naar de settings.
+
+00:00:28.170 --> 00:00:33.450
+Onder de settings staat geavanceerd, daar klikken wij op en dan kom je in dit menu.
+
+00:00:35.150 --> 00:00:43.170
+En wat hier staat eigenlijk alle instellingen van de calving catcher en dus ook van het kalf.
+
+00:00:43.870 --> 00:00:46.990
+Dan zijn er twee manieren om dit probleem te benaderen.
+
+00:00:48.010 --> 00:00:53.170
+We kunnen als eerste de tijd tussen meldingen van een detectie op het kalf verlengen.
+
+00:00:54.470 --> 00:00:57.090
+Standaard is dat om de 15 minuten.
+
+00:00:58.170 --> 00:01:03.790
+Maar dan kunnen we bijvoorbeeld ook verlengen naar 3600 seconden.
+
+00:01:03.890 --> 00:01:07.950
+Dat zou betekenen dat tussen een melding minimaal een uur moet zitten.
+
+00:01:08.850 --> 00:01:11.350
+En we kunnen het natuurlijk nog langer maken.
+
+00:01:12.190 --> 00:01:17.450
+Elke combinatie in secondes is legitiem.
+
+00:01:17.990 --> 00:01:25.330
+In dit geval 86.000 secondes is een cooldown periode van één dag.
+
+00:01:25.330 --> 00:01:27.330
+Dus binnen...
+
+00:01:28.170 --> 00:01:30.930
+24 uur wordt er geen nieuwe melding meer verzonden.
+
+00:01:30.930 --> 00:01:37.790
+Dus vanaf 24 uur, dan is er weer dat er een melding van een detectie op het kalf verzonden mag worden.
+
+00:01:37.790 --> 00:01:40.130
+En deze kun je natuurlijk zo lang mogelijk maken als je wil.
+
+00:01:40.130 --> 00:01:42.130
+Maak het drie dagen, maak het vijf dagen.
+
+00:01:42.130 --> 00:01:44.130
+En de waarde is in secondes.
+
+00:01:44.130 --> 00:01:50.130
+Als je het hebt aangepast, bijvoorbeeld nu dus een dag, dan druk je op save, hier links onderin.
+
+00:01:50.130 --> 00:01:55.070
+Hij is opgeslagen.
+
+00:01:55.070 --> 00:02:00.890
+Een tweede manier om dit te benaderen is als je überhaupt geen melding meer van het kalf hebt.
+
+00:02:00.890 --> 00:02:02.890
+En dat je een melding van het kalf wilt krijgen.
+
+00:02:02.890 --> 00:02:10.890
+Wat we dan aanpassen is in het kopje confidence, de waarde 0,85.
+
+00:02:10.890 --> 00:02:12.890
+Want de standaardwaarde is vervangen door 0,99.
+
+00:02:12.890 --> 00:02:21.890
+Dit is een onrealistisch hoge waarde, drempelwaarde, waardoor je eigenlijk geen detectie meer op het kalf gaat krijgen.
+
+00:02:21.890 --> 00:02:25.200
+En daarop drukken we ook op opslaan.
+
+00:02:25.200 --> 00:02:31.200
+Dus in deze huidige configuratie zal je eigenlijk geen melding van het kalf krijgen.
+
+00:02:31.200 --> 00:02:32.200
+Omdat de betrouwbaarheid van het kalf is.
+
+00:02:32.200 --> 00:02:34.200
+Omdat de betrouwbaarheid veel te hoog is.
+
+00:02:34.200 --> 00:02:36.200
+Onrealistisch hoog zelfs.
+
+00:02:36.200 --> 00:02:46.200
+Maar mocht er dus een detectie toch nog plaatsvinden, dan is die tijd minimaal tussen meldingen 24 uur.
+
+00:02:46.200 --> 00:02:48.200
+En dan gaan we naar monitoring toe.
+
+00:02:48.200 --> 00:02:52.200
+En dan zie je ook netjes dat alle vier de camera's weer zijn begonnen met monitoren.
+
+00:02:52.200 --> 00:02:54.200
+Met de nieuwe settings.

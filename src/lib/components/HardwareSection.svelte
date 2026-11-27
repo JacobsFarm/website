@@ -6,7 +6,10 @@
      * Eén hardwarecategorie (computer, camera's, …) met opties als kaarten.
      * Extra uitleg en koop-/videolinks zitten achter "Meer informatie".
      */
-    let { id = '', number = '', title = '', intro = '', options = [] } = $props();
+    let { id = '', number = '', title = '', intro = '', tip = '', options = [] } = $props();
+
+    /** Links within this site open in the same tab. @param {string} url */
+    const isExternal = (url) => /^https?:/.test(url) || url.endsWith('.pdf');
 </script>
 
 <section class="hw-section" {id}>
@@ -15,12 +18,13 @@
         <div>
             <h2>{title}</h2>
             {#if intro}<p class="intro">{intro}</p>{/if}
+            {#if tip}<p class="tip"><Icon name="star" size={16} /> <span>{tip}</span></p>{/if}
         </div>
     </header>
 
     <ul class="options" class:single={options.length === 1}>
         {#each options as option (option.title)}
-            <li class="option">
+            <li class="option" class:recommended={option.recommended}>
                 {#if option.imageSrc}
                     <div class="media">
                         <img src={option.imageSrc} alt={option.imageAlt} loading="lazy" />
@@ -28,6 +32,9 @@
                 {/if}
 
                 <div class="body">
+                    {#if option.recommended}
+                        <span class="badge"><Icon name="star" size={13} /> {m.hardware_recommended()}</span>
+                    {/if}
                     <h3>{option.title}</h3>
                     <p class="desc">{option.desc}</p>
 
@@ -47,14 +54,13 @@
                                         {#each option.links as link (link.url)}
                                             <a
                                                 href={link.url}
-                                                target="_blank"
-                                                rel="external noopener noreferrer"
-                                                data-sveltekit-reload
+                                                target={isExternal(link.url) ? '_blank' : undefined}
+                                                rel={isExternal(link.url) ? 'external noopener noreferrer' : undefined}
                                                 class="hw-link"
                                             >
                                                 <Icon name={link.icon} size={16} />
                                                 <span>{link.text}</span>
-                                                <Icon name="arrow-up-right" size={14} class="ext" />
+                                                <Icon name={isExternal(link.url) ? 'arrow-up-right' : 'arrow-right'} size={14} class="ext" />
                                             </a>
                                         {/each}
                                     </div>
@@ -119,6 +125,44 @@
         box-shadow:
             0 0 0 1px var(--line),
             var(--shadow-sm);
+    }
+
+    .option.recommended {
+        box-shadow:
+            0 0 0 2px var(--primary),
+            var(--shadow-md);
+    }
+
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        justify-self: start;
+        gap: 0.3rem;
+        padding: 0.2rem 0.6rem;
+        border-radius: var(--radius-pill);
+        background: var(--primary);
+        color: #fff;
+        font-size: 0.75rem;
+        font-weight: 600;
+        letter-spacing: 0.03em;
+    }
+
+    .tip {
+        display: flex;
+        gap: 0.5rem;
+        align-items: flex-start;
+        margin-top: 0.9rem;
+        padding: 0.75rem 1rem;
+        border-radius: var(--radius);
+        background: var(--primary-soft);
+        color: var(--primary-ink);
+        font-weight: 500;
+        max-width: 64ch;
+    }
+
+    .tip :global(svg) {
+        flex-shrink: 0;
+        margin-top: 0.2rem;
     }
 
     .media {

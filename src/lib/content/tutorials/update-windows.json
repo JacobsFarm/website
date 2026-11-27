@@ -1,0 +1,242 @@
+{
+	"nl": {
+		"title": "AI Detector updaten op Windows",
+		"subtitle": "Korte handleiding – in 7 stappen naar de nieuwste versie",
+		"intro": "Er is een nieuwe versie van de AI Detector beschikbaar? Dan verschijnt er een melding bij het opstarten van je computer. Updaten is eenvoudig: je hoeft alleen een paar keer op <strong>Yes</strong> te klikken. De oude versie wordt automatisch vervangen door de nieuwe.",
+		"steps": [
+			{
+				"title": "Melding \"update available\"",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Wanneer je computer opstart en er een update is, verschijnt rechtsonder een melding: <em>\"AI Detector update available\"</em>."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_melding.jpg",
+						"alt": "Melding AI Detector update available",
+						"caption": "De melding rechtsonder in beeld."
+					}
+				]
+			},
+			{
+				"title": "Open het systeemvak",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik rechtsonder in de taakbalk op het <strong>pijltje (^)</strong>. Er opent een klein menu met verborgen pictogrammen. Hier staat het pictogram van de <strong>AI Detector</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_systeemvak.jpg",
+						"alt": "Systeemvak met AI Detector",
+						"caption": "Het systeemvak naast de klok."
+					},
+					{
+						"type": "tip",
+						"html": "Bij een actuele installatie is het pictogram <strong>groen</strong>. In de video is het zwart omdat daar bewust een oude versie draait."
+					}
+				]
+			},
+			{
+				"title": "Check for Updates",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik met je <strong>rechtermuisknop</strong> op het AI Detector-pictogram en kies <strong>Check for Updates…</strong>"
+					},
+					{
+						"type": "figure",
+						"src": "stap3_menu.jpg",
+						"alt": "Menu met Check for Updates",
+						"caption": "Het rechtsklikmenu van de AI Detector."
+					},
+					{
+						"type": "tip",
+						"html": "Staat er \"geen update, je bent up-to-date\"? Dan draai je al de nieuwste versie en hoef je niets te doen."
+					}
+				]
+			},
+			{
+				"title": "Download bevestigen",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Er verschijnt een venster dat er een nieuwe versie is (in dit voorbeeld <strong>1.0.1</strong>). Klik op <strong>Yes</strong>. De bewaking blijft gewoon doorlopen tijdens het downloaden."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_download.jpg",
+						"alt": "Download AI Detector 1.0.1?",
+						"caption": "Klik op \"Yes\" om te downloaden."
+					}
+				]
+			},
+			{
+				"title": "Update is klaar – opnieuw opstarten",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Als de download klaar is, verschijnt een pop-up: <em>\"The update is ready. Restart AI Detector now?\"</em>. De monitoring pauzeert kort en start daarna weer op. Klik op <strong>Yes</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_klaar.jpg",
+						"alt": "Update is ready, herstart AI Detector",
+						"caption": "Klik opnieuw op \"Yes\"."
+					}
+				]
+			},
+			{
+				"title": "Installatie",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "De update wordt nu geïnstalleerd (\"Installing Update\"). Wacht even; je hoeft niets te doen."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_installeren.jpg",
+						"alt": "Installing Update",
+						"caption": "De installatie is bezig."
+					}
+				]
+			},
+			{
+				"title": "Klaar!",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Zodra de installatie klaar is, start de AI Detector automatisch weer op. Het dashboard opent en linksonder zie je het nieuwe versienummer (hier <strong>Versie 1.0.1</strong>). Je bent bijgewerkt."
+					},
+					{
+						"type": "figure",
+						"src": "stap7_dashboard.jpg",
+						"alt": "Dashboard met versie 1.0.1",
+						"caption": "Het dashboard na de update, met het nieuwe versienummer linksonder."
+					}
+				]
+			}
+		]
+	},
+	"en": {
+		"title": "Updating the AI Detector on Windows",
+		"subtitle": "Short guide – 7 steps to the latest version",
+		"intro": "Is a new version of the AI Detector available? Then a notification appears when your computer starts. Updating is simple: you only need to click <strong>Yes</strong> a few times. The old version is replaced by the new one automatically.",
+		"steps": [
+			{
+				"title": "The \"update available\" notification",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "When your computer starts and an update is available, a notification appears at the bottom right: <em>\"AI Detector update available\"</em>."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_melding.jpg",
+						"alt": "AI Detector update available notification",
+						"caption": "The notification at the bottom right of the screen."
+					}
+				]
+			},
+			{
+				"title": "Open the system tray",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "At the bottom right of the taskbar, click the <strong>arrow (^)</strong>. A small menu with hidden icons opens. The <strong>AI Detector</strong> icon is in here."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_systeemvak.jpg",
+						"alt": "System tray with AI Detector",
+						"caption": "The system tray next to the clock."
+					},
+					{
+						"type": "tip",
+						"html": "On an up-to-date install the icon is <strong>green</strong>. In the video it is black because an old version is deliberately running."
+					}
+				]
+			},
+			{
+				"title": "Check for Updates",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "<strong>Right-click</strong> the AI Detector icon and choose <strong>Check for Updates…</strong>"
+					},
+					{
+						"type": "figure",
+						"src": "stap3_menu.jpg",
+						"alt": "Menu with Check for Updates",
+						"caption": "The AI Detector right-click menu."
+					},
+					{
+						"type": "tip",
+						"html": "Does it say there is no update and you are up to date? Then you already have the latest version and nothing more is needed."
+					}
+				]
+			},
+			{
+				"title": "Confirm the download",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "A window tells you a new version is available (in this example <strong>1.0.1</strong>). Click <strong>Yes</strong>. Monitoring keeps running during the download."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_download.jpg",
+						"alt": "Download AI Detector 1.0.1?",
+						"caption": "Click \"Yes\" to download."
+					}
+				]
+			},
+			{
+				"title": "Update is ready – restart",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "When the download is finished, a pop-up appears: <em>\"The update is ready. Restart AI Detector now?\"</em>. Monitoring pauses briefly and then resumes. Click <strong>Yes</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_klaar.jpg",
+						"alt": "Update is ready, herstart AI Detector",
+						"caption": "Click \"Yes\" again."
+					}
+				]
+			},
+			{
+				"title": "Installation",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The update is now being installed (\"Installing Update\"). Just wait a moment; there is nothing else to do."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_installeren.jpg",
+						"alt": "Installing Update",
+						"caption": "The installation is in progress."
+					}
+				]
+			},
+			{
+				"title": "Done!",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "When the installation is finished, the AI Detector starts again automatically. The dashboard opens and the new version number is shown at the bottom left (here <strong>Versie 1.0.1</strong>). You are up to date."
+					},
+					{
+						"type": "figure",
+						"src": "stap7_dashboard.jpg",
+						"alt": "Dashboard showing version 1.0.1",
+						"caption": "The dashboard after the update, with the new version number at the bottom left."
+					}
+				]
+			}
+		]
+	}
+}

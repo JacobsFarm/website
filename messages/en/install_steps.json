@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision & Dahua</strong> — RTSP and ONVIF are usually enabled by default. You do not have to change anything.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — also stream RTSP out of the box, on the standard port 554.",
   "inst_cams_rtsp_enable_caption": "Example: enabling RTSP in the Reolink app under Network → Advanced → Server Settings.",
-
   "inst_setup_cams_title": "Setup 1 of 3 — Connect your cameras",
   "inst_setup_cams_1": "When AI Detector starts, setup opens in your browser by itself. Nothing opens? Go to <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Choose your language at the top right: English, Nederlands, Deutsch or Français.",
+  "inst_setup_cams_2": "Choose your language at the top right. The app speaks English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe and 简体中文.",
   "inst_setup_cams_3": "The cameras found on your network are already ticked. A camera that needs its own login asks for its username and password.",
   "inst_setup_cams_4": "A camera is missing? Click <strong>Enter a stream URL instead</strong> and paste its RTSP address — use the table below to find it.",
   "inst_setup_cams_5": "Check each picture and give every camera a name you recognize, for example <code>Heifers barn 1</code> or <code>Calving pen</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "RTSP URL",
   "inst_rtsp_finder_copy": "Copy",
   "inst_rtsp_finder_copied": "Copied!",
-
   "inst_setup_det_title": "Setup 2 of 3 — Choose what to detect",
   "inst_setup_det_intro": "A detector watches the cameras you choose, records what it sees and alerts the people you pick. Choose a <strong>preset</strong>: it supplies the AI model and all settings, and keeps the detector up to date with newer models.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — heat detection: recognizes mounting behaviour.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Phone alerts and the AI check can be added right away or later (see the next steps).",
   "inst_setup_det_3": "Want a second detector? After setup, go to <strong>Detectors → Add detector</strong> and choose another preset.",
   "inst_setup_det_caption": "Setup step 2: pick a preset and the cameras it should watch.",
-
   "inst_setup_start_title": "Setup 3 of 3 — Start monitoring",
   "inst_setup_start_1": "Every camera is checked once. Then click <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "On the first start AI Detector downloads the model and prepares it for your hardware. That can take a few minutes.",
+  "inst_setup_start_2": "On the first start AI Detector downloads the model optimised for your computer (about 2 GB) and prepares it. Depending on your internet speed this takes a few minutes up to half an hour. Monitoring starts by itself when it is done.",
   "inst_setup_start_3": "As soon as the cameras are really being analysed, <strong>Recordings</strong> opens. The green dot at the top left says <em>Monitoring</em>.",
   "inst_setup_start_4": "Monitoring keeps running when you close the browser.",
   "inst_setup_start_caption": "Setup step 3: each camera is checked, then monitoring starts and keeps running in the background.",
-
   "inst_tele_title": "Phone alerts via Telegram",
   "inst_tele_intro": "Telegram is the fastest free way to get an alert on your phone, including the video clip of the detection. You create your own bot once; it takes about two minutes.",
   "inst_tele_1": "Open a detector (or go to <strong>Settings → Alerts → Add recipient</strong>) and click <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Every alert has 👍 and 👎 buttons. Your answer is saved with the recording in AI Detector, so you build up a reviewed archive without opening the computer.",
   "inst_tele_groups_title": "Several recipients and quiet hours",
   "inst_tele_groups_text": "One bot can send alerts to different chats: for example a group <em>Heat detection</em> for the farmer and staff, and a group <em>Calving alerts</em> for the night shift. With <strong>quiet hours</strong> on a recipient, alerts between two times (for example at night) arrive without sound — they still arrive.",
-
   "inst_ai_title": "AI check against false alarms (optional)",
   "inst_ai_intro": "With the AI check, a vision language model looks at every clip again before you get an alert. It filters out most false alarms. The preset supplies the question the AI answers.",
   "inst_ai_1": "Go to <strong>Settings → AI check</strong> and click <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "In each detector you can switch the AI check on or off.",
   "inst_ai_note": "Google offers a limited free tier. Clips of detected events are sent to Google to be checked; everything else stays on your computer. Other providers can be set under <em>Advanced → AI connections</em>.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini: paste your API key from Google AI Studio.",
-
   "inst_phone_title": "Open AI Detector on your phone",
   "inst_phone_intro": "You can open the dashboard on every phone, tablet or computer on the same network as the AI computer.",
   "inst_phone_1": "On the AI computer, go to <strong>Settings → Devices</strong> and click <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "On an iPhone or iPad you can put AI Detector on your home screen; it then opens like an app. Instructions are under <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "The connection inside your network is not encrypted (HTTP). Only use it on a network you trust.",
   "inst_phone_caption": "Settings → Devices: connect phones and computers with a one-time code.",
-
   "inst_storage_title": "Where your data is stored",
   "inst_storage_text": "Every detection is saved as a recording with photo and video clip on your own computer. Settings, models and recordings live outside the program, so they stay when you uninstall or update. Back up this folder now and then:",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "the folder next to the Compose file",
-
   "inst_support_title": "Help and support",
   "inst_support_diag": "<strong>Something wrong?</strong> Go to <strong>Settings → Logs</strong> and click <strong>Download diagnostics</strong>. That file contains everything needed for a bug report. Check it for camera addresses before you share it.",
   "inst_support_youtube": "<strong>YouTube</strong> — search for “CowCatcher AI” for video guides and tips.",
   "inst_support_email": "<strong>E-mail</strong> — questions or problems? Mail us directly:",
   "inst_support_community": "<strong>Facebook / Telegram community</strong> — ask your question in our group for quick help and experiences from fellow farmers.",
-  "inst_back_to_platforms": "Back to platform overview"
+  "inst_back_to_platforms": "Back to platform overview",
+  "inst_alarm_title": "Phone alarm that wakes you up (optional)",
+  "inst_alarm_intro": "Besides Telegram, AI Detector can make your phone ring loudly for a detection, also at night, with a picture of what it saw. It uses the free ntfy app and needs no account.",
+  "inst_alarm_1": "Install the free <strong>ntfy</strong> app on your phone (Android or iPhone).",
+  "inst_alarm_2": "In AI Detector go to <strong>Settings → Alerts</strong> (or open a detector) and click <strong>Connect ntfy</strong>.",
+  "inst_alarm_3": "Subscribe in the ntfy app to the name AI Detector shows, confirm the test alarm and choose which detectors may ring it.",
+  "inst_alarm_4": "On Android the alarm can ring through Do Not Disturb and keep ringing until you look; the steps are shown while connecting. An iPhone shows the alarm but stays silent in silent mode.",
+  "inst_alarm_note": "Every phone subscribed to the name rings, so keep the name to yourself. The alarm travels through the ntfy.sh service and needs internet. With the alarm connected, <strong>Camera offline</strong> can also warn you when a camera is no longer watched.",
+  "inst_heartbeat_title": "Get warned when the computer stops",
+  "inst_heartbeat_text": "Power cut, crash or no internet? Then AI Detector cannot send anything itself. A heartbeat with the free Healthchecks.io sends you a Telegram message when the calls from your computer stop."
 }

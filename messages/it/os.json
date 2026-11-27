@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Scarica il file per macOS dall'ultima release.",
   "os_btn_releases": "Vai alle Releases",
   "os_macos_req_title": "Prima di iniziare",
-  "os_macos_req_text": "Ti serve un Mac con Apple Silicon (M1, M2, M3, M4 o successivo) e macOS 14 Sonoma o successivo. Il rilevamento usa il Neural Engine del chip: veloce, silenzioso e molto efficiente dal punto di vista energetico.",
+  "os_macos_req_text": "Ti serve un Mac con Apple Silicon (M1, M2, M3, M4, M5, M6 o successivo) e macOS 14 Sonoma o successivo. Il rilevamento usa il Neural Engine del chip: veloce, silenzioso e molto efficiente dal punto di vista energetico.",
   "os_table_mac": "Il tuo Mac",
   "os_table_engine": "Il rilevamento funziona su",
   "os_hw_apple_silicon": "Mac con Apple Silicon (M1 o successivo), macOS 14+",

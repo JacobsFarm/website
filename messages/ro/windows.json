@@ -26,5 +26,7 @@
   "windows_keep_title": "Ține-l în funcțiune 24/7",
   "windows_keep_1": "<strong>Folosește un cablu de rețea.</strong> Conectează atât PC-ul, cât și camerele IP printr-o conexiune cu cablu (UTP/ethernet). Wi-Fi-ul dintr-un grajd poate fi instabil, iar imaginile camerelor se pot bloca.",
   "windows_keep_2": "<strong>Nu sunt necesare setări de repaus.</strong> Cât timp monitorizarea este pornită, AI Detector ține PC-ul treaz singur. Un laptop tot intră în repaus când îi închizi capacul sau când funcționează pe baterie — așa că ține laptopul deschis și conectat la priză.",
-  "windows_keep_3": "<strong>Actualizări.</strong> Alege <em>Check for Updates</em> din meniul AI Detector (iconița de lângă ceas). Detectoarele create dintr-un preset primesc singure și modele mai noi."
+  "windows_keep_3": "<strong>Actualizări.</strong> Alege <em>Check for Updates</em> din meniul AI Detector (iconița de lângă ceas). Detectoarele create dintr-un preset primesc singure și modele mai noi.",
+  "windows_step2_tip": "<strong>Sfat:</strong> vrei să eviți avertismentul albastru? Fă clic dreapta pe fișierul de instalare, alege <em>Proprietăți</em>, bifează jos <strong>Deblocare</strong> și apasă <strong>OK</strong>. Apoi pornește instalarea.",
+  "windows_step2_5": "Windows întreabă dacă AI Detector poate folosi rețeaua. Apasă <strong>Permite</strong>: e necesar pentru a găsi camerele."
 }

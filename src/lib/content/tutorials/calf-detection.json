@@ -1,0 +1,334 @@
+{
+	"nl": {
+		"title": "Kalf langer bij de koe houden",
+		"subtitle": "Korte handleiding – minder meldingen van het kalf in het hok",
+		"intro": "Houd je het kalf langer bij de koe, dan krijg je steeds een melding van het kalf dat in het hok rondloopt. Dat kun je op <strong>twee manieren</strong> oplossen in de instellingen van de Calving Catcher: de <strong>tijd tussen meldingen verlengen</strong> (cooldown) of de <strong>drempelwaarde verhogen</strong> (confidence).",
+		"steps": [
+			{
+				"title": "Open Settings → Advanced",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Ga in het menu links naar <strong>Settings</strong> en klik op <strong>Advanced</strong> (\"Edit thresholds, prompts and the detection engine as JSON\"). Hier staan alle instellingen van de Calving Catcher, dus ook die van het kalf."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_settings.jpg",
+						"alt": "Settings met Advanced",
+						"caption": "Settings → Advanced."
+					}
+				]
+			},
+			{
+				"title": "Zoek \"confidence\" en \"cooldown\"",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Je ziet de instellingen als JSON. Voor het kalf zijn twee regels belangrijk, beide met de naam <code>\"calf\"</code>:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Onderdeel",
+							"Standaardwaarde",
+							"Betekenis"
+						],
+						"rows": [
+							[
+								"<code>confidence → calf</code>",
+								"0.85",
+								"Drempelwaarde: hoe zeker de AI moet zijn"
+							],
+							[
+								"<code>cooldown → calf</code>",
+								"900",
+								"Seconden tussen twee meldingen (15 minuten)"
+							]
+						]
+					},
+					{
+						"type": "note",
+						"html": "<strong>Let op: dit geldt alleen voor het kalf.</strong> Alleen de regels met <code>\"calf\"</code> worden aangepast. De afkalfdetectie van de koe (<code>waterbag</code>, <code>legs</code>, <code>head</code>, <code>body</code>) blijft op de standaardwaarden staan (confidence 0.65 en cooldown 900), dus het afkalven van een koe wordt gewoon nog steeds gemeld."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_json.jpg",
+						"alt": "JSON met confidence en cooldown",
+						"caption": "Ingezoomd op \"confidence\" en \"cooldown\" met de standaardwaarden."
+					}
+				]
+			},
+			{
+				"title": "Manier 1: tijd tussen meldingen verlengen",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Verander bij <code>cooldown</code> de waarde van <code>\"calf\"</code> van <code>900</code> naar een hogere waarde. De waarde is in <strong>seconden</strong>; elke combinatie is toegestaan:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Waarde",
+							"Minimale tijd tussen meldingen"
+						],
+						"rows": [
+							[
+								"900 (standaard)",
+								"15 minuten"
+							],
+							[
+								"3600",
+								"1 uur"
+							],
+							[
+								"86400",
+								"1 dag (24 uur)"
+							]
+						]
+					},
+					{
+						"type": "p",
+						"html": "Met <code>86400</code> wordt er binnen 24 uur geen nieuwe melding van het kalf verstuurd. Je kunt het zo lang maken als je wilt, bijvoorbeeld drie of vijf dagen."
+					},
+					{
+						"type": "figure",
+						"src": "stap3_cooldown.jpg",
+						"alt": "Cooldown calf gewijzigd naar 86400",
+						"caption": "\"calf\" bij cooldown staat nu op 86400 (één dag)."
+					}
+				]
+			},
+			{
+				"title": "Opslaan",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik linksonder op <strong>Save</strong>. Er staat dan <em>Settings saved</em>."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_opslaan.jpg",
+						"alt": "Save-knop actief",
+						"caption": "Er zijn niet-opgeslagen wijzigingen: klik op \"Save\"."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_opgeslagen.jpg",
+						"alt": "Settings saved",
+						"caption": "De melding \"Settings saved\" bevestigt het opslaan."
+					}
+				]
+			},
+			{
+				"title": "Manier 2: geen kalfmeldingen meer",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Wil je helemaal geen melding van het kalf meer, verhoog dan de drempelwaarde. Pas bij <code>confidence</code> de waarde van <code>\"calf\"</code> aan van <code>0.85</code> naar <code>0.99</code>. Dat is een onrealistisch hoge drempel, waardoor het kalf vrijwel nooit meer wordt gemeld. Klik daarna weer op <strong>Save</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_confidence.jpg",
+						"alt": "Confidence calf 0.99",
+						"caption": "\"calf\" bij confidence staat nu op 0.99."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_opgeslagen.jpg",
+						"alt": "Settings saved",
+						"caption": "Opgeslagen."
+					},
+					{
+						"type": "note",
+						"html": "Deze twee aanpassingen gelden alleen voor het <strong>kalf</strong>. Meldingen over het afkalven van de koe blijven werken met de standaardwaarden."
+					},
+					{
+						"type": "tip",
+						"html": "Komt er toch nog een detectie van het kalf, dan geldt nog steeds de cooldown: met 86400 mag er minimaal 24 uur tussen twee meldingen zitten."
+					}
+				]
+			},
+			{
+				"title": "Controleer de monitoring",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open <strong>Monitoring</strong>. Na het opslaan herstart de bewaking even; daarna zie je dat alle camera's weer zijn begonnen met monitoren, met de nieuwe instellingen."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_monitoring.jpg",
+						"alt": "Monitoring van vier camera's",
+						"caption": "Alle camera's bewaken weer met de nieuwe instellingen."
+					}
+				]
+			}
+		]
+	},
+	"en": {
+		"title": "Keeping the calf with the cow",
+		"subtitle": "Short guide – fewer alerts about the calf in the pen",
+		"intro": "If you keep the calf with the cow for longer, you keep getting alerts about the calf walking around the pen. You can solve this in <strong>two ways</strong> in the Calving Catcher settings: <strong>lengthen the time between alerts</strong> (cooldown) or <strong>raise the threshold</strong> (confidence).",
+		"steps": [
+			{
+				"title": "Open Settings → Advanced",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "In the left-hand menu go to <strong>Settings</strong> and click <strong>Advanced</strong> (\"Edit thresholds, prompts and the detection engine as JSON\"). It contains all Calving Catcher settings, including those for the calf."
+					},
+					{
+						"type": "figure",
+						"src": "stap1_settings.jpg",
+						"alt": "Settings with Advanced",
+						"caption": "Settings → Advanced."
+					}
+				]
+			},
+			{
+				"title": "Find \"confidence\" and \"cooldown\"",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The settings are shown as JSON. Two lines matter for the calf, both named <code>\"calf\"</code>:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Section",
+							"Default",
+							"Meaning"
+						],
+						"rows": [
+							[
+								"<code>confidence → calf</code>",
+								"0.85",
+								"Threshold: how sure the AI must be"
+							],
+							[
+								"<code>cooldown → calf</code>",
+								"900",
+								"Seconds between two alerts (15 minutes)"
+							]
+						]
+					},
+					{
+						"type": "note",
+						"html": "<strong>Note: this applies to the calf only.</strong> Only the lines named <code>\"calf\"</code> are changed. The cow's calving detection (<code>waterbag</code>, <code>legs</code>, <code>head</code>, <code>body</code>) stays at its default values (confidence 0.65 and cooldown 900), so a cow calving is still reported as usual."
+					},
+					{
+						"type": "figure",
+						"src": "stap2_json.jpg",
+						"alt": "JSON with confidence and cooldown",
+						"caption": "Zoomed in on \"confidence\" and \"cooldown\" with the default values."
+					}
+				]
+			},
+			{
+				"title": "Method 1: lengthen the time between alerts",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Under <code>cooldown</code>, change the value of <code>\"calf\"</code> from <code>900</code> to a higher value. The value is in <strong>seconds</strong>; any number is allowed:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Value",
+							"Minimum time between alerts"
+						],
+						"rows": [
+							[
+								"900 (default)",
+								"15 minutes"
+							],
+							[
+								"3600",
+								"1 hour"
+							],
+							[
+								"86400",
+								"1 day (24 hours)"
+							]
+						]
+					},
+					{
+						"type": "p",
+						"html": "With <code>86400</code> no new calf alert is sent within 24 hours. You can make it as long as you like, for example three or five days."
+					},
+					{
+						"type": "figure",
+						"src": "stap3_cooldown.jpg",
+						"alt": "Cooldown calf changed to 86400",
+						"caption": "\"calf\" under cooldown is now 86400 (one day)."
+					}
+				]
+			},
+			{
+				"title": "Save",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Click <strong>Save</strong> at the bottom left. It then says <em>Settings saved</em>."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_opslaan.jpg",
+						"alt": "Save button active",
+						"caption": "There are unsaved changes: click \"Save\"."
+					},
+					{
+						"type": "figure",
+						"src": "stap4_opgeslagen.jpg",
+						"alt": "Settings saved",
+						"caption": "\"Settings saved\" confirms it."
+					}
+				]
+			},
+			{
+				"title": "Method 2: no more calf alerts",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "If you do not want any calf alerts at all, raise the threshold. Under <code>confidence</code>, change <code>\"calf\"</code> from <code>0.85</code> to <code>0.99</code>. That is an unrealistically high threshold, so the calf is almost never reported. Then click <strong>Save</strong> again."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_confidence.jpg",
+						"alt": "Confidence calf 0.99",
+						"caption": "\"calf\" under confidence is now 0.99."
+					},
+					{
+						"type": "figure",
+						"src": "stap5_opgeslagen.jpg",
+						"alt": "Settings saved",
+						"caption": "Saved."
+					},
+					{
+						"type": "note",
+						"html": "These two changes apply to the <strong>calf</strong> only. Alerts about a cow calving keep working with the default values."
+					},
+					{
+						"type": "tip",
+						"html": "If a calf detection does still happen, the cooldown still applies: with 86400 there must be at least 24 hours between two alerts."
+					}
+				]
+			},
+			{
+				"title": "Check monitoring",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open <strong>Monitoring</strong>. After saving, monitoring restarts briefly; afterwards all cameras are monitoring again with the new settings."
+					},
+					{
+						"type": "figure",
+						"src": "stap6_monitoring.jpg",
+						"alt": "Monitoring of four cameras",
+						"caption": "All cameras monitor again with the new settings."
+					}
+				]
+			}
+		]
+	}
+}

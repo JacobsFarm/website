@@ -19,21 +19,21 @@
     const platforms = [
         {
             title: m.download_card_windows_title,
-            link: '/installation/download/Windows',
+            link: '/installation/download/Windows/',
             desc: m.download_card_windows_desc,
             logo: windowsLogo,
             meta: 'Windows 10 · 11'
         },
         {
             title: m.download_card_macos_title,
-            link: '/installation/download/macOS',
+            link: '/installation/download/macOS/',
             desc: m.download_card_macos_desc,
             logo: macOSLogo,
             meta: 'macOS 14+ · Apple Silicon'
         },
         {
             title: m.download_card_linux_title,
-            link: '/installation/download/docker',
+            link: '/installation/download/docker/',
             desc: m.download_card_linux_desc,
             logo: linuxLogo,
             meta: 'Ubuntu · Docker · Jetson'
@@ -47,7 +47,7 @@
     eyebrow="{m.step_label()} 2"
     title={m.download_title()}
     lead={m.download_intro_text()}
-    crumbs={[{ href: '/installation', label: m.nav_install() }]}
+    crumbs={[{ href: '/installation/', label: m.nav_install() }]}
 />
 
 <div class="container">
@@ -83,8 +83,8 @@
 
     <div class="pager-wrap">
         <PagerNav
-            prev={{ href: '/installation/hardware', label: stripNumber(m.install_card_hardware_title()), hint: `${m.step_label()} 1` }}
-            next={{ href: '/installation/options', label: stripNumber(m.install_card_options_title()), hint: `${m.step_label()} 3` }}
+            prev={{ href: '/installation/hardware/', label: stripNumber(m.install_card_hardware_title()), hint: `${m.step_label()} 1` }}
+            next={{ href: '/installation/options/', label: stripNumber(m.install_card_options_title()), hint: `${m.step_label()} 3` }}
         />
     </div>
 </div>

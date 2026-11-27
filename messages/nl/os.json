@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Download het macOS-bestand uit de nieuwste release.",
   "os_btn_releases": "Naar Releases",
   "os_macos_req_title": "Voordat je begint",
-  "os_macos_req_text": "Je hebt een Mac met Apple Silicon nodig (M1, M2, M3, M4 of nieuwer) en macOS 14 Sonoma of nieuwer. De detectie draait op de Neural Engine van de chip: snel, stil en heel zuinig.",
+  "os_macos_req_text": "Je hebt een Mac met Apple Silicon nodig (M1, M2, M3, M4, M5, M6 of nieuwer) en macOS 14 Sonoma of nieuwer. De detectie draait op de Neural Engine van de chip: snel, stil en heel zuinig.",
   "os_table_mac": "Jouw Mac",
   "os_table_engine": "Detectie draait op",
   "os_hw_apple_silicon": "Mac met Apple Silicon (M1 of nieuwer), macOS 14+",

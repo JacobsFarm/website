@@ -26,5 +26,7 @@
   "windows_keep_title": "Niech działa 24/7",
   "windows_keep_1": "<strong>Użyj kabla sieciowego.</strong> Podłącz komputer i kamery IP przewodowo (UTP/ethernet). Wi-Fi w oborze bywa niestabilne, a wtedy obraz z kamer się zacina.",
   "windows_keep_2": "<strong>Nie trzeba zmieniać ustawień uśpienia.</strong> Gdy monitoring jest włączony, AI Detector sam nie pozwala komputerowi zasnąć. Laptop nadal zasypia po zamknięciu klapy lub na baterii — dlatego trzymaj laptopa otwartego i podłączonego do prądu.",
-  "windows_keep_3": "<strong>Aktualizacje.</strong> Wybierz <em>Check for Updates</em> w menu AI Detector (ikona obok zegara). Detektory utworzone z presetu dostają nowsze modele same."
+  "windows_keep_3": "<strong>Aktualizacje.</strong> Wybierz <em>Check for Updates</em> w menu AI Detector (ikona obok zegara). Detektory utworzone z presetu dostają nowsze modele same.",
+  "windows_step2_tip": "<strong>Wskazówka:</strong> chcesz ominąć niebieskie ostrzeżenie? Kliknij plik instalacyjny prawym przyciskiem, wybierz <em>Właściwości</em>, zaznacz na dole <strong>Odblokuj</strong> i kliknij <strong>OK</strong>. Potem uruchom instalację.",
+  "windows_step2_5": "Windows pyta, czy AI Detector może korzystać z sieci. Kliknij <strong>Zezwalaj</strong>: jest to potrzebne do znalezienia kamer."
 }

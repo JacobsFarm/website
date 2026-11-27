@@ -13,7 +13,8 @@ const config = {
         },
         prerender: {
             // Dit voorkomt dat de build stopt als hij een link vindt die niet met /website begint
-            handleHttpError: 'warn' 
+            handleHttpError: 'warn',
+            entries: ['*', '/sitemap.xml']
         }
     },
     preprocess: [mdsvex()],

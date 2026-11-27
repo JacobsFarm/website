@@ -1,7 +1,6 @@
 {
   "options_title": "Korzystanie z aplikacji",
   "options_intro": "Wszystko ustawiasz w samej aplikacji — bez plików konfiguracyjnych. Ten przewodnik przechodzi przez każdą stronę: Recordings, Cameras, Detectors i Settings.",
-
   "use_rec_title": "Recordings",
   "use_rec_desc": "Każde wykrycie pojawia się tutaj ze zdjęciem i krótkim klipem wideo, pogrupowane według dnia.",
   "use_rec_1": "Kliknij nagranie, aby otworzyć podgląd. Strzałkami na klawiaturze przechodzisz przez wszystkie nagrania.",
@@ -11,7 +10,6 @@
   "use_rec_5": "<strong>Export</strong> pobiera ZIP z bieżącym filtrem, opcjonalnie między dwiema datami. <em>Only the original photos</em> tworzy mały ZIP do przesłania osobom, które trenują modele.",
   "use_rec_caption": "Recordings: każde wykrycie z pewnością, kategorią i Twoją oceną.",
   "use_rec_viewer_caption": "Podgląd odtwarza klip z ramką wykrycia; potwierdź go albo oznacz jako fałszywy alarm.",
-
   "use_cam_title": "Cameras",
   "use_cam_desc": "Obrazy na żywo wszystkich kamer, z najnowszymi ramkami wykryć na wierzchu.",
   "use_cam_1": "<strong>Live</strong> pokazuje naraz do czterech obrazów na żywo; kliknij <em>Show live picture</em>, aby zobaczyć pozostałe. Kamera pokazuje pierwszy obraz przy następnej klatce kluczowej, co może zająć kilka sekund.",
@@ -20,7 +18,6 @@
   "use_cam_4": "<strong>Add camera</strong> szuka ponownie w sieci albo pozwala wpisać adres strumienia samodzielnie.",
   "use_cam_caption": "Cameras → Live: każda kamera z detektorem, który ją obserwuje.",
   "use_cam_history_caption": "Cameras → History: zielony oznacza obserwację, znaczniki to nagrania, a przerwy pokazują, dlaczego nic nie widziano.",
-
   "use_det_title": "Detectors i presety",
   "use_det_desc": "Detektor łączy kamery, model AI i odbiorców alertów.",
   "use_det_1": "Kliknij detektor, aby zmienić jego preset, nazwę, kamery, odbiorców Telegrama i sprawdzanie AI. Zmiany zadziałają dopiero po <strong>Save detector</strong>.",
@@ -30,38 +27,33 @@
   "use_det_5": "Sam zmieniłeś ustawienia wykrywania? Wtedy detektor je zachowuje i nie jest już aktualizowany. Wybierz preset ponownie, aby znów za nim podążał.",
   "use_det_caption": "Detectors: każdy detektor z kamerami i odbiorcami alertów.",
   "use_det_edit_caption": "Detektor: wybierz preset, nazwę i kamery, które obserwuje.",
-
   "use_status_title": "Status monitoringu i heartbeat",
   "use_status_desc": "Status w lewym górnym rogu jest zawsze widoczny. Kliknij go, aby zobaczyć dla każdej kamery, czy świeże obrazy są właśnie analizowane.",
   "use_status_1": "Kamera liczy się jako monitorowana tylko wtedy, gdy świeże obrazy są naprawdę analizowane przez każdy przypisany do niej detektor.",
   "use_status_2": "<strong>Pause monitoring</strong> zatrzymuje wykrywanie i zachowuje wstrzymanie także przy następnym starcie.",
   "use_status_3": "Detektor, który się zatrzymał, uruchamia się sam ponownie. Jeśli ciągle zawodzi, każda strona pokazuje, że monitoring się zatrzymał i dlaczego.",
-  "use_status_4": "<strong>Heartbeat</strong>: detektor wywołuje wybrany przez Ciebie adres (np. Healthchecks.io lub Uptime Kuma) podczas pracy. Dostajesz ostrzeżenie, gdy wywołania ustaną — to jedyne ostrzeżenie, które działa też wtedy, gdy komputer jest wyłączony lub nie ma internetu.",
+  "use_status_4": "<strong>Puls</strong>: detektor wywołuje wybrany adres (np. Healthchecks.io lub Uptime Kuma), dopóki działa. Gdy wywołania ustaną, dostajesz ostrzeżenie — jedyne, które działa także przy wyłączonym komputerze lub bez internetu. Zobacz <a href=\"../../tutorials/heartbeat-healthchecks/\">poradnik</a>.",
   "use_status_caption": "Status monitoringu: każda kamera z czasem jej ostatniego przeanalizowanego obrazu.",
-
   "use_alerts_title": "Alerty i ciche godziny",
   "use_alerts_desc": "W Settings → Alerts zarządzasz wszystkimi, którzy dostają wiadomość na Telegramie.",
   "use_alerts_1": "Każdy odbiorca wybiera, o których detektorach ma być powiadamiany. Jeden bot może obsługiwać kilka czatów.",
   "use_alerts_2": "<strong>Quiet hours</strong>: alerty między dwiema godzinami przychodzą bez dźwięku, na przykład w nocy. Zostaw oba pola puste, aby mieć dźwięk o każdej porze.",
-  "use_alerts_3": "<strong>Camera offline notifications</strong> (domyślnie wyłączone): po pięciu minutach bez monitoringu odbiorcy kamery dostają wiadomość, a kolejną, gdy kamera wróci.",
+  "use_alerts_3": "<strong>Kamera offline</strong> (domyślnie wyłączone, pojawia się po podłączeniu alarmu w telefonie): kamera niemonitorowana od pięciu minut jest zgłaszana do alarmu jako zwykłe powiadomienie, i ponownie, gdy wróci.",
   "use_alerts_4": "<strong>Send test alert</strong> sprawdza, czy odbiorca nadal działa.",
   "use_alerts_caption": "Settings → Alerts: odbiorcy i powiadomienia o offline kamer.",
   "use_alerts_quiet_caption": "Odbiorca z cichymi godzinami od 22:00 do 06:00.",
-
   "use_ai_title": "Sprawdzanie AI",
   "use_ai_desc": "Opcjonalnie: pozwól modelowi wizyjno-językowemu sprawdzić każdy klip dwa razy, zanim wyślesz alert.",
   "use_ai_1": "Połącz Google Gemini kluczem z Google AI Studio. Innych dostawców ustawisz w <em>Advanced → AI connections</em>.",
   "use_ai_2": "Połączenie zapisuje się raz i używa go dowolna liczba detektorów, każdy z własnym pytaniem.",
   "use_ai_3": "Nagranie pokazuje, czy sprawdzanie AI potwierdziło, czy odrzuciło zdarzenie.",
   "use_ai_caption": "Settings → AI check: bez połączenia każde wykrycie jest zapisywane i zgłaszane tak, jak jest.",
-
   "use_devices_title": "Inne urządzenia i Twój telefon",
   "use_devices_desc": "Otwórz panel na każdym telefonie lub komputerze w tej samej sieci.",
   "use_devices_1": "Wejdź na <code>http://aidetector.local/</code> lub <code>http://&lt;IP-komputera&gt;/</code>. Port 80 jest już zajęty? Wtedy aplikacja przechodzi na <code>:8080</code> albo kolejny wolny numer. Kod QR w <strong>Settings → Devices</strong> zawsze otwiera właściwy adres.",
   "use_devices_2": "Każda nowa przeglądarka potrzebuje jednorazowego kodu z <strong>Settings → Devices</strong>. Komputer, na którym działa AI Detector, jest zawsze zaufany.",
   "use_devices_3": "Na iPhonie lub iPadzie możesz dodać aplikację na ekran główny. Na Androidzie <strong>Settings → Home screen shortcut</strong> wyjaśnia, jak dodać link.",
   "use_devices_caption": "Settings → Devices: podłączone przeglądarki, każda z przyciskiem do odebrania dostępu.",
-
   "use_storage_title": "Pamięć, kopie zapasowe i odzyskiwanie",
   "use_storage_desc": "Nagrania są zachowywane, dopóki ich nie usuniesz. Nic nie jest kasowane automatycznie.",
   "use_storage_1": "<strong>Settings → Storage</strong> pokazuje wolne miejsce i usuwa nagrania sprzed wybranej daty. Najpierw wyeksportuj te, które chcesz zachować.",
@@ -70,16 +62,19 @@
   "use_storage_4": "Plik ustawień nie może zostać odczytany? Każda strona wtedy oferuje <strong>Recover settings</strong>, które przywraca ostatnie poprawne ustawienia.",
   "use_storage_caption": "Settings → Storage: wolne miejsce, usuwanie starych nagrań i pamięć modeli.",
   "use_settings_caption": "Settings: alerty, sprawdzanie AI, urządzenia, pamięć, zaawansowane, język, wygląd i kopia zapasowa.",
-
   "use_more_title": "Zaawansowane, dzienniki, język i aktualizacje",
   "use_more_desc": "Dla każdego, kto chce coś dostroić lub potrzebuje pomocy.",
-  "use_more_1": "<strong>Advanced</strong> pozwala edytować progi, podpowiedzi i silnik wykrywania jako JSON. Potrzebne tylko w szczególnych sytuacjach; presety ustawiają wszystko za Ciebie.",
+  "use_more_1": "<strong>Zaawansowane</strong> pozwala edytować progi, pytania i silnik detekcji jako JSON. Potrzebne tylko w szczególnych sytuacjach; presety ustawiają wszystko za Ciebie. Każde ustawienie wyjaśnia <a href=\"../configuration/\">opis konfiguracji</a>.",
   "use_more_2": "<strong>Logs</strong> pokazuje ostatnią aktywność. <em>Download diagnostics</em> pakuje dzienniki, dane o systemie i ustawienia z ukrytymi danymi do zgłoszenia błędu.",
-  "use_more_3": "<strong>Language</strong>: English, Nederlands, Deutsch lub Français — dla każdego urządzenia i dla odpowiedzi w Telegramie.",
+  "use_more_3": "<strong>Język</strong>: English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe lub 简体中文 — dla każdego urządzenia i dla odpowiedzi w Telegramie.",
   "use_more_4": "<strong>Appearance</strong>: jasny, ciemny lub automatyczny.",
-  "use_more_5": "<strong>Updates</strong>: w Windows i na Macu przez <em>Check for Updates</em> w menu AI Detector; na Ubuntu przez instalację nowego pakietu; przy Dockerze przez <code>docker compose pull</code>.",
-
+  "use_more_5": "<strong>Aktualizacje</strong>: na Windows i Mac przez <em>Check for Updates</em> w menu AI Detector; na Ubuntu przez zwykłe aktualizacje systemu; w Dockerze przez <code>docker compose pull && docker compose up -d</code>.",
   "options_btn_back": "Powrót do przeglądu instalacji",
   "options_github_text": "Przeczytaj pełny przewodnik po aplikacji, zgłoś błąd albo śledź nowe wydania na oficjalnej stronie AI Detector na GitHub.",
-  "options_github_btn": "Zobacz na GitHub"
+  "options_github_btn": "Zobacz na GitHub",
+  "use_alarm_title": "Alarm w telefonie (ntfy)",
+  "use_alarm_desc": "Głośny alarm w telefonie przy wykryciu, także w nocy, ze zdjęciem tego, co zobaczył detektor.",
+  "use_alarm_1": "<strong>Połącz ntfy</strong> w Ustawienia → Powiadomienia lub w edytorze detektora. Zainstaluj darmową aplikację ntfy, zasubskrybuj pokazaną nazwę i potwierdź alarm testowy. Bez konta.",
+  "use_alarm_2": "Jest jeden alarm na instalację; wybierz detektory, które mogą go uruchamiać. Działa obok Telegrama lub bez niego.",
+  "use_alarm_3": "Android może dzwonić mimo trybu Nie przeszkadzać, aż spojrzysz. iPhone pokazuje alarm, ale w trybie cichym pozostaje cichy. Alarm wymaga internetu."
 }

@@ -13,7 +13,8 @@
 
 	const links = [
 		...projects.map((project) => ({ href: project.link, label: () => project.name.replace('-', ' ') })),
-		{ href: '/about-us', label: m.nav_about }
+		{ href: '/tutorials/', label: m.nav_tutorials },
+		{ href: '/about-us/', label: m.nav_about }
 	];
 
 	/** @param {string} href */
@@ -21,7 +22,7 @@
 		return page.url.pathname.startsWith(`${base}${href}`);
 	}
 
-	const installActive = $derived(isActive('/installation'));
+	const installActive = $derived(isActive('/installation/'));
 
 	function close() {
 		isOpen = false;
@@ -59,7 +60,7 @@
 
 		<div class="actions">
 			<span class="desktop-only"><LanguageSelect /></span>
-			<a href="{base}/installation" class="btn btn--sm install-btn" class:btn--ink={!installActive} class:btn--solid={installActive}>
+			<a href="{base}/installation/" class="btn btn--sm install-btn" class:btn--ink={!installActive} class:btn--solid={installActive}>
 				{m.nav_install()}
 			</a>
 			<button
@@ -89,13 +90,13 @@
 				</li>
 			{/each}
 			<li style="--i: {links.length + 1}">
-				<a href="{base}/installation" onclick={close} class:active={installActive}>{m.nav_install()}</a>
+				<a href="{base}/installation/" onclick={close} class:active={installActive}>{m.nav_install()}</a>
 			</li>
 		</ul>
 
 		<div class="menu-foot" style="--i: {links.length + 2}">
 			<LanguageSelect variant="full" />
-			<a href="{base}/installation" class="btn btn--solid btn--lg" onclick={close}>
+			<a href="{base}/installation/" class="btn btn--solid btn--lg" onclick={close}>
 				{m.front_page_intro_btn_install()}
 				<span class="btn__icon"><Icon name="arrow-right" /></span>
 			</a>

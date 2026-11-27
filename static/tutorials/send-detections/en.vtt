@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00:00.520 --> 00:00:09.660
+In this video I want to show how you, as a farmer, can help us make the model smarter by sending us your detections.
+
+00:00:10.380 --> 00:00:18.180
+All detections are stored locally, and we can export them to send them to us.
+
+00:00:18.540 --> 00:00:22.380
+You do that by going to the Recordings tab. I have it in English here.
+
+00:00:22.600 --> 00:00:25.100
+At the top right it says Export.
+
+00:00:25.100 --> 00:00:35.480
+Click it. This window opens, where you can enter a from date and a to date.
+
+00:00:36.060 --> 00:00:43.220
+If you leave them empty, it includes all data. For me that is 1,700 detections, or recordings.
+
+00:00:43.840 --> 00:00:49.420
+What we need: please tick this box to send only the original photos.
+
+00:00:49.500 --> 00:00:54.100
+It says so here too. It is a much smaller file, and we can't use the rest anyway.
+
+00:00:54.100 --> 00:00:55.620
+We can't use the videos.
+
+00:00:56.960 --> 00:01:03.980
+By ticking this we have enough: we have the data to make the model smarter.
+
+00:01:04.560 --> 00:01:07.920
+In this case I take one day as an example.
+
+00:01:08.340 --> 00:01:12.220
+Then it says I have selected 195 detections.
+
+00:01:12.500 --> 00:01:14.520
+Then I click Download ZIP.
+
+00:01:15.960 --> 00:01:21.480
+And at the top right you see the AI Detector recordings file.
+
+00:01:22.620 --> 00:01:23.980
+And what we can do then is...
+
+00:01:24.100 --> 00:01:28.260
+We go to Telegram. That is by far the easiest way to send it.
+
+00:01:29.040 --> 00:01:32.340
+You can also simply open it as a web app on your computer.
+
+00:01:33.060 --> 00:01:37.460
+Then you join the CowCatcher AI open source project group.
+
+00:01:37.760 --> 00:01:43.780
+I will then automatically send you a message: I see you joined the group, are you running CowCatcher or do you need help?
+
+00:01:45.100 --> 00:01:46.700
+You can reply to that, of course. That's me.
+
+00:01:47.200 --> 00:01:51.700
+Or you send a personal message straight to Jacob5456, which is also me.
+
+00:01:52.420 --> 00:01:54.000
+Once you have done that, you have...
+
+00:01:54.000 --> 00:02:06.400
+...a personal chat with me, and from there you can easily send the ZIP folder in the same menu. Click Send, it is sent to us and we take it from there.
+
+00:02:08.080 --> 00:02:11.680
+Once you have sent your detections, you can also remove them.
+
+00:02:11.780 --> 00:02:13.940
+So, we are back in the AI Detector.
+
+00:02:13.940 --> 00:02:23.540
+We go to Settings, under Storage, and here at Remove old recordings you enter a date.
+
+00:02:23.540 --> 00:02:30.360
+The last date, then Review, and it asks whether you want to remove them.
+
+00:02:30.480 --> 00:02:32.760
+And this cannot be undone.
+
+00:02:34.640 --> 00:02:38.320
+And then they are removed and your disk is empty again.
+
+00:02:38.900 --> 00:02:42.400
+Storage is only needed to show them here.
+
+00:02:42.900 --> 00:02:46.960
+If you don't use that, you can safely remove them all up to this day.

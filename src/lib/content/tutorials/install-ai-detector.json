@@ -1,0 +1,830 @@
+{
+	"nl": {
+		"title": "AI Detector installeren",
+		"subtitle": "Stap voor stap – van downloaden tot de eerste detector die draait",
+		"intro": "In deze handleiding installeer je de <strong>AI Detector</strong> van CowCatcher AI op je computer. De installatie is voor <strong>Windows en Apple (Mac)</strong> hetzelfde; Linux loopt iets anders. Alle beelden worden <strong>lokaal op je eigen computer</strong> verwerkt. Reken op ongeveer 15 minuten, plus de downloadtijd van het AI-model (ca. 2 GB).",
+		"steps": [
+			{
+				"title": "Zoek CowCatcher AI",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open je browser en zoek op <strong>CowCatcher AI</strong>. Het resultaat van <strong>GitHub</strong> is de plek waar je de software vindt."
+					},
+					{
+						"type": "figure",
+						"src": "stap01_zoeken.jpg",
+						"alt": "Zoeken op cowcatcher ai",
+						"caption": "Zoek op \"cowcatcher ai\" en kies het GitHub-resultaat."
+					}
+				]
+			},
+			{
+				"title": "Open de AI Detector",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Scroll op de GitHub-pagina naar beneden tot <strong>\"Powered by AI Detector\"</strong> en klik op de link <strong>AI Detector</strong>. Direct eronder staat ook een uitleg over het vervolg."
+					},
+					{
+						"type": "figure",
+						"src": "stap02_github.jpg",
+						"alt": "GitHub pagina CowCatcher AI",
+						"caption": "Klik op de link \"AI Detector\"."
+					}
+				]
+			},
+			{
+				"title": "Download de juiste versie",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik rechts bij <strong>Releases</strong> op de nieuwste versie. Onder <strong>Assets</strong> kies je de versie voor jouw computer:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Computer",
+							"Bestand"
+						],
+						"rows": [
+							[
+								"Windows",
+								"<code>…-windows-x64-setup.zip</code>"
+							],
+							[
+								"Apple (bijv. Mac mini)",
+								"<code>…-macos-arm64.dmg</code>"
+							],
+							[
+								"Linux",
+								"<code>…-linux-amd64.deb</code>"
+							]
+						]
+					},
+					{
+						"type": "figure",
+						"src": "stap03_releases.jpg",
+						"alt": "Releases met assets",
+						"caption": "Onder \"Assets\" staan de bestanden per type computer. In dit voorbeeld: Windows."
+					},
+					{
+						"type": "figure",
+						"src": "stap03_download.jpg",
+						"alt": "Download gestart",
+						"caption": "Rechtsboven in de browser zie je dat het bestand wordt gedownload."
+					}
+				]
+			},
+			{
+				"title": "Pak het bestand uit",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Ga naar je map <strong>Downloads</strong> en pak het zip-bestand uit (<strong>Extract all</strong> / <strong>Alles uitpakken</strong>). Bevestig het uitpakken; de map opent daarna automatisch."
+					},
+					{
+						"type": "figure",
+						"src": "stap04_zip.jpg",
+						"alt": "Zip-bestand in Downloads",
+						"caption": "Het zip-bestand in de map Downloads."
+					},
+					{
+						"type": "figure",
+						"src": "stap04_uitpakken.jpg",
+						"alt": "Uitpakken",
+						"caption": "Kies de map en klik op \"Extract\"."
+					}
+				]
+			},
+			{
+				"title": "Start de installatie",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "In de uitgepakte map staat het programma <strong>AI-Detector … windows-x64-setup</strong>. Dubbelklik erop om te installeren."
+					},
+					{
+						"type": "figure",
+						"src": "stap05_map.jpg",
+						"alt": "Uitgepakte map met setup",
+						"caption": "Dubbelklik op het setup-bestand."
+					},
+					{
+						"type": "p",
+						"html": "Windows geeft nu de melding <strong>\"Windows protected your PC\"</strong> (onbekende uitgever). Klik op <strong>More info</strong> en daarna op <strong>Run anyway</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap05_smartscreen.jpg",
+						"alt": "Windows SmartScreen melding",
+						"caption": "Klik op \"More info\" en daarna \"Run anyway\"."
+					}
+				]
+			},
+			{
+				"title": "Tip: de melding vooraf uitschakelen",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Wil je die waarschuwing niet krijgen? Klik met de <strong>rechter muisknop</strong> op het setup-bestand, kies <strong>Properties</strong> (Eigenschappen), vink onderaan <strong>Unblock</strong> aan en klik op <strong>OK</strong>. Start daarna de installatie."
+					},
+					{
+						"type": "figure",
+						"src": "stap06_eigenschappen.jpg",
+						"alt": "Rechtermuisknop menu",
+						"caption": "Rechter muisknop → Properties."
+					},
+					{
+						"type": "figure",
+						"src": "stap06_unblock.jpg",
+						"alt": "Unblock aanvinken",
+						"caption": "Vink \"Unblock\" aan en klik op OK."
+					}
+				]
+			},
+			{
+				"title": "Installeren en automatisch opstarten",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "De AI Detector wordt nu geïnstalleerd. Daarna vraagt het programma of het <strong>automatisch moet opstarten</strong> wanneer je computer is uitgezet geweest. Kies bij voorkeur <strong>Yes</strong>: na een herstart of een stroomstoring draait de bewaking dan vanzelf weer."
+					},
+					{
+						"type": "figure",
+						"src": "stap07_installeren.jpg",
+						"alt": "Installatie bezig",
+						"caption": "De installatie loopt."
+					},
+					{
+						"type": "figure",
+						"src": "stap07_autostart.jpg",
+						"alt": "Automatisch opstarten vraag",
+						"caption": "\"Yes\" = automatisch opstarten met je computer."
+					},
+					{
+						"type": "tip",
+						"html": "Dit kun je later altijd weer uitzetten door de bewaking te pauzeren in het programma."
+					}
+				]
+			},
+			{
+				"title": "Toestaan in de firewall",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Als laatste vraagt Windows of het programma toegang tot het netwerk mag hebben. De AI Detector heeft dit nodig om je camera's te kunnen vinden. Klik op <strong>Allow</strong> (Toestaan)."
+					},
+					{
+						"type": "figure",
+						"src": "stap08_firewall.jpg",
+						"alt": "Firewall melding",
+						"caption": "Klik op \"Allow\"."
+					}
+				]
+			},
+			{
+				"title": "Camera's verbinden",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Het programma opent in je browser en zoekt bij de eerste start automatisch naar alle camera's in je netwerk. Vink de camera('s) aan die je wilt gebruiken en klik op <strong>Camera's verbinden</strong>. Vul daarna de <strong>gebruikersnaam</strong> en het <strong>wachtwoord van de camera</strong> in en klik op <strong>Opnieuw proberen</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap09_cameras.jpg",
+						"alt": "Camera's in je netwerk",
+						"caption": "\"Verbind je camera's\": kies de camera's in je netwerk."
+					},
+					{
+						"type": "figure",
+						"src": "stap09_wachtwoord.jpg",
+						"alt": "Gebruikersnaam en wachtwoord van de camera",
+						"caption": "Vul gebruikersnaam en wachtwoord van de camera in."
+					},
+					{
+						"type": "note",
+						"html": "<strong>Camera niet in de lijst?</strong> Kun je de camera wel openen in de app van de camera, maar staat hij niet in de lijst? Controleer dan in de camera-instellingen of het <strong>RTSP</strong>- of <strong>ONVIF</strong>-protocol aan staat. Of kies <em>\"In plaats daarvan een stream-URL invullen\"</em>. Staat er <em>verbinding mislukt</em>, dan was het wachtwoord meestal nog niet ingevuld: probeer het opnieuw."
+					}
+				]
+			},
+			{
+				"title": "Geef de camera een naam",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Als de verbinding lukt, zie je het live beeld. Geef de camera een duidelijke naam, bijvoorbeeld <em>\"Achterkant stal linkerkant\"</em>, en klik op <strong>Camera toevoegen</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap10_naam.jpg",
+						"alt": "Camera naam geven",
+						"caption": "Controleer het beeld en geef de camera een naam."
+					}
+				]
+			},
+			{
+				"title": "Kies wat je wilt detecteren",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Kies de voorinstelling die past bij het doel van de camera:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Voorinstelling",
+							"Waarvoor"
+						],
+						"rows": [
+							[
+								"<strong>Cow Catcher</strong>",
+								"Tocht (bronst) herkennen"
+							],
+							[
+								"<strong>Calving Catcher</strong>",
+								"Afkalven herkennen"
+							],
+							[
+								"<strong>Calving Catcher Tailup</strong>",
+								"Uitbreiding op afkalven: de koe heeft langer dan een ingestelde tijd de staart omhoog"
+							],
+							[
+								"<strong>General</strong>",
+								"Algemeen"
+							]
+						]
+					},
+					{
+						"type": "p",
+						"html": "In dit voorbeeld kiezen we <strong>Cow Catcher</strong>. Laat <strong>Automatisch bijwerken</strong> aan staan: komt er een nieuw model uit, dan krijg je dat vanzelf. Geef de detector een naam (bijv. <em>\"Tocht melkkoeien\"</em>) en kies welke camera('s) hij bewaakt."
+					},
+					{
+						"type": "figure",
+						"src": "stap11_detectie.jpg",
+						"alt": "Kies wat je wilt detecteren",
+						"caption": "Kies de voorinstelling en de camera."
+					},
+					{
+						"type": "figure",
+						"src": "stap11_cowcatcher.jpg",
+						"alt": "Cow Catcher gekozen met naam",
+						"caption": "Cow Catcher gekozen, met een eigen naam voor de detector."
+					}
+				]
+			},
+			{
+				"title": "Meldingen op je telefoon (optioneel)",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Wil je een melding met foto op je telefoon? Klik op <strong>Telegram koppelen</strong>. Klik op <strong>BotFather openen</strong> en volg de stappen in Telegram: stuur <code>/newbot</code>, kies een naam en gebruikersnaam en kopieer het <strong>token</strong> dat je krijgt."
+					},
+					{
+						"type": "figure",
+						"src": "stap12_botfather.jpg",
+						"alt": "BotFather in Telegram",
+						"caption": "BotFather maakt je eigen Telegram-bot."
+					},
+					{
+						"type": "p",
+						"html": "Plak het token bij <strong>Bottoken van BotFather</strong> en kies bij <strong>Meldingen sturen naar</strong>: <em>Mijn telefoon</em>, <em>Een groep</em> of <em>Een kanaal</em>. Klik daarna op koppelen."
+					},
+					{
+						"type": "figure",
+						"src": "stap12_koppelen.jpg",
+						"alt": "Telegram koppelen",
+						"caption": "Plak het token en kies waar de meldingen naartoe gaan."
+					},
+					{
+						"type": "tip",
+						"html": "Telegram is optioneel. Zonder Telegram worden detecties gewoon lokaal op je computer opgeslagen; alleen de melding op je telefoon ontbreekt. Is het token ongeldig, dan krijg je een foutmelding. Je kunt deze stap overslaan en later koppelen."
+					}
+				]
+			},
+			{
+				"title": "Bewaking starten",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Klik op <strong>Detector opslaan</strong> en daarna op <strong>Bewaking starten</strong>. Het programma controleert je computer en downloadt automatisch het <strong>geoptimaliseerde model</strong> en de juiste software (o.a. NVIDIA-versnelling) voor jouw computer. Alles draait lokaal."
+					},
+					{
+						"type": "figure",
+						"src": "stap13_starten.jpg",
+						"alt": "Bewaking starten",
+						"caption": "Het model wordt gedownload en geïnstalleerd."
+					},
+					{
+						"type": "note",
+						"html": "<strong>Even geduld.</strong> Dit is een bestand van ongeveer <strong>2 GB</strong>. Afhankelijk van je internetsnelheid duurt dit enkele minuten tot tientallen minuten. Als het klaar is, word je automatisch naar de hoofdpagina gebracht."
+					}
+				]
+			},
+			{
+				"title": "Opnamen en Bewaking",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Op <strong>Opnamen</strong> komen al je detecties binnen. Ze worden lokaal op je computer bewaard en je kunt ze hier bekijken, ook zonder Telegram."
+					},
+					{
+						"type": "figure",
+						"src": "stap14_opnamen.jpg",
+						"alt": "Opnamen",
+						"caption": "Opnamen: hier verschijnen je detecties."
+					},
+					{
+						"type": "p",
+						"html": "Bij <strong>Bewaking</strong> zie je of alles draait: een <strong>groen bolletje</strong> met <em>\"Bewaking actief\"</em> betekent dat alles werkt. Hier kun je de bewaking <strong>pauzeren</strong>, zien hoeveel camera's bewaakt worden en een <strong>heartbeat</strong> instellen (een melding op je telefoon als de computer of het programma stopt, zie de aparte handleiding). Onder <strong>Technische details</strong> staat waar de bestanden zijn opgeslagen en kun je het logboek bekijken of diagnosegegevens downloaden."
+					},
+					{
+						"type": "figure",
+						"src": "stap14_bewaking.jpg",
+						"alt": "Bewaking actief",
+						"caption": "Groen bolletje en \"Bewaking actief\": alles draait."
+					}
+				]
+			},
+			{
+				"title": "Later aanpassen: camera's en detectoren",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Via <strong>Camera's</strong> kun je de naam van een camera wijzigen en met <strong>Camera toevoegen</strong> nieuwe camera's zoeken en verbinden."
+					},
+					{
+						"type": "figure",
+						"src": "stap15_cameras.jpg",
+						"alt": "Camera toevoegen",
+						"caption": "Camera's toevoegen: het programma zoekt opnieuw in je netwerk."
+					},
+					{
+						"type": "p",
+						"html": "Bij <strong>Detectoren</strong> staan de instellingen die je hebt gemaakt. Je kunt meerdere detectoren hebben, elk met eigen instellingen, camera's en ontvangers van de melding, bijvoorbeeld één voor <em>tocht melkkoeien</em>, één voor <em>tocht jongvee</em> en één voor <em>afkalven</em>. Klik op <strong>Detector toevoegen</strong> voor een extra detector."
+					},
+					{
+						"type": "figure",
+						"src": "stap15_detectoren.jpg",
+						"alt": "Detectoren overzicht",
+						"caption": "Overzicht van je detectoren."
+					},
+					{
+						"type": "p",
+						"html": "Bij een nieuwe detector kies je de <strong>Modus</strong>:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Modus",
+							"Wanneer"
+						],
+						"rows": [
+							[
+								"<strong>Standaard</strong>",
+								"Voor de meeste computers goed genoeg, ook een standaard computer van ca. 5 jaar oud. Heb je een videokaart of een Mac mini? Kies dan altijd Standaard."
+							],
+							[
+								"<strong>Low Power</strong>",
+								"Voor een zwakkere computer: er wordt per beeld langer gekeken (ca. 5 seconden in plaats van 2)."
+							]
+						]
+					},
+					{
+						"type": "figure",
+						"src": "stap15_modus.jpg",
+						"alt": "Modus Standaard of Low Power",
+						"caption": "Kies bij \"Modus\" tussen Standaard en Low Power."
+					}
+				]
+			},
+			{
+				"title": "Klaar: programma afsluiten kan gewoon",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Je mag het venster gewoon sluiten: de bewaking blijft <strong>op de achtergrond</strong> doorlopen. Op je computer staat een snelkoppeling; klik erop om weer in het programma te komen."
+					},
+					{
+						"type": "tip",
+						"html": "Nog even samengevat: downloaden → uitpakken → installeren → camera's verbinden → detector kiezen → bewaking starten."
+					}
+				]
+			}
+		]
+	},
+	"en": {
+		"title": "Installing the AI Detector",
+		"subtitle": "Step by step – from download to your first running detector",
+		"intro": "This guide shows you how to install the CowCatcher AI <strong>AI Detector</strong> on your computer. The installation is the same for <strong>Windows and Apple (Mac)</strong>; Linux differs slightly. All video is processed <strong>locally on your own computer</strong>. Allow about 15 minutes, plus the download time of the AI model (approx. 2 GB). <em>The screenshots show the Dutch interface; the app has a language switch at the top.</em>",
+		"steps": [
+			{
+				"title": "Search for CowCatcher AI",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Open your browser and search for <strong>CowCatcher AI</strong>. The <strong>GitHub</strong> result is where you find the software."
+					},
+					{
+						"type": "figure",
+						"src": "stap01_zoeken.jpg",
+						"alt": "Searching for cowcatcher ai",
+						"caption": "Search for \"cowcatcher ai\" and choose the GitHub result."
+					}
+				]
+			},
+			{
+				"title": "Open the AI Detector",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Scroll down the GitHub page to <strong>\"Powered by AI Detector\"</strong> and click the <strong>AI Detector</strong> link. Right below it there is also an explanation of the next steps."
+					},
+					{
+						"type": "figure",
+						"src": "stap02_github.jpg",
+						"alt": "CowCatcher AI GitHub page",
+						"caption": "Click the \"AI Detector\" link."
+					}
+				]
+			},
+			{
+				"title": "Download the right version",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "On the right, under <strong>Releases</strong>, click the latest version. Under <strong>Assets</strong>, pick the file for your computer:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Computer",
+							"File"
+						],
+						"rows": [
+							[
+								"Windows",
+								"<code>…-windows-x64-setup.zip</code>"
+							],
+							[
+								"Apple (e.g. Mac mini)",
+								"<code>…-macos-arm64.dmg</code>"
+							],
+							[
+								"Linux",
+								"<code>…-linux-amd64.deb</code>"
+							]
+						]
+					},
+					{
+						"type": "figure",
+						"src": "stap03_releases.jpg",
+						"alt": "Releases with assets",
+						"caption": "The files per type of computer are listed under \"Assets\". In this example: Windows."
+					},
+					{
+						"type": "figure",
+						"src": "stap03_download.jpg",
+						"alt": "Download started",
+						"caption": "At the top right of the browser you can see the file downloading."
+					}
+				]
+			},
+			{
+				"title": "Extract the file",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Go to your <strong>Downloads</strong> folder and extract the zip file (<strong>Extract all</strong>). Confirm the extraction; the folder then opens automatically."
+					},
+					{
+						"type": "figure",
+						"src": "stap04_zip.jpg",
+						"alt": "Zip file in Downloads",
+						"caption": "The zip file in the Downloads folder."
+					},
+					{
+						"type": "figure",
+						"src": "stap04_uitpakken.jpg",
+						"alt": "Extracting",
+						"caption": "Choose the folder and click \"Extract\"."
+					}
+				]
+			},
+			{
+				"title": "Start the installation",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The extracted folder contains the program <strong>AI-Detector … windows-x64-setup</strong>. Double-click it to install."
+					},
+					{
+						"type": "figure",
+						"src": "stap05_map.jpg",
+						"alt": "Extracted folder with setup",
+						"caption": "Double-click the setup file."
+					},
+					{
+						"type": "p",
+						"html": "Windows now shows <strong>\"Windows protected your PC\"</strong> (unknown publisher). Click <strong>More info</strong> and then <strong>Run anyway</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap05_smartscreen.jpg",
+						"alt": "Windows SmartScreen warning",
+						"caption": "Click \"More info\", then \"Run anyway\"."
+					}
+				]
+			},
+			{
+				"title": "Tip: skip the warning in advance",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Don't want to see that warning? <strong>Right-click</strong> the setup file, choose <strong>Properties</strong>, tick <strong>Unblock</strong> at the bottom and click <strong>OK</strong>. Then start the installation."
+					},
+					{
+						"type": "figure",
+						"src": "stap06_eigenschappen.jpg",
+						"alt": "Right-click menu",
+						"caption": "Right-click → Properties."
+					},
+					{
+						"type": "figure",
+						"src": "stap06_unblock.jpg",
+						"alt": "Tick Unblock",
+						"caption": "Tick \"Unblock\" and click OK."
+					}
+				]
+			},
+			{
+				"title": "Install and start automatically",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The AI Detector is now being installed. Afterwards the program asks whether it should <strong>start automatically</strong> after your computer has been switched off. Preferably choose <strong>Yes</strong>: after a restart or power cut, monitoring then resumes by itself."
+					},
+					{
+						"type": "figure",
+						"src": "stap07_installeren.jpg",
+						"alt": "Installation in progress",
+						"caption": "The installation is running."
+					},
+					{
+						"type": "figure",
+						"src": "stap07_autostart.jpg",
+						"alt": "Start automatically question",
+						"caption": "\"Yes\" = start automatically with your computer."
+					},
+					{
+						"type": "tip",
+						"html": "You can always turn this off again later by pausing monitoring in the program."
+					}
+				]
+			},
+			{
+				"title": "Allow it in the firewall",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Finally Windows asks whether the program may access the network. The AI Detector needs this to find your cameras. Click <strong>Allow</strong>."
+					},
+					{
+						"type": "figure",
+						"src": "stap08_firewall.jpg",
+						"alt": "Firewall prompt",
+						"caption": "Click \"Allow\"."
+					}
+				]
+			},
+			{
+				"title": "Connect your cameras",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "The program opens in your browser and automatically searches your network for cameras on first start. Tick the camera(s) you want to use and click <strong>Connect cameras</strong> (\"Camera's verbinden\"). Then enter the camera's <strong>username</strong> and <strong>password</strong> and click <strong>Try again</strong> (\"Opnieuw proberen\")."
+					},
+					{
+						"type": "figure",
+						"src": "stap09_cameras.jpg",
+						"alt": "Cameras in your network",
+						"caption": "\"Connect your cameras\": choose the cameras in your network."
+					},
+					{
+						"type": "figure",
+						"src": "stap09_wachtwoord.jpg",
+						"alt": "Camera username and password",
+						"caption": "Enter the camera's username and password."
+					},
+					{
+						"type": "note",
+						"html": "<strong>Camera not in the list?</strong> If you can open the camera in its own app but it is not listed, check in the camera settings that the <strong>RTSP</strong> or <strong>ONVIF</strong> protocol is switched on. Or choose <em>\"enter a stream URL instead\"</em>. If it says <em>connection failed</em>, the password usually was not entered yet: just try again."
+					}
+				]
+			},
+			{
+				"title": "Give the camera a name",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "When the connection succeeds, you will see the live image. Give the camera a clear name, for example <em>\"Back of barn, left side\"</em>, and click <strong>Add camera</strong> (\"Camera toevoegen\")."
+					},
+					{
+						"type": "figure",
+						"src": "stap10_naam.jpg",
+						"alt": "Naming the camera",
+						"caption": "Check the image and name the camera."
+					}
+				]
+			},
+			{
+				"title": "Choose what to detect",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Choose the preset that matches the purpose of the camera:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Preset",
+							"Used for"
+						],
+						"rows": [
+							[
+								"<strong>Cow Catcher</strong>",
+								"Detecting heat (estrus)"
+							],
+							[
+								"<strong>Calving Catcher</strong>",
+								"Detecting calving"
+							],
+							[
+								"<strong>Calving Catcher Tailup</strong>",
+								"Extension of calving: the cow has had her tail up for longer than a set time"
+							],
+							[
+								"<strong>General</strong>",
+								"General purpose"
+							]
+						]
+					},
+					{
+						"type": "p",
+						"html": "In this example we choose <strong>Cow Catcher</strong>. Leave <strong>Automatic updates</strong> switched on: when a new model is released, you receive it automatically. Give the detector a name (e.g. <em>\"Heat dairy cows\"</em>) and choose which camera(s) it monitors."
+					},
+					{
+						"type": "figure",
+						"src": "stap11_detectie.jpg",
+						"alt": "Choose what to detect",
+						"caption": "Choose the preset and the camera."
+					},
+					{
+						"type": "figure",
+						"src": "stap11_cowcatcher.jpg",
+						"alt": "Cow Catcher selected with name",
+						"caption": "Cow Catcher selected, with its own name for the detector."
+					}
+				]
+			},
+			{
+				"title": "Notifications on your phone (optional)",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Want a notification with a photo on your phone? Click <strong>Link Telegram</strong> (\"Telegram koppelen\"). Click <strong>Open BotFather</strong> and follow the steps in Telegram: send <code>/newbot</code>, choose a name and username and copy the <strong>token</strong> you receive."
+					},
+					{
+						"type": "figure",
+						"src": "stap12_botfather.jpg",
+						"alt": "BotFather in Telegram",
+						"caption": "BotFather creates your own Telegram bot."
+					},
+					{
+						"type": "p",
+						"html": "Paste the token into <strong>Bot token from BotFather</strong> and under <strong>Send notifications to</strong> choose: <em>My phone</em>, <em>A group</em> or <em>A channel</em>. Then click link."
+					},
+					{
+						"type": "figure",
+						"src": "stap12_koppelen.jpg",
+						"alt": "Link Telegram",
+						"caption": "Paste the token and choose where the notifications go."
+					},
+					{
+						"type": "tip",
+						"html": "Telegram is optional. Without Telegram, detections are simply stored locally on your computer; only the phone notification is missing. If the token is invalid you get an error message. You can skip this step and link Telegram later."
+					}
+				]
+			},
+			{
+				"title": "Start monitoring",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Click <strong>Save detector</strong> and then <strong>Start monitoring</strong> (\"Bewaking starten\"). The program checks your computer and automatically downloads the <strong>optimized model</strong> and the right software (including NVIDIA acceleration) for your computer. Everything runs locally."
+					},
+					{
+						"type": "figure",
+						"src": "stap13_starten.jpg",
+						"alt": "Start monitoring",
+						"caption": "The model is being downloaded and installed."
+					},
+					{
+						"type": "note",
+						"html": "<strong>Be patient.</strong> This is a file of about <strong>2 GB</strong>. Depending on your internet speed it takes a few minutes up to tens of minutes. When it is done, you are taken to the main page automatically."
+					}
+				]
+			},
+			{
+				"title": "Recordings and Monitoring",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "On <strong>Recordings</strong> (\"Opnamen\") all your detections arrive. They are stored locally on your computer and you can view them here, even without Telegram."
+					},
+					{
+						"type": "figure",
+						"src": "stap14_opnamen.jpg",
+						"alt": "Recordings",
+						"caption": "Recordings: your detections appear here."
+					},
+					{
+						"type": "p",
+						"html": "On <strong>Monitoring</strong> (\"Bewaking\") you can see whether everything is running: a <strong>green dot</strong> with <em>\"Monitoring active\"</em> means all is working. Here you can <strong>pause</strong> monitoring, see how many cameras are monitored and set up a <strong>heartbeat</strong> (a phone alert when the computer or program stops; see the separate guide). Under <strong>Technical details</strong> you can see where files are stored, view the log and download diagnostics."
+					},
+					{
+						"type": "figure",
+						"src": "stap14_bewaking.jpg",
+						"alt": "Monitoring active",
+						"caption": "Green dot and \"Monitoring active\": everything is running."
+					}
+				]
+			},
+			{
+				"title": "Adjust later: cameras and detectors",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "Under <strong>Cameras</strong> you can rename a camera and use <strong>Add camera</strong> to search for and connect new cameras."
+					},
+					{
+						"type": "figure",
+						"src": "stap15_cameras.jpg",
+						"alt": "Add camera",
+						"caption": "Adding cameras: the program searches your network again."
+					},
+					{
+						"type": "p",
+						"html": "Under <strong>Detectors</strong> (\"Detectoren\") you find the settings you made. You can have several detectors, each with its own settings, cameras and notification recipients, for example one for <em>heat dairy cows</em>, one for <em>heat young stock</em> and one for <em>calving</em>. Click <strong>Add detector</strong> for an extra detector."
+					},
+					{
+						"type": "figure",
+						"src": "stap15_detectoren.jpg",
+						"alt": "Detectors overview",
+						"caption": "Overview of your detectors."
+					},
+					{
+						"type": "p",
+						"html": "For a new detector you choose the <strong>Mode</strong>:"
+					},
+					{
+						"type": "table",
+						"head": [
+							"Mode",
+							"When"
+						],
+						"rows": [
+							[
+								"<strong>Standard</strong>",
+								"Good enough for most computers, including a standard computer of about 5 years old. If you have a graphics card or a Mac mini, always choose Standard."
+							],
+							[
+								"<strong>Low Power</strong>",
+								"For a weaker computer: it looks at each image for longer (about 5 seconds instead of 2)."
+							]
+						]
+					},
+					{
+						"type": "figure",
+						"src": "stap15_modus.jpg",
+						"alt": "Mode Standard or Low Power",
+						"caption": "Under \"Modus\" choose between Standard and Low Power."
+					}
+				]
+			},
+			{
+				"title": "Done: you can simply close the program",
+				"blocks": [
+					{
+						"type": "p",
+						"html": "You may simply close the window: monitoring keeps running <strong>in the background</strong>. There is a shortcut on your computer; click it to get back into the program."
+					},
+					{
+						"type": "tip",
+						"html": "In short: download → extract → install → connect cameras → choose detector → start monitoring."
+					}
+				]
+			}
+		]
+	}
+}

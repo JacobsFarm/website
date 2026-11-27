@@ -26,5 +26,7 @@
   "windows_keep_title": "Rund um die Uhr im Betrieb",
   "windows_keep_1": "<strong>Nutze ein Netzwerkkabel.</strong> Verbinde sowohl den PC als auch die IP-Kameras per Kabel (UTP/Ethernet). WLAN im Stall kann instabil sein, dann ruckeln die Kamerabilder.",
   "windows_keep_2": "<strong>Keine Energiespar-Einstellungen nötig.</strong> Solange die Überwachung läuft, hält AI Detector den PC selbst wach. Ein Laptop geht trotzdem in den Ruhezustand, wenn du den Deckel schließt oder er mit Akku läuft — lass einen Laptop also offen und am Strom.",
-  "windows_keep_3": "<strong>Updates.</strong> Wähle im Menü von AI Detector (das Symbol neben der Uhr) <em>Check for Updates</em>. Detectors, die aus einem Preset erstellt wurden, bekommen neuere Modelle außerdem automatisch."
+  "windows_keep_3": "<strong>Updates.</strong> Wähle im Menü von AI Detector (das Symbol neben der Uhr) <em>Check for Updates</em>. Detectors, die aus einem Preset erstellt wurden, bekommen neuere Modelle außerdem automatisch.",
+  "windows_step2_tip": "<strong>Tipp:</strong> Die blaue Warnung überspringen? Klicken Sie mit der rechten Maustaste auf die Setup-Datei, wählen Sie <em>Eigenschaften</em>, setzen Sie unten das Häkchen bei <strong>Zulassen</strong> und klicken Sie auf <strong>OK</strong>. Starten Sie dann das Setup.",
+  "windows_step2_5": "Windows fragt, ob der AI Detector das Netzwerk nutzen darf. Klicken Sie auf <strong>Zulassen</strong>: Das ist nötig, um Ihre Kameras zu finden."
 }

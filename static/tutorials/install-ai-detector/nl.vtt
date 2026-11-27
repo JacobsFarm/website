@@ -1,0 +1,688 @@
+WEBVTT
+
+00:00:00.370 --> 00:00:04.250
+In deze video wil ik laten zien hoe je Cowcatcher kan installeren.
+
+00:00:06.650 --> 00:00:12.470
+Er zijn meerdere manieren om bij de website te komen, maar het makkelijkste is als je intypt Cowcatcher AI.
+
+00:00:13.670 --> 00:00:15.590
+Dan staat hij op GitHub.
+
+00:00:17.210 --> 00:00:24.650
+Dan kom je op deze pagina en als je naar beneden scrolt, dan staat er Powered by the AI Detector.
+
+00:00:25.130 --> 00:00:29.090
+En hieronder is er ook een uitleg hoe het verder moet, maar daar klikken wij op.
+
+00:00:29.090 --> 00:00:34.490
+En dan staat hier bij Releases de laatste versie.
+
+00:00:35.330 --> 00:00:36.470
+Dus daar klikken wij op.
+
+00:00:37.830 --> 00:00:40.070
+En dan eens kijken van waar gaan we het op installeren.
+
+00:00:41.070 --> 00:00:44.550
+Ik heb een Windows computer, dus ik klik deze aan.
+
+00:00:45.310 --> 00:00:46.790
+Dan begint er een folder te downloaden.
+
+00:00:48.090 --> 00:00:52.710
+Heb je een Apple computer, zoals een Mac Mini, dan download je deze versie.
+
+00:00:54.940 --> 00:00:58.040
+Heb je Linux, dan installeer je deze versie.
+
+00:00:58.860 --> 00:01:01.540
+Er zijn verder geen verschillen in installatie.
+
+00:01:02.000 --> 00:01:03.100
+Apple en Windows.
+
+00:01:03.960 --> 00:01:05.240
+Linux loopt iets anders.
+
+00:01:06.400 --> 00:01:08.480
+Zoals je rechtsboven kan zien is hij gedownload.
+
+00:01:09.700 --> 00:01:11.060
+Dan gaan we naar Downloads toe.
+
+00:01:13.370 --> 00:01:14.830
+Dan kan je hem uitpakken.
+
+00:01:16.410 --> 00:01:17.990
+Dan vraagt hij of hij hem wil uitpakken.
+
+00:01:18.110 --> 00:01:22.280
+Ja, hij is hier nu mee bezig.
+
+00:01:25.560 --> 00:01:27.120
+Dan opent hij automatisch al.
+
+00:01:27.680 --> 00:01:33.680
+En dan hebben we hier het programma, de AI Detector, de versie, Windows.
+
+00:01:34.600 --> 00:01:36.060
+En dan kunnen we verder op klikken.
+
+00:01:37.200 --> 00:01:38.060
+En dan gaat hij vragen.
+
+00:01:38.080 --> 00:01:40.340
+Hé, dit is een onbeschermd programma.
+
+00:01:40.400 --> 00:01:41.080
+Weet je het zeker?
+
+00:01:41.220 --> 00:01:44.100
+Dan druk je op meer info en dan Run Anyway.
+
+00:01:45.900 --> 00:01:50.900
+En een tweede manier is, om dit te omzeilen, is je gaat naar de echte muisknop.
+
+00:01:51.280 --> 00:01:52.480
+Eigenschap of Properties.
+
+00:01:53.040 --> 00:01:54.100
+En druk je op Unblock.
+
+00:01:54.900 --> 00:01:56.220
+Dan komt die pop-up niet.
+
+00:01:56.900 --> 00:01:58.460
+Dan vink je die aan en dan OK.
+
+00:02:02.040 --> 00:02:08.020
+Als je er verder op klikt, dan gaat hij de AI Detector installeren.
+
+00:02:10.400 --> 00:02:13.000
+Dus op de achtergrond begint hij nou het programma te installeren.
+
+00:02:14.220 --> 00:02:17.600
+Als het installeren klaar is, dan krijg je nog één pop-up.
+
+00:02:18.340 --> 00:02:25.980
+En hier vraagt hij, en hier vraagt hij, wil je dat het programma automatisch opstart wanneer je computer uit is geweest?
+
+00:02:26.620 --> 00:02:27.480
+Dit is heel makkelijk.
+
+00:02:27.640 --> 00:02:32.480
+Natuurlijk, als je computer uitgaat of je doet hem uit en je wil in de ochtend start je hem weer op,
+
+00:02:32.700 --> 00:02:34.420
+dat het programma automatisch weer begint.
+
+00:02:36.120 --> 00:02:37.720
+Wil je dat niet, dan druk je op Nee.
+
+00:02:38.000 --> 00:02:38.660
+Wil je dat wel?
+
+00:02:38.660 --> 00:02:40.760
+Wat eigenlijk in alle gevallen is, dan druk je op Ja.
+
+00:02:41.600 --> 00:02:45.420
+En dan kan je ook ten alle tijden weer uitzetten door in het programma te zeggen,
+
+00:02:45.520 --> 00:02:48.500
+hé, ik wil detecteren nu pauze hebben.
+
+00:02:49.300 --> 00:02:53.420
+Als laatste, dan krijg je nog deze pop-up en dan vraagt hij, wil je dit programma toestaan?
+
+00:02:54.080 --> 00:02:56.820
+En dan druk je op Allow of Toestaan.
+
+00:02:58.420 --> 00:03:00.460
+En op de achtergrond zag je hem eigenlijk al begonnen.
+
+00:03:02.040 --> 00:03:03.700
+Dit is nu de AI Detector.
+
+00:03:04.440 --> 00:03:08.480
+Bij de eerste keer opstarten van het programma, gaat hij zoeken naar alle camera's,
+
+00:03:08.660 --> 00:03:14.300
+die op jouw internet zijn aangesloten, dus ook de camera's die je, als het goed is, hebt geïnstalleerd.
+
+00:03:14.900 --> 00:03:16.120
+Dus die komen dan hier te staan.
+
+00:03:16.220 --> 00:03:18.220
+Nou, die staan hier voor mij allemaal.
+
+00:03:18.600 --> 00:03:20.600
+Ik ga er nou eentje toevoegen.
+
+00:03:21.840 --> 00:03:24.480
+Dan druk je op Camera's verbinden.
+
+00:03:26.560 --> 00:03:30.700
+En dan gaat hij vragen naar het wachtwoord van die camera.
+
+00:03:32.360 --> 00:03:33.760
+Die kun je hier dan intypen.
+
+00:03:35.260 --> 00:03:39.600
+En staat de camera niet in deze lijst, maar heb je hem wel opgehangen
+
+00:03:39.600 --> 00:03:49.600
+en kan je hem in de app wel openen, dan moet je in de instellingen kijken of de RTSP of de ONVIF-protocol aanstaat.
+
+00:03:49.600 --> 00:03:52.780
+Hier staat hij ook verbinding mislukt, omdat het nog geen wachtwoord was.
+
+00:03:52.780 --> 00:03:57.400
+Dus die gaan we nu opnieuw proberen.
+
+00:03:57.400 --> 00:03:59.400
+Dan gaat hij met de camera proberen.
+
+00:03:59.400 --> 00:04:01.400
+Het is te openen.
+
+00:04:01.400 --> 00:04:03.400
+Nou, het is gelukt.
+
+00:04:03.400 --> 00:04:05.400
+We geven de camera een naam.
+
+00:04:05.400 --> 00:04:12.120
+Dit is in mijn geval, is dit achterkantstal aan de linkerkant gekeken.
+
+00:04:12.220 --> 00:04:14.220
+Nou goed.
+
+00:04:14.220 --> 00:04:16.220
+Druk je op Camera toevoegen.
+
+00:04:16.220 --> 00:04:18.220
+Hier gaan we kijken van nou, wat gaan we doen?
+
+00:04:18.220 --> 00:04:20.220
+Wordt hij gebruikt voor het afkalven?
+
+00:04:20.220 --> 00:04:22.220
+Of voor de tocht?
+
+00:04:22.220 --> 00:04:24.220
+Dus Cowcatcher is tocht.
+
+00:04:24.220 --> 00:04:26.220
+Calvingcatcher is afkalven.
+
+00:04:26.220 --> 00:04:28.220
+En dan hebben we de optie Tail Up.
+
+00:04:28.220 --> 00:04:30.220
+Wat natuurlijk Nederlands vertaald is, staart omhoog.
+
+00:04:30.220 --> 00:04:32.220
+Dit is een uitbreiding op het afkalfgedeelte.
+
+00:04:32.220 --> 00:04:36.220
+En hier kijken we eigenlijk, heeft die koe langer dan zoveel minuten zijn staart omhoog.
+
+00:04:36.220 --> 00:04:40.220
+En hier kijken we eigenlijk, heeft die koe langer dan zoveel minuten zijn staart omhoog.
+
+00:04:40.220 --> 00:04:44.220
+En hier kijken we eigenlijk, heeft die koe langer dan zoveel minuten zijn staart omhoog.
+
+00:04:44.220 --> 00:04:48.220
+Dan is er natuurlijk een teken van dat hij wil gaan afkalven.
+
+00:04:48.220 --> 00:04:50.220
+En dan krijg je daar een detectie op.
+
+00:04:50.220 --> 00:04:52.220
+Maar wij gaan hier tocht doen.
+
+00:04:52.220 --> 00:04:54.220
+Dus drukken we op Cowcatcher.
+
+00:04:54.220 --> 00:04:56.220
+Nou hier staat eigenlijk automatisch bijwerkings.
+
+00:04:56.220 --> 00:04:58.220
+Wanneer wij een nieuw model hebben.
+
+00:04:58.220 --> 00:05:00.220
+Dan wordt dat automatisch.
+
+00:05:00.220 --> 00:05:02.220
+Dan krijg je die ook.
+
+00:05:02.220 --> 00:05:04.220
+Nou we noemen hem Tocht Melkkoeien hier.
+
+00:05:04.220 --> 00:05:06.220
+Nou we noemen hem Tocht Melkkoeien hier.
+
+00:05:06.220 --> 00:05:08.220
+Dat gaat voor de melkkoeien gelden.
+
+00:05:08.220 --> 00:05:10.220
+Dat gaat voor de melkkoeien gelden.
+
+00:05:10.220 --> 00:05:12.220
+Daar kennen we Telegram koppelen.
+
+00:05:12.220 --> 00:05:14.220
+Daar kennen we Telegram koppelen.
+
+00:05:14.220 --> 00:05:16.220
+Hier staat ook netjes.
+
+00:05:16.220 --> 00:05:18.220
+Als we bijvoorbeeld Botvader openen.
+
+00:05:18.220 --> 00:05:20.220
+Opent hij meteen de bot voor jou.
+
+00:05:20.220 --> 00:05:22.220
+Opent hij meteen de bot voor jou.
+
+00:05:22.220 --> 00:05:24.220
+Dan moet je even deze stappen volgen.
+
+00:05:24.220 --> 00:05:26.220
+Dat slaan we kort even over.
+
+00:05:26.220 --> 00:05:28.220
+Daar komt natuurlijk een hele grote code uit.
+
+00:05:28.220 --> 00:05:30.220
+Een API token.
+
+00:05:30.220 --> 00:05:32.220
+Die vul je hier in.
+
+00:05:32.220 --> 00:05:34.220
+De melding gaan we naar mijn telefoon versturen.
+
+00:05:34.220 --> 00:05:36.220
+De melding gaan we naar mijn telefoon versturen.
+
+00:05:36.220 --> 00:05:38.220
+Een groep ken ook.
+
+00:05:38.220 --> 00:05:41.530
+Dan ga je Telegram.
+
+00:05:41.530 --> 00:05:43.530
+Koppelen.
+
+00:05:43.530 --> 00:05:45.530
+Maar je zegt, de bottoken is ongeldig.
+
+00:05:45.530 --> 00:05:47.530
+Ik kan niks versturen.
+
+00:05:47.530 --> 00:05:49.530
+Dan komt er een alarm of een foutmelding.
+
+00:05:49.530 --> 00:05:51.530
+Die kunnen we voor nu overslaan.
+
+00:05:51.530 --> 00:05:53.530
+We gaan de detector opslaan.
+
+00:05:53.530 --> 00:05:57.420
+We gaan de detector opslaan.
+
+00:05:57.420 --> 00:05:59.420
+Hij doet het.
+
+00:05:59.420 --> 00:06:05.840
+Dan gaan we de bewaking starten.
+
+00:06:05.840 --> 00:06:07.840
+Hier zie je automatisch
+
+00:06:07.840 --> 00:06:09.840
+het
+
+00:06:09.840 --> 00:06:11.840
+geoptimaliseerde
+
+00:06:11.840 --> 00:06:13.840
+model aan het
+
+00:06:13.840 --> 00:06:15.840
+installeren voor jouw computer.
+
+00:06:15.840 --> 00:06:17.840
+Om de hoogste
+
+00:06:17.840 --> 00:06:19.840
+prestaties eruit te halen.
+
+00:06:19.840 --> 00:06:21.840
+We hebben
+
+00:06:21.840 --> 00:06:23.840
+twee kanten gekeken.
+
+00:06:23.840 --> 00:06:25.840
+We willen het alles lokaal hebben.
+
+00:06:25.840 --> 00:06:27.840
+En we willen de allerhoogste prestaties hebben.
+
+00:06:27.840 --> 00:06:29.840
+Niet per se de meeste opties.
+
+00:06:29.840 --> 00:06:31.840
+Maar we willen gewoon
+
+00:06:31.840 --> 00:06:33.840
+op elke computer goed draaien.
+
+00:06:33.840 --> 00:06:35.840
+Dat is deze controle.
+
+00:06:35.840 --> 00:06:37.840
+En dat de juiste software daarvoor
+
+00:06:37.840 --> 00:06:39.840
+wordt gedownload.
+
+00:06:39.840 --> 00:06:41.840
+Dit kan
+
+00:06:41.840 --> 00:06:43.840
+enkele minuten duren.
+
+00:06:43.840 --> 00:06:45.840
+Tot tientallen minuten ligt eraan
+
+00:06:45.840 --> 00:06:47.840
+hoe snel jouw internet is.
+
+00:06:47.840 --> 00:06:49.840
+Een vrij groot bestand van 2 GB.
+
+00:06:49.840 --> 00:06:53.340
+Hij is klaar met installeren.
+
+00:06:53.340 --> 00:06:55.340
+En dan word je automatisch
+
+00:06:55.340 --> 00:06:57.340
+naar de hoofdpagina gebracht.
+
+00:06:57.340 --> 00:06:59.340
+Op deze hoofdpagina
+
+00:06:59.340 --> 00:07:01.340
+oftewel opnamen.
+
+00:07:01.340 --> 00:07:03.340
+Daar komen al je detecties binnen.
+
+00:07:03.340 --> 00:07:05.340
+Dus naast Telegram
+
+00:07:05.340 --> 00:07:07.340
+worden ze natuurlijk ook opgeslagen
+
+00:07:07.340 --> 00:07:09.340
+lokaal op jouw computer.
+
+00:07:09.340 --> 00:07:11.340
+En kun je ze hier bekijken.
+
+00:07:11.340 --> 00:07:13.340
+Dus je hebt Telegram niet nodig.
+
+00:07:13.340 --> 00:07:15.340
+Voor de melding op je telefoon dan weer wel.
+
+00:07:15.340 --> 00:07:17.340
+En dan kennen we door naar
+
+00:07:17.340 --> 00:07:19.340
+de bewaking. Heel simpel.
+
+00:07:19.340 --> 00:07:21.340
+Een groen bolletje. Dan draait alles.
+
+00:07:21.340 --> 00:07:23.340
+Hier staat ook bewaking actief.
+
+00:07:23.340 --> 00:07:25.340
+Eén camera wordt er bewaakt.
+
+00:07:25.340 --> 00:07:27.340
+We kunnen hem hier pauzeren.
+
+00:07:27.340 --> 00:07:29.340
+De aantal camera's.
+
+00:07:29.340 --> 00:07:31.340
+En nogmaals dat hij actief is.
+
+00:07:31.340 --> 00:07:33.340
+We kunnen hier nog een
+
+00:07:33.340 --> 00:07:35.340
+hartslag toevoegen. Dat wil zeggen
+
+00:07:35.340 --> 00:07:37.340
+wanneer de computer uitgaat
+
+00:07:37.340 --> 00:07:39.340
+dan krijg je een melding op je telefoon
+
+00:07:39.340 --> 00:07:41.340
+dat het programma niet meer draait.
+
+00:07:41.340 --> 00:07:43.340
+Daarvoor heb ik een andere video gemaakt.
+
+00:07:43.340 --> 00:07:45.340
+Die kun je dus hier makkelijk instellen.
+
+00:07:45.340 --> 00:07:47.340
+Dan hebben we daaronder nog
+
+00:07:47.340 --> 00:07:50.620
+de technische details.
+
+00:07:50.620 --> 00:07:52.620
+Hier kun je nog zien waar de bestanden
+
+00:07:52.620 --> 00:07:54.620
+lokaal op je computer worden opgeslagen.
+
+00:07:54.620 --> 00:07:56.620
+En dan kun je
+
+00:07:56.620 --> 00:07:58.620
+ook nog je diagnosegegevens downloaden.
+
+00:07:58.620 --> 00:08:00.620
+En het logboek bekijken.
+
+00:08:00.620 --> 00:08:02.620
+Als er eventueel wat fout is kun je dat hier zien.
+
+00:08:02.620 --> 00:08:04.620
+Voor de technische lui.
+
+00:08:04.620 --> 00:08:06.620
+Dan hebben we hier nog de camera's.
+
+00:08:06.620 --> 00:08:08.620
+Kun je nog even snel terugkijken.
+
+00:08:08.620 --> 00:08:14.880
+Je kunt de naam weer veranderen.
+
+00:08:14.880 --> 00:08:16.880
+En je kunt hier nog meer camera's toevoegen.
+
+00:08:16.880 --> 00:08:18.880
+Dan kun je natuurlijk gewoon weer opklikken.
+
+00:08:18.880 --> 00:08:20.880
+Gaat hij weer zoeken.
+
+00:08:20.880 --> 00:08:22.880
+Zo simpel is het.
+
+00:08:22.880 --> 00:08:24.880
+Dan hebben we hier de detectoren.
+
+00:08:24.880 --> 00:08:26.880
+De detectoren is eigenlijk
+
+00:08:26.880 --> 00:08:28.880
+de instellingen die we hebben ingesteld.
+
+00:08:28.880 --> 00:08:30.880
+En met de opdracht.
+
+00:08:30.880 --> 00:08:32.880
+Je kunt meerdere detectoren hebben.
+
+00:08:32.880 --> 00:08:34.880
+Dus je kunt één detectoren hebben voor je
+
+00:08:34.880 --> 00:08:36.880
+tocht melkkoeien. Voor je tocht
+
+00:08:36.880 --> 00:08:38.880
+jongvee.
+
+00:08:38.880 --> 00:08:40.880
+Voor je tocht
+
+00:08:40.880 --> 00:08:42.880
+afkalven.
+
+00:08:42.880 --> 00:08:44.880
+Met zijn eigen instellingen.
+
+00:08:44.880 --> 00:08:46.880
+En je kunt dan ook gewoon
+
+00:08:46.880 --> 00:08:48.880
+nog weer camera's toevoegen.
+
+00:08:48.880 --> 00:08:50.880
+En of
+
+00:08:50.880 --> 00:08:52.880
+extra mensen toevoegen
+
+00:08:52.880 --> 00:08:54.880
+waar de melding naartoe moet.
+
+00:08:54.880 --> 00:08:56.880
+Wil je bijvoorbeeld
+
+00:08:56.880 --> 00:08:58.880
+nog het afkalven ernaast doen.
+
+00:08:58.880 --> 00:09:00.880
+Dan kan je zeggen detector toevoegen.
+
+00:09:00.880 --> 00:09:02.880
+Kalving catcher.
+
+00:09:02.880 --> 00:09:04.880
+Tik je dan aan.
+
+00:09:04.880 --> 00:09:06.880
+Nou hier nog weer de camera's.
+
+00:09:06.880 --> 00:09:08.880
+Dan geef je hem een naam. Afkalven.
+
+00:09:08.880 --> 00:09:10.880
+Dan kan je hem terugvinden.
+
+00:09:10.880 --> 00:09:12.880
+Nou hierbij hebben we dan nog wel twee modussen.
+
+00:09:12.880 --> 00:09:14.880
+Standaard en een laag power.
+
+00:09:14.880 --> 00:09:16.880
+Laag power wil eigenlijk zeggen. Je computer is niet zo goed.
+
+00:09:16.880 --> 00:09:18.880
+We gaan in plaats van
+
+00:09:18.880 --> 00:09:20.880
+onder 2 seconden kijken. Kijken we onder 5 seconden.
+
+00:09:20.880 --> 00:09:22.880
+En de
+
+00:09:22.880 --> 00:09:24.880
+standaard is eigenlijk
+
+00:09:24.880 --> 00:09:26.880
+voor de meesten goed genoeg.
+
+00:09:26.880 --> 00:09:28.880
+Zeker als je gewoon een standaard computer
+
+00:09:28.880 --> 00:09:30.880
+hebt van 5 jaar kan je op standaard prima draaien.
+
+00:09:30.880 --> 00:09:32.880
+Heb je er eentje
+
+00:09:32.880 --> 00:09:34.880
+met videokaart. Een Mac mini.
+
+00:09:34.880 --> 00:09:36.880
+Dan moet je altijd op standaard draaien.
+
+00:09:36.880 --> 00:09:40.480
+Verder
+
+00:09:40.480 --> 00:09:42.480
+zijn dat eigenlijk alle instellingen.
+
+00:09:42.480 --> 00:09:44.480
+De magie zit natuurlijk eigenlijk in
+
+00:09:44.480 --> 00:09:46.480
+detecteren. Dit programma hoeft helemaal niet
+
+00:09:46.480 --> 00:09:48.480
+te uitgebreider te zijn.
+
+00:09:48.480 --> 00:09:50.480
+Het is simpel installeren en gaan.
+
+00:09:50.480 --> 00:09:52.480
+En draaien.
+
+00:09:52.480 --> 00:09:54.480
+Je kan het programma gewoon afsluiten.
+
+00:09:54.480 --> 00:09:56.480
+Op de achtergrond gaat het programma gewoon door.
+
+00:09:56.480 --> 00:09:58.480
+Er komt automatische snelkoppeling
+
+00:09:58.480 --> 00:10:00.480
+op je computer.
+
+00:10:00.480 --> 00:10:02.480
+Je kan er op klikken.
+
+00:10:02.480 --> 00:10:04.480
+En zo kom je weer in het programma.

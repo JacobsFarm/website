@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision & Dahua</strong> — RTSP und ONVIF sind meist standardmäßig aktiviert. Du musst nichts ändern.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — streamen RTSP ebenfalls direkt, auf dem Standardport 554.",
   "inst_cams_rtsp_enable_caption": "Beispiel: RTSP in der Reolink-App aktivieren, unter Network → Advanced → Server Settings.",
-
   "inst_setup_cams_title": "Einrichtung 1 von 3 — Kameras verbinden",
   "inst_setup_cams_1": "Wenn AI Detector startet, öffnet sich die Einrichtung von selbst im Browser. Öffnet sich nichts? Dann gehe zu <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Wähle oben rechts deine Sprache: English, Nederlands, Deutsch oder Français.",
+  "inst_setup_cams_2": "Wählen Sie oben rechts Ihre Sprache. Die App spricht English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe und 简体中文.",
   "inst_setup_cams_3": "Die Kameras, die in deinem Netzwerk gefunden wurden, sind bereits angehakt. Eine Kamera, die einen eigenen Login braucht, fragt nach Benutzername und Passwort.",
   "inst_setup_cams_4": "Fehlt eine Kamera? Klicke auf <strong>Enter a stream URL instead</strong> und füge ihre RTSP-Adresse ein — die Tabelle unten hilft dir, sie zu finden.",
   "inst_setup_cams_5": "Prüfe jedes Bild und gib jeder Kamera einen Namen, den du wiedererkennst, zum Beispiel <code>Heifers barn 1</code> oder <code>Calving pen</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "RTSP-URL",
   "inst_rtsp_finder_copy": "Kopieren",
   "inst_rtsp_finder_copied": "Kopiert!",
-
   "inst_setup_det_title": "Einrichtung 2 von 3 — Wähle, was erkannt werden soll",
   "inst_setup_det_intro": "Ein Detector überwacht die Kameras, die du auswählst, zeichnet auf, was er sieht, und benachrichtigt die Personen, die du wählst. Wähle ein <strong>Preset</strong>: Es liefert das KI-Modell und alle Einstellungen und hält den Detector mit neueren Modellen aktuell.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — Brunsterkennung: erkennt das Aufreiten.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Handy-Benachrichtigungen und die KI-Prüfung kannst du gleich oder später hinzufügen (siehe die nächsten Schritte).",
   "inst_setup_det_3": "Willst du einen zweiten Detector? Gehe nach der Einrichtung zu <strong>Detectors → Add detector</strong> und wähle ein anderes Preset.",
   "inst_setup_det_caption": "Einrichtungsschritt 2: Wähle ein Preset und die Kameras, die es überwachen soll.",
-
   "inst_setup_start_title": "Einrichtung 3 von 3 — Überwachung starten",
   "inst_setup_start_1": "Jede Kamera wird einmal geprüft. Klicke dann auf <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "Beim ersten Start lädt AI Detector das Modell herunter und bereitet es auf deine Hardware vor. Das kann einige Minuten dauern.",
+  "inst_setup_start_2": "Beim ersten Start lädt der AI Detector das für Ihren Computer optimierte Modell herunter (etwa 2 GB) und bereitet es vor. Je nach Internetgeschwindigkeit dauert das einige Minuten bis eine halbe Stunde. Danach startet die Überwachung von selbst.",
   "inst_setup_start_3": "Sobald die Kameras wirklich analysiert werden, öffnet sich <strong>Recordings</strong>. Der grüne Punkt oben links zeigt <em>Monitoring</em> an.",
   "inst_setup_start_4": "Die Überwachung läuft weiter, auch wenn du den Browser schließt.",
   "inst_setup_start_caption": "Einrichtungsschritt 3: Jede Kamera wird geprüft, dann startet die Überwachung und läuft im Hintergrund weiter.",
-
   "inst_tele_title": "Handy-Benachrichtigungen über Telegram",
   "inst_tele_intro": "Telegram ist der schnellste kostenlose Weg, eine Benachrichtigung auf dein Handy zu bekommen, inklusive Videoclip der Erkennung. Du erstellst einmal deinen eigenen Bot; das dauert etwa zwei Minuten.",
   "inst_tele_1": "Öffne einen Detector (oder gehe zu <strong>Settings → Alerts → Add recipient</strong>) und klicke auf <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Jede Benachrichtigung hat die Buttons 👍 und 👎. Deine Antwort wird zusammen mit der Aufnahme in AI Detector gespeichert, so baust du ein geprüftes Archiv auf, ohne den Computer öffnen zu müssen.",
   "inst_tele_groups_title": "Mehrere Empfänger und ruhige Stunden",
   "inst_tele_groups_text": "Ein Bot kann Benachrichtigungen an verschiedene Chats senden: zum Beispiel eine Gruppe <em>Brunsterkennung</em> für Landwirt und Personal und eine Gruppe <em>Kalbungsalarme</em> für die Nachtschicht. Mit <strong>Quiet hours</strong> bei einem Empfänger kommen Benachrichtigungen zwischen zwei Uhrzeiten (zum Beispiel nachts) ohne Ton an — sie kommen trotzdem an.",
-
   "inst_ai_title": "KI-Prüfung gegen Fehlalarme (optional)",
   "inst_ai_intro": "Mit der KI-Prüfung schaut ein Vision-Language-Modell sich jeden Clip noch einmal an, bevor du eine Benachrichtigung bekommst. So werden die meisten Fehlalarme herausgefiltert. Das Preset liefert die Frage, die die KI beantwortet.",
   "inst_ai_1": "Gehe zu <strong>Settings → AI check</strong> und klicke auf <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "In jedem Detector kannst du die KI-Prüfung ein- oder ausschalten.",
   "inst_ai_note": "Google bietet ein begrenztes kostenloses Kontingent an. Clips erkannter Ereignisse werden zur Prüfung an Google gesendet; alles andere bleibt auf deinem Computer. Andere Anbieter kannst du unter <em>Advanced → AI connections</em> einstellen.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini: Füge deinen API-Schlüssel aus Google AI Studio ein.",
-
   "inst_phone_title": "AI Detector auf deinem Handy öffnen",
   "inst_phone_intro": "Du kannst das Dashboard auf jedem Handy, Tablet oder Computer im selben Netzwerk wie der KI-Computer öffnen.",
   "inst_phone_1": "Gehe auf dem KI-Computer zu <strong>Settings → Devices</strong> und klicke auf <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "Auf einem iPhone oder iPad kannst du AI Detector auf den Home-Bildschirm legen; dann öffnet es sich wie eine App. Die Anleitung findest du unter <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "Die Verbindung im Netzwerk ist nicht verschlüsselt (HTTP). Nutze sie nur in einem Netzwerk, dem du vertraust.",
   "inst_phone_caption": "Settings → Devices: Verbinde Handys und Computer mit einem einmaligen Code.",
-
   "inst_storage_title": "Wo deine Daten gespeichert werden",
   "inst_storage_text": "Jede Erkennung wird als Aufnahme mit Foto und Videoclip auf deinem eigenen Computer gespeichert. Einstellungen, Modelle und Aufnahmen liegen außerhalb des Programms, sie bleiben also beim Deinstallieren oder Aktualisieren erhalten. Sichere diesen Ordner ab und zu:",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "der Ordner neben der Compose-Datei",
-
   "inst_support_title": "Hilfe und Support",
   "inst_support_diag": "<strong>Etwas stimmt nicht?</strong> Gehe zu <strong>Settings → Logs</strong> und klicke auf <strong>Download diagnostics</strong>. Diese Datei enthält alles für einen Fehlerbericht. Prüfe sie vor dem Teilen auf Kamera-Adressen.",
   "inst_support_youtube": "<strong>YouTube</strong> — suche nach „CowCatcher AI“ für Videoanleitungen und Tipps.",
   "inst_support_email": "<strong>E-Mail</strong> — Fragen oder Probleme? Schreib uns direkt:",
   "inst_support_community": "<strong>Facebook / Telegram-Community</strong> — stelle deine Frage in unserer Gruppe für schnelle Hilfe und Erfahrungen von anderen Landwirten.",
-  "inst_back_to_platforms": "Zurück zur Plattformübersicht"
+  "inst_back_to_platforms": "Zurück zur Plattformübersicht",
+  "inst_alarm_title": "Handy-Alarm, der Sie weckt (optional)",
+  "inst_alarm_intro": "Neben Telegram kann der AI Detector Ihr Handy bei einer Erkennung laut klingeln lassen, auch nachts, mit einem Bild dessen, was er gesehen hat. Dafür dient die kostenlose App ntfy, ein Konto ist nicht nötig.",
+  "inst_alarm_1": "Installieren Sie die kostenlose App <strong>ntfy</strong> auf Ihrem Handy (Android oder iPhone).",
+  "inst_alarm_2": "Gehen Sie im AI Detector zu <strong>Einstellungen → Meldungen</strong> (oder öffnen Sie einen Detektor) und klicken Sie auf <strong>ntfy verbinden</strong>.",
+  "inst_alarm_3": "Abonnieren Sie in der ntfy-App den Namen, den der AI Detector anzeigt, bestätigen Sie den Testalarm und wählen Sie, welche Detektoren ihn auslösen dürfen.",
+  "inst_alarm_4": "Unter Android kann der Alarm trotz „Nicht stören“ klingeln und so lange klingeln, bis Sie nachsehen; die Schritte werden beim Verbinden angezeigt. Ein iPhone zeigt den Alarm, bleibt im Lautlos-Modus aber stumm.",
+  "inst_alarm_note": "Jedes Handy, das den Namen abonniert hat, klingelt – behalten Sie den Namen also für sich. Der Alarm läuft über den Dienst ntfy.sh und braucht Internet. Mit verbundenem Alarm kann <strong>Kamera offline</strong> Sie auch warnen, wenn eine Kamera nicht mehr überwacht wird.",
+  "inst_heartbeat_title": "Gewarnt werden, wenn der Computer stoppt",
+  "inst_heartbeat_text": "Stromausfall, Absturz oder kein Internet? Dann kann der AI Detector selbst nichts mehr senden. Ein Heartbeat mit dem kostenlosen Healthchecks.io schickt Ihnen eine Telegram-Nachricht, wenn die Aufrufe Ihres Computers ausbleiben."
 }

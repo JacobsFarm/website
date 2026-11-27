@@ -11,10 +11,12 @@
 	const motto = splitMotto(m.footer_tagline());
 
 	const installLinks = [
-		{ href: '/installation', label: m.install_title },
-		{ href: '/installation/hardware', label: () => stripNumber(m.install_card_hardware_title()) },
-		{ href: '/installation/download', label: () => stripNumber(m.install_card_software_title()) },
-		{ href: '/installation/options', label: () => stripNumber(m.install_card_options_title()) }
+		{ href: '/installation/', label: m.install_title },
+		{ href: '/installation/hardware/', label: () => stripNumber(m.install_card_hardware_title()) },
+		{ href: '/installation/download/', label: () => stripNumber(m.install_card_software_title()) },
+		{ href: '/installation/options/', label: () => stripNumber(m.install_card_options_title()) },
+		{ href: '/installation/configuration/', label: m.config_nav_label },
+		{ href: '/tutorials/', label: m.nav_tutorials }
 	];
 
 	const community = [
@@ -45,7 +47,7 @@
 						{#each projects as project (project.id)}
 							<li><a href="{base}{project.link}">{project.name.replace('-', ' ')}</a></li>
 						{/each}
-						<li><a href="{base}/about-us">{m.nav_about()}</a></li>
+						<li><a href="{base}/about-us/">{m.nav_about()}</a></li>
 					</ul>
 				</div>
 

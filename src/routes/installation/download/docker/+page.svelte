@@ -34,8 +34,8 @@
     title={m.docker_title()}
     lead={m.docker_intro()}
     crumbs={[
-        { href: '/installation', label: m.nav_install() },
-        { href: '/installation/download', label: stripNumber(m.install_card_software_title()) }
+        { href: '/installation/', label: m.nav_install() },
+        { href: '/installation/download/', label: stripNumber(m.install_card_software_title()) }
     ]}
 >
     {#snippet aside()}
@@ -75,7 +75,7 @@
                 </tr>
                 <tr>
                     <td>{m.docker_route_jetson_host()}</td>
-                    <td><a href="#step-3" class="text-link">C · <code>compose.jetson.yml</code></a></td>
+                    <td><a href="#step-3" class="text-link">C · <code>compose.yml</code></a></td>
                     <td>{m.docker_route_jetson_engine()}</td>
                 </tr>
             </tbody>
@@ -103,7 +103,9 @@ sudo apt install ./AI-Detector-*-linux-amd64.deb</code></pre>
         <pre><code>git clone https://github.com/ESchouten/ai-detector.git
 cd ai-detector/example
 sudo docker compose up -d</code></pre>
+        <p class="note">{@html m.docker_nvidia_runtime_note()}</p>
         <p>{@html m.docker_nvidia_open()}</p>
+        <p class="tip-box">{@html m.docker_autostart_note()}</p>
     </InstallStep>
 
     <InstallStep number="3" title={m.docker_jetson_title()}>
@@ -143,14 +145,13 @@ sudo systemctl restart docker</code></pre>
                 <p>{m.docker_jetson_start_desc()}</p>
                 <pre><code>git clone https://github.com/ESchouten/ai-detector.git
 cd ai-detector/example
-sudo docker compose -f compose.jetson.yml up -d</code></pre>
+sudo docker compose up -d</code></pre>
             </div>
 
             <div class="option">
                 <h4>{m.docker_jetson_auto_title()}</h4>
                 <p>{@html m.docker_jetson_auto_desc()}</p>
-                <pre><code>cd ~/ai-detector
-python3 distribution/linux_startup.py install --compose example/compose.jetson.yml</code></pre>
+                <pre><code>sudo systemctl enable --now docker</code></pre>
                 <p class="note">{@html m.docker_jetson_auto_note()}</p>
             </div>
         </div>
@@ -163,8 +164,10 @@ python3 distribution/linux_startup.py install --compose example/compose.jetson.y
             <pre><code>sudo docker compose down</code></pre>
             <p>{m.docker_manage_logs()}:</p>
             <pre><code>sudo docker compose logs -f aidetector</code></pre>
-            <p>{@html m.docker_jetson_compose_note()}</p>
         </div>
+
+        <h4>{m.docker_migrate_title()}</h4>
+        <p>{@html m.docker_migrate_text()}</p>
     </InstallStep>
 
     <InstallStep number="4" title={m.docker_open_title()}>
@@ -174,8 +177,8 @@ python3 distribution/linux_startup.py install --compose example/compose.jetson.y
     <InstallCommonSteps start={5} />
 
     <PagerNav
-        prev={{ href: '/installation/download', label: m.inst_back_to_platforms() }}
-        next={{ href: '/installation/options', label: stripNumber(m.install_card_options_title()), hint: m.next_step() }}
+        prev={{ href: '/installation/download/', label: m.inst_back_to_platforms() }}
+        next={{ href: '/installation/options/', label: stripNumber(m.install_card_options_title()), hint: m.next_step() }}
     />
 </DocLayout>
 

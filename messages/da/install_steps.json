@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision & Dahua</strong> — RTSP og ONVIF er som regel slået til som standard. Du behøver ikke at ændre noget.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — streamer også RTSP fra start, på standardporten 554.",
   "inst_cams_rtsp_enable_caption": "Eksempel: aktivering af RTSP i Reolink-appen under Network → Advanced → Server Settings.",
-
   "inst_setup_cams_title": "Opsætning 1 af 3 — Forbind dine kameraer",
   "inst_setup_cams_1": "Når AI Detector starter, åbner opsætningen sig selv i din browser. Åbner der intet? Gå til <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Vælg dit sprog øverst til højre: English, Nederlands, Deutsch eller Français.",
+  "inst_setup_cams_2": "Vælg dit sprog øverst til højre. Appen taler English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe og 简体中文.",
   "inst_setup_cams_3": "De kameraer, der er fundet på dit netværk, er allerede markeret. Et kamera, der kræver sit eget login, beder om brugernavn og adgangskode.",
   "inst_setup_cams_4": "Mangler et kamera? Klik på <strong>Enter a stream URL instead</strong>, og indsæt dets RTSP-adresse — brug tabellen nedenfor for at finde den.",
   "inst_setup_cams_5": "Tjek hvert billede, og giv hvert kamera et navn, du genkender, f.eks. <code>Kviestald 1</code> eller <code>Kælvningsboks</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "RTSP-URL",
   "inst_rtsp_finder_copy": "Kopiér",
   "inst_rtsp_finder_copied": "Kopieret!",
-
   "inst_setup_det_title": "Opsætning 2 af 3 — Vælg hvad der skal registreres",
   "inst_setup_det_intro": "En detektor holder øje med de kameraer, du vælger, optager det, den ser, og advarer de personer, du vælger. Vælg en <strong>forudindstilling</strong>: den leverer AI-modellen og alle indstillinger og holder detektoren opdateret med nyere modeller.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — registrering af brunst: genkender rideadfærd.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Telefonalarmer og AI-kontrollen kan tilføjes med det samme eller senere (se de næste trin).",
   "inst_setup_det_3": "Vil du have en ekstra detektor? Efter opsætningen går du til <strong>Detectors → Add detector</strong> og vælger en anden forudindstilling.",
   "inst_setup_det_caption": "Opsætningstrin 2: Vælg en forudindstilling og de kameraer, den skal holde øje med.",
-
   "inst_setup_start_title": "Opsætning 3 af 3 — Start overvågning",
   "inst_setup_start_1": "Hvert kamera bliver tjekket én gang. Klik derefter på <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "Ved første start henter AI Detector modellen og gør den klar til din hardware. Det kan tage et par minutter.",
+  "inst_setup_start_2": "Ved første start henter AI Detector den model, der er optimeret til din computer (ca. 2 GB), og forbereder den. Afhængigt af internettet tager det fra få minutter til en halv time. Derefter starter overvågningen af sig selv.",
   "inst_setup_start_3": "Så snart kameraerne rent faktisk bliver analyseret, åbnes <strong>Recordings</strong>. Den grønne prik øverst til venstre siger <em>Monitoring</em>.",
   "inst_setup_start_4": "Overvågningen fortsætter, når du lukker browseren.",
   "inst_setup_start_caption": "Opsætningstrin 3: Hvert kamera bliver tjekket, derefter starter overvågningen, og den kører i baggrunden.",
-
   "inst_tele_title": "Telefonalarmer via Telegram",
   "inst_tele_intro": "Telegram er den hurtigste gratis måde at få en alarm på din telefon, inklusive videoklippet af registreringen. Du opretter din egen bot én gang; det tager cirka to minutter.",
   "inst_tele_1": "Åbn en detektor (eller gå til <strong>Settings → Alerts → Add recipient</strong>), og klik på <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Hver alarm har 👍- og 👎-knapper. Dit svar gemmes sammen med optagelsen i AI Detector, så du opbygger et gennemgået arkiv uden at åbne computeren.",
   "inst_tele_groups_title": "Flere modtagere og quiet hours",
   "inst_tele_groups_text": "Én bot kan sende alarmer til forskellige chats: f.eks. en gruppe <em>Brunstregistrering</em> til landmanden og personalet, og en gruppe <em>Kælvningsalarmer</em> til nattevagten. Med <strong>quiet hours</strong> slået til for en modtager kommer alarmer mellem to tidspunkter (f.eks. om natten) uden lyd — de kommer stadig frem.",
-
   "inst_ai_title": "AI-kontrol mod falske alarmer (valgfri)",
   "inst_ai_intro": "Med AI-kontrollen kigger en vision language model på hvert klip igen, før du får en alarm. Den filtrerer de fleste falske alarmer fra. Forudindstillingen leverer det spørgsmål, AI'en besvarer.",
   "inst_ai_1": "Gå til <strong>Settings → AI check</strong>, og klik på <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "I hver detektor kan du slå AI-kontrollen til eller fra.",
   "inst_ai_note": "Google tilbyder et begrænset gratis niveau. Klip af registrerede hændelser sendes til Google for at blive kontrolleret; alt andet bliver på din computer. Andre udbydere kan indstilles under <em>Advanced → AI connections</em>.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini: Indsæt din API-nøgle fra Google AI Studio.",
-
   "inst_phone_title": "Åbn AI Detector på din telefon",
   "inst_phone_intro": "Du kan åbne dashboardet på enhver telefon, tablet eller computer på samme netværk som AI-computeren.",
   "inst_phone_1": "På AI-computeren går du til <strong>Settings → Devices</strong> og klikker på <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "På en iPhone eller iPad kan du lægge AI Detector på din startskærm; så åbner det sig som en app. Vejledningen findes under <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "Forbindelsen inde i dit netværk er ikke krypteret (HTTP). Brug den kun på et netværk, du stoler på.",
   "inst_phone_caption": "Settings → Devices: forbind telefoner og computere med en engangskode.",
-
   "inst_storage_title": "Hvor dine data gemmes",
   "inst_storage_text": "Hver registrering gemmes som en optagelse med foto og videoklip på din egen computer. Indstillinger, modeller og optagelser ligger uden for programmet, så de bliver, når du afinstallerer eller opdaterer. Tag en sikkerhedskopi af denne mappe nu og da:",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "mappen ved siden af Compose-filen",
-
   "inst_support_title": "Hjælp og support",
   "inst_support_diag": "<strong>Noget er galt?</strong> Gå til <strong>Settings → Logs</strong>, og klik på <strong>Download diagnostics</strong>. Filen indeholder alt, der skal bruges til en fejlrapport. Tjek den for kameraadresser, før du deler den.",
   "inst_support_youtube": "<strong>YouTube</strong> — søg efter “CowCatcher AI” for videovejledninger og tips.",
   "inst_support_email": "<strong>E-mail</strong> — spørgsmål eller problemer? Skriv til os direkte:",
   "inst_support_community": "<strong>Facebook- / Telegram-fællesskab</strong> — stil dit spørgsmål i vores gruppe for hurtig hjælp og erfaringer fra andre landmænd.",
-  "inst_back_to_platforms": "Tilbage til oversigten over platforme"
+  "inst_back_to_platforms": "Tilbage til oversigten over platforme",
+  "inst_alarm_title": "Telefonalarm, der vækker dig (valgfrit)",
+  "inst_alarm_intro": "Ud over Telegram kan AI Detector få din telefon til at ringe højt ved en detektion, også om natten, med et billede af det, den så. Den bruger den gratis app ntfy og kræver ingen konto.",
+  "inst_alarm_1": "Installer den gratis app <strong>ntfy</strong> på din telefon (Android eller iPhone).",
+  "inst_alarm_2": "Gå i AI Detector til <strong>Indstillinger → Alarmer</strong> (eller åbn en detektor) og klik på <strong>Forbind ntfy</strong>.",
+  "inst_alarm_3": "Abonner i ntfy-appen på det navn, AI Detector viser, bekræft testalarmen, og vælg hvilke detektorer der må udløse den.",
+  "inst_alarm_4": "På Android kan alarmen ringe gennem Forstyr ikke og blive ved, til du kigger; trinnene vises under tilslutningen. En iPhone viser alarmen, men er stille i lydløs tilstand.",
+  "inst_alarm_note": "Alle telefoner, der abonnerer på navnet, ringer, så hold navnet for dig selv. Alarmen går via tjenesten ntfy.sh og kræver internet. Med alarmen forbundet kan <strong>Kamera offline</strong> også advare dig, når et kamera ikke længere overvåges.",
+  "inst_heartbeat_title": "Få besked, når computeren stopper",
+  "inst_heartbeat_text": "Strømsvigt, nedbrud eller intet internet? Så kan AI Detector ikke selv sende noget. Et hjerteslag med den gratis tjeneste Healthchecks.io sender dig en Telegram-besked, når kaldene fra din computer stopper."
 }

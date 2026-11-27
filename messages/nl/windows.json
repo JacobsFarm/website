@@ -26,5 +26,7 @@
   "windows_keep_title": "24/7 laten draaien",
   "windows_keep_1": "<strong>Gebruik een netwerkkabel.</strong> Sluit zowel de pc als de IP-camera's bekabeld aan (UTP/ethernet). Wifi in een stal kan instabiel zijn, waardoor de camerabeelden haperen.",
   "windows_keep_2": "<strong>Geen slaapinstellingen nodig.</strong> Zolang de bewaking aan staat, houdt AI Detector de pc zelf wakker. Een laptop gaat nog wel slapen als je het deksel dichtdoet of als hij op de accu draait — laat een laptop dus open en aan de stroom.",
-  "windows_keep_3": "<strong>Updates.</strong> Kies <em>Check for Updates</em> in het menu van AI Detector (het pictogram naast de klok). Detectors die op een preset zijn gebaseerd krijgen nieuwere modellen ook vanzelf."
+  "windows_keep_3": "<strong>Updates.</strong> Kies <em>Check for Updates</em> in het menu van AI Detector (het pictogram naast de klok). Detectors die op een preset zijn gebaseerd krijgen nieuwere modellen ook vanzelf.",
+  "windows_step2_tip": "<strong>Tip:</strong> wil je die blauwe waarschuwing overslaan? Klik met de rechtermuisknop op het setupbestand, kies <em>Eigenschappen</em>, vink onderaan <strong>Blokkering opheffen</strong> aan en klik op <strong>OK</strong>. Start daarna de setup.",
+  "windows_step2_5": "Windows vraagt of de AI Detector het netwerk mag gebruiken. Klik op <strong>Toestaan</strong>: dat is nodig om je camera’s te vinden."
 }

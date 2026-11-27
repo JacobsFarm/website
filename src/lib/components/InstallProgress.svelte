@@ -13,9 +13,9 @@
 	let { current = 1 } = $props();
 
 	const steps = [
-		{ href: '/installation/hardware', icon: 'wrench', title: m.install_card_hardware_title },
-		{ href: '/installation/download', icon: 'download', title: m.install_card_software_title },
-		{ href: '/installation/options', icon: 'sliders', title: m.install_card_options_title }
+		{ href: '/installation/hardware/', icon: 'wrench', title: m.install_card_hardware_title },
+		{ href: '/installation/download/', icon: 'download', title: m.install_card_software_title },
+		{ href: '/installation/options/', icon: 'sliders', title: m.install_card_options_title }
 	];
 </script>
 

@@ -45,9 +45,9 @@
 	];
 
 	const installSteps = [
-		{ href: '/installation/hardware', title: m.install_card_hardware_title, desc: m.install_card_hardware_desc, img: imgHardware },
-		{ href: '/installation/download', title: m.install_card_software_title, desc: m.install_card_software_desc, img: imgSoftware },
-		{ href: '/installation/options', title: m.install_card_options_title, desc: m.install_card_options_desc, img: imgOptions }
+		{ href: '/installation/hardware/', title: m.install_card_hardware_title, desc: m.install_card_hardware_desc, img: imgHardware },
+		{ href: '/installation/download/', title: m.install_card_software_title, desc: m.install_card_software_desc, img: imgSoftware },
+		{ href: '/installation/options/', title: m.install_card_options_title, desc: m.install_card_options_desc, img: imgOptions }
 	];
 
 	// Tellers die oplopen zodra het statistiekblok in beeld komt.
@@ -108,7 +108,7 @@
 			<p class="lead rise" style="--d: 300ms">{m.home_hero_lead()}</p>
 
 			<div class="btn-row rise" style="--d: 380ms">
-				<a href="{base}/installation" class="btn btn--solid btn--lg">
+				<a href="{base}/installation/" class="btn btn--solid btn--lg">
 					{m.front_page_intro_btn_install()}
 					<span class="btn__icon"><Icon name="arrow-right" /></span>
 				</a>
@@ -278,7 +278,7 @@
 		<div class="story-cta" use:reveal>
 			<p>{m.front_page_intro_p5()}</p>
 			<div class="btn-row">
-				<a href="{base}/installation" class="btn btn--amber btn--lg">
+				<a href="{base}/installation/" class="btn btn--amber btn--lg">
 					{m.front_page_intro_btn_install()}
 					<span class="btn__icon"><Icon name="arrow-right" /></span>
 				</a>
@@ -340,9 +340,12 @@
 		</ol>
 
 		<div class="install-cta" use:reveal>
-			<a href="{base}/installation" class="btn btn--solid btn--lg">
+			<a href="{base}/installation/" class="btn btn--solid btn--lg">
 				{m.front_page_intro_btn_install()}
 				<span class="btn__icon"><Icon name="arrow-right" /></span>
+			</a>
+			<a href="{base}/tutorials/" class="btn btn--ghost btn--lg">
+				<Icon name="play" size={16} /> {m.tutorials_all()}
 			</a>
 		</div>
 	</div>
@@ -1090,6 +1093,8 @@
 
 	.install-cta {
 		display: flex;
+		flex-wrap: wrap;
+		gap: 0.75rem;
 		justify-content: center;
 		margin-top: 2.5rem;
 	}

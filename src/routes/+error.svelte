@@ -6,10 +6,11 @@
 	import Icon from '$lib/components/Icon.svelte';
 
 	const suggestions = [
-		{ href: '/installation', label: m.nav_install, icon: 'download' },
-		{ href: '/projects/cowcatcher', label: () => 'CowCatcher', icon: 'eye' },
-		{ href: '/projects/calvingcatcher', label: () => 'CalvingCatcher', icon: 'eye' },
-		{ href: '/about-us', label: m.nav_about, icon: 'users' }
+		{ href: '/installation/', label: m.nav_install, icon: 'download' },
+		{ href: '/tutorials/', label: m.nav_tutorials, icon: 'play' },
+		{ href: '/projects/cowcatcher/', label: () => 'CowCatcher', icon: 'eye' },
+		{ href: '/projects/calvingcatcher/', label: () => 'CalvingCatcher', icon: 'eye' },
+		{ href: '/about-us/', label: m.nav_about, icon: 'users' }
 	];
 </script>
 

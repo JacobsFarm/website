@@ -13,7 +13,7 @@ export const projects = [
 	{
 		id: 'cowcatcher',
 		name: 'CowCatcher',
-		link: '/projects/cowcatcher',
+		link: '/projects/cowcatcher/',
 		logo: cowcatcherLogo,
 		title: m.front_page_cowcatcher_title,
 		desc: m.front_page_cowcatcher_desc
@@ -21,7 +21,7 @@ export const projects = [
 	{
 		id: 'calvingcatcher',
 		name: 'CalvingCatcher',
-		link: '/projects/calvingcatcher',
+		link: '/projects/calvingcatcher/',
 		logo: calvingcatcherLogo,
 		title: m.front_page_calvingcatcher_title,
 		desc: m.front_page_calvingcatcher_desc
@@ -29,7 +29,7 @@ export const projects = [
 	{
 		id: 'ai-detector',
 		name: 'AI-Detector',
-		link: '/projects/ai-detector',
+		link: '/projects/ai-detector/',
 		logo: aiDetectorLogo,
 		title: m.front_page_ai_detector_title,
 		desc: m.front_page_ai_detector_desc

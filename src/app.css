@@ -20,6 +20,8 @@
 	--amber-soft: oklch(95% 0.045 80);
 	--amber-ink: oklch(48% 0.12 70);
 	--alert: oklch(63% 0.2 28); /* REC-lampje, live-indicator */
+	--alert-soft: oklch(95.5% 0.03 28);
+	--alert-ink: oklch(45% 0.15 28);
 
 	/* ── Neutralen ── */
 	--bg-color: oklch(98% 0.005 145); /* Off White */
@@ -615,6 +617,13 @@ kbd {
 	white-space: nowrap;
 }
 
+@media (max-width: 640px) {
+	.prose :not(pre) > code {
+		white-space: normal;
+		overflow-wrap: anywhere;
+	}
+}
+
 .prose kbd {
 	background: var(--card-bg);
 	box-shadow:
@@ -761,7 +770,8 @@ kbd {
 }
 
 .note,
-.tip-box {
+.tip-box,
+.warn-box {
 	position: relative;
 	margin: 1.25rem 0;
 	padding: 1rem 1.15rem 1rem 3rem;
@@ -773,7 +783,8 @@ kbd {
 }
 
 .note::before,
-.tip-box::before {
+.tip-box::before,
+.warn-box::before {
 	content: '!';
 	position: absolute;
 	left: 1rem;
@@ -800,8 +811,18 @@ kbd {
 	color: #ffffff;
 }
 
+.warn-box {
+	background: var(--alert-soft);
+}
+
+.warn-box::before {
+	background: var(--alert);
+	color: #ffffff;
+}
+
 .note :is(code, kbd),
-.tip-box :is(code, kbd) {
+.tip-box :is(code, kbd),
+.warn-box :is(code, kbd) {
 	background: oklch(100% 0 0 / 0.65);
 }
 

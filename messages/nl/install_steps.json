@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision & Dahua</strong> — RTSP en ONVIF staan meestal standaard aan. Je hoeft niets te wijzigen.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — sturen ook direct RTSP uit, op de standaardpoort 554.",
   "inst_cams_rtsp_enable_caption": "Voorbeeld: RTSP aanzetten in de Reolink-app onder Netwerk → Geavanceerd → Serverinstellingen.",
-
   "inst_setup_cams_title": "Setup 1 van 3 — Koppel je camera's",
   "inst_setup_cams_1": "Als AI Detector start, opent de setup vanzelf in je browser. Opent er niets? Ga naar <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Kies rechtsboven je taal: English, Nederlands, Deutsch of Français.",
+  "inst_setup_cams_2": "Kies rechtsboven je taal. De app spreekt English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe en 简体中文.",
   "inst_setup_cams_3": "De camera's die in je netwerk zijn gevonden, staan al aangevinkt. Een camera met een eigen login vraagt om gebruikersnaam en wachtwoord.",
   "inst_setup_cams_4": "Mist er een camera? Klik op <strong>Enter a stream URL instead</strong> en plak het RTSP-adres — zoek het op in de tabel hieronder.",
   "inst_setup_cams_5": "Controleer elk beeld en geef elke camera een naam die je herkent, bijvoorbeeld <code>Pinken stal 1</code> of <code>Afkalfhok</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "RTSP-URL",
   "inst_rtsp_finder_copy": "Kopiëren",
   "inst_rtsp_finder_copied": "Gekopieerd!",
-
   "inst_setup_det_title": "Setup 2 van 3 — Kies wat je wilt detecteren",
   "inst_setup_det_intro": "Een detector bewaakt de camera's die je kiest, neemt op wat hij ziet en waarschuwt de mensen die je aanwijst. Kies een <strong>preset</strong>: die levert het AI-model en alle instellingen, en houdt de detector bij met nieuwere modellen.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — tochtdetectie: herkent bespringgedrag.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Telefoonmeldingen en de AI-controle kun je meteen of later toevoegen (zie de volgende stappen).",
   "inst_setup_det_3": "Een tweede detector? Ga na de setup naar <strong>Detectors → Add detector</strong> en kies een andere preset.",
   "inst_setup_det_caption": "Setup-stap 2: kies een preset en de camera's die hij moet bewaken.",
-
   "inst_setup_start_title": "Setup 3 van 3 — Start de bewaking",
   "inst_setup_start_1": "Elke camera wordt één keer gecontroleerd. Klik daarna op <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "Bij de eerste start downloadt AI Detector het model en bereidt het voor op jouw hardware. Dat kan een paar minuten duren.",
+  "inst_setup_start_2": "Bij de eerste start downloadt de AI Detector het model dat voor jouw computer is geoptimaliseerd (ongeveer 2 GB) en bereidt het voor. Afhankelijk van je internetsnelheid duurt dat een paar minuten tot een half uur. De bewaking start daarna vanzelf.",
   "inst_setup_start_3": "Zodra de camera's echt worden geanalyseerd, opent <strong>Recordings</strong>. Het groene bolletje linksboven geeft <em>Monitoring</em> aan.",
   "inst_setup_start_4": "De bewaking blijft draaien als je de browser sluit.",
   "inst_setup_start_caption": "Setup-stap 3: elke camera wordt gecontroleerd, daarna start de bewaking en blijft die op de achtergrond draaien.",
-
   "inst_tele_title": "Meldingen op je telefoon via Telegram",
   "inst_tele_intro": "Telegram is de snelste gratis manier om een melding op je telefoon te krijgen, inclusief het videofragment van de detectie. Je maakt één keer je eigen bot; dat duurt ongeveer twee minuten.",
   "inst_tele_1": "Open een detector (of ga naar <strong>Settings → Alerts → Add recipient</strong>) en klik op <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Elke melding heeft 👍- en 👎-knoppen. Je antwoord wordt bij de opname in AI Detector bewaard, zo bouw je een beoordeeld archief op zonder de computer te openen.",
   "inst_tele_groups_title": "Meerdere ontvangers en stille uren",
   "inst_tele_groups_text": "Eén bot kan meldingen naar verschillende chats sturen: bijvoorbeeld een groep <em>Tochtdetectie</em> voor de boer en het personeel, en een groep <em>Afkalfmeldingen</em> voor de nachtdienst. Met <strong>stille uren</strong> (quiet hours) op een ontvanger komen meldingen tussen twee tijden (bijvoorbeeld 's nachts) zonder geluid binnen — ze komen wel binnen.",
-
   "inst_ai_title": "AI-controle tegen vals alarm (optioneel)",
   "inst_ai_intro": "Met de AI-controle (AI check) bekijkt een vision-taalmodel elk fragment nog een keer voordat je een melding krijgt. Zo valt het meeste valse alarm weg. De preset levert de vraag die de AI beantwoordt.",
   "inst_ai_1": "Ga naar <strong>Settings → AI check</strong> en klik op <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "Per detector kun je de AI-controle aan- of uitzetten.",
   "inst_ai_note": "Google biedt een beperkt gratis gebruik. Fragmenten van gedetecteerde gebeurtenissen worden naar Google gestuurd ter controle; al het andere blijft op je computer. Andere aanbieders stel je in onder <em>Advanced → AI connections</em>.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini: plak je API-sleutel uit Google AI Studio.",
-
   "inst_phone_title": "AI Detector openen op je telefoon",
   "inst_phone_intro": "Je kunt het dashboard openen op elke telefoon, tablet of computer in hetzelfde netwerk als de AI-computer.",
   "inst_phone_1": "Ga op de AI-computer naar <strong>Settings → Devices</strong> en klik op <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "Op een iPhone of iPad zet je AI Detector op je beginscherm; hij opent dan als een app. De uitleg staat onder <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "De verbinding binnen je netwerk is niet versleuteld (HTTP). Gebruik hem alleen op een netwerk dat je vertrouwt.",
   "inst_phone_caption": "Settings → Devices: koppel telefoons en computers met een eenmalige code.",
-
   "inst_storage_title": "Waar je gegevens staan",
   "inst_storage_text": "Elke detectie wordt als opname met foto en videofragment op je eigen computer bewaard. Instellingen, modellen en opnames staan buiten het programma, dus ze blijven bewaard als je de-installeert of bijwerkt. Maak af en toe een back-up van deze map:",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "de map naast het Compose-bestand",
-
   "inst_support_title": "Hulp en ondersteuning",
   "inst_support_diag": "<strong>Gaat er iets mis?</strong> Ga naar <strong>Settings → Logs</strong> en klik op <strong>Download diagnostics</strong>. Dat bestand bevat alles wat nodig is voor een foutmelding. Controleer het op camera-adressen voordat je het deelt.",
   "inst_support_youtube": "<strong>YouTube</strong> — zoek op “CowCatcher AI” voor uitlegvideo's en tips.",
   "inst_support_email": "<strong>E-mail</strong> — vragen of problemen? Mail ons direct:",
   "inst_support_community": "<strong>Facebook / Telegram-community</strong> — stel je vraag in onze groep voor snelle hulp en ervaringen van collega-boeren.",
-  "inst_back_to_platforms": "Terug naar het platformoverzicht"
+  "inst_back_to_platforms": "Terug naar het platformoverzicht",
+  "inst_alarm_title": "Telefoonalarm dat je wakker maakt (optioneel)",
+  "inst_alarm_intro": "Naast Telegram kan de AI Detector je telefoon hard laten afgaan bij een detectie, ook ’s nachts, met een foto van wat hij zag. Dat gaat via de gratis app ntfy en je hebt geen account nodig.",
+  "inst_alarm_1": "Installeer de gratis app <strong>ntfy</strong> op je telefoon (Android of iPhone).",
+  "inst_alarm_2": "Ga in de AI Detector naar <strong>Instellingen → Meldingen</strong> (of open een detector) en klik op <strong>ntfy koppelen</strong>.",
+  "inst_alarm_3": "Abonneer je in de ntfy-app op de naam die de AI Detector toont, bevestig het testalarm en kies welke detectoren het alarm mogen laten afgaan.",
+  "inst_alarm_4": "Op Android kan het alarm door Niet storen heen afgaan en blijven afgaan tot je kijkt; de stappen zie je tijdens het koppelen. Een iPhone toont het alarm, maar blijft stil in de stille modus.",
+  "inst_alarm_note": "Elke telefoon die op de naam is geabonneerd, gaat af; houd de naam dus voor jezelf. Het alarm gaat via de dienst ntfy.sh en heeft internet nodig. Met een gekoppeld alarm kan <strong>Camera offline</strong> je ook waarschuwen als een camera niet meer wordt bewaakt.",
+  "inst_heartbeat_title": "Gewaarschuwd worden als de computer stopt",
+  "inst_heartbeat_text": "Stroomstoring, crash of geen internet? Dan kan de AI Detector zelf niets meer versturen. Een hartslag met het gratis Healthchecks.io stuurt je een Telegram-bericht als de oproepen van je computer stoppen."
 }

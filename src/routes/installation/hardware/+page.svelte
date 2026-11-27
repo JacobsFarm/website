@@ -28,22 +28,30 @@
             id: 'computer',
             title: m.hardware_computer_title(),
             intro: m.hardware_computer_intro(),
+            tip: m.hardware_computer_tip(),
             options: [
+                {
+                    title: m.hardware_comp_opt2_title(),
+                    desc: m.hardware_comp_opt2_desc(),
+                    moreInfo: m.hardware_comp_opt2_more(),
+                    imageSrc: imgMacMini,
+                    imageAlt: 'Mac mini with an M6 chip',
+                    recommended: true,
+                    links: [
+                        { text: m.hardware_link_mac_guide(), url: `${base}/installation/download/macOS/`, icon: 'book' },
+                        { text: m.hardware_link_install_video(), url: `${base}/tutorials/install-ai-detector/`, icon: 'play' }
+                    ]
+                },
                 {
                     title: m.hardware_comp_opt1_title(),
                     desc: m.hardware_comp_opt1_desc(),
                     moreInfo: m.hardware_comp_opt1_more(),
                     imageSrc: imgNvidiaDesktop,
                     imageAlt: 'Gaming PC with an NVIDIA graphics card',
-                    links: [{ text: 'See setup video', url: links.youtubeSearch, icon: 'play' }]
-                },
-                {
-                    title: m.hardware_comp_opt2_title(),
-                    desc: m.hardware_comp_opt2_desc(),
-                    moreInfo: m.hardware_comp_opt2_more(),
-                    imageSrc: imgMacMini,
-                    imageAlt: 'Mac mini',
-                    links: []
+                    links: [
+                        { text: m.hardware_link_windows_guide(), url: `${base}/installation/download/Windows/`, icon: 'book' },
+                        { text: m.hardware_link_install_video(), url: `${base}/tutorials/install-ai-detector/`, icon: 'play' }
+                    ]
                 },
                 {
                     title: m.hardware_comp_opt3_title(),
@@ -51,13 +59,7 @@
                     moreInfo: m.hardware_comp_opt3_more(),
                     imageSrc: imgJetsonNano,
                     imageAlt: 'NVIDIA Jetson Orin Nano',
-                    links: [
-                        {
-                            text: 'View Docker installation guide',
-                            url: `${base}/installation/download/docker`,
-                            icon: 'book'
-                        }
-                    ]
+                    links: [{ text: m.hardware_link_docker_guide(), url: `${base}/installation/download/docker/`, icon: 'book' }]
                 },
                 {
                     title: m.hardware_comp_opt4_title(),
@@ -65,7 +67,7 @@
                     moreInfo: m.hardware_comp_opt4_more(),
                     imageSrc: imgStandardDesktop,
                     imageAlt: 'Refurbished desktop PC',
-                    links: []
+                    links: [{ text: m.hardware_link_windows_guide(), url: `${base}/installation/download/Windows/`, icon: 'book' }]
                 }
             ]
         },
@@ -81,9 +83,9 @@
                     imageSrc: imgHardware1,
                     imageAlt: 'IP camera',
                     links: [
-                        { text: 'See camera setup video', url: links.youtubeSearch, icon: 'play' },
+                        { text: m.hardware_link_cam_video(), url: links.youtubeSearch, icon: 'play' },
                         {
-                            text: 'Camera Setup Manual (PDF)',
+                            text: m.hardware_link_cam_manual(),
                             url: `${base}/docs/camera_setup_trackmix.pdf`,
                             icon: 'book'
                         }
@@ -102,7 +104,7 @@
                     moreInfo: m.hardware_req_opt1_more(),
                     imageSrc: imgPoeSwitch,
                     imageAlt: 'PoE network switch',
-                    links: [{ text: 'Buy PoE Switch on AliExpress', url: shop('poe-switch'), icon: 'cart' }]
+                    links: [{ text: m.hardware_link_shop(), url: shop('poe-switch'), icon: 'cart' }]
                 },
                 {
                     title: m.hardware_req_opt2_title(),
@@ -110,7 +112,7 @@
                     moreInfo: m.hardware_req_opt2_more(),
                     imageSrc: imgEthernetCable,
                     imageAlt: 'Network cable',
-                    links: [{ text: 'Buy Cat6 Cable on AliExpress', url: shop('cat6-cable'), icon: 'cart' }]
+                    links: [{ text: m.hardware_link_shop(), url: shop('cat6-cable'), icon: 'cart' }]
                 },
                 {
                     title: m.hardware_req_opt3_title(),
@@ -118,7 +120,7 @@
                     moreInfo: m.hardware_req_opt3_more(),
                     imageSrc: imgPlaceholder,
                     imageAlt: 'Waterproof junction box',
-                    links: [{ text: 'Buy Waterproof Box', url: shop('waterproof-junction-box'), icon: 'cart' }]
+                    links: [{ text: m.hardware_link_shop(), url: shop('waterproof-junction-box'), icon: 'cart' }]
                 }
             ]
         },
@@ -134,8 +136,8 @@
                     imageSrc: imgCrimpTool,
                     imageAlt: 'Pass-through crimp tool',
                     links: [
-                        { text: 'See how to crimp cables', url: links.youtubeSearch, icon: 'play' },
-                        { text: 'Buy Pass-through Tool', url: shop('pass-through-crimp-tool'), icon: 'cart' }
+                        { text: m.hardware_link_crimp_video(), url: 'https://www.youtube.com/results?search_query=pass+through+rj45+crimp+cat6', icon: 'play' },
+                        { text: m.hardware_link_shop(), url: shop('pass-through-crimp-tool'), icon: 'cart' }
                     ]
                 },
                 {
@@ -144,7 +146,7 @@
                     moreInfo: m.hardware_diy_opt2_more(),
                     imageSrc: imgPlaceholder,
                     imageAlt: 'Pass-through connectors',
-                    links: [{ text: 'Buy Connectors (Cat6)', url: shop('cat6-pass-through-connector'), icon: 'cart' }]
+                    links: [{ text: m.hardware_link_shop(), url: shop('cat6-pass-through-connector'), icon: 'cart' }]
                 },
                 {
                     title: m.hardware_diy_opt3_title(),
@@ -153,8 +155,8 @@
                     imageSrc: imgPlaceholder,
                     imageAlt: 'Components for a DIY junction box',
                     links: [
-                        { text: 'Buy Junction Box', url: shop('waterproof-junction-box'), icon: 'cart' },
-                        { text: 'Buy Cable Glands', url: shop('cable-gland'), icon: 'cart' }
+                        { text: `${m.hardware_link_shop()} · junction box`, url: shop('waterproof-junction-box'), icon: 'cart' },
+                        { text: `${m.hardware_link_shop()} · cable gland`, url: shop('cable-gland'), icon: 'cart' }
                     ]
                 },
                 {
@@ -176,7 +178,7 @@
     eyebrow="{m.step_label()} 1"
     title={m.hardware_title()}
     lead={m.hardware_intro()}
-    crumbs={[{ href: '/installation', label: m.nav_install() }]}
+    crumbs={[{ href: '/installation/', label: m.nav_install() }]}
 />
 
 <div class="container">
@@ -194,14 +196,15 @@
             number="0{i + 1}"
             title={stripNumber(section.title)}
             intro={section.intro}
+            tip={section.tip}
             options={section.options}
         />
     {/each}
 
     <div class="pager-wrap">
         <PagerNav
-            prev={{ href: '/installation', label: m.hardware_btn_back() }}
-            next={{ href: '/installation/download', label: stripNumber(m.install_card_software_title()), hint: m.next_step() }}
+            prev={{ href: '/installation/', label: m.hardware_btn_back() }}
+            next={{ href: '/installation/download/', label: stripNumber(m.install_card_software_title()), hint: m.next_step() }}
         />
     </div>
 </div>

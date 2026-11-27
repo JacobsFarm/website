@@ -60,7 +60,7 @@
 		<div class="placeholder" class:hidden={ready}>
 			<span class="play" aria-hidden="true"><Icon name="play" size={28} /></span>
 			<span class="hint">{m.home_video_placeholder()}</span>
-			<a class="yt-link" href="https://youtu.be/{videoId}" target="_blank" rel="noopener noreferrer">
+			<a class="yt-link" href="https://www.youtube.com/watch?v={videoId}" target="_blank" rel="noopener noreferrer">
 				{m.home_video_open()}
 				<Icon name="arrow-up-right" size={14} />
 			</a>

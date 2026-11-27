@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision & Dahua</strong> — RTSP e ONVIF sono di solito già attivi. Non devi cambiare nulla.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — trasmettono anche loro RTSP di serie, sulla porta standard 554.",
   "inst_cams_rtsp_enable_caption": "Esempio: attivare RTSP nell'app Reolink in Rete → Avanzate → Impostazioni server.",
-
   "inst_setup_cams_title": "Configurazione 1 di 3 — Collega le telecamere",
   "inst_setup_cams_1": "Quando AI Detector si avvia, la configurazione si apre da sola nel browser. Non si apre nulla? Vai su <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Scegli la lingua in alto a destra: English, Nederlands, Deutsch o Français.",
+  "inst_setup_cams_2": "Scegli la lingua in alto a destra. L’app parla English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe e 简体中文.",
   "inst_setup_cams_3": "Le telecamere trovate nella tua rete sono già selezionate. Una telecamera che ha un proprio accesso chiede nome utente e password.",
   "inst_setup_cams_4": "Manca una telecamera? Clicca su <strong>Enter a stream URL instead</strong> e incolla il suo indirizzo RTSP — usa la tabella qui sotto per trovarlo.",
   "inst_setup_cams_5": "Controlla ogni immagine e dai a ogni telecamera un nome riconoscibile, per esempio <code>Giovenche stalla 1</code> oppure <code>Box parto</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "URL RTSP",
   "inst_rtsp_finder_copy": "Copia",
   "inst_rtsp_finder_copied": "Copiato!",
-
   "inst_setup_det_title": "Configurazione 2 di 3 — Scegli cosa rilevare",
   "inst_setup_det_intro": "Un rilevatore osserva le telecamere che scegli, registra ciò che vede e avvisa le persone che selezioni. Scegli un <strong>preset</strong>: fornisce il modello AI e tutte le impostazioni, e tiene il rilevatore aggiornato con i modelli più recenti.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — rilevamento del calore: riconosce il comportamento di monta.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Gli avvisi sul telefono e il controllo AI si possono aggiungere subito o più tardi (vedi i passi successivi).",
   "inst_setup_det_3": "Vuoi un secondo rilevatore? Dopo la configurazione vai su <strong>Detectors → Add detector</strong> e scegli un altro preset.",
   "inst_setup_det_caption": "Passo 2 della configurazione: scegli un preset e le telecamere che deve osservare.",
-
   "inst_setup_start_title": "Configurazione 3 di 3 — Avvia il monitoraggio",
   "inst_setup_start_1": "Ogni telecamera viene controllata una volta. Poi clicca su <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "Al primo avvio AI Detector scarica il modello e lo prepara per il tuo hardware. Può richiedere qualche minuto.",
+  "inst_setup_start_2": "Al primo avvio l’AI Detector scarica il modello ottimizzato per il tuo computer (circa 2 GB) e lo prepara. A seconda della connessione servono da pochi minuti a mezz’ora. Poi il monitoraggio parte da solo.",
   "inst_setup_start_3": "Appena le telecamere vengono davvero analizzate, si apre <strong>Recordings</strong>. Il punto verde in alto a sinistra dice <em>Monitoring</em>.",
   "inst_setup_start_4": "Il monitoraggio continua a funzionare anche quando chiudi il browser.",
   "inst_setup_start_caption": "Passo 3 della configurazione: ogni telecamera viene controllata, poi il monitoraggio parte e continua in background.",
-
   "inst_tele_title": "Avvisi sul telefono tramite Telegram",
   "inst_tele_intro": "Telegram è il modo gratuito più rapido per ricevere un avviso sul telefono, clip video del rilevamento inclusa. Crei il tuo bot una sola volta; ci vogliono circa due minuti.",
   "inst_tele_1": "Apri un rilevatore (oppure vai su <strong>Settings → Alerts → Add recipient</strong>) e clicca su <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Ogni avviso ha i pulsanti 👍 e 👎. La tua risposta viene salvata con la registrazione in AI Detector, così costruisci un archivio verificato senza dover aprire il computer.",
   "inst_tele_groups_title": "Più destinatari e orari silenziosi",
   "inst_tele_groups_text": "Un bot può inviare avvisi a chat diverse: per esempio un gruppo <em>Rilevamento calore</em> per il titolare e il personale, e un gruppo <em>Avvisi parto</em> per il turno di notte. Con <strong>Quiet hours</strong> attivi per un destinatario, gli avvisi tra due orari (per esempio di notte) arrivano senza suono — ma arrivano comunque.",
-
   "inst_ai_title": "Controllo AI contro i falsi allarmi (facoltativo)",
   "inst_ai_intro": "Con il controllo AI, un modello di visione e linguaggio riesamina ogni clip prima che tu riceva un avviso. Filtra gran parte dei falsi allarmi. Il preset fornisce la domanda a cui l'AI risponde.",
   "inst_ai_1": "Vai su <strong>Settings → AI check</strong> e clicca su <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "In ogni rilevatore puoi attivare o disattivare il controllo AI.",
   "inst_ai_note": "Google offre un piano gratuito con limiti. Le clip degli eventi rilevati vengono inviate a Google per la verifica; tutto il resto resta sul tuo computer. Altri fornitori si possono impostare in <em>Advanced → AI connections</em>.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini: incolla la tua chiave API di Google AI Studio.",
-
   "inst_phone_title": "Apri AI Detector sul telefono",
   "inst_phone_intro": "Puoi aprire la dashboard su ogni telefono, tablet o computer collegato alla stessa rete del computer AI.",
   "inst_phone_1": "Sul computer AI vai su <strong>Settings → Devices</strong> e clicca su <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "Su iPhone o iPad puoi mettere AI Detector nella schermata Home; si apre poi come un'app. Le istruzioni si trovano in <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "La connessione all'interno della tua rete non è cifrata (HTTP). Usala solo su una rete di cui ti fidi.",
   "inst_phone_caption": "Settings → Devices: collega telefoni e computer con un codice monouso.",
-
   "inst_storage_title": "Dove vengono salvati i tuoi dati",
   "inst_storage_text": "Ogni rilevamento viene salvato come registrazione con foto e clip video sul tuo computer. Impostazioni, modelli e registrazioni si trovano fuori dal programma, quindi restano anche quando disinstalli o aggiorni. Fai ogni tanto un backup di questa cartella:",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "la cartella accanto al file Compose",
-
   "inst_support_title": "Aiuto e supporto",
   "inst_support_diag": "<strong>Qualcosa non va?</strong> Vai su <strong>Settings → Logs</strong> e clicca su <strong>Download diagnostics</strong>. Quel file contiene tutto il necessario per una segnalazione di bug. Controllalo per eventuali indirizzi delle telecamere prima di condividerlo.",
   "inst_support_youtube": "<strong>YouTube</strong> — cerca “CowCatcher AI” per video guide e consigli.",
   "inst_support_email": "<strong>E-mail</strong> — domande o problemi? Scrivici direttamente:",
   "inst_support_community": "<strong>Community Facebook / Telegram</strong> — fai la tua domanda nel nostro gruppo per un aiuto rapido ed esperienze di altri allevatori.",
-  "inst_back_to_platforms": "Torna alla panoramica delle piattaforme"
+  "inst_back_to_platforms": "Torna alla panoramica delle piattaforme",
+  "inst_alarm_title": "Allarme sul telefono che ti sveglia (facoltativo)",
+  "inst_alarm_intro": "Oltre a Telegram, l’AI Detector può far suonare forte il tuo telefono a ogni rilevamento, anche di notte, con un’immagine di ciò che ha visto. Usa l’app gratuita ntfy, senza account.",
+  "inst_alarm_1": "Installa l’app gratuita <strong>ntfy</strong> sul telefono (Android o iPhone).",
+  "inst_alarm_2": "Nell’AI Detector vai su <strong>Impostazioni → Avvisi</strong> (o apri un rilevatore) e clicca <strong>Collega ntfy</strong>.",
+  "inst_alarm_3": "Nell’app ntfy iscriviti al nome mostrato dall’AI Detector, conferma l’allarme di prova e scegli quali rilevatori possono farlo suonare.",
+  "inst_alarm_4": "Su Android l’allarme può suonare anche con Non disturbare e continuare finché non guardi; i passaggi sono mostrati durante il collegamento. Un iPhone mostra l’allarme ma resta silenzioso in modalità silenziosa.",
+  "inst_alarm_note": "Suona ogni telefono iscritto al nome, quindi tienilo per te. L’allarme passa dal servizio ntfy.sh e richiede Internet. Con l’allarme collegato, <strong>Telecamera offline</strong> può avvisarti anche quando una telecamera non è più sorvegliata.",
+  "inst_heartbeat_title": "Essere avvisati quando il computer si ferma",
+  "inst_heartbeat_text": "Blackout, blocco o niente Internet? Allora l’AI Detector non può più inviare nulla da solo. Un battito con il servizio gratuito Healthchecks.io ti manda un messaggio Telegram quando le chiamate del computer si fermano."
 }

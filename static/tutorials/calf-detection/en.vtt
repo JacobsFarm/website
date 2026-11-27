@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00:00.210 --> 00:00:07.590
+In this video I want to show how you, as a farmer, can deal with keeping the calf with the cow for longer.
+
+00:00:07.590 --> 00:00:13.230
+Without constantly getting an alert about the calf walking around the pen, which is correct after all.
+
+00:00:14.110 --> 00:00:19.150
+We are at the cameras, and now we go to the detectors.
+
+00:00:19.430 --> 00:00:23.750
+There is one detector running: the Calving Catcher, which also looks for the calf.
+
+00:00:25.510 --> 00:00:28.170
+What we do now is go to the settings.
+
+00:00:28.170 --> 00:00:33.450
+Under the settings there is Advanced. We click it and this menu opens.
+
+00:00:35.150 --> 00:00:43.170
+This shows all the settings of the Calving Catcher, including those for the calf.
+
+00:00:43.870 --> 00:00:46.990
+There are two ways to tackle this problem.
+
+00:00:48.010 --> 00:00:53.170
+First, we can lengthen the time between alerts of a calf detection.
+
+00:00:54.470 --> 00:00:57.090
+By default that is every 15 minutes.
+
+00:00:58.170 --> 00:01:03.790
+But we can lengthen it, for example to 3600 seconds.
+
+00:01:03.890 --> 00:01:07.950
+That would mean there has to be at least an hour between two alerts.
+
+00:01:08.850 --> 00:01:11.350
+And of course we can make it even longer.
+
+00:01:12.190 --> 00:01:17.450
+Any number of seconds is fine.
+
+00:01:17.990 --> 00:01:25.330
+In this case, 86,400 seconds is a cooldown period of one day.
+
+00:01:25.330 --> 00:01:27.330
+So within...
+
+00:01:28.170 --> 00:01:30.930
+24 hours no new alert is sent.
+
+00:01:30.930 --> 00:01:37.790
+So after 24 hours, an alert for a calf detection may be sent again.
+
+00:01:37.790 --> 00:01:40.130
+And you can make this as long as you like.
+
+00:01:40.130 --> 00:01:42.130
+Make it three days, make it five days.
+
+00:01:42.130 --> 00:01:44.130
+The value is in seconds.
+
+00:01:44.130 --> 00:01:50.130
+Once you have changed it, in this case to one day, click Save here at the bottom left.
+
+00:01:50.130 --> 00:01:55.070
+It has been saved.
+
+00:01:55.070 --> 00:02:00.890
+A second way to tackle this is if you do not want any calf alerts at all.
+
+00:02:00.890 --> 00:02:02.890
+Or only want an alert of the calf in rare cases.
+
+00:02:02.890 --> 00:02:10.890
+What we change then is the value 0.85 under the heading confidence.
+
+00:02:10.890 --> 00:02:12.890
+The default value is replaced by 0.99.
+
+00:02:12.890 --> 00:02:21.890
+That is an unrealistically high threshold, so you will hardly get any calf detections any more.
+
+00:02:21.890 --> 00:02:25.200
+Then we click Save again.
+
+00:02:25.200 --> 00:02:31.200
+So with this configuration you will effectively get no calf alerts.
+
+00:02:31.200 --> 00:02:32.200
+Because the confidence for the calf...
+
+00:02:32.200 --> 00:02:34.200
+Because the required confidence is far too high.
+
+00:02:34.200 --> 00:02:36.200
+Unrealistically high, even.
+
+00:02:36.200 --> 00:02:46.200
+But if a detection does still happen, there are at least 24 hours between alerts.
+
+00:02:46.200 --> 00:02:48.200
+Then we go to Monitoring.
+
+00:02:48.200 --> 00:02:52.200
+And you can see that all four cameras have started monitoring again.
+
+00:02:52.200 --> 00:02:54.200
+With the new settings.

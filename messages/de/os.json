@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Lade die macOS-Datei aus dem neuesten Release herunter.",
   "os_btn_releases": "Zu den Releases",
   "os_macos_req_title": "Bevor du anfängst",
-  "os_macos_req_text": "Du brauchst einen Mac mit Apple-Silicon-Chip (M1, M2, M3, M4 oder neuer) und macOS 14 Sonoma oder neuer. Die Erkennung läuft auf der Neural Engine des Chips: schnell, leise und sehr energiesparend.",
+  "os_macos_req_text": "Du brauchst einen Mac mit Apple-Silicon-Chip (M1, M2, M3, M4, M5, M6 oder neuer) und macOS 14 Sonoma oder neuer. Die Erkennung läuft auf der Neural Engine des Chips: schnell, leise und sehr energiesparend.",
   "os_table_mac": "Dein Mac",
   "os_table_engine": "Die Erkennung läuft auf",
   "os_hw_apple_silicon": "Mac mit Apple Silicon (M1 oder neuer), macOS 14+",

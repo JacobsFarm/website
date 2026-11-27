@@ -2,65 +2,46 @@
   "ai_detector_desc": "Die App, die CowCatcher und CalvingCatcher auf deinem eigenen Computer ausführt.",
   "ai_detector_title": "AI Detector",
   "ai_detector_text": "Informationen zur Anwendung AI Detector.",
-
   "ai_detector_hero_title": "AI Detector",
   "ai_detector_hero_subtitle": "Eine App für CowCatcher und CalvingCatcher. Sie überwacht deine Stallkameras auf deinem eigenen Computer, zeichnet auf, was sie sieht, und benachrichtigt dich auf dem Handy.",
   "ai_detector_btn_download": "App herunterladen",
   "ai_detector_btn_github": "Quellcode ansehen",
   "ai_detector_hero_img_alt": "Die Seite Recordings von AI Detector mit erkannten Aufreitvorgängen",
-
   "ai_detector_about_title": "Ein Detector, unendlich viele Möglichkeiten",
   "ai_detector_about_p1": "Bei Cowcatcher AI trainieren und entwickeln wir die Vision-Modelle. AI Detector ist die App, die diese Modelle in der Praxis anwendet: Sie liest deine Kameras, erkennt Brunst und Kalbung und sagt dir, wenn es wichtig wird.",
   "ai_detector_about_p2": "Du installierst sie wie jedes andere Programm. Die Einrichtung läuft in drei Schritten im Browser — Kameras, Erkennung, Start — und ein Preset liefert alles, was die KI braucht. Presets halten deine Detectors außerdem selbst mit neueren Modellen aktuell.",
-
   "ai_detector_video_title": "In zwei Minuten sehen",
   "ai_detector_video_desc": "Vom Download bis zur ersten Benachrichtigung: ein kurzer Rundgang durch Einrichtung, Telegram-Benachrichtigungen, KI-Prüfung und Aufnahmen (auf Englisch).",
-
   "ai_detector_media_title": "Smarte Aufnahme & Benachrichtigungen",
-
   "ai_detector_image_title": "Bilderkennung",
   "ai_detector_image_desc": "Jede Erkennung wird mit dem besten erfassten Moment gespeichert, mit eingezeichnetem Erkennungsfeld. In Telegram bekommst du das Bild sofort und kannst es mit 👍 bestätigen oder mit 👎 als Fehlalarm markieren.",
-
   "ai_detector_video_clip_title": "Videoerkennung",
   "ai_detector_video_desc_clip": "Der Detector zeichnet außerdem einen kurzen, flüssigen Videoclip des Ereignisses auf, unabhängig von der Leistung deines Computers. Praktisch bei der Brunsterkennung: Du siehst sofort, ob eine Kuh stillsteht oder aktiv aufreitet.",
-
   "ai_detector_feature_local_title": "100% lokale Verarbeitung",
   "ai_detector_feature_local_desc": "Deine Aufnahmen bleiben auf deinem Hof. Die Erkennung läuft komplett auf deinem eigenen Computer — auf einer NVIDIA-GPU, mit Windows ML, der Apple Neural Engine oder einem Jetson.",
-
   "ai_detector_feature_network_title": "Auf jedem Handy",
   "ai_detector_feature_network_desc": "Öffne das Dashboard auf deinem Handy, Tablet oder Laptop über aidetector.local. Verbinde dich mit einem einmaligen Code und lege es auf den Home-Bildschirm.",
-
   "ai_detector_feature_custom_title": "Presets, die aktuell bleiben",
   "ai_detector_feature_custom_desc": "Wähle Cow Catcher oder Calving Catcher und du bist fertig. Neuere Modelle kommen von selbst; keine Konfigurationsdateien nötig.",
-
-  "ai_detector_feature_alerts_title": "Telegram mit Prüfung",
-  "ai_detector_feature_alerts_desc": "Benachrichtigungen mit Foto und Clip, 👍/👎-Buttons, mehrere Empfänger und ruhige Stunden in der Nacht.",
-
+  "ai_detector_feature_alerts_title": "Telegram & Handy-Alarm",
+  "ai_detector_feature_alerts_desc": "Meldungen mit Foto und Clip, 👍/👎-Tasten, mehrere Empfänger und Ruhezeiten – dazu ein optionaler lauter Handy-Alarm (ntfy), der Sie nachts weckt.",
   "ai_detector_feature_check_title": "KI-Prüfung (optional)",
   "ai_detector_feature_check_desc": "Lass Google Gemini jeden Clip noch einmal prüfen, bevor du eine Benachrichtigung bekommst, um Fehlalarme herauszufiltern.",
-
   "ai_detector_feature_monitor_title": "Immer wissen, dass es läuft",
   "ai_detector_feature_monitor_desc": "Live-Status pro Kamera, eine 30-Tage-Historie, was wirklich überwacht wurde, Meldungen bei Ausfall und ein Heartbeat.",
-
   "ai_detector_how_title": "So funktioniert es",
   "ai_detector_step_1_title": "Schritt 1: Kameras verbinden",
   "ai_detector_step_1_desc": "Die Kameras in deinem Netzwerk werden von selbst gefunden. Prüfe die Bilder und gib jeder Kamera einen Namen.",
-
   "ai_detector_step_2_title": "Schritt 2: Wähle, was erkannt werden soll",
   "ai_detector_step_2_desc": "Wähle ein Preset — Cow Catcher für Brunst, Calving Catcher für Kalbung — und die Kameras, die es überwachen soll.",
-
   "ai_detector_step_3_title": "Schritt 3: Überwachung starten",
   "ai_detector_step_3_desc": "Die Überwachung läuft im Hintergrund, auch wenn du den Browser schließt. Erkennungen erscheinen unter Recordings und auf deinem Handy.",
-
   "ai_detector_install_title": "Einfache Installation",
   "ai_detector_install_desc": "Herunterladen, öffnen, fertig. Die Einrichtung passiert im Browser.",
-
   "ai_detector_install_win_title": "Windows",
   "ai_detector_install_win_desc": "Windows 10 (22H2+) oder 11. Entpacke die ZIP-Datei und starte das Setup. Nutzt eine NVIDIA-GPU, wenn vorhanden, sonst Windows ML.",
-
   "ai_detector_install_mac_title": "Mac",
   "ai_detector_install_mac_desc": "macOS 14+ auf Apple Silicon. Öffne die .dmg-Datei und ziehe AI Detector in Programme.",
-
   "ai_detector_install_docker_title": "Ubuntu, Docker & Jetson",
   "ai_detector_install_docker_desc": "Ubuntu-Paket, Docker-Container für einen NVIDIA-PC oder ein Jetson Orin mit JetPack 7.2."
 }

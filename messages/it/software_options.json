@@ -1,7 +1,6 @@
 {
   "options_title": "Uso dell'app",
   "options_intro": "Tutto si configura nell'app stessa — nessun file di configurazione. Questa guida illustra ogni pagina: Recordings, Cameras, Detectors e Settings.",
-
   "use_rec_title": "Recordings",
   "use_rec_desc": "Ogni rilevamento compare qui con una foto e una breve clip video, raggruppato per giorno.",
   "use_rec_1": "Clicca su una registrazione per aprire il visualizzatore. Con i tasti freccia scorri tutte le registrazioni.",
@@ -11,7 +10,6 @@
   "use_rec_5": "<strong>Export</strong> scarica uno ZIP del filtro attuale, facoltativamente tra due date. <em>Only the original photos</em> crea uno ZIP piccolo da condividere con le persone che addestrano i modelli.",
   "use_rec_caption": "Recordings: ogni rilevamento con confidenza, categoria e la tua verifica.",
   "use_rec_viewer_caption": "Il visualizzatore riproduce la clip con il riquadro di rilevamento; conferma o segnala come falso allarme.",
-
   "use_cam_title": "Cameras",
   "use_cam_desc": "Le immagini dal vivo di tutte le telecamere, con in alto i riquadri dell'ultimo rilevamento.",
   "use_cam_1": "<strong>Live</strong> mostra fino a quattro immagini dal vivo alla volta; clicca su <em>Show live picture</em> per le altre. Una telecamera mostra la prima immagine al successivo keyframe, che può richiedere alcuni secondi.",
@@ -20,7 +18,6 @@
   "use_cam_4": "<strong>Add camera</strong> cerca di nuovo nella rete, oppure ti permette di inserire tu un URL del flusso.",
   "use_cam_caption": "Cameras → Live: ogni telecamera con il rilevatore che la osserva.",
   "use_cam_history_caption": "Cameras → History: il verde indica l'osservazione, i segni sono registrazioni, i vuoti mostrano perché non si è visto nulla.",
-
   "use_det_title": "Detectors & presets",
   "use_det_desc": "Un rilevatore collega telecamere, un modello AI e i destinatari degli avvisi.",
   "use_det_1": "Clicca su un rilevatore per cambiare preset, nome, telecamere, destinatari Telegram e controllo AI. Le modifiche valgono solo dopo <strong>Save detector</strong>.",
@@ -30,38 +27,33 @@
   "use_det_5": "Hai cambiato tu le impostazioni di rilevamento? Allora il rilevatore le mantiene e non viene più aggiornato. Scegli di nuovo il preset per tornare a seguirlo.",
   "use_det_caption": "Detectors: ogni rilevatore con le sue telecamere e i destinatari degli avvisi.",
   "use_det_edit_caption": "Un rilevatore: scegli un preset, un nome e le telecamere che osserva.",
-
   "use_status_title": "Stato del monitoraggio & heartbeat",
   "use_status_desc": "Lo stato in alto a sinistra è sempre visibile. Cliccalo per vedere per ogni telecamera se in questo momento vengono analizzate immagini recenti.",
   "use_status_1": "Una telecamera risulta monitorata solo quando immagini recenti vengono davvero analizzate da tutti i rilevatori assegnati.",
   "use_status_2": "<strong>Pause monitoring</strong> ferma il rilevamento e lo mantiene in pausa anche al successivo avvio.",
   "use_status_3": "Un rilevatore che si ferma viene riavviato da solo. Se continua a fallire, ogni pagina mostra che il monitoraggio si è fermato e il motivo.",
-  "use_status_4": "<strong>Heartbeat</strong>: mentre è in funzione, il rilevatore chiama un indirizzo a tua scelta (per esempio Healthchecks.io o Uptime Kuma). Ricevi un avviso quando le chiamate si interrompono — l'unico avviso che funziona anche quando il computer è spento o senza internet.",
+  "use_status_4": "<strong>Battito</strong>: il rilevatore chiama un indirizzo a tua scelta (per esempio Healthchecks.io o Uptime Kuma) finché è attivo. Quando le chiamate si fermano ricevi un avviso — l’unico che funziona anche a computer spento o senza Internet. Vedi il <a href=\"../../tutorials/heartbeat-healthchecks/\">tutorial</a>.",
   "use_status_caption": "Stato del monitoraggio: ogni telecamera con l'ora della sua ultima immagine analizzata.",
-
   "use_alerts_title": "Avvisi & quiet hours",
   "use_alerts_desc": "In Settings → Alerts gestisci tutti quelli che ricevono un messaggio Telegram.",
   "use_alerts_1": "Ogni destinatario sceglie quali rilevatori lo avvisano. Un bot può servire più chat.",
   "use_alerts_2": "<strong>Quiet hours</strong>: gli avvisi tra due orari arrivano senza suono, per esempio di notte. Lascia vuoti entrambi i campi per avere il suono a qualsiasi ora.",
-  "use_alerts_3": "<strong>Camera offline notifications</strong> (disattivate di default): dopo cinque minuti senza monitoraggio, i destinatari della telecamera ricevono un messaggio, e un altro quando torna online.",
+  "use_alerts_3": "<strong>Telecamera offline</strong> (disattivato di default, compare quando è collegato un allarme sul telefono): una telecamera non sorvegliata da cinque minuti viene segnalata all’allarme come notifica normale, e di nuovo quando torna.",
   "use_alerts_4": "<strong>Send test alert</strong> verifica che un destinatario funzioni ancora.",
   "use_alerts_caption": "Settings → Alerts: destinatari e notifiche di telecamera offline.",
   "use_alerts_quiet_caption": "Un destinatario con quiet hours dalle 22:00 alle 06:00.",
-
   "use_ai_title": "AI check",
   "use_ai_desc": "Facoltativo: lascia che un modello di visione e linguaggio ricontrolli ogni clip prima dell'invio di un avviso.",
   "use_ai_1": "Collega Google Gemini con una chiave di Google AI Studio. Gli altri fornitori si impostano in <em>Advanced → AI connections</em>.",
   "use_ai_2": "Una connessione viene salvata una sola volta e usata da quanti rilevatori vuoi, ognuno con la propria domanda.",
   "use_ai_3": "La registrazione mostra se il controllo AI ha confermato o respinto l'evento.",
   "use_ai_caption": "Settings → AI check: senza una connessione, ogni rilevamento viene registrato e segnalato così com'è.",
-
   "use_devices_title": "Altri dispositivi e il tuo telefono",
   "use_devices_desc": "Apri la dashboard su qualsiasi telefono o computer della stessa rete.",
   "use_devices_1": "Vai su <code>http://aidetector.local/</code> oppure <code>http://&lt;computer-IP&gt;/</code>. La porta 80 è già in uso? Allora l'app passa a <code>:8080</code> o al numero libero successivo. Il codice QR in <strong>Settings → Devices</strong> apre sempre l'indirizzo giusto.",
   "use_devices_2": "Ogni nuovo browser ha bisogno di un codice monouso da <strong>Settings → Devices</strong>. Il computer su cui gira AI Detector è sempre attendibile.",
   "use_devices_3": "Su iPhone o iPad puoi aggiungere l'app alla schermata Home. Su Android, <strong>Settings → Home screen shortcut</strong> spiega come aggiungere un collegamento.",
   "use_devices_caption": "Settings → Devices: i browser collegati, ognuno con un pulsante per rimuovere l'accesso.",
-
   "use_storage_title": "Archiviazione, backup & ripristino",
   "use_storage_desc": "Le registrazioni vengono conservate finché non le rimuovi. Non viene cancellato nulla automaticamente.",
   "use_storage_1": "<strong>Settings → Storage</strong> mostra lo spazio libero e rimuove le registrazioni precedenti a una data che scegli. Esporta prima quelle che vuoi conservare.",
@@ -70,16 +62,19 @@
   "use_storage_4": "Un file di impostazioni non si legge? Ogni pagina offre allora <strong>Recover settings</strong>, che ripristina le ultime impostazioni valide.",
   "use_storage_caption": "Settings → Storage: spazio libero, rimozione delle registrazioni vecchie e cache dei modelli.",
   "use_settings_caption": "Settings: avvisi, controllo AI, dispositivi, archiviazione, avanzate, lingua, aspetto e backup.",
-
   "use_more_title": "Advanced, logs, lingua & aggiornamenti",
   "use_more_desc": "Per chi vuole mettere a punto le impostazioni o ha bisogno di aiuto.",
-  "use_more_1": "<strong>Advanced</strong> ti permette di modificare soglie, prompt e motore di rilevamento in JSON. Serve solo in situazioni particolari; i preset impostano tutto per te.",
+  "use_more_1": "<strong>Avanzate</strong> permette di modificare soglie, domande e motore di rilevamento in JSON. Serve solo in casi particolari; i preset impostano tutto. Ogni impostazione è spiegata nel <a href=\"../configuration/\">riferimento di configurazione</a>.",
   "use_more_2": "<strong>Logs</strong> mostra l'attività recente. <em>Download diagnostics</em> raccoglie log, dettagli di sistema e impostazioni anonimizzate per una segnalazione di bug.",
-  "use_more_3": "<strong>Language</strong>: English, Nederlands, Deutsch o Français — per ogni dispositivo e per le risposte di Telegram.",
+  "use_more_3": "<strong>Lingua</strong>: English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe o 简体中文 — per ogni dispositivo e per le risposte su Telegram.",
   "use_more_4": "<strong>Appearance</strong>: chiaro, scuro o automatico.",
-  "use_more_5": "<strong>Updates</strong>: su Windows e Mac tramite <em>Check for Updates</em> nel menu di AI Detector; su Ubuntu installando il nuovo pacchetto; con Docker tramite <code>docker compose pull</code>.",
-
+  "use_more_5": "<strong>Aggiornamenti</strong>: su Windows e Mac con <em>Check for Updates</em> nel menu di AI Detector; su Ubuntu con i normali aggiornamenti di sistema; con Docker con <code>docker compose pull && docker compose up -d</code>.",
   "options_btn_back": "Torna alla panoramica dell'installazione",
   "options_github_text": "Leggi la guida completa dell'applicazione, segnala un bug o segui le nuove release sulla pagina GitHub ufficiale di AI Detector.",
-  "options_github_btn": "Vedi su GitHub"
+  "options_github_btn": "Vedi su GitHub",
+  "use_alarm_title": "Allarme sul telefono (ntfy)",
+  "use_alarm_desc": "Un allarme forte sul telefono a ogni rilevamento, anche di notte, con un’immagine di ciò che il rilevatore ha visto.",
+  "use_alarm_1": "<strong>Collega ntfy</strong> in Impostazioni → Avvisi o nell’editor del rilevatore. Installa l’app gratuita ntfy, iscriviti al nome mostrato e conferma l’allarme di prova. Nessun account.",
+  "use_alarm_2": "C’è un allarme per installazione; scegli quali rilevatori possono farlo suonare. Funziona insieme a Telegram o senza.",
+  "use_alarm_3": "Android può suonare anche con Non disturbare finché non guardi. Un iPhone mostra l’allarme ma resta silenzioso in modalità silenziosa. L’allarme richiede Internet."
 }

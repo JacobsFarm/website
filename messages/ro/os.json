@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Descarcă fișierul pentru macOS din ultima versiune.",
   "os_btn_releases": "Mergi la Releases",
   "os_macos_req_title": "Înainte să începi",
-  "os_macos_req_text": "Ai nevoie de un Mac cu Apple Silicon (M1, M2, M3, M4 sau mai nou) și macOS 14 Sonoma sau mai nou. Detecția rulează pe Neural Engine al cipului: rapidă, silențioasă și foarte eficientă energetic.",
+  "os_macos_req_text": "Ai nevoie de un Mac cu Apple Silicon (M1, M2, M3, M4, M5, M6 sau mai nou) și macOS 14 Sonoma sau mai nou. Detecția rulează pe Neural Engine al cipului: rapidă, silențioasă și foarte eficientă energetic.",
   "os_table_mac": "Mac-ul tău",
   "os_table_engine": "Detecția rulează pe",
   "os_hw_apple_silicon": "Mac cu Apple Silicon (M1 sau mai nou), macOS 14+",

@@ -9,7 +9,7 @@
   "inst_cams_rtsp_enable_caption": "Exemplo: ativando o RTSP no app Reolink em Network → Advanced → Server Settings.",
   "inst_setup_cams_title": "Configuração 1 de 3 — Conecte suas câmeras",
   "inst_setup_cams_1": "Quando o AI Detector inicia, a configuração abre sozinha no seu navegador. Não abriu nada? Acesse <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Escolha seu idioma no canto superior direito: English, Nederlands, Deutsch ou Français.",
+  "inst_setup_cams_2": "Escolha o idioma no canto superior direito. A aplicação fala English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe e 简体中文.",
   "inst_setup_cams_3": "As câmeras encontradas na sua rede já vêm marcadas. Uma câmera que precisa de login próprio pede o nome de usuário e a senha.",
   "inst_setup_cams_4": "Falta uma câmera? Clique em <strong>Enter a stream URL instead</strong> e cole o endereço RTSP dela — use a tabela abaixo para encontrá-lo.",
   "inst_setup_cams_5": "Confira cada imagem e dê a cada câmera um nome que você reconheça, por exemplo <code>Heifers barn 1</code> ou <code>Calving pen</code>.",
@@ -35,7 +35,7 @@
   "inst_setup_det_caption": "Passo 2 da configuração: escolha um preset e as câmeras que ele deve observar.",
   "inst_setup_start_title": "Configuração 3 de 3 — Iniciar o monitoramento",
   "inst_setup_start_1": "Cada câmera é verificada uma vez. Depois clique em <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "Na primeira inicialização, o AI Detector baixa o modelo e o prepara para o seu hardware. Isso pode levar alguns minutos.",
+  "inst_setup_start_2": "No primeiro arranque, o AI Detector descarrega o modelo otimizado para o seu computador (cerca de 2 GB) e prepara-o. Conforme a ligação, demora de alguns minutos a meia hora. Depois a monitorização começa sozinha.",
   "inst_setup_start_3": "Assim que as câmeras estiverem realmente sendo analisadas, <strong>Recordings</strong> abre. O ponto verde no canto superior esquerdo mostra <em>Monitoring</em>.",
   "inst_setup_start_4": "O monitoramento continua funcionando quando você fecha o navegador.",
   "inst_setup_start_caption": "Passo 3 da configuração: cada câmera é verificada, depois o monitoramento começa e continua em segundo plano.",
@@ -80,5 +80,14 @@
   "inst_support_youtube": "<strong>YouTube</strong> — pesquise por “CowCatcher AI” para guias em vídeo e dicas.",
   "inst_support_email": "<strong>E-mail</strong> — dúvidas ou problemas? Escreva diretamente para nós:",
   "inst_support_community": "<strong>Comunidade no Facebook / Telegram</strong> — faça sua pergunta no nosso grupo para ajuda rápida e experiências de outros produtores.",
-  "inst_back_to_platforms": "Voltar para a visão geral das plataformas"
+  "inst_back_to_platforms": "Voltar para a visão geral das plataformas",
+  "inst_alarm_title": "Alarme no telemóvel que o acorda (opcional)",
+  "inst_alarm_intro": "Além do Telegram, o AI Detector pode fazer tocar alto o seu telemóvel numa deteção, também de noite, com uma imagem do que viu. Usa a app gratuita ntfy e não precisa de conta.",
+  "inst_alarm_1": "Instale a app gratuita <strong>ntfy</strong> no telemóvel (Android ou iPhone).",
+  "inst_alarm_2": "No AI Detector vá a <strong>Definições → Alertas</strong> (ou abra um detetor) e clique em <strong>Ligar ntfy</strong>.",
+  "inst_alarm_3": "Na app ntfy subscreva o nome que o AI Detector mostra, confirme o alarme de teste e escolha que detetores o podem fazer tocar.",
+  "inst_alarm_4": "No Android o alarme pode tocar mesmo em Não incomodar e continuar até olhar; os passos são mostrados ao ligar. Um iPhone mostra o alarme mas fica em silêncio no modo silencioso.",
+  "inst_alarm_note": "Toca cada telemóvel que subscreveu o nome, por isso guarde-o para si. O alarme passa pelo serviço ntfy.sh e precisa de Internet. Com o alarme ligado, <strong>Câmara offline</strong> também o pode avisar quando uma câmara deixa de ser vigiada.",
+  "inst_heartbeat_title": "Ser avisado quando o computador para",
+  "inst_heartbeat_text": "Falha de energia, bloqueio ou sem Internet? Então o AI Detector não consegue enviar nada sozinho. Um batimento com o serviço gratuito Healthchecks.io envia-lhe uma mensagem no Telegram quando as chamadas do computador param."
 }

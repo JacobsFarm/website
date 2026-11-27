@@ -5,7 +5,7 @@
   "os_macos_download_desc": "Download macOS-filen fra den seneste udgivelse.",
   "os_btn_releases": "Gå til Releases",
   "os_macos_req_title": "Før du går i gang",
-  "os_macos_req_text": "Du skal bruge en Mac med Apple Silicon (M1, M2, M3, M4 eller nyere) og macOS 14 Sonoma eller nyere. Registreringen kører på chippens Neural Engine: hurtig, stille og meget energieffektiv.",
+  "os_macos_req_text": "Du skal bruge en Mac med Apple Silicon (M1, M2, M3, M4, M5, M6 eller nyere) og macOS 14 Sonoma eller nyere. Registreringen kører på chippens Neural Engine: hurtig, stille og meget energieffektiv.",
   "os_table_mac": "Din Mac",
   "os_table_engine": "Registreringen kører på",
   "os_hw_apple_silicon": "Mac med Apple Silicon (M1 eller nyere), macOS 14+",

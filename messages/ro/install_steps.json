@@ -7,10 +7,9 @@
   "inst_cams_hikvision": "<strong>Hikvision și Dahua</strong> — RTSP și ONVIF sunt de obicei activate implicit. Nu trebuie să schimbi nimic.",
   "inst_cams_others": "<strong>Axis, Foscam, Ubiquiti UniFi</strong> — și acestea transmit RTSP din fabrică, pe portul standard 554.",
   "inst_cams_rtsp_enable_caption": "Exemplu: activarea RTSP în aplicația Reolink, la Network → Advanced → Server Settings.",
-
   "inst_setup_cams_title": "Configurare 1 din 3 — Conectează camerele",
   "inst_setup_cams_1": "Când pornește AI Detector, configurarea se deschide singură în browser. Nu se deschide nimic? Mergi la <code>http://localhost/</code>.",
-  "inst_setup_cams_2": "Alege limba din dreapta sus: English, Nederlands, Deutsch sau Français.",
+  "inst_setup_cams_2": "Alege limba din dreapta sus. Aplicația vorbește English, Nederlands, Deutsch, Français, Español, Italiano, Português, Polski, Русский, Українська, Türkçe și 简体中文.",
   "inst_setup_cams_3": "Camerele găsite în rețea sunt deja bifate. O cameră care are propriul login cere numele de utilizator și parola.",
   "inst_setup_cams_4": "Lipsește o cameră? Apasă pe <strong>Enter a stream URL instead</strong> și lipește adresa ei RTSP — folosește tabelul de mai jos ca s-o găsești.",
   "inst_setup_cams_5": "Verifică fiecare imagine și dă fiecărei camere un nume pe care îl recunoști, de exemplu <code>Heifers barn 1</code> sau <code>Calving pen</code>.",
@@ -24,7 +23,6 @@
   "inst_rtsp_finder_url_th": "Adresă RTSP",
   "inst_rtsp_finder_copy": "Copiază",
   "inst_rtsp_finder_copied": "Copiat!",
-
   "inst_setup_det_title": "Configurare 2 din 3 — Alege ce să detectezi",
   "inst_setup_det_intro": "Un detector urmărește camerele pe care le alegi, înregistrează ce vede și trimite alerte persoanelor pe care le alegi. Alege un <strong>preset</strong>: acesta oferă modelul AI și toate setările și menține detectorul actualizat cu modele mai noi.",
   "inst_preset_cc": "<strong>Cow Catcher</strong> — detectarea căldurii: recunoaște comportamentul de montare.",
@@ -35,14 +33,12 @@
   "inst_setup_det_2": "Alertele pe telefon și verificarea AI pot fi adăugate imediat sau mai târziu (vezi pașii următori).",
   "inst_setup_det_3": "Vrei un al doilea detector? După configurare, mergi la <strong>Detectors → Add detector</strong> și alege alt preset.",
   "inst_setup_det_caption": "Pasul 2 al configurării: alege un preset și camerele pe care trebuie să le urmărească.",
-
   "inst_setup_start_title": "Configurare 3 din 3 — Pornește monitorizarea",
   "inst_setup_start_1": "Fiecare cameră este verificată o dată. Apoi apasă pe <strong>Start monitoring</strong>.",
-  "inst_setup_start_2": "La prima pornire, AI Detector descarcă modelul și îl pregătește pentru hardware-ul tău. Acest lucru poate dura câteva minute.",
+  "inst_setup_start_2": "La prima pornire, AI Detector descarcă modelul optimizat pentru calculatorul tău (circa 2 GB) și îl pregătește. În funcție de internet durează de la câteva minute la o jumătate de oră. Apoi monitorizarea pornește singură.",
   "inst_setup_start_3": "Imediat ce camerele sunt analizate cu adevărat, se deschide <strong>Recordings</strong>. Punctul verde din stânga sus spune <em>Monitoring</em>.",
   "inst_setup_start_4": "Monitorizarea continuă să ruleze când închizi browserul.",
   "inst_setup_start_caption": "Pasul 3 al configurării: fiecare cameră este verificată, apoi monitorizarea pornește și rulează în fundal.",
-
   "inst_tele_title": "Alerte pe telefon prin Telegram",
   "inst_tele_intro": "Telegram este cel mai rapid mod gratuit de a primi o alertă pe telefon, inclusiv clipul video al detecției. Îți creezi o singură dată propriul bot; durează aproximativ două minute.",
   "inst_tele_1": "Deschide un detector (sau mergi la <strong>Settings → Alerts → Add recipient</strong>) și apasă pe <strong>Connect Telegram</strong>.",
@@ -56,7 +52,6 @@
   "inst_tele_review_text": "Fiecare alertă are butoanele 👍 și 👎. Răspunsul tău este salvat împreună cu înregistrarea în AI Detector, așa că vei construi o arhivă verificată fără să deschizi calculatorul.",
   "inst_tele_groups_title": "Mai mulți destinatari și ore de liniște",
   "inst_tele_groups_text": "Un singur bot poate trimite alerte către conversații diferite: de exemplu un grup <em>Detectarea căldurii</em> pentru fermier și angajați și un grup <em>Alerte fătare</em> pentru tura de noapte. Cu <strong>quiet hours</strong> activate la un destinatar, alertele trimise între două ore (de exemplu noaptea) ajung fără sunet — tot ajung.",
-
   "inst_ai_title": "Verificare AI împotriva alarmelor false (opțional)",
   "inst_ai_intro": "Cu verificarea AI, un model vizual-lingvistic se uită din nou la fiecare clip înainte să primești o alertă. Filtrează majoritatea alarmelor false. Presetul oferă întrebarea la care răspunde AI-ul.",
   "inst_ai_1": "Mergi la <strong>Settings → AI check</strong> și apasă pe <strong>Connect Google Gemini</strong>.",
@@ -65,7 +60,6 @@
   "inst_ai_4": "În fiecare detector poți activa sau dezactiva verificarea AI.",
   "inst_ai_note": "Google oferă un nivel gratuit limitat. Clipurile cu evenimentele detectate sunt trimise către Google pentru verificare; tot restul rămâne pe calculatorul tău. Alți furnizori pot fi setați la <em>Advanced → AI connections</em>.",
   "inst_ai_caption": "Settings → AI check → Connect Google Gemini: lipește cheia API din Google AI Studio.",
-
   "inst_phone_title": "Deschide AI Detector pe telefon",
   "inst_phone_intro": "Poți deschide panoul de control pe orice telefon, tabletă sau calculator din aceeași rețea cu calculatorul AI.",
   "inst_phone_1": "Pe calculatorul AI, mergi la <strong>Settings → Devices</strong> și apasă pe <strong>Connect a device</strong>.",
@@ -74,7 +68,6 @@
   "inst_phone_4": "Pe iPhone sau iPad poți pune AI Detector pe ecranul de start; atunci se deschide ca o aplicație. Instrucțiunile se găsesc la <strong>Settings → Home screen</strong>.",
   "inst_phone_note": "Conexiunea din interiorul rețelei tale nu este criptată (HTTP). Folosește-o doar pe o rețea de încredere.",
   "inst_phone_caption": "Settings → Devices: conectează telefoane și calculatoare cu un cod de unică folosință.",
-
   "inst_storage_title": "Unde sunt stocate datele tale",
   "inst_storage_text": "Fiecare detecție este salvată ca înregistrare, cu fotografie și clip video, pe propriul tău calculator. Setările, modelele și înregistrările există în afara programului, așa că rămân și după dezinstalare sau actualizare. Fă din când în când o copie de rezervă a acestui folder:",
   "inst_storage_win": "Windows",
@@ -82,11 +75,19 @@
   "inst_storage_linux": "Linux",
   "inst_storage_docker": "Docker",
   "inst_storage_docker_path": "folderul de lângă fișierul Compose",
-
   "inst_support_title": "Ajutor și suport",
   "inst_support_diag": "<strong>Ceva nu merge?</strong> Mergi la <strong>Settings → Logs</strong> și apasă pe <strong>Download diagnostics</strong>. Acest fișier conține tot ce trebuie pentru un raport de eroare. Verifică-l pentru adresele camerelor înainte să îl trimiți.",
   "inst_support_youtube": "<strong>YouTube</strong> — caută „CowCatcher AI” pentru ghiduri video și sfaturi.",
   "inst_support_email": "<strong>E-mail</strong> — întrebări sau probleme? Scrie-ne direct:",
   "inst_support_community": "<strong>Comunitatea Facebook / Telegram</strong> — pune întrebarea în grupul nostru pentru ajutor rapid și experiențe de la alți fermieri.",
-  "inst_back_to_platforms": "Înapoi la prezentarea platformelor"
+  "inst_back_to_platforms": "Înapoi la prezentarea platformelor",
+  "inst_alarm_title": "Alarmă pe telefon care te trezește (opțional)",
+  "inst_alarm_intro": "Pe lângă Telegram, AI Detector poate face telefonul să sune tare la o detecție, chiar și noaptea, cu o imagine a ce a văzut. Folosește aplicația gratuită ntfy și nu necesită cont.",
+  "inst_alarm_1": "Instalează aplicația gratuită <strong>ntfy</strong> pe telefon (Android sau iPhone).",
+  "inst_alarm_2": "În AI Detector mergi la <strong>Setări → Alerte</strong> (sau deschide un detector) și apasă <strong>Conectează ntfy</strong>.",
+  "inst_alarm_3": "În aplicația ntfy abonează-te la numele afișat de AI Detector, confirmă alarma de test și alege ce detectoare o pot declanșa.",
+  "inst_alarm_4": "Pe Android alarma poate suna chiar și în modul Nu deranja și continuă până te uiți; pașii apar la conectare. Un iPhone afișează alarma, dar rămâne silențios în modul silențios.",
+  "inst_alarm_note": "Sună fiecare telefon abonat la nume, așa că păstrează-l pentru tine. Alarma trece prin serviciul ntfy.sh și are nevoie de internet. Cu alarma conectată, <strong>Cameră offline</strong> te poate avertiza și când o cameră nu mai este supravegheată.",
+  "inst_heartbeat_title": "Avertizare când calculatorul se oprește",
+  "inst_heartbeat_text": "Pană de curent, blocare sau fără internet? Atunci AI Detector nu mai poate trimite nimic singur. Un puls cu serviciul gratuit Healthchecks.io îți trimite un mesaj pe Telegram când apelurile de la calculator se opresc."
 }

@@ -9,6 +9,8 @@
     import InstallStep from '$lib/components/InstallStep.svelte';
     import PagerNav from '$lib/components/PagerNav.svelte';
     import Icon from '$lib/components/Icon.svelte';
+    import TutorialCallout from '$lib/components/TutorialCallout.svelte';
+    import { base } from '$app/paths';
 
     import imgRecordings from '$lib/assets/app_recordings.jpg';
     import imgViewer from '$lib/assets/app_recording_viewer.jpg';
@@ -34,6 +36,7 @@
             title: m.use_rec_title,
             desc: m.use_rec_desc,
             items: [m.use_rec_1, m.use_rec_2, m.use_rec_3, m.use_rec_4, m.use_rec_5],
+            tutorials: ['send-detections'],
             images: [
                 { src: imgRecordings, alt: 'Recordings page of AI Detector', caption: m.use_rec_caption },
                 { src: imgViewer, alt: 'Recording viewer with a detected mount', caption: m.use_rec_viewer_caption }
@@ -52,6 +55,7 @@
             title: m.use_det_title,
             desc: m.use_det_desc,
             items: [m.use_det_1, m.use_det_2, m.use_det_3, m.use_det_4, m.use_det_5],
+            tutorials: ['tail-up', 'calf-detection'],
             images: [
                 { src: imgDetectors, alt: 'Detectors page with three detectors', caption: m.use_det_caption },
                 { src: imgDetectorEdit, alt: 'Editing a detector: preset and cameras', caption: m.use_det_edit_caption }
@@ -61,6 +65,7 @@
             title: m.use_status_title,
             desc: m.use_status_desc,
             items: [m.use_status_1, m.use_status_2, m.use_status_3, m.use_status_4],
+            tutorials: ['heartbeat-healthchecks'],
             images: [{ src: imgStatus, alt: 'Monitoring status page', caption: m.use_status_caption }]
         },
         {
@@ -71,6 +76,12 @@
                 { src: imgAlerts, alt: 'Alerts settings with Telegram recipients', caption: m.use_alerts_caption },
                 { src: imgQuietHours, alt: 'Telegram recipient with quiet hours', caption: m.use_alerts_quiet_caption }
             ]
+        },
+        {
+            title: m.use_alarm_title,
+            desc: m.use_alarm_desc,
+            items: [m.use_alarm_1, m.use_alarm_2, m.use_alarm_3],
+            images: []
         },
         {
             title: m.use_ai_title,
@@ -110,7 +121,7 @@
     eyebrow="{m.step_label()} 3"
     title={m.options_title()}
     lead={m.options_intro()}
-    crumbs={[{ href: '/installation', label: m.nav_install() }]}
+    crumbs={[{ href: '/installation/', label: m.nav_install() }]}
 />
 
 <div class="container progress-wrap">
@@ -130,8 +141,20 @@
                     <li>{@html item()}</li>
                 {/each}
             </ul>
+            {#each section.tutorials ?? [] as slug (slug)}
+                <TutorialCallout {slug} />
+            {/each}
         </InstallStep>
     {/each}
+
+    <div class="github config-cta">
+        <span class="github-icon"><Icon name="code" size={24} /></span>
+        <p>{m.config_lead()}</p>
+        <a href="{base}/installation/configuration/" class="btn btn--solid">
+            {m.config_title()}
+            <span class="btn__icon"><Icon name="arrow-right" /></span>
+        </a>
+    </div>
 
     <div class="github">
         <span class="github-icon"><Icon name="github" size={26} /></span>
@@ -143,8 +166,8 @@
     </div>
 
     <PagerNav
-        prev={{ href: '/installation/download', label: stripNumber(m.install_card_software_title()), hint: `${m.step_label()} 2` }}
-        next={{ href: '/installation', label: m.options_btn_back(), hint: m.nav_install() }}
+        prev={{ href: '/installation/download/', label: stripNumber(m.install_card_software_title()), hint: `${m.step_label()} 2` }}
+        next={{ href: '/installation/configuration/', label: m.config_title(), hint: m.config_eyebrow() }}
     />
 </DocLayout>
 
@@ -155,6 +178,14 @@
 
     .section-desc {
         color: var(--text-muted);
+    }
+
+    .config-cta {
+        margin-top: 2.5rem !important;
+    }
+
+    .config-cta + .github {
+        margin-top: 1rem !important;
     }
 
     .github {

@@ -56,7 +56,7 @@ Everything runs on your own machine. There is no account and no upload — only 
 
 | | Minimum | Recommended |
 |---|---|---|
-| **Computer** | Any recent desktop or refurbished PC | NVIDIA GPU desktop, Mac mini (M-series), or Jetson Orin Nano |
+| **Computer** | Any recent desktop or refurbished PC | **Mac mini M6** (our recommendation), an NVIDIA GPU desktop, or a Jetson Orin Nano |
 | **Camera** | One PoE IP camera with an RTSP stream, pointed at the group | One per pen you want covered |
 | **Network** | PoE switch and Cat6 cabling to the barn | — |
 | **OS** | Windows 10 22H2+ / 11, macOS 14+ (Apple Silicon), Ubuntu, or Docker/Jetson | — |
@@ -104,6 +104,8 @@ Translations live in `messages/<locale>/`. Correcting a phrase means editing one
 | [Hardware](https://jacobsfarm.github.io/website/installation/hardware/) | Computers, cameras, PoE switches, cabling, DIY enclosures |
 | [Download](https://jacobsfarm.github.io/website/installation/download/) | Windows, macOS and Linux/Docker/Jetson install guides |
 | [Using the app](https://jacobsfarm.github.io/website/installation/options/) | Tour of every page and setting of the AI Detector app |
+| [Configuration reference](https://jacobsfarm.github.io/website/installation/configuration/) | Every `config.json` setting of the AI Detector, where it goes in the JSON, with ready-made examples |
+| [Tutorials](https://jacobsfarm.github.io/website/tutorials/) | Video tutorials with chapters, Dutch and English subtitles and a written step-by-step guide |
 | [Projects](https://jacobsfarm.github.io/website/projects/cowcatcher/) | Background on CowCatcher, CalvingCatcher and the AI Detector |
 | [About us](https://jacobsfarm.github.io/website/about-us/) | Who builds this and why |
 
@@ -139,7 +141,7 @@ Independent coverage of the project:
 ## Community and support
 
 - 💬 [Facebook group](https://www.facebook.com/groups/1765616710830233)
-- 📨 [Telegram channel](https://web.telegram.org/a/#-1003640103247)
+- 📨 [Telegram group](https://web.telegram.org/a/#-1003640103247) — also reachable as [jacobsfarm.github.io/website/telegram](https://jacobsfarm.github.io/website/telegram/)
 - 🗣️ [Prikkebord forum thread](https://www.prikkebord.nl/topic/362840/)
 - 📧 cowcatcherai@gmail.com
 - 🐛 Website problems → [open an issue](https://github.com/JacobsFarm/website/issues)

@@ -1,0 +1,114 @@
+{
+	"nl": {
+		"title": "Alarm als de AI Detector uitvalt",
+		"subtitle": "Korte handleiding – een hartslag met Healthchecks.io en Telegram",
+		"intro": "Valt de stroom uit, crasht de computer of loopt de internetverbinding vast, dan kan de AI Detector zelf geen melding meer sturen. Met een <strong>hartslag</strong> (heartbeat) roept de detector elke minuut een adres aan. Blijft die oproep uit, dan stuurt de gratis dienst <strong>Healthchecks.io</strong> je een bericht in Telegram. Dit is de enige waarschuwing die ook werkt als de computer uit staat of geen internet heeft.",
+		"steps": [
+			{
+				"title": "Maak een gratis account op Healthchecks.io",
+				"blocks": [
+					{ "type": "p", "html": "Ga naar <strong>healthchecks.io</strong> en klik op <strong>Sign Up</strong>. Vul je e-mailadres in en klik op de inloglink in de mail die je krijgt. Je bent dan meteen ingelogd." },
+					{ "type": "p", "html": "Stel daarna een wachtwoord in via <strong>Account Settings</strong>. Je krijgt eerst nog een bevestigingscode per mail; daarna kun je het wachtwoord aanmaken." },
+					{ "type": "tip", "html": "Het gratis abonnement van Healthchecks.io is ruim voldoende voor één of enkele AI Detectors." }
+				]
+			},
+			{
+				"title": "Koppel Telegram",
+				"blocks": [
+					{ "type": "p", "html": "Open in je project het tabblad <strong>Integrations</strong> en kies bij <strong>Telegram</strong> voor <strong>Add Integration</strong>. Healthchecks.io legt daar ook zelf uit hoe het werkt." },
+					{ "type": "p", "html": "Zoek in Telegram naar <code>@HealthchecksBot</code> (let op de juiste naam) en druk op <strong>Start</strong>. De bot stuurt je een speciale link. Open die, log in met je e-mailadres en wachtwoord en klik op <strong>Connect Telegram</strong>." },
+					{ "type": "p", "html": "Vanaf nu kun je zowel per e-mail als via Telegram gewaarschuwd worden." }
+				]
+			},
+			{
+				"title": "Stel het schema in",
+				"blocks": [
+					{ "type": "p", "html": "Open je check en klik onder <strong>Schedule</strong> op <strong>Change Schedule</strong>. Kies bij <strong>Period</strong> <code>1 minute</code>: zo vaak roept de AI Detector het adres aan." },
+					{ "type": "p", "html": "Met <strong>Grace Time</strong> bepaal je hoe lang Healthchecks.io na de laatste oproep wacht voordat je een melding krijgt. Met bijvoorbeeld <code>30 minutes</code> of <code>1 hour</code> word je niet meteen gestoord bij een korte herstart of update." },
+					{ "type": "figure", "src": "schedule.jpg", "alt": "Healthchecks.io schema met Period 1 minuut en Grace Time", "caption": "Period = de tijd tussen twee oproepen. Grace Time = hoe lang er gewacht wordt voordat je een melding krijgt." }
+				]
+			},
+			{
+				"title": "Kopieer je ping-adres",
+				"blocks": [
+					{ "type": "p", "html": "Bovenaan de check staat onder <strong>How To Ping</strong> je persoonlijke adres, zoals <code>https://hc-ping.com/1a2b3c4d-…</code>. Klik erop om het te kopiëren." },
+					{ "type": "note", "html": "<strong>Houd dit adres voor jezelf.</strong> Iedereen die het kent, kan je check op ‘online’ zetten." }
+				]
+			},
+			{
+				"title": "Zet het adres in de AI Detector",
+				"blocks": [
+					{ "type": "p", "html": "<strong>Manier 1 (aanbevolen):</strong> klik linksboven op de bewakingsstatus. Plak het adres onder <strong>Heartbeat</strong> (hartslag) en sla op." },
+					{ "type": "p", "html": "<strong>Manier 2, via de JSON:</strong> ga naar <strong>Settings → Advanced</strong>, document <em>Detection</em>. Zet het blok <code>health</code> op het hoogste niveau, naast <code>detectors</code> (dus niet binnen een detector). Let goed op de komma’s en aanhalingstekens:" },
+					{ "type": "code", "code": "{\n  \"detectors\": [ … ],\n  \"health\": {\n    \"url\": \"https://hc-ping.com/JOUW-EIGEN-CODE\",\n    \"interval\": 60\n  }\n}" },
+					{ "type": "p", "html": "Klik op <strong>Save</strong>. De bewaking start kort opnieuw met de nieuwe instelling." },
+					{ "type": "tip", "html": "Alle opties van <code>health</code> (methode, time-out, headers) staan in de <a href=\"{base}/installation/configuration/#health\">configuratie-referentie</a>." }
+				]
+			},
+			{
+				"title": "Test het",
+				"blocks": [
+					{ "type": "p", "html": "Binnen een minuut staat je check in Healthchecks.io op groen en krijg je in Telegram het bericht dat de check <strong>UP</strong> is." },
+					{ "type": "p", "html": "Stop de AI Detector of zet de computer uit. Na de ingestelde periode plus de Grace Time komt er een rode <strong>DOWN</strong>-melding binnen. Start je hem weer, dan volgt vanzelf een groene <strong>UP</strong>-melding." },
+					{ "type": "figure", "src": "telegram_up_down.jpg", "alt": "Telegram-berichten van HealthchecksBot: DOWN en UP", "caption": "Rood: de AI Detector draait niet meer. Groen: hij draait weer." }
+				]
+			}
+		]
+	},
+	"en": {
+		"title": "Get an alert when the AI Detector stops",
+		"subtitle": "Short guide – a heartbeat with Healthchecks.io and Telegram",
+		"intro": "When the power fails, the computer crashes or the internet connection drops, the AI Detector cannot send an alert itself. With a <strong>heartbeat</strong>, the detector calls an address every minute. When those calls stop, the free service <strong>Healthchecks.io</strong> sends you a Telegram message. It is the only warning that also works while the computer is off or has no internet.",
+		"steps": [
+			{
+				"title": "Create a free Healthchecks.io account",
+				"blocks": [
+					{ "type": "p", "html": "Go to <strong>healthchecks.io</strong> and click <strong>Sign Up</strong>. Enter your e-mail address and click the login link in the e-mail you receive. You are then signed in right away." },
+					{ "type": "p", "html": "Then set a password under <strong>Account Settings</strong>. You first get a confirmation code by e-mail; after that you can create the password." },
+					{ "type": "tip", "html": "The free Healthchecks.io plan is more than enough for one or a few AI Detectors." }
+				]
+			},
+			{
+				"title": "Connect Telegram",
+				"blocks": [
+					{ "type": "p", "html": "In your project, open the <strong>Integrations</strong> tab and choose <strong>Add Integration</strong> next to <strong>Telegram</strong>. Healthchecks.io explains the steps there as well." },
+					{ "type": "p", "html": "In Telegram, search for <code>@HealthchecksBot</code> (check the exact name) and press <strong>Start</strong>. The bot sends you a special link. Open it, sign in with your e-mail address and password and click <strong>Connect Telegram</strong>." },
+					{ "type": "p", "html": "From now on you can be warned by e-mail and by Telegram." }
+				]
+			},
+			{
+				"title": "Set the schedule",
+				"blocks": [
+					{ "type": "p", "html": "Open your check and click <strong>Change Schedule</strong> under <strong>Schedule</strong>. Set <strong>Period</strong> to <code>1 minute</code>: that is how often the AI Detector calls the address." },
+					{ "type": "p", "html": "<strong>Grace Time</strong> is how long Healthchecks.io waits after the last call before it alerts you. With, for example, <code>30 minutes</code> or <code>1 hour</code> you are not disturbed by a short restart or update." },
+					{ "type": "figure", "src": "schedule.jpg", "alt": "Healthchecks.io schedule with a period of 1 minute and a grace time", "caption": "Period = the time between two calls. Grace Time = how long to wait before you get an alert." }
+				]
+			},
+			{
+				"title": "Copy your ping address",
+				"blocks": [
+					{ "type": "p", "html": "At the top of the check, under <strong>How To Ping</strong>, is your personal address, such as <code>https://hc-ping.com/1a2b3c4d-…</code>. Click it to copy it." },
+					{ "type": "note", "html": "<strong>Keep this address to yourself.</strong> Anyone who knows it can mark your check as online." }
+				]
+			},
+			{
+				"title": "Add the address to the AI Detector",
+				"blocks": [
+					{ "type": "p", "html": "<strong>Option 1 (recommended):</strong> click the monitoring status at the top left. Paste the address under <strong>Heartbeat</strong> and save." },
+					{ "type": "p", "html": "<strong>Option 2, in the JSON:</strong> go to <strong>Settings → Advanced</strong>, document <em>Detection</em>. Put the <code>health</code> block at the top level, next to <code>detectors</code> (not inside a detector). Mind the commas and quotes:" },
+					{ "type": "code", "code": "{\n  \"detectors\": [ … ],\n  \"health\": {\n    \"url\": \"https://hc-ping.com/YOUR-OWN-CODE\",\n    \"interval\": 60\n  }\n}" },
+					{ "type": "p", "html": "Click <strong>Save</strong>. Monitoring restarts briefly with the new setting." },
+					{ "type": "tip", "html": "Every <code>health</code> option (method, timeout, headers) is listed in the <a href=\"{base}/installation/configuration/#health\">configuration reference</a>." }
+				]
+			},
+			{
+				"title": "Test it",
+				"blocks": [
+					{ "type": "p", "html": "Within a minute your check turns green in Healthchecks.io and Telegram tells you the check is <strong>UP</strong>." },
+					{ "type": "p", "html": "Stop the AI Detector or switch the computer off. After the period plus the grace time a red <strong>DOWN</strong> alert arrives. Start it again and a green <strong>UP</strong> message follows by itself." },
+					{ "type": "figure", "src": "telegram_up_down.jpg", "alt": "Telegram messages from HealthchecksBot: DOWN and UP", "caption": "Red: the AI Detector is no longer running. Green: it is running again." }
+				]
+			}
+		]
+	}
+}
